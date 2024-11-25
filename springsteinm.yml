@@ -1,0 +1,413 @@
+Ewerth2017:
+  type: article
+  title: Estimating relative depth in single images via rankboost
+  author:
+  - Ewerth, Ralph
+  - Springstein, Matthias
+  - Müller, Eric
+  - Balz, Alexander
+  - Gehlhaar, Jan
+  - Naziyok, Tolga
+  - Dembczynski, Krzysztof
+  - Hüllermeier, Eyke
+  date: 2017
+  page-range: 919–924
+  serial-number:
+    doi: 10.1109/ICME.2017.8019434
+  parent:
+    type: proceedings
+    title: '{IEEE} International Conference on Multimedia and Expo, {ICME} 2017, Hong Kong, China, July 10-14, 2017'
+    publisher: '{IEEE} Computer Society'
+Muehling2017:
+  type: article
+  title: Deep learning for content-based video retrieval in film and television production
+  author:
+  - Mühling, Markus
+  - Korfhage, Nikolaus
+  - Müller, Eric
+  - Otto, Christian
+  - Springstein, Matthias
+  - Langelage, Thomas
+  - Veith, Uli
+  - Ewerth, Ralph
+  - Freisleben, Bernd
+  date: 2017
+  page-range: 22169–22194
+  serial-number:
+    doi: 10.1007/s11042-017-4962-9
+  parent:
+    type: periodical
+    title: Multimedia Tools and Applications
+    issue: 21
+    volume: 76
+EwerthSPS17:
+  type: article
+  title: '"Are Machines Better Than Humans in Image Tagging?" - {A} User Study Adds to the Puzzle'
+  author:
+  - Ewerth, Ralph
+  - Springstein, Matthias
+  - Phan-Vogtmann, Lo An
+  - Schütze, Juliane
+  date: 2017
+  editor:
+  - Jose, Joemon M.
+  - Hauff, Claudia
+  - Altingövde, Ismail Sengör
+  - Song, Dawei
+  - Albakour, Dyaa
+  - Watt, Stuart N. K.
+  - Tait, John
+  page-range: 186–198
+  serial-number:
+    doi: 10.1007/978-3-319-56608-5\_15
+  parent:
+    type: proceedings
+    title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
+    volume: 10193
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+Mueller-Budack_SCSMI2024:
+  type: article
+  title: 'TIB AV-Analytics: A Computational Tool for Film and Video Analysis'
+  author:
+  - Müller-Budack, Eric
+  - Springstein, Matthias
+  - Plank, Margret
+  - Sittel, Julian
+  - Mauer, Roman
+  - Bulgakowa, Oksana
+  - Burghardt, Manuel
+  - Bateman, John A
+  - Ewerth, Ralph
+  date: 2024
+  parent:
+    type: proceedings
+    title: Conference of the Society for Cognitive Studies of the Moving Image, {SCSMI} 2024, Budapest, Hungary, June 5-8, 2024
+MuellerBudack2021b:
+  type: chapter
+  title: Image Analytics in Web Archives
+  author:
+  - Müller-Budack, Eric
+  - Pustu-Iren, Kader
+  - Diering, Sebastian
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 141–151
+  serial-number:
+    doi: 10.1007/978-3-030-63291-5_11
+    isbn: 978-3-030-63291-5
+  parent:
+    type: book
+    title: 'The Past Web: Exploring Web Archives'
+    publisher: Springer International Publishing
+    location: Cham
+MuellerBudack2021:
+  type: article
+  title: Ontology-driven Event Type Classification in Images
+  author:
+  - Müller-Budack, Eric
+  - Springstein, Matthias
+  - Hakimov, Sherzod
+  - Mrutzek, Kevin
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 2927–2937
+  serial-number:
+    doi: 10.1109/WACV48630.2021.00297
+  parent:
+    type: proceedings
+    title: '{IEEE} Winter Conference on Applications of Computer Vision, {WACV} 2021, Virtual Event, January 3-8, 2021'
+    publisher: '{IEEE}'
+Mueller2017:
+  type: article
+  title: '"When Was This Picture Taken?" - Image Date Estimation in the Wild'
+  author:
+  - Müller, Eric
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2017
+  page-range: 619–625
+  serial-number:
+    doi: 10.1007/978-3-319-56608-5\_57
+  parent:
+    type: proceedings
+    title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
+otto2019understanding:
+  type: article
+  title: Understanding, Categorizing and Predicting Semantic Image-Text Relations
+  author:
+  - Otto, Christian
+  - Springstein, Matthias
+  - Anand, Avishek
+  - Ewerth, Ralph
+  date: 2019
+  page-range: 168–176
+  serial-number:
+    doi: 10.1145/3323873.3325049
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia Retrieval, {ICMR} 2019, Ottawa, ON, Canada, June 10-13, 2019
+    publisher: '{ACM}'
+otto2020characterization:
+  type: article
+  title: Characterization and Classification of Semantic Image-Text Relations
+  author:
+  - Otto, Christian
+  - Springstein, Matthias
+  - Anand, Avishek
+  - Ewerth, Ralph
+  date: 2020
+  page-range: 31–45
+  serial-number:
+    doi: 10.1007/s13735-019-00187-6
+  parent:
+    type: periodical
+    title: International Journal of Multimedia Information Retrieval
+    issue: 1
+    volume: 9
+SpringsteinSRSK24:
+  type: article
+  title: 'Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images'
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Rahnama, Javad
+  - Stalter, Julian
+  - Kristen, Maximilian
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2024
+  page-range: 7195–7205
+  serial-number:
+    doi: 10.1109/WACV57701.2024.00705
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Winter Conference on Applications of Computer Vision, {WACV} 2024, Waikoloa, HI, USA, January 3-8, 2024'
+    publisher: '{IEEE}'
+SpringsteinSPSM23:
+  type: article
+  title: '{TIB} AV-Analytics: {A} Web-based Platform for Scholarly Video Analysis and Film Studies'
+  author:
+  - Springstein, Matthias
+  - Stamatakis, Markos
+  - Plank, Margret
+  - Sittel, Julian
+  - Mauer, Roman
+  - Bulgakowa, Oksana
+  - Ewerth, Ralph
+  - Müller-Budack, Eric
+  date: 2023
+  page-range: 3195–3199
+  serial-number:
+    doi: 10.1145/3539618.3591820
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Research and Development in Information Retrieval, {SIGIR} 2023, Taipei, Taiwan, July 23-27, 2023'
+    publisher: '{ACM}'
+SpringsteinSAE22:
+  type: article
+  title: Semi-supervised Human Pose Estimation in Art-historical Images
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Althaus, Christian
+  - Ewerth, Ralph
+  date: 2022
+  editor:
+  - Magalhães, João
+  - Bimbo, Alberto Del
+  - Satoh, Shin'ichi
+  - Sebe, Nicu
+  - Alameda-Pineda, Xavier
+  - Jin, Qin
+  - Oria, Vincent
+  - Toni, Laura
+  page-range: 1107–1116
+  url: https://doi.org/10.1145/3503161.3548371
+  serial-number:
+    doi: 10.1145/3503161.3548371
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Multimedia, {MM} 2022, Lisboa, Portugal, October 10 - 14, 2022'
+    publisher: '{ACM}'
+SchneiderSRKEH22:
+  type: article
+  title: iART - Eine Suchmaschine zur Unterst{ü}tzung von bildorientierten Forschungsprozessen
+  author:
+  - Schneider, Stefanie
+  - Springstein, Matthias
+  - Rahnama, Javad
+  - Kohle, Hubertus
+  - Ewerth, Ralph
+  - Hüllermeier, Eyke
+  date: 2022
+  editor: Geierhos, Michaela
+  serial-number:
+    doi: 10.5281/ZENODO.6310.528175
+  parent:
+    type: proceedings
+    title: Tagung des Verbands Digital Humanities im deutschsprachigen Raum, {DHd} 2022, Potsdam, Germany, March 7 - 11, 2022
+SpringsteinSRHK21:
+  type: article
+  title: 'iART: {A} Search Engine for Art-Historical Images to Support Research in the Humanities'
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Rahnama, Javad
+  - Hüllermeier, Eyke
+  - Kohle, Hubertus
+  - Ewerth, Ralph
+  date: 2021
+  editor:
+  - Shen, Heng Tao
+  - Zhuang, Yueting
+  - Smith, John R.
+  - Yang, Yang
+  - César, Pablo
+  - Metze, Florian
+  - Prabhakaran, Balakrishnan
+  page-range: 2801–2803
+  serial-number:
+    doi: 10.1145/3474085.3478564
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Multimedia, {MM} 2021, Virtual Event, China, October 20 - 24, 2021'
+    publisher: '{ACM}'
+Springstein2021a:
+  type: article
+  title: Unsupervised Training Data Generation of Handwritten Formulas using Generative Adversarial Networks with Self-Attention
+  author:
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 46–54
+  serial-number:
+    doi: 10.1145/3463945.3469059
+  parent:
+    type: proceedings
+    title: Workshop on Multi-Modal Pre-Training for Multimedia Understanding co-located with the International Conference on Multimedia Retrieval, {MMPT}@{ICMR} 2021, Virtual Event, August 21, 2021
+    publisher: '{ACM}'
+Springstein2021:
+  type: article
+  title: QuTI! Quantifying Text-Image Consistency in Multimodal Documents
+  author:
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 2575–2579
+  serial-number:
+    doi: 10.1145/3404835.3462796
+  parent:
+    type: proceedings
+    title: '{ACM} {SIGIR} Conference on Research and Development in Information Retrieval, {SIGIR} 2021, Virtual Event, July 11-15, 2021'
+    publisher: '{ACM}'
+SchneiderSRHEK20:
+  type: article
+  title: The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects
+  author:
+  - Schneider, Stefanie
+  - Springstein, Matthias
+  - Rahnama, Javad
+  - Hüllermeier, Eyke
+  - Ewerth, Ralph
+  - Kohle, Hubertus
+  date: 2020
+  editor:
+  - Reussner, Ralf H.
+  - Koziolek, Anne
+  - Heinrich, Robert
+  page-range: 1355–1364
+  url: https://doi.org/10.18420/inf2020/_127
+  serial-number:
+    doi: 10.18420/INF2020\_127
+  parent:
+    type: proceedings
+    title: Jahrestagung der Gesellschaft f{ü}r Informatik, {INFORMATIK} 2020, Karlsruhe, Germany, September 28 - October 2, 2020
+    publisher: '{GI}'
+    parent:
+      type: proceedings
+      title: '{LNI}'
+SpringsteinNHE18:
+  type: article
+  title: 'TIB-arXiv: An Alternative Search Portal for the arXiv Pre-print Server'
+  author:
+  - Springstein, Matthias
+  - Nguyen, Huu Hung
+  - Hoppe, Anett
+  - Ewerth, Ralph
+  date: 2018
+  editor:
+  - Rodríguez, Eva M. Méndez
+  - Crestani, Fabio
+  - Ribeiro, Cristina
+  - David, Gabriel
+  - Lopes, João Correia
+  page-range: 295–298
+  serial-number:
+    doi: 10.1007/978-3-030-00066-0\_26
+  parent:
+    type: proceedings
+    title: International Conference on Theory and Practice of Digital Libraries, {TPDL} 2018, Porto, Portugal, September 10-13, 2018
+    publisher: Springer
+    volume: 11057
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+SpringsteinE16:
+  type: article
+  title: On the Effects of Spam Filtering and Incremental Learning for Web-Supervised Visual Concept Classification
+  author:
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2016
+  editor:
+  - Kender, John R.
+  - Smith, John R.
+  - Luo, Jiebo
+  - Boll, Susanne
+  - Hsu, Winston H.
+  page-range: 377–380
+  serial-number:
+    doi: 10.1145/2911996.2912072
+  parent:
+    type: proceedings
+    title: '{ACM} International Conference on Multimedia Retrieval, {ICMR} 2016, New York, New York, USA, June 6-9, 2016'
+    publisher: '{ACM}'
+TahmasebzadehSE24:
+  type: article
+  title: Few-Shot Event Classification in Images using Knowledge Graphs for Prompting
+  author:
+  - Tahmasebzadeh, Golsa
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  - Müller-Budack, Eric
+  date: 2024
+  page-range: 7271–7280
+  serial-number:
+    doi: 10.1109/WACV57701.2024.00712
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Winter Conference on Applications of Computer Vision, {WACV} 2024, Waikoloa, HI, USA, January 3-8, 2024'
+    publisher: '{IEEE}'
+Theiner_2023_CVPR:
+  type: article
+  title: Analyzing Results of Depth Estimation Models With Monocular Criteria
+  author:
+  - Theiner, Jonas
+  - Nommensen, Nils
+  - Rhotert, Jim
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2023-06
+  page-range: 3738–3742
+  url: https://openaccess.thecvf.com/content/CVPR2023W/XAI4CV/html/Theiner_Analyzing_Results_of_Depth_Estimation_Models_With_Monocular_Criteria_CVPRW_2023_paper.html
+  parent:
+    type: proceedings
+    title: Explainable AI for Computer Vision Workshop co-located with the IEEE/CFV Conference on Computer Vision and Pattern Recognition, XAI4CV@CVPR 2023, Vancouver, Canada, June 19
+    publisher: IEEE/CVF
+

@@ -1,0 +1,3881 @@
+
+# Own
+Ewerth2017:
+  type: article
+  title: Estimating relative depth in single images via rankboost
+  author:
+  - Ewerth, Ralph
+  - Springstein, Matthias
+  - Müller, Eric
+  - Balz, Alexander
+  - Gehlhaar, Jan
+  - Naziyok, Tolga
+  - Dembczynski, Krzysztof
+  - Hüllermeier, Eyke
+  date: 2017
+  page-range: 919–924
+  serial-number:
+    doi: 10.1109/ICME.2017.8019434
+  parent:
+    type: proceedings
+    title: '{IEEE} International Conference on Multimedia and Expo, {ICME} 2017, Hong Kong, China, July 10-14, 2017'
+    publisher: '{IEEE} Computer Society'
+Muehling2017:
+  type: article
+  title: Deep learning for content-based video retrieval in film and television production
+  author:
+  - Mühling, Markus
+  - Korfhage, Nikolaus
+  - Müller, Eric
+  - Otto, Christian
+  - Springstein, Matthias
+  - Langelage, Thomas
+  - Veith, Uli
+  - Ewerth, Ralph
+  - Freisleben, Bernd
+  date: 2017
+  page-range: 22169–22194
+  serial-number:
+    doi: 10.1007/s11042-017-4962-9
+  parent:
+    type: periodical
+    title: Multimedia Tools and Applications
+    issue: 21
+    volume: 76
+EwerthSPS17:
+  type: article
+  title: '"Are Machines Better Than Humans in Image Tagging?" - {A} User Study Adds to the Puzzle'
+  author:
+  - Ewerth, Ralph
+  - Springstein, Matthias
+  - Phan-Vogtmann, Lo An
+  - Schütze, Juliane
+  date: 2017
+  editor:
+  - Jose, Joemon M.
+  - Hauff, Claudia
+  - Altingövde, Ismail Sengör
+  - Song, Dawei
+  - Albakour, Dyaa
+  - Watt, Stuart N. K.
+  - Tait, John
+  page-range: 186–198
+  serial-number:
+    doi: 10.1007/978-3-319-56608-5\_15
+  parent:
+    type: proceedings
+    title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
+    volume: 10193
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+Mueller-Budack_SCSMI2024:
+  type: article
+  title: 'TIB AV-Analytics: A Computational Tool for Film and Video Analysis'
+  author:
+  - Müller-Budack, Eric
+  - Springstein, Matthias
+  - Plank, Margret
+  - Sittel, Julian
+  - Mauer, Roman
+  - Bulgakowa, Oksana
+  - Burghardt, Manuel
+  - Bateman, John A
+  - Ewerth, Ralph
+  date: 2024
+  parent:
+    type: proceedings
+    title: Conference of the Society for Cognitive Studies of the Moving Image, {SCSMI} 2024, Budapest, Hungary, June 5-8, 2024
+MuellerBudack2021b:
+  type: chapter
+  title: Image Analytics in Web Archives
+  author:
+  - Müller-Budack, Eric
+  - Pustu-Iren, Kader
+  - Diering, Sebastian
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 141–151
+  serial-number:
+    doi: 10.1007/978-3-030-63291-5_11
+    isbn: 978-3-030-63291-5
+  parent:
+    type: book
+    title: 'The Past Web: Exploring Web Archives'
+    publisher: Springer International Publishing
+    location: Cham
+MuellerBudack2021:
+  type: article
+  title: Ontology-driven Event Type Classification in Images
+  author:
+  - Müller-Budack, Eric
+  - Springstein, Matthias
+  - Hakimov, Sherzod
+  - Mrutzek, Kevin
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 2927–2937
+  serial-number:
+    doi: 10.1109/WACV48630.2021.00297
+  parent:
+    type: proceedings
+    title: '{IEEE} Winter Conference on Applications of Computer Vision, {WACV} 2021, Virtual Event, January 3-8, 2021'
+    publisher: '{IEEE}'
+Mueller2017:
+  type: article
+  title: '"When Was This Picture Taken?" - Image Date Estimation in the Wild'
+  author:
+  - Müller, Eric
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2017
+  page-range: 619–625
+  serial-number:
+    doi: 10.1007/978-3-319-56608-5\_57
+  parent:
+    type: proceedings
+    title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
+otto2019understanding:
+  type: article
+  title: Understanding, Categorizing and Predicting Semantic Image-Text Relations
+  author:
+  - Otto, Christian
+  - Springstein, Matthias
+  - Anand, Avishek
+  - Ewerth, Ralph
+  date: 2019
+  page-range: 168–176
+  serial-number:
+    doi: 10.1145/3323873.3325049
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia Retrieval, {ICMR} 2019, Ottawa, ON, Canada, June 10-13, 2019
+    publisher: '{ACM}'
+otto2020characterization:
+  type: article
+  title: Characterization and Classification of Semantic Image-Text Relations
+  author:
+  - Otto, Christian
+  - Springstein, Matthias
+  - Anand, Avishek
+  - Ewerth, Ralph
+  date: 2020
+  page-range: 31–45
+  serial-number:
+    doi: 10.1007/s13735-019-00187-6
+  parent:
+    type: periodical
+    title: International Journal of Multimedia Information Retrieval
+    issue: 1
+    volume: 9
+SpringsteinSRSK24:
+  type: article
+  title: 'Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images'
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Rahnama, Javad
+  - Stalter, Julian
+  - Kristen, Maximilian
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2024
+  page-range: 7195–7205
+  serial-number:
+    doi: 10.1109/WACV57701.2024.00705
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Winter Conference on Applications of Computer Vision, {WACV} 2024, Waikoloa, HI, USA, January 3-8, 2024'
+    publisher: '{IEEE}'
+SpringsteinSPSM23:
+  type: article
+  title: '{TIB} AV-Analytics: {A} Web-based Platform for Scholarly Video Analysis and Film Studies'
+  author:
+  - Springstein, Matthias
+  - Stamatakis, Markos
+  - Plank, Margret
+  - Sittel, Julian
+  - Mauer, Roman
+  - Bulgakowa, Oksana
+  - Ewerth, Ralph
+  - Müller-Budack, Eric
+  date: 2023
+  page-range: 3195–3199
+  serial-number:
+    doi: 10.1145/3539618.3591820
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Research and Development in Information Retrieval, {SIGIR} 2023, Taipei, Taiwan, July 23-27, 2023'
+    publisher: '{ACM}'
+SpringsteinSAE22:
+  type: article
+  title: Semi-supervised Human Pose Estimation in Art-historical Images
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Althaus, Christian
+  - Ewerth, Ralph
+  date: 2022
+  editor:
+  - Magalhães, João
+  - Bimbo, Alberto Del
+  - Satoh, Shin'ichi
+  - Sebe, Nicu
+  - Alameda-Pineda, Xavier
+  - Jin, Qin
+  - Oria, Vincent
+  - Toni, Laura
+  page-range: 1107–1116
+  url: https://doi.org/10.1145/3503161.3548371
+  serial-number:
+    doi: 10.1145/3503161.3548371
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Multimedia, {MM} 2022, Lisboa, Portugal, October 10 - 14, 2022'
+    publisher: '{ACM}'
+SchneiderSRKEH22:
+  type: article
+  title: iART - Eine Suchmaschine zur Unterst{ü}tzung von bildorientierten Forschungsprozessen
+  author:
+  - Schneider, Stefanie
+  - Springstein, Matthias
+  - Rahnama, Javad
+  - Kohle, Hubertus
+  - Ewerth, Ralph
+  - Hüllermeier, Eyke
+  date: 2022
+  editor: Geierhos, Michaela
+  serial-number:
+    doi: 10.5281/ZENODO.6310.528175
+  parent:
+    type: proceedings
+    title: Tagung des Verbands Digital Humanities im deutschsprachigen Raum, {DHd} 2022, Potsdam, Germany, March 7 - 11, 2022
+SpringsteinSRHK21:
+  type: article
+  title: 'iART: {A} Search Engine for Art-Historical Images to Support Research in the Humanities'
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Rahnama, Javad
+  - Hüllermeier, Eyke
+  - Kohle, Hubertus
+  - Ewerth, Ralph
+  date: 2021
+  editor:
+  - Shen, Heng Tao
+  - Zhuang, Yueting
+  - Smith, John R.
+  - Yang, Yang
+  - César, Pablo
+  - Metze, Florian
+  - Prabhakaran, Balakrishnan
+  page-range: 2801–2803
+  serial-number:
+    doi: 10.1145/3474085.3478564
+  parent:
+    type: proceedings
+    title: '{ACM} Conference on Multimedia, {MM} 2021, Virtual Event, China, October 20 - 24, 2021'
+    publisher: '{ACM}'
+Springstein2021a:
+  type: article
+  title: Unsupervised Training Data Generation of Handwritten Formulas using Generative Adversarial Networks with Self-Attention
+  author:
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 46–54
+  serial-number:
+    doi: 10.1145/3463945.3469059
+  parent:
+    type: proceedings
+    title: Workshop on Multi-Modal Pre-Training for Multimedia Understanding co-located with the International Conference on Multimedia Retrieval, {MMPT}@{ICMR} 2021, Virtual Event, August 21, 2021
+    publisher: '{ACM}'
+Springstein2021:
+  type: article
+  title: QuTI! Quantifying Text-Image Consistency in Multimodal Documents
+  author:
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 2575–2579
+  serial-number:
+    doi: 10.1145/3404835.3462796
+  parent:
+    type: proceedings
+    title: '{ACM} {SIGIR} Conference on Research and Development in Information Retrieval, {SIGIR} 2021, Virtual Event, July 11-15, 2021'
+    publisher: '{ACM}'
+SchneiderSRHEK20:
+  type: article
+  title: The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects
+  author:
+  - Schneider, Stefanie
+  - Springstein, Matthias
+  - Rahnama, Javad
+  - Hüllermeier, Eyke
+  - Ewerth, Ralph
+  - Kohle, Hubertus
+  date: 2020
+  editor:
+  - Reussner, Ralf H.
+  - Koziolek, Anne
+  - Heinrich, Robert
+  page-range: 1355–1364
+  url: https://doi.org/10.18420/inf2020/_127
+  serial-number:
+    doi: 10.18420/INF2020\_127
+  parent:
+    type: proceedings
+    title: Jahrestagung der Gesellschaft f{ü}r Informatik, {INFORMATIK} 2020, Karlsruhe, Germany, September 28 - October 2, 2020
+    publisher: '{GI}'
+    parent:
+      type: proceedings
+      title: '{LNI}'
+SpringsteinNHE18:
+  type: article
+  title: 'TIB-arXiv: An Alternative Search Portal for the arXiv Pre-print Server'
+  author:
+  - Springstein, Matthias
+  - Nguyen, Huu Hung
+  - Hoppe, Anett
+  - Ewerth, Ralph
+  date: 2018
+  editor:
+  - Rodríguez, Eva M. Méndez
+  - Crestani, Fabio
+  - Ribeiro, Cristina
+  - David, Gabriel
+  - Lopes, João Correia
+  page-range: 295–298
+  serial-number:
+    doi: 10.1007/978-3-030-00066-0\_26
+  parent:
+    type: proceedings
+    title: International Conference on Theory and Practice of Digital Libraries, {TPDL} 2018, Porto, Portugal, September 10-13, 2018
+    publisher: Springer
+    volume: 11057
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+SpringsteinE16:
+  type: article
+  title: On the Effects of Spam Filtering and Incremental Learning for Web-Supervised Visual Concept Classification
+  author:
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  date: 2016
+  editor:
+  - Kender, John R.
+  - Smith, John R.
+  - Luo, Jiebo
+  - Boll, Susanne
+  - Hsu, Winston H.
+  page-range: 377–380
+  serial-number:
+    doi: 10.1145/2911996.2912072
+  parent:
+    type: proceedings
+    title: '{ACM} International Conference on Multimedia Retrieval, {ICMR} 2016, New York, New York, USA, June 6-9, 2016'
+    publisher: '{ACM}'
+TahmasebzadehSE24:
+  type: article
+  title: Few-Shot Event Classification in Images using Knowledge Graphs for Prompting
+  author:
+  - Tahmasebzadeh, Golsa
+  - Springstein, Matthias
+  - Ewerth, Ralph
+  - Müller-Budack, Eric
+  date: 2024
+  page-range: 7271–7280
+  serial-number:
+    doi: 10.1109/WACV57701.2024.00712
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Winter Conference on Applications of Computer Vision, {WACV} 2024, Waikoloa, HI, USA, January 3-8, 2024'
+    publisher: '{IEEE}'
+Theiner_2023_CVPR:
+  type: article
+  title: Analyzing Results of Depth Estimation Models With Monocular Criteria
+  author:
+  - Theiner, Jonas
+  - Nommensen, Nils
+  - Rhotert, Jim
+  - Springstein, Matthias
+  - Müller-Budack, Eric
+  - Ewerth, Ralph
+  date: 2023-06
+  page-range: 3738–3742
+  url: https://openaccess.thecvf.com/content/CVPR2023W/XAI4CV/html/Theiner_Analyzing_Results_of_Depth_Estimation_Models_With_Monocular_Criteria_CVPRW_2023_paper.html
+  parent:
+    type: proceedings
+    title: Explainable AI for Computer Vision Workshop co-located with the IEEE/CFV Conference on Computer Vision and Pattern Recognition, XAI4CV@CVPR 2023, Vancouver, Canada, June 19
+    publisher: IEEE/CVF
+
+
+
+# Extern
+
+RussakovskyDSKS15:
+  type: article
+  title: ImageNet Large Scale Visual Recognition Challenge
+  author:
+  - Russakovsky, Olga
+  - Deng, Jia
+  - Su, Hao
+  - Krause, Jonathan
+  - Satheesh, Sanjeev
+  - Ma, Sean
+  - Huang, Zhiheng
+  - Karpathy, Andrej
+  - Khosla, Aditya
+  - Bernstein, Michael S.
+  - Berg, Alexander C.
+  - Fei-Fei, Li
+  date: 2015
+  page-range: 211–252
+  serial-number:
+    doi: 10.1007/s11263-015-0816-y
+  parent:
+    type: periodical
+    title: International Journal of Computer Vision
+    issue: 3
+    volume: 115
+LoshchilovH17:
+  type: article
+  title: '{SGDR}. {S}tochastic Gradient Descent with Warm Restarts'
+  author:
+  - Loshchilov, Ilya
+  - Hutter, Frank
+  date: 2017
+  parent:
+    type: proceedings
+    title: International Conference on Learning Representations, {ICLR} 2017
+LoshchilovH19:
+  type: article
+  title: Decoupled Weight Decay Regularization
+  author:
+  - Loshchilov, Ilya
+  - Hutter, Frank
+  date: 2019
+  parent:
+    type: proceedings
+    title: International Conference on Learning Representations, {ICLR} 2019
+KarpathyL15:
+  type: article
+  title: Deep Visual-semantic Alignments for Generating Image Descriptions
+  author:
+  - Karpathy, Andrej
+  - Fei-Fei, Li
+  date: 2015
+  page-range: 3128–3137
+  serial-number:
+    doi: 10.1109/CVPR.2015.7298932
+  parent:
+    type: proceedings
+    title: Computer Vision and Pattern Recognition, {CVPR} 2015
+    publisher: '{IEEE}'
+    location: New York
+abs-2111-02114:
+  type: article
+  title: '{LAION-400M.} {O}pen Dataset of {CLIP}-Filtered 400 Million Image-text Pairs'
+  author:
+  - Schuhmann, Christoph
+  - Vencu, Richard
+  - Beaumont, Romain
+  - Kaczmarczyk, Robert
+  - Mullis, Clayton
+  - Katta, Aarush
+  - Coombes, Theo
+  - Jitsev, Jenia
+  - Komatsuzaki, Aran
+  date: 2021
+  url: https://arxiv.org/abs/2111.02114
+  serial-number:
+    arxiv: '2111.02114'
+  parent:
+    type: periodical
+panofsky1939:
+  type: book
+  title: Studies in Iconology. {H}umanistic Themes in the Art of the Renaissance
+  author: Panofsky, Erwin
+  date: 1939
+  publisher: Oxford University Press
+  location: New York
+vanstraten1994:
+  type: book
+  title: Iconography, Indexing, {Iconclass}. {A} Handbook
+  author:
+    name: Straten
+    given-name: Roelof
+    prefix: van
+  date: 1994
+  publisher: Foleor
+  location: Leiden
+vandewaal1973:
+  type: book
+  title: '{Iconclass}. {A}n Iconographic Classification System. {C}ompleted and Edited by {L. D. Couprie} with {R. H. Fuchs}'
+  author:
+    name: Waal
+    given-name: Henri
+    prefix: van de
+  date: 1973
+  publisher: North-Holland Publishing Company
+  location: Amsterdam
+heusinger1985:
+  type: book
+  title: '{M}arburger {I}ndex. {I}nventar der {K}unst in {D}eutschland'
+  author: Heusinger, Lutz
+  date: 1985
+  publisher: Saur
+  location: Munich
+jenaesthetics:
+  type: article
+  title: '{JenAesthetics} Subjective Dataset. {A}nalyzing Paintings by Subjective Scores'
+  author:
+  - Amirshahi, Seyed Ali
+  - Hayn-Leichsenring, Gregor Uwe
+  - Denzler, Joachim
+  - Redies, Christoph
+  date: 2014
+  editor:
+  - Agapito, Lourdes
+  - Bronstein, Michael M.
+  - Rother, Carsten
+  page-range: 3–19
+  serial-number:
+    doi: 10.1007/978-3-319-16178-5_1
+  parent:
+    type: proceedings
+    title: Workshop co-located with the European Conference on Computer Vision, {ECCV} 2014
+    publisher: Springer
+    location: Cham
+    volume: 8925
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+mart:
+  type: article
+  title: In the Eye of the Beholder. {E}mploying Statistical Analysis and Eye Tracking for Analyzing Abstract Paintings
+  author:
+  - Yanulevskaya, Victoria
+  - Uijlings, Jasper R. R.
+  - Bruni, Elia
+  - Sartori, Andreza
+  - Zamboni, Elisa
+  - Bacci, Francesca
+  - Melcher, David
+  - Sebe, Nicu
+  date: 2012
+  editor:
+  - Babaguchi, Noboru
+  - Aizawa, Kiyoharu
+  - Smith, John R.
+  - Satoh, Shin'ichi
+  - Plagemann, Thomas
+  - Hua, Xian-Sheng
+  - Yan, Rong
+  page-range: 349–358
+  serial-number:
+    doi: 10.1145/2393347.2393399
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia, {MM} 2012
+    publisher: '{ACM}'
+    location: New York
+wikiart-emotions:
+  type: article
+  title: '{WikiArt} Emotions. {A}n Annotated Dataset of Emotions Evoked by Art'
+  author:
+  - Mohammad, Saif M.
+  - Kiritchenko, Svetlana
+  date: 2018
+  editor:
+  - Calzolari, Nicoletta
+  - Choukri, Khalid
+  - Cieri, Christopher
+  - Declerck, Thierry
+  - Goggi, Sara
+  - Hasida, Kôiti
+  - Isahara, Hitoshi
+  - Maegaard, Bente
+  - Mariani, Joseph
+  - Mazo, Hélène
+  - Moreno, Asunción
+  - Odijk, Jan
+  - Piperidis, Stelios
+  - Tokunaga, Takenobu
+  page-range: 1225–1238
+  url: http://www.lrec-conf.org/proceedings/lrec2018/summaries/966.html
+  parent:
+    type: proceedings
+    title: International Conference on Language Resources and Evaluation, {LREC} 2018
+    publisher: '{ELRA}'
+    location: Miyazaki
+brueghel:
+  type: article
+  title: Discovering Visual Patterns in Art Collections With Spatially-consistent Feature Learning
+  author:
+  - Shen, Xi
+  - Efros, Alexei A.
+  - Aubry, Mathieu
+  date: 2019
+  page-range: 9278–9287
+  serial-number:
+    doi: 10.1109/CVPR.2019.00950
+  parent:
+    type: proceedings
+    title: Computer Vision and Pattern Recognition, {CVPR} 2019
+    publisher: '{IEEE}'
+    location: New York
+jenicek2019:
+  type: article
+  title: Linking Art Through Human Poses
+  author:
+  - Jenícek, Tomás
+  - Chum, Ondrej
+  date: 2019
+  page-range: 1338–1345
+  serial-number:
+    doi: 10.1109/ICDAR.2019.00216
+  parent:
+    type: proceedings
+    title: International Conference on Document Analysis and Recognition, {ICDAR} 2019
+    publisher: '{IEEE}'
+    location: New York
+impett2016:
+  type: article
+  title: Pose and Pathosformel in {Aby Warburg's} Bilderatlas
+  author:
+  - Impett, Leonardo
+  - Süsstrunk, Sabine
+  date: 2016
+  editor:
+  - Hua, Gang
+  - Jégou, Hervé
+  page-range: 888–902
+  serial-number:
+    doi: 10.1007/978-3-319-46604-0_61
+  parent:
+    type: proceedings
+    title: Workshop co-located with the European Conference on Computer Vision, {ECCV} 2016
+    publisher: Springer
+    location: Cham
+    volume: 9913
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+gupta2020:
+  type: article
+  title: Towards Image Caption Generation for Art Historical Data
+  author:
+  - Gupta, Jahnvi
+  - Madhu, Prathmesh
+  - Kosti, Ronak
+  - Bell, Peter
+  - Maier, Andreas K.
+  - Christlein, Vincent
+  date: 2020
+  url: https://aidh.kinf.wiai.uni-bamberg.de/02_Gupta_et_al_Towards_Image_Caption_Generation_etc.pdf
+  parent:
+    type: proceedings
+    title: AI Methods for Digital Heritage co-located with the German Conference on Artificial Intelligence, {KI2020} 2020
+madhu2023:
+  type: article
+  title: Enhancing Human Pose Estimation in Ancient Vase Paintings via Perceptually-grounded Style Transfer Learning
+  author:
+  - Madhu, Prathmesh
+  - Villar-Corrales, Angel
+  - Kosti, Ronak
+  - Bendschus, Torsten
+  - Reinhardt, Corinna
+  - Bell, Peter
+  - Maier, Andreas K.
+  - Christlein, Vincent
+  date: 2023
+  page-range: 1–17
+  serial-number:
+    doi: 10.1145/3569089
+  parent:
+    type: periodical
+    title: Journal on Computing and Cultural Heritage
+    publisher: '{ACM}'
+    issue: 1
+    volume: 16
+cetinic2021:
+  type: article
+  title: Towards Generating and Evaluating Iconographic Image Captions of Artworks
+  author: Cetinic, Eva
+  date: 2021
+  page-range: 123
+  serial-number:
+    doi: 10.3390/jimaging7080123
+  parent:
+    type: periodical
+    title: Journal of Imaging
+    issue: 8
+    volume: 7
+banar2021:
+  type: article
+  title: Multi-modal Label Retrieval for the Visual Arts. {T}he Case of Iconclass
+  author:
+  - Banar, Nikolay
+  - Daelemans, Walter
+  - Kestemont, Mike
+  date: 2021
+  editor:
+  - Rocha, Ana Paula
+  - Steels, Luc
+  - name: Herik
+    given-name: H. Jaap
+    prefix: van den
+  page-range: 622–629
+  serial-number:
+    doi: 10.5220/0010390606220629
+  parent:
+    type: proceedings
+    title: International Conference on Agents and Artificial Intelligence, {ICAART} 2021
+    publisher: '{SCITEPRESS}'
+painting-91:
+  type: article
+  title: '{Painting-91}. {A} Large Scale Database for Computational Painting Categorization'
+  author:
+  - Khan, Fahad Shahbaz
+  - Beigpour, Shida
+  - name: Weijer
+    given-name: Joost
+    prefix: van de
+  - Felsberg, Michael
+  date: 2014
+  page-range: 1385–1397
+  serial-number:
+    doi: 10.1007/s00138-014-0621-6
+  parent:
+    type: periodical
+    title: Machine Vision Applications
+    issue: 6
+    volume: 25
+rijksmuseum-challenge:
+  type: article
+  title: The {Rijksmuseum} Challenge. {M}useum-centered Visual Recognition
+  author:
+  - Mensink, Thomas
+  - name: Gemert
+    given-name: Jan C.
+    prefix: van
+  date: 2014
+  editor:
+  - Kankanhalli, Mohan S.
+  - Rüger, Stefan M.
+  - Manmatha, R.
+  - Jose, Joemon M.
+  - name: Rijsbergen
+    given-name: Keith
+    prefix: van
+  page-range: 451–454
+  serial-number:
+    doi: 10.1145/2578726.2578791
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia Retrieval, {ICMR} 2014
+    publisher: '{ACM}'
+    location: New York
+painter-by-numbers:
+  type: misc
+  title: Painter by Numbers
+  author: Nichol, Kiri
+  date: 2016
+  url: https://www.kaggle.com/c/painter-by-numbers
+art500k:
+  type: article
+  title: '{DeepArt}. {L}earning Joint Representations of Visual Arts'
+  author:
+  - Mao, Hui
+  - Cheung, Ming
+  - She, James
+  date: 2017
+  editor:
+  - Liu, Qiong
+  - Lienhart, Rainer
+  - Wang, Haohong
+  - name: Chen
+    given-name: Sheng-Wei
+    prefix: '"Kuan-Ta"'
+  - Boll, Susanne
+  - Chen, Yi-Ping Phoebe
+  - Friedland, Gerald
+  - Li, Jia
+  - Yan, Shuicheng
+  page-range: 1183–1191
+  serial-number:
+    doi: 10.1145/3123266.3123405
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia, {MM} 2017
+    publisher: '{ACM}'
+    location: New York
+omniart:
+  type: article
+  title: '{OmniArt}. {A} Large-scale Artistic Benchmark'
+  author:
+  - Strezoski, Gjorgji
+  - Worring, Marcel
+  date: 2018
+  page-range: 1–21
+  serial-number:
+    doi: 10.1145/3273022
+  parent:
+    type: periodical
+    title: Transactions on Multimedia Computing, Communications, and Applications
+    publisher: '{ACM}'
+    location: New York
+    issue: 4
+    volume: 14
+multitaskpainting100k:
+  type: article
+  title: Multitask Painting Categorization by Deep Multibranch Neural Network
+  author:
+  - Bianco, Simone
+  - Mazzini, Davide
+  - Napoletano, Paolo
+  - Schettini, Raimondo
+  date: 2019
+  page-range: 90–101
+  serial-number:
+    doi: 10.1016/j.eswa.2019.05.036
+  parent:
+    type: periodical
+    title: Expert Systems with Applications
+    volume: 135
+artpedia:
+  type: article
+  title: '{Artpedia}. {A} New Visual-semantic Dataset with Visual and Contextual Sentences in the Artistic Domain'
+  author:
+  - Stefanini, Matteo
+  - Cornia, Marcella
+  - Baraldi, Lorenzo
+  - Corsini, Massimiliano
+  - Cucchiara, Rita
+  date: 2019
+  editor:
+  - Ricci, Elisa
+  - Bulò, Samuel Rota
+  - Snoek, Cees
+  - Lanz, Oswald
+  - Messelodi, Stefano
+  - Sebe, Nicu
+  page-range: 729–740
+  serial-number:
+    doi: 10.1007/978-3-030-30645-8_66
+  parent:
+    type: proceedings
+    title: Image Analysis and Processing, {ICIAP} 2019
+    publisher: Springer
+    location: Cham
+    volume: 11752
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+the-met:
+  type: article
+  title: The {Met} Dataset. {I}nstance-level Recognition for Artworks
+  author:
+  - Ypsilantis, Nikolaos-Antonios
+  - Garcia, Noa
+  - Han, Guangxing
+  - Ibrahimi, Sarah
+  - name: Noord
+    given-name: Nanne
+    prefix: van
+  - Tolias, Giorgos
+  date: 2021
+  editor:
+  - Vanschoren, Joaquin
+  - Yeung, Sai-Kit
+  url: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/5f93f983524def3dca464469d2cf9f3e-Paper-round2.pdf
+  parent:
+    type: proceedings
+    title: Neural Information Processing Systems, {NeurIPS} 2021
+artbench-10:
+  type: article
+  title: The {ArtBench} Dataset. {B}enchmarking Generative Models with Artworks
+  author:
+  - Liao, Peiyuan
+  - Li, Xiuyu
+  - Liu, Xihui
+  - Keutzer, Kurt
+  date: 2022
+  serial-number:
+    arxiv: '2206.11404'
+  parent:
+    type: periodical
+aqua:
+  type: article
+  title: A Dataset and Baselines for Visual Question Answering on Art
+  author:
+  - Garcia, Noa
+  - Ye, Chentao
+  - Liu, Zihua
+  - Hu, Qingtao
+  - Otani, Mayu
+  - Chu, Chenhui
+  - Nakashima, Yuta
+  - Mitamura, Teruko
+  date: 2020
+  editor:
+  - Bartoli, Adrien
+  - Fusiello, Andrea
+  page-range: 92–108
+  serial-number:
+    doi: 10.1007/978-3-030-66096-3_8
+  parent:
+    type: proceedings
+    title: Workshop co-located with the European Conference on Computer Vision, {ECCV} 2020
+    publisher: Springer
+    location: Cham
+    volume: 12536
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+artdl:
+  type: article
+  title: A Dataset and a Convolutional Model for Iconography Classification in Paintings
+  author:
+  - Milani, Federico
+  - Fraternali, Piero
+  date: 2021
+  serial-number:
+    doi: 10.1145/3458885
+  parent:
+    type: periodical
+    title: Journal on Computing and Cultural Heritage
+    publisher: '{ACM}'
+    location: New York
+    issue: 4
+    volume: 14
+iconclass-ai-test-set:
+  type: misc
+  title: Iconclass {AI} Test Set
+  author: Posthumus, Etienne
+  note: \\url\{https://iconclass.org/testset/\}
+schneider2020:
+  type: article
+  title: The Dissimilar in the Similar. {A}n Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects
+  author:
+  - Schneider, Stefanie
+  - Springstein, Matthias
+  - Rahnama, Javad
+  - Hüllermeier, Eyke
+  - Ewerth, Ralph
+  - Kohle, Hubertus
+  date: 2020
+  editor:
+  - Reussner, Ralf H.
+  - Koziolek, Anne
+  - Heinrich, Robert
+  page-range: 1355–1364
+  serial-number:
+    doi: 10.18420/inf2020_127
+  parent:
+    type: proceedings
+    title: Jahrestagung der Gesellschaft f{ü}r Informatik, {INFORMATIK} 2020
+    publisher: '{GI}'
+    location: Bonn
+    parent:
+      type: proceedings
+      title: '{LNI}'
+springstein2022:
+  type: article
+  title: Semi-supervised Human Pose Estimation in Art-historical Images
+  author:
+  - Springstein, Matthias
+  - Schneider, Stefanie
+  - Althaus, Christian
+  - Ewerth, Ralph
+  date: 2022
+  editor:
+  - Magalhães, João
+  - Bimbo, Alberto Del
+  - Satoh, Shin'ichi
+  - Sebe, Nicu
+  - Alameda-Pineda, Xavier
+  - Jin, Qin
+  - Oria, Vincent
+  - Toni, Laura
+  page-range: 1107–1116
+  serial-number:
+    doi: 10.1145/3503161.3548371
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia, {MM} 2022
+    publisher: '{ACM}'
+brandhorst2017:
+  type: article
+  title: '{Iconclass}. {A} Key to Collaboration in the Digital Humanities'
+  author:
+  - Brandhorst, Hans
+  - Posthumus, Etienne
+  date: 2017
+  editor: Hourihane, Colum
+  page-range: 201–218
+  parent:
+    type: proceedings
+    title: The Routledge Companion to Medieval Iconography
+    publisher: Routledge
+    location: Milton Park
+    parent:
+      type: proceedings
+      title: Routledge Art History and Visual Studies Companions
+dosovitskiy2021:
+  type: article
+  title: An Image is Worth 16x16 Words. {T}ransformers for Image Recognition at Scale
+  author:
+  - Dosovitskiy, Alexey
+  - Beyer, Lucas
+  - Kolesnikov, Alexander
+  - Weissenborn, Dirk
+  - Zhai, Xiaohua
+  - Unterthiner, Thomas
+  - Dehghani, Mostafa
+  - Minderer, Matthias
+  - Heigold, Georg
+  - Gelly, Sylvain
+  - Uszkoreit, Jakob
+  - Houlsby, Neil
+  date: 2021
+  parent:
+    type: proceedings
+    title: International Conference on Learning Representations, {ICLR} 2021
+huang2019:
+  type: article
+  title: Hierarchical Multi-label Text Classification. {A}n Attention-based Recurrent Network Approach
+  author:
+  - Huang, Wei
+  - Chen, Enhong
+  - Liu, Qi
+  - Chen, Yuying
+  - Huang, Zai
+  - Liu, Yang
+  - Zhao, Zhou
+  - Zhang, Dan
+  - Wang, Shijin
+  date: 2019
+  editor:
+  - Zhu, Wenwu
+  - Tao, Dacheng
+  - Cheng, Xueqi
+  - Cui, Peng
+  - Rundensteiner, Elke A.
+  - Carmel, David
+  - He, Qi
+  - Yu, Jeffrey Xu
+  page-range: 1051–1060
+  serial-number:
+    doi: 10.1145/3357384.3357885
+  parent:
+    type: proceedings
+    title: International Conference on Information and Knowledge Management, {CIKM} 2019
+    publisher: '{ACM}'
+vens2008:
+  type: article
+  title: Decision Trees for Hierarchical Multi-label Classification
+  author:
+  - Vens, Celine
+  - Struyf, Jan
+  - Schietgat, Leander
+  - Dzeroski, Saso
+  - Blockeel, Hendrik
+  date: 2008
+  page-range: 185–214
+  serial-number:
+    doi: 10.1007/s10994-008-5077-3
+  parent:
+    type: periodical
+    title: Machine Learning
+    issue: 2
+    volume: 73
+DevlinCLT19:
+  type: article
+  title: '{BERT.} {P}re-training of Deep Bidirectional Transformers for Language Understanding'
+  author:
+  - Devlin, Jacob
+  - Chang, Ming-Wei
+  - Lee, Kenton
+  - Toutanova, Kristina
+  date: 2019
+  editor:
+  - Burstein, Jill
+  - Doran, Christy
+  - Solorio, Thamar
+  page-range: 4171–4186
+  serial-number:
+    doi: 10.18653/v1/n19-1423
+  parent:
+    type: proceedings
+    title: Conference of the North American Chapter of the Association for Computational Linguistics, Human Language Technologies, {NAACL-HLT} 2019
+    publisher: Association for Computational Linguistics
+VaswaniSPUJGKP17:
+  type: article
+  title: Attention is All you Need
+  author:
+  - Vaswani, Ashish
+  - Shazeer, Noam
+  - Parmar, Niki
+  - Uszkoreit, Jakob
+  - Jones, Llion
+  - Gomez, Aidan N.
+  - Kaiser, Lukasz
+  - Polosukhin, Illia
+  date: 2017
+  editor:
+  - Guyon, Isabelle
+  - name: Luxburg
+    given-name: Ulrike
+    prefix: von
+  - Bengio, Samy
+  - Wallach, Hanna M.
+  - Fergus, Rob
+  - Vishwanathan, S. V. N.
+  - Garnett, Roman
+  page-range: 5998–6008
+  url: https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+  parent:
+    type: proceedings
+    title: Neural Information Processing Systems, {NeurIPS} 2017
+RadfordKHRGASAM21:
+  type: article
+  title: Learning Transferable Visual Models From Natural Language Supervision
+  author:
+  - Radford, Alec
+  - Kim, Jong Wook
+  - Hallacy, Chris
+  - Ramesh, Aditya
+  - Goh, Gabriel
+  - Agarwal, Sandhini
+  - Sastry, Girish
+  - Askell, Amanda
+  - Mishkin, Pamela
+  - Clark, Jack
+  - Krueger, Gretchen
+  - Sutskever, Ilya
+  date: 2021
+  editor:
+  - Meila, Marina
+  - Zhang, Tong
+  page-range: 8748–8763
+  url: http://proceedings.mlr.press/v139/radford21a.html
+  parent:
+    type: proceedings
+    title: International Conference on Machine Learning, {ICML} 2021
+    publisher: '{PMLR}'
+    volume: 139
+    parent:
+      type: proceedings
+      title: Proceedings of Machine Learning Research
+jylanki2010thousand:
+  type: article
+  title: A Thousand Ways to Pack the Bin. {A} Practical Approach to Two-dimensional Rectangle Bin Packing
+  author: Jylänki, Jukka
+  date: 2010
+  url: http://clb.demon.fi/files/RectangleBinPack.pdf
+  parent:
+    type: periodical
+    publisher: Citeseer
+HeGDG17:
+  type: article
+  title: Mask {R-CNN}
+  author:
+  - He, Kaiming
+  - Gkioxari, Georgia
+  - Dollár, Piotr
+  - Girshick, Ross B.
+  date: 2017
+  page-range: 2980–2988
+  serial-number:
+    doi: 10.1109/ICCV.2017.322
+  parent:
+    type: proceedings
+    title: International Conference on Computer Vision, {ICCV} 2017
+    publisher: '{IEEE}'
+    location: New York
+MadhuMKBMC20:
+  type: article
+  title: Understanding Compositional Structures in Art Historical Images Using Pose and Gaze Priors. {T}owards Scene Understanding in Digital Art History
+  author:
+  - Madhu, Prathmesh
+  - Marquart, Tilman
+  - Kosti, Ronak
+  - Bell, Peter
+  - Maier, Andreas K.
+  - Christlein, Vincent
+  date: 2020
+  editor:
+  - Bartoli, Adrien
+  - Fusiello, Andrea
+  page-range: 109–125
+  serial-number:
+    doi: 10.1007/978-3-030-66096-3\_9
+  parent:
+    type: proceedings
+    title: Workshop co-located with the European Conference on Computer Vision, {ECCV} 2020
+    publisher: Springer
+    location: Cham
+    volume: 12536
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+radford2019language:
+  type: article
+  title: Language Models are Unsupervised Multitask Learners
+  author:
+  - Radford, Alec
+  - Wu, Jeff
+  - Child, Rewon
+  - Luan, David
+  - Amodei, Dario
+  - Sutskever, Ilya
+  date: 2019
+  parent:
+    type: periodical
+CondeT21:
+  type: article
+  title: '{CLIP-Art}. {C}ontrastive Pre-Training for Fine-Grained Art Classification'
+  author:
+  - Conde, Marcos V.
+  - Turgutlu, Kerem
+  date: 2021
+  page-range: 3956–3960
+  serial-number:
+    doi: 10.1109/CVPRW53098.2021.00444
+  parent:
+    type: proceedings
+    title: Workshop co-located with the Computer Vision and Pattern Recognition, {CVPR} 2021
+    publisher: '{IEEE}'
+    location: New York
+brank2017annotating:
+  type: article
+  title: Annotating Documents with Relevant Wikipedia Concepts
+  author:
+  - Brank, Janez
+  - Leban, Gregor
+  - Grobelnik, Marko
+  date: 2017
+  parent:
+    type: proceedings
+    volume: 472
+LinMBHPRDZ14:
+  type: article
+  title: Microsoft {COCO}. {C}ommon Objects in Context
+  author:
+  - Lin, Tsung-Yi
+  - Maire, Michael
+  - Belongie, Serge J.
+  - Hays, James
+  - Perona, Pietro
+  - Ramanan, Deva
+  - Dollár, Piotr
+  - Zitnick, C. Lawrence
+  date: 2014
+  editor:
+  - Fleet, David J.
+  - Pajdla, Tomás
+  - Schiele, Bernt
+  - Tuytelaars, Tinne
+  page-range: 740–755
+  serial-number:
+    doi: 10.1007/978-3-319-10602-1\_48
+  parent:
+    type: proceedings
+    title: European Conference on Computer Vision, {ECCV} 2014
+    publisher: Springer
+    location: Cham
+    volume: 8693
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+LiXWZ0Z0JC22:
+  type: article
+  title: '{CLIP}-Event. {C}onnecting Text and Images with Event Structures'
+  author:
+  - Li, Manling
+  - Xu, Ruochen
+  - Wang, Shuohang
+  - Zhou, Luowei
+  - Lin, Xudong
+  - Zhu, Chenguang
+  - Zeng, Michael
+  - Ji, Heng
+  - Chang, Shih-Fu
+  date: 2022
+  page-range: 16399–16408
+  serial-number:
+    doi: 10.1109/CVPR52688.2022.01593
+  parent:
+    type: proceedings
+    title: ' Computer Vision and Pattern Recognition, {CVPR} 2022'
+    publisher: '{IEEE}'
+    location: New York
+abs-2210-11416:
+  type: article
+  title: Scaling Instruction-Finetuned Language Models
+  author:
+  - Chung, Hyung Won
+  - Hou, Le
+  - Longpre, Shayne
+  - Zoph, Barret
+  - Tay, Yi
+  - Fedus, William
+  - Li, Eric
+  - Wang, Xuezhi
+  - Dehghani, Mostafa
+  - Brahma, Siddhartha
+  - Webson, Albert
+  - Gu, Shixiang Shane
+  - Dai, Zhuyun
+  - Suzgun, Mirac
+  - Chen, Xinyun
+  - Chowdhery, Aakanksha
+  - Narang, Sharan
+  - Mishra, Gaurav
+  - Yu, Adams
+  - Zhao, Vincent Y.
+  - Huang, Yanping
+  - Dai, Andrew M.
+  - Yu, Hongkun
+  - Petrov, Slav
+  - Chi, Ed H.
+  - Dean, Jeff
+  - Devlin, Jacob
+  - Roberts, Adam
+  - Zhou, Denny
+  - Le, Quoc V.
+  - Wei, Jason
+  date: 2022
+  serial-number:
+    arxiv: '2210.11416'
+  parent:
+    type: periodical
+abs-2301-12597:
+  type: article
+  title: '{BLIP-2}. {B}ootstrapping Language-image Pre-training with Frozen Image Encoders and Large Language Models'
+  author:
+  - Li, Junnan
+  - Li, Dongxu
+  - Savarese, Silvio
+  - Hoi, Steven C. H.
+  date: 2023
+  serial-number:
+    arxiv: '2301.12597'
+  parent:
+    type: periodical
+abs-2305-06500:
+  type: article
+  title: '{InstructBLIP}. {T}owards General-purpose Vision-language Models with Instruction Tuning'
+  author:
+  - Dai, Wenliang
+  - Li, Junnan
+  - Li, Dongxu
+  - Tiong, Anthony Meng Huat
+  - Zhao, Junqi
+  - Wang, Weisheng
+  - Li, Boyang
+  - Fung, Pascale
+  - Hoi, Steven C. H.
+  date: 2023
+  serial-number:
+    arxiv: '2305.06500'
+  parent:
+    type: periodical
+ZhaoLX11:
+  type: article
+  title: Large-Scale Category Structure Aware Image Categorization
+  author:
+  - Zhao, Bin
+  - Fei-Fei, Li
+  - Xing, Eric P.
+  date: 2011
+  editor:
+  - Shawe-Taylor, John
+  - Zemel, Richard S.
+  - Bartlett, Peter L.
+  - Pereira, Fernando C. N.
+  - Weinberger, Kilian Q.
+  page-range: 1251–1259
+  url: https://proceedings.neurips.cc/paper/2011/hash/d5cfead94f5350c12c322b5b664544c1-Abstract.html
+  parent:
+    type: proceedings
+    title: Neural Information Processing Systems, {NeurIPS} 2011
+GarnotL21:
+  type: article
+  title: Leveraging Class Hierarchies with Metric-Guided Prototype Learning
+  author:
+  - Garnot, Vivien Sainte Fare
+  - Landrieu, Loïc
+  date: 2021
+  page-range: 123
+  url: https://www.bmvc2021-virtualconference.com/assets/papers/0084.pdf
+  parent:
+    type: proceedings
+    title: British Machine Vision Conference 2021, {BMVC} 2021
+    publisher: '{BMVA} Press'
+AkataRWLS15:
+  type: article
+  title: Evaluation of Output Embeddings for Fine-grained Image Classification
+  author:
+  - Akata, Zeynep
+  - Reed, Scott E.
+  - Walter, Daniel
+  - Lee, Honglak
+  - Schiele, Bernt
+  date: 2015
+  page-range: 2927–2936
+  serial-number:
+    doi: 10.1109/CVPR.2015.7298911
+  parent:
+    type: proceedings
+    title: '{IEEE} Computer Vision and Pattern Recognition, {CVPR} 2015'
+    publisher: '{IEEE}'
+    location: New York
+abs-1709-09890:
+  type: article
+  title: '{B-CNN}. {B}ranch Convolutional Neural Network for Hierarchical Classification'
+  author:
+  - Zhu, Xinqi
+  - Bain, Michael
+  date: 2017
+  serial-number:
+    arxiv: '1709.09890'
+  parent:
+    type: periodical
+TaoufiqNB20:
+  type: article
+  title: '{HierarchyNet}. {H}ierarchical {CNN}-Based Urban Building Classification'
+  author:
+  - Taoufiq, Salma
+  - Nagy, Balázs
+  - Benedek, Csaba
+  date: 2020
+  page-range: 3794
+  serial-number:
+    doi: 10.3390/rs12223794
+  parent:
+    type: periodical
+    title: Remote Sensing
+    issue: 22
+    volume: 12
+YanZPJDDY15:
+  type: article
+  title: '{HD-CNN}. {H}ierarchical Deep Convolutional Neural Networks for Large Scale Visual Recognition'
+  author:
+  - Yan, Zhicheng
+  - Zhang, Hao
+  - Piramuthu, Robinson
+  - Jagadeesh, Vignesh
+  - DeCoste, Dennis
+  - Di, Wei
+  - Yu, Yizhou
+  date: 2015
+  page-range: 2740–2748
+  serial-number:
+    doi: 10.1109/ICCV.2015.314
+  parent:
+    type: proceedings
+    title: '{IEEE} International Conference on Computer Vision, {ICCV} 2015'
+    publisher: '{IEEE}'
+    location: New York
+DengBLF10:
+  type: article
+  title: What Does Classifying More Than 10,000 Image Categories Tell Us?
+  author:
+  - Deng, Jia
+  - Berg, Alexander C.
+  - Li, Kai
+  - Fei-Fei, Li
+  date: 2010
+  editor:
+  - Daniilidis, Kostas
+  - Maragos, Petros
+  - Paragios, Nikos
+  page-range: 71–84
+  serial-number:
+    doi: 10.1007/978-3-642-15555-0\_6
+  parent:
+    type: proceedings
+    title: European Conference on Computer Vision, {ECCV} 2010
+    publisher: Springer
+    location: Cham
+    volume: 6315
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+BertinettoMTSL20:
+  type: article
+  title: Making Better Mistakes. {L}everaging Class Hierarchies With Deep Networks
+  author:
+  - Bertinetto, Luca
+  - Müller, Romain
+  - Tertikas, Konstantinos
+  - Samangooei, Sina
+  - Lord, Nicholas A.
+  date: 2020
+  page-range: 12503–12512
+  serial-number:
+    doi: 10.1109/CVPR42600.2020.01252
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Computer Vision and Pattern Recognition, {CVPR} 2020'
+    publisher: '{IEEE}'
+    location: New York
+BengioWG10:
+  type: article
+  title: Label Embedding Trees for Large Multi-Class Tasks
+  author:
+  - Bengio, Samy
+  - Weston, Jason
+  - Grangier, David
+  date: 2010
+  editor:
+  - Lafferty, John D.
+  - Williams, Christopher K. I.
+  - Shawe-Taylor, John
+  - Zemel, Richard S.
+  - Culotta, Aron
+  page-range: 163–171
+  url: https://proceedings.neurips.cc/paper/2010/hash/06138bc5af6023646ede0e1f7c1eac75-Abstract.html
+  parent:
+    type: proceedings
+    title: Neural Information Processing Systems, {NeurIPS} 2010
+    publisher: Curran Associates, Inc.
+ZhangXXR22:
+  type: article
+  title: Use All The Labels. {A} Hierarchical Multi-Label Contrastive Learning Framework
+  author:
+  - Zhang, Shu
+  - Xu, Ran
+  - Xiong, Caiming
+  - Ramaiah, Chetan
+  date: 2022
+  page-range: 16639–16648
+  serial-number:
+    doi: 10.1109/CVPR52688.2022.01616
+  parent:
+    type: proceedings
+    title: '{IEEE} Computer Vision and Pattern Recognition, {CVPR} 2022'
+    publisher: '{IEEE}'
+    location: New York
+ChangPZMS021:
+  type: article
+  title: Your \\enquote\{Flamingo\} is My \\enquote\{Bird\}. {F}ine-Grained, or Not
+  author:
+  - Chang, Dongliang
+  - Pang, Kaiyue
+  - Zheng, Yixiao
+  - Ma, Zhanyu
+  - Song, Yi-Zhe
+  - Guo, Jun
+  date: 2021
+  page-range: 11476–11485
+  serial-number:
+    doi: 10.1109/CVPR46437.2021.01131
+  parent:
+    type: proceedings
+    title: '{IEEE} Computer Vision and Pattern Recognition, {CVPR} 2021'
+    publisher: '{IEEE}'
+    location: New York
+RedmonF17:
+  type: article
+  title: '{YOLO9000}. {B}etter, Faster, Stronger'
+  author:
+  - Redmon, Joseph
+  - Farhadi, Ali
+  date: 2017
+  page-range: 6517–6525
+  serial-number:
+    doi: 10.1109/CVPR.2017.690
+  parent:
+    type: proceedings
+    title: '{IEEE} Computer Vision and Pattern Recognition, {CVPR} 2017'
+    publisher: '{IEEE}'
+    location: New York
+ChenWLQ22:
+  type: article
+  title: Label Relation Graphs Enhanced Hierarchical Residual Network for Hierarchical Multi-Granularity Classification
+  author:
+  - Chen, Jingzhou
+  - Wang, Peng
+  - Liu, Jian
+  - Qian, Yuntao
+  date: 2022
+  page-range: 4848–4857
+  serial-number:
+    doi: 10.1109/CVPR52688.2022.00481
+  parent:
+    type: proceedings
+    title: '{IEEE} Computer Vision and Pattern Recognition, {CVPR} 2022'
+    publisher: '{IEEE}'
+    location: New York
+GiunchigliaL20:
+  type: article
+  title: Coherent Hierarchical Multi-label Classification Networks
+  author:
+  - Giunchiglia, Eleonora
+  - Lukasiewicz, Thomas
+  date: 2020
+  editor:
+  - Larochelle, Hugo
+  - Ranzato, Marc'Aurelio
+  - Hadsell, Raia
+  - Balcan, Maria-Florina
+  - Lin, Hsuan-Tien
+  url: https://proceedings.neurips.cc/paper/2020/hash/6dd4e10e3296fa63738371ec0d5df818-Abstract.html
+  parent:
+    type: proceedings
+    title: Neural Information Processing Systems, {NeurIPS} 2020
+WehrmannCB18:
+  type: article
+  title: Hierarchical Multi-Label Classification Networks
+  author:
+  - Wehrmann, Jonatas
+  - Cerri, Ricardo
+  - Barros, Rodrigo C.
+  date: 2018
+  editor:
+  - Dy, Jennifer G.
+  - Krause, Andreas
+  page-range: 5225–5234
+  url: http://proceedings.mlr.press/v80/wehrmann18a.html
+  parent:
+    type: proceedings
+    title: International Conference on Machine Learning, {ICML} 2018
+    publisher: '{PMLR}'
+    volume: 80
+    parent:
+      type: proceedings
+      title: Proceedings of Machine Learning Research
+Muller-BudackSH21:
+  type: article
+  title: Ontology-driven Event Type Classification in Images
+  author:
+  - Müller-Budack, Eric
+  - Springstein, Matthias
+  - Hakimov, Sherzod
+  - Mrutzek, Kevin
+  - Ewerth, Ralph
+  date: 2021
+  page-range: 2927–2937
+  serial-number:
+    doi: 10.1109/WACV48630.2021.00297
+  parent:
+    type: proceedings
+    title: Winter Conference on Applications of Computer Vision, {WACV} 2021
+    publisher: '{IEEE}'
+    location: New York
+abs-2303-04249:
+  type: article
+  title: Where We Are and What We're Looking At. {Q}uery Based Worldwide Image Geo-localization Using Hierarchies and Scenes
+  author:
+  - Clark, Brandon
+  - Kerrigan, Alec
+  - Kulkarni, Parth Parag
+  - Cepeda, Vicente Vivanco
+  - Shah, Mubarak
+  date: 2023
+  serial-number:
+    arxiv: '2303.04249'
+  parent:
+    type: periodical
+ilharco_gabriel_2021_5143773:
+  type: misc
+  title: OpenCLIP
+  author:
+  - Ilharco, Gabriel
+  - Wortsman, Mitchell
+  - Wightman, Ross
+  - Gordon, Cade
+  - Carlini, Nicholas
+  - Taori, Rohan
+  - Dave, Achal
+  - Shankar, Vaishaal
+  - Namkoong, Hongseok
+  - Miller, John
+  - Hajishirzi, Hannaneh
+  - Farhadi, Ali
+  - Schmidt, Ludwig
+  date: 2021
+  publisher: Zenodo
+  serial-number:
+    doi: 10.5281/zenodo.5143773
+    version: '0.1'
+ChenPSA17:
+  type: article
+  title: Rethinking Atrous Convolution for Semantic Image Segmentation
+  author:
+  - Chen, Liang-Chieh
+  - Papandreou, George
+  - Schroff, Florian
+  - Adam, Hartwig
+  date: 2017
+  serial-number:
+    arxiv: '1706.05587'
+  parent:
+    type: periodical
+HeZRS16:
+  type: article
+  title: Deep Residual Learning for Image Recognition
+  author:
+  - He, Kaiming
+  - Zhang, Xiangyu
+  - Ren, Shaoqing
+  - Sun, Jian
+  date: 2016
+  page-range: 770–778
+  serial-number:
+    doi: 10.1109/CVPR.2016.90
+  parent:
+    type: proceedings
+    title: Computer Vision and Pattern Recognition, {CVPR} 2016
+    publisher: '{IEEE}'
+    location: New York
+WuSCLNMKCGMKSJL16:
+  type: article
+  title: '{Google''s} Neural Machine Translation System. {B}ridging the Gap between Human and Machine Translation'
+  author:
+  - Wu, Yonghui
+  - Schuster, Mike
+  - Chen, Zhifeng
+  - Le, Quoc V.
+  - Norouzi, Mohammad
+  - Macherey, Wolfgang
+  - Krikun, Maxim
+  - Cao, Yuan
+  - Gao, Qin
+  - Macherey, Klaus
+  - Klingner, Jeff
+  - Shah, Apurva
+  - Johnson, Melvin
+  - Liu, Xiaobing
+  - Kaiser, Lukasz
+  - Gouws, Stephan
+  - Kato, Yoshikiyo
+  - Kudo, Taku
+  - Kazawa, Hideto
+  - Stevens, Keith
+  - Kurian, George
+  - Patil, Nishant
+  - Wang, Wei
+  - Young, Cliff
+  - Smith, Jason
+  - Riesa, Jason
+  - Rudnick, Alex
+  - Vinyals, Oriol
+  - Corrado, Greg
+  - Hughes, Macduff
+  - Dean, Jeffrey
+  date: 2016
+  serial-number:
+    arxiv: '1609.08144'
+  parent:
+    type: periodical
+abs-2212-00794:
+  type: article
+  title: Scaling Language-Image Pre-training via Masking
+  author:
+  - Li, Yanghao
+  - Fan, Haoqi
+  - Hu, Ronghang
+  - Feichtenhofer, Christoph
+  - He, Kaiming
+  date: 2022
+  serial-number:
+    arxiv: '2212.00794'
+  parent:
+    type: periodical
+abs-1807-03748:
+  type: article
+  title: Representation Learning with Contrastive Predictive Coding
+  author:
+  - name: Oord
+    given-name: Aäron
+    prefix: van den
+  - Li, Yazhe
+  - Vinyals, Oriol
+  date: 2018
+  url: http://arxiv.org/abs/1807.03748
+  parent:
+    type: periodical
+ridnik2021asymmetric:
+  type: article
+  title: Asymmetric loss for multi-label classification
+  author:
+  - Ridnik, Tal
+  - Ben-Baruch, Emanuel
+  - Zamir, Nadav
+  - Noy, Asaf
+  - Friedman, Itamar
+  - Protter, Matan
+  - Zelnik-Manor, Lihi
+  date: 2021
+  page-range: 82–91
+  parent:
+    type: proceedings
+    title: International Conference on Computer Vision, {ICCV} 2021
+Knowlson1965:
+  type: article
+  title: The Idea of Gesture as a Universal Language in the XVIIth and XVIIIth Centuries
+  author: Knowlson, James R.
+  date: 1965
+  page-range: 495–508
+  parent:
+    type: periodical
+    title: Journal of the History of Ideas
+    volume: 26
+Barasch1987:
+  type: book
+  title: Giotto and the Language of Gesture
+  author: Barasch, Moshe
+  date: 1987
+  publisher: Cambridge University Press
+  location: Cambridge
+vonAmira1905:
+  type: anthos
+  title: Die Handgebärden in den Bilderhandschriften des Sachsenspiegels
+  author:
+    name: Amira
+    given-name: Karl
+    prefix: von
+  date: 1905
+  page-range: 162–264
+  parent:
+    type: anthology
+    title: Abhandlungen der Bayerischen Akademie der Wissenschaften. Philosophisch-Philologische und Historische Klasse
+    publisher: Franz
+    location: München
+Warburg1905:
+  type: anthos
+  title: Dürer und die italienische Antike
+  author: Warburg, Aby
+  date: 1998
+  editor:
+  - Bredekamp, Horst
+  - Diers, Michael
+  page-range: 443–449
+  parent:
+    type: anthology
+    title: Die Erneuerung der heidnischen Antike. Kulturwissenschaftliche Beiträge zur Geschichte der europäischen Renaissance. Gesammelte Schriften
+    publisher: Akademie Verlag
+    location: Berlin
+Warburg1914:
+  type: anthos
+  title: Der Eintritt des antikisierenden Idealstils in die Malerei der Frührenaissance
+  author: Warburg, Aby
+  date: 1998
+  editor:
+  - Bredekamp, Horst
+  - Diers, Michael
+  page-range: 173–176
+  parent:
+    type: anthology
+    title: Die Erneuerung der heidnischen Antike. Kulturwissenschaftliche Beiträge zur Geschichte der europäischen Renaissance. Gesammelte Schriften
+    publisher: Akademie Verlag
+    location: Berlin
+Brilliant1963:
+  type: book
+  title: Gesture and Rank in Roman Art. The Use of Gestures to Denote Status in Roman Sculpture and Coinage
+  author: Brilliant, Richard
+  date: 1963
+  publisher: Connecticut Academy of Arts & Sciences
+  location: New Haven
+JenicekC19:
+  type: article
+  title: Linking Art through Human Poses
+  author:
+  - Jenícek, Tomás
+  - Chum, Ondrej
+  date: 2019
+  page-range: 1338–1345
+  url: https://doi.org/10.1109/ICDAR.2019.00216
+  serial-number:
+    doi: 10.1109/ICDAR.2019.00216
+  parent:
+    type: proceedings
+    title: 2019 International Conference on Document Analysis and Recognition, {ICDAR} 2019, Sydney, Australia, September 20–25, 2019
+    publisher: '{IEEE}'
+abs-2012-05616:
+  type: article
+  title: Enhancing Human Pose Estimation in Ancient Vase Paintings via Perceptually-grounded Style Transfer Learning
+  author:
+  - Madhu, Prathmesh
+  - Villar-Corrales, Angel
+  - Kosti, Ronak
+  - Bendschus, Torsten
+  - Reinhardt, Corinna
+  - Bell, Peter
+  - Maier, Andreas K.
+  - Christlein, Vincent
+  date: 2020
+  serial-number:
+    arxiv: '2012.05616'
+  parent:
+    type: periodical
+0012WZXXT21:
+  type: article
+  title: Pose Recognition With Cascade Transformers
+  author:
+  - Li, Ke
+  - Wang, Shijie
+  - Zhang, Xiang
+  - Xu, Yifan
+  - Xu, Weijian
+  - Tu, Zhuowen
+  date: 2021
+  page-range: 1944–1953
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021, virtual, June 19–25, 2021'
+    publisher: Computer Vision Foundation / {IEEE}
+0009XLW19:
+  type: article
+  title: Deep High-Resolution Representation Learning for Human Pose Estimation
+  author:
+  - Sun, Ke
+  - Xiao, Bin
+  - Liu, Dong
+  - Wang, Jingdong
+  date: 2019
+  page-range: 5693–5703
+  serial-number:
+    doi: 10.1109/CVPR.2019.00584
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2019, Long Beach, CA, USA, June 16–20, 2019'
+    publisher: Computer Vision Foundation / {IEEE}
+KreissBA19:
+  type: article
+  title: 'PifPaf: Composite Fields for Human Pose Estimation'
+  author:
+  - Kreiss, Sven
+  - Bertoni, Lorenzo
+  - Alahi, Alexandre
+  date: 2019
+  page-range: 11977–11986
+  serial-number:
+    doi: 10.1109/CVPR.2019.01225
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2019, Long Beach, CA, USA, June 16–20, 2019'
+    publisher: Computer Vision Foundation / {IEEE}
+ChengXWSH020:
+  type: article
+  title: 'HigherHRNet: Scale-Aware Representation Learning for Bottom-Up Human Pose Estimation'
+  author:
+  - Cheng, Bowen
+  - Xiao, Bin
+  - Wang, Jingdong
+  - Shi, Honghui
+  - Huang, Thomas S.
+  - Zhang, Lei
+  date: 2020
+  page-range: 5385–5394
+  serial-number:
+    doi: 10.1109/CVPR42600.2020.00543
+  parent:
+    type: proceedings
+    title: 2020 {IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020, Seattle, WA, USA, June 13–19, 2020
+    publisher: Computer Vision Foundation / {IEEE}
+XiaoWW18:
+  type: article
+  title: Simple Baselines for Human Pose Estimation and Tracking
+  author:
+  - Xiao, Bin
+  - Wu, Haiping
+  - Wei, Yichen
+  date: 2018
+  editor:
+  - Ferrari, Vittorio
+  - Hebert, Martial
+  - Sminchisescu, Cristian
+  - Weiss, Yair
+  page-range: 472–487
+  url: https://doi.org/10.1007/978-3-030-01231-1/_29
+  serial-number:
+    doi: 10.1007/978-3-030-01231-1\_29
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2018 - 15th European Conference, Munich, Germany, September 8–14, 2018, Proceedings, Part {VI}
+    publisher: Springer
+    volume: 11210
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+CaoHSWS21:
+  type: article
+  title: 'OpenPose: Realtime Multi-Person 2D Pose Estimation Using Part Affinity Fields'
+  author:
+  - Cao, Zhe
+  - Hidalgo, Gines
+  - Simon, Tomas
+  - Wei, Shih-En
+  - Sheikh, Yaser
+  date: 2021
+  page-range: 172–186
+  url: https://doi.org/10.1109/TPAMI.2019.2929257
+  serial-number:
+    doi: 10.1109/TPAMI.2019.2929257
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Pattern Anal. Mach. Intell.'
+    issue: 1
+    volume: 43
+painter:
+  type: web
+  title: Painter by Numbers
+  author: Nichol, Kiri
+  date: 2016
+  url: https://www.kaggle.com/c/painter-by-numbers
+artigo:
+  type: web
+  title: ARTigo – Social Image Tagging [Dataset and Images]
+  author:
+  - Becker, Matthias
+  - Bogner, Martin
+  - Bross, Fabian
+  - Bry, François
+  - Campanella, Caterina
+  - Commare, Laura
+  - Cramerotti, Silvia
+  - Jakob, Katharina
+  - Josko, Martin
+  - Kneißl, Fabian
+  - Kohle, Hubertus
+  - Krefeld, Thomas
+  - Levushkina, Elena
+  - Lücke, Stephan
+  - Puglisi, Alessandra
+  - Regner, Anke
+  - Riepl, Christian
+  - Schefels, Clemens
+  - Schemainda, Corina
+  - Schmidt, Eva
+  - Schneider, Stefanie
+  - Schön, Gerhard
+  - Schulz, Klaus
+  - Siglmüller, Franz
+  - Steinmayr, Bartholomäus
+  - Störkle, Florian
+  - Teske, Iris
+  - Wieser, Christoph
+  date: 2018
+  publisher: Open Data LMU
+  url: https://doi.org/10.5282/ubm/data.136
+  serial-number:
+    doi: 10.5282/ubm/data.136
+ZhangZD0Z20:
+  type: article
+  title: Distribution-Aware Coordinate Representation for Human Pose Estimation
+  author:
+  - Zhang, Feng
+  - Zhu, Xiatian
+  - Dai, Hanbin
+  - Ye, Mao
+  - Zhu, Ce
+  date: 2020
+  page-range: 7091–7100
+  serial-number:
+    doi: 10.1109/CVPR42600.2020.00712
+  parent:
+    type: proceedings
+    title: 2020 {IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020, Seattle, WA, USA, June 13–19, 2020
+    publisher: Computer Vision Foundation / {IEEE}
+PapandreouZCGTM18:
+  type: article
+  title: 'PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model'
+  author:
+  - Papandreou, George
+  - Zhu, Tyler
+  - Chen, Liang-Chieh
+  - Gidaris, Spyros
+  - Tompson, Jonathan
+  - Murphy, Kevin
+  date: 2018
+  editor:
+  - Ferrari, Vittorio
+  - Hebert, Martial
+  - Sminchisescu, Cristian
+  - Weiss, Yair
+  page-range: 282–299
+  url: https://doi.org/10.1007/978-3-030-01264-9/_17
+  serial-number:
+    doi: 10.1007/978-3-030-01264-9\_17
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2018 - 15th European Conference, Munich, Germany, September 8–14, 2018, Proceedings, Part {XIV}
+    publisher: Springer
+    volume: 11218
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+KarayevTHADHW14:
+  type: article
+  title: Recognizing Image Style
+  author:
+  - Karayev, Sergey
+  - Trentacoste, Matthew
+  - Han, Helen
+  - Agarwala, Aseem
+  - Darrell, Trevor
+  - Hertzmann, Aaron
+  - Winnemoeller, Holger
+  date: 2014
+  editor:
+  - Valstar, Michel François
+  - French, Andrew P.
+  - Pridmore, Tony P.
+  parent:
+    type: proceedings
+    title: British Machine Vision Conference, {BMVC} 2014, Nottingham, UK, September 1–5, 2014
+    publisher: '{BMVA} Press'
+GarciaV18:
+  type: article
+  title: 'How to Read Paintings: Semantic Art Understanding with Multi-modal Retrieval'
+  author:
+  - Garcia, Noa
+  - Vogiatzis, George
+  date: 2018
+  editor:
+  - Leal-Taixé, Laura
+  - Roth, Stefan
+  page-range: 676–691
+  url: https://doi.org/10.1007/978-3-030-11012-3/_52
+  serial-number:
+    doi: 10.1007/978-3-030-11012-3\_52
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2018 Workshops - Munich, Germany, September 8–14, 2018, Proceedings, Part {II}
+    publisher: Springer
+    volume: 11130
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+MaoCS17:
+  type: article
+  title: 'DeepArt: {L}earning Joint Representations of Visual Arts'
+  author:
+  - Mao, Hui
+  - Cheung, Ming
+  - She, James
+  date: 2017
+  editor:
+  - Liu, Qiong
+  - Lienhart, Rainer
+  - Wang, Haohong
+  - name: Chen
+    given-name: Sheng-Wei
+    prefix: '"Kuan-Ta"'
+  - Boll, Susanne
+  - Chen, Yi-Ping Phoebe
+  - Friedland, Gerald
+  - Li, Jia
+  - Yan, Shuicheng
+  page-range: 1183–1191
+  url: https://doi.org/10.1145/3123266.3123405
+  serial-number:
+    doi: 10.1145/3123266.3123405
+  parent:
+    type: proceedings
+    title: Proceedings of the 2017 {ACM} on Multimedia Conference, {MM} 2017, Mountain View, CA, USA, October 23–27, 2017
+    publisher: '{ACM}'
+abs-1906-00901:
+  type: article
+  title: The iMet Collection 2019 Challenge Dataset
+  author:
+  - Zhang, Chenyang
+  - Kaeser-Chen, Christine
+  - Vesom, Grace
+  - Choi, Jennie
+  - Kessler, Maria
+  - Belongie, Serge J.
+  date: 2019
+  serial-number:
+    arxiv: '1906.00901'
+  parent:
+    type: periodical
+StrezoskiW18:
+  type: article
+  title: 'OmniArt: {A} Large-scale Artistic Benchmark'
+  author:
+  - Strezoski, Gjorgji
+  - Worring, Marcel
+  date: 2018
+  page-range: 1–21
+  url: https://doi.org/10.1145/3273022
+  serial-number:
+    doi: 10.1145/3273022
+  parent:
+    type: periodical
+    title: '{ACM} Trans. Multim. Comput. Commun. Appl.'
+    issue: 4
+    volume: 14
+ImpettMoretti2017:
+  type: misc
+  title: 'Totentanz: Operationalizing Aby Warburg''s ''Pathosformeln'''
+  author:
+  - Impett, Leonardo
+  - Moretti, Franco
+  date: 2017
+  issue: 16
+  serial-number:
+    issn: 2164–1757
+  parent:
+    type: misc
+    title: Pamphlets of the Stanford Literary Lab
+ImpettS16:
+  type: article
+  title: Pose and Pathosformel in Aby Warburg's Bilderatlas
+  author:
+  - Impett, Leonardo
+  - Süsstrunk, Sabine
+  date: 2016
+  editor:
+  - Hua, Gang
+  - Jégou, Hervé
+  page-range: 888–902
+  url: https://doi.org/10.1007/978-3-319-46604-0/_61
+  serial-number:
+    doi: 10.1007/978-3-319-46604-0\_61
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2016 Workshops - Amsterdam, The Netherlands, October 8–10 and 15–16, 2016, Proceedings, Part {I}
+    publisher: Springer
+    volume: 9913
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+XieLHL20:
+  type: article
+  title: Self-Training With Noisy Student Improves ImageNet Classification
+  author:
+  - Xie, Qizhe
+  - Luong, Minh-Thang
+  - Hovy, Eduard H.
+  - Le, Quoc V.
+  date: 2020
+  page-range: 10684–10695
+  serial-number:
+    doi: 10.1109/CVPR42600.2020.01070
+  parent:
+    type: proceedings
+    title: 2020 {IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020, Seattle, WA, USA, June 13–19, 2020
+    publisher: Computer Vision Foundation / {IEEE}
+lee2013pseudo:
+  type: article
+  title: 'Pseudo-label: The Simple and Efficient Semi-supervised Learning Method for Deep Neural Networks'
+  author: Lee, Dong-Hyun
+  date: 2013
+  page-range: 896
+  parent:
+    type: proceedings
+    title: Workshop on Challenges in Representation Learning, ICML
+    issue: 2
+    volume: 3
+LaineA17:
+  type: article
+  title: Temporal Ensembling for Semi-Supervised Learning
+  author:
+  - Laine, Samuli
+  - Aila, Timo
+  date: 2017
+  parent:
+    type: proceedings
+    title: 5th International Conference on Learning Representations, {ICLR} 2017, Toulon, France, April 24–26, 2017, Conference Track Proceedings
+MiyatoMKI19:
+  type: article
+  title: 'Virtual Adversarial Training: {A} Regularization Method for Supervised and Semi-Supervised Learning'
+  author:
+  - Miyato, Takeru
+  - Maeda, Shin-ichi
+  - Koyama, Masanori
+  - Ishii, Shin
+  date: 2019
+  page-range: 1979–1993
+  url: https://doi.org/10.1109/TPAMI.2018.2858821
+  serial-number:
+    doi: 10.1109/TPAMI.2018.2858821
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Pattern Anal. Mach. Intell.'
+    issue: 8
+    volume: 41
+TarvainenV17:
+  type: article
+  title: 'Mean Teachers are Better Role Models: Weight-averaged Consistency Targets Improve Semi-supervised Deep Learning Results'
+  author:
+  - Tarvainen, Antti
+  - Valpola, Harri
+  date: 2017
+  parent:
+    type: proceedings
+    title: 5th International Conference on Learning Representations, {ICLR} 2017, Toulon, France, April 24–26, 2017, Workshop Track Proceedings
+BerthelotCCKSZR20:
+  type: article
+  title: 'ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring'
+  author:
+  - Berthelot, David
+  - Carlini, Nicholas
+  - Cubuk, Ekin D.
+  - Kurakin, Alex
+  - Sohn, Kihyuk
+  - Zhang, Han
+  - Raffel, Colin
+  date: 2020
+  parent:
+    type: proceedings
+    title: 8th International Conference on Learning Representations, {ICLR} 2020, Addis Ababa, Ethiopia, April 26–30, 2020
+BerthelotCGPOR19:
+  type: article
+  title: 'MixMatch: {A} Holistic Approach to Semi-Supervised Learning'
+  author:
+  - Berthelot, David
+  - Carlini, Nicholas
+  - Goodfellow, Ian J.
+  - Papernot, Nicolas
+  - Oliver, Avital
+  - Raffel, Colin
+  date: 2019
+  editor:
+  - Wallach, Hanna M.
+  - Larochelle, Hugo
+  - Beygelzimer, Alina
+  - d'Alché-Buc, Florence
+  - Fox, Emily B.
+  - Garnett, Roman
+  page-range: 5050–5060
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8–14, 2019, Vancouver, BC, Canada'
+SohnBCZZRCKL20:
+  type: article
+  title: 'FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence'
+  author:
+  - Sohn, Kihyuk
+  - Berthelot, David
+  - Carlini, Nicholas
+  - Zhang, Zizhao
+  - Zhang, Han
+  - Raffel, Colin
+  - Cubuk, Ekin Dogus
+  - Kurakin, Alexey
+  - Li, Chun-Liang
+  date: 2020
+  editor:
+  - Larochelle, Hugo
+  - Ranzato, Marc'Aurelio
+  - Hadsell, Raia
+  - Balcan, Maria-Florina
+  - Lin, Hsuan-Tien
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6–12, 2020, virtual'
+JeongLKK19:
+  type: article
+  title: Consistency-based Semi-supervised Learning for Object detection
+  author:
+  - Jeong, Jisoo
+  - Lee, Seungeui
+  - Kim, Jeesoo
+  - Kwak, Nojun
+  date: 2019
+  editor:
+  - Wallach, Hanna M.
+  - Larochelle, Hugo
+  - Beygelzimer, Alina
+  - d'Alché-Buc, Florence
+  - Fox, Emily B.
+  - Garnett, Roman
+  page-range: 10758–10767
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8–14, 2019, Vancouver, BC, Canada'
+TangRWXX21:
+  type: article
+  title: Proposal Learning for Semi-Supervised Object Detection
+  author:
+  - Tang, Peng
+  - Ramaiah, Chetan
+  - Wang, Yan
+  - Xu, Ran
+  - Xiong, Caiming
+  date: 2021
+  page-range: 2290–2300
+  url: https://doi.org/10.1109/WACV48630.2021.00234
+  serial-number:
+    doi: 10.1109/WACV48630.2021.00234
+  parent:
+    type: proceedings
+    title: '{IEEE} Winter Conference on Applications of Computer Vision, {WACV} 2021, Waikoloa, HI, USA, January 3–8, 2021'
+    publisher: '{IEEE}'
+Xu00WWWB021:
+  type: article
+  title: End-to-End Semi-Supervised Object Detection with Soft Teacher
+  author:
+  - Xu, Mengde
+  - Zhang, Zheng
+  - Hu, Han
+  - Wang, Jianfeng
+  - Wang, Lijuan
+  - Wei, Fangyun
+  - Bai, Xiang
+  - Liu, Zicheng
+  date: 2021
+  page-range: 3040–3049
+  url: https://doi.org/10.1109/ICCV48922.2021.00305
+  serial-number:
+    doi: 10.1109/ICCV48922.2021.00305
+  parent:
+    type: proceedings
+    title: 2021 {IEEE/CVF} International Conference on Computer Vision, {ICCV} 2021, Montreal, QC, Canada, October 10–17, 2021
+    publisher: '{IEEE}'
+WangYZ0L18:
+  type: article
+  title: 'Towards Human-Machine Cooperation: Self-Supervised Sample Mining for Object Detection'
+  author:
+  - Wang, Keze
+  - Yan, Xiaopeng
+  - Zhang, Dongyu
+  - Zhang, Lei
+  - Lin, Liang
+  date: 2018
+  page-range: 1605–1613
+  serial-number:
+    doi: 10.1109/CVPR.2018.00173
+  parent:
+    type: proceedings
+    title: 2018 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2018, Salt Lake City, UT, USA, June 18–22, 2018
+    publisher: Computer Vision Foundation / {IEEE} Computer Society
+CarionMSUKZ20:
+  type: article
+  title: End-to-End Object Detection with Transformers
+  author:
+  - Carion, Nicolas
+  - Massa, Francisco
+  - Synnaeve, Gabriel
+  - Usunier, Nicolas
+  - Kirillov, Alexander
+  - Zagoruyko, Sergey
+  date: 2020
+  editor:
+  - Vedaldi, Andrea
+  - Bischof, Horst
+  - Brox, Thomas
+  - Frahm, Jan-Michael
+  page-range: 213–229
+  url: https://doi.org/10.1007/978-3-030-58452-8/_13
+  serial-number:
+    doi: 10.1007/978-3-030-58452-8\_13
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2020 - 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part {I}
+    publisher: Springer
+    volume: 12346
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+kuhn1955hungarian:
+  type: article
+  title: The Hungarian Method for the Assignment Problem
+  author: Kuhn, Harold W.
+  date: 1955
+  page-range: 83–97
+  parent:
+    type: periodical
+    title: Naval research logistics quarterly
+    publisher: Wiley Online Library
+    issue: 1–2
+    volume: 2
+RezatofighiTGS019:
+  type: article
+  title: 'Generalized Intersection Over Union: {A} Metric and a Loss for Bounding Box Regression'
+  author:
+  - Rezatofighi, Hamid
+  - Tsoi, Nathan
+  - Gwak, JunYoung
+  - Sadeghian, Amir
+  - Reid, Ian D.
+  - Savarese, Silvio
+  date: 2019
+  page-range: 658–666
+  serial-number:
+    doi: 10.1109/CVPR.2019.00075
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2019, Long Beach, CA, USA, June 16–20, 2019'
+    publisher: Computer Vision Foundation / {IEEE}
+RenHGS15:
+  type: article
+  title: Faster {R-CNN:} Towards Real-Time Object Detection with Region Proposal Networks
+  author:
+  - Ren, Shaoqing
+  - He, Kaiming
+  - Girshick, Ross B.
+  - Sun, Jian
+  date: 2015
+  editor:
+  - Cortes, Corinna
+  - Lawrence, Neil D.
+  - Lee, Daniel D.
+  - Sugiyama, Masashi
+  - Garnett, Roman
+  page-range: 91–99
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 28: Annual Conference on Neural Information Processing Systems 2015, December 7–12, 2015, Montreal, Quebec, Canada'
+WestlakeCH16:
+  type: article
+  title: Detecting People in Artwork with CNNs
+  author:
+  - Westlake, Nicholas
+  - Cai, Hongping
+  - Hall, Peter
+  date: 2016
+  editor:
+  - Hua, Gang
+  - Jégou, Hervé
+  page-range: 825–841
+  url: https://doi.org/10.1007/978-3-319-46604-0/_57
+  serial-number:
+    doi: 10.1007/978-3-319-46604-0\_57
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2016 Workshops - Amsterdam, The Netherlands, October 8–10 and 15–16, 2016, Proceedings, Part {I}
+    publisher: Springer
+    volume: 9913
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+CaiWCH15:
+  type: article
+  title: 'The Cross-Depiction Problem: Computer Vision Algorithms for Recognising Objects in Artwork and in Photographs'
+  author:
+  - Cai, Hongping
+  - Wu, Qi
+  - Corradi, Tadeo
+  - Hall, Peter
+  date: 2015
+  serial-number:
+    arxiv: '1505.00110'
+  parent:
+    type: periodical
+KingmaB14:
+  type: article
+  title: 'Adam: {A} Method for Stochastic Optimization'
+  author:
+  - Kingma, Diederik P.
+  - Ba, Jimmy
+  date: 2015
+  editor:
+  - Bengio, Yoshua
+  - LeCun, Yann
+  url: http://arxiv.org/abs/1412.6980
+  parent:
+    type: proceedings
+    title: 3rd International Conference on Learning Representations, {ICLR} 2015, San Diego, CA, USA, May 7–9, 2015, Conference Track Proceedings
+KadishRL21:
+  type: article
+  title: Improving Object Detection in Art Images Using Only Style Transfer
+  author:
+  - Kadish, David
+  - Risi, Sebastian
+  - Løvlie, Anders Sundnes
+  date: 2021
+  page-range: 1–8
+  url: https://doi.org/10.1109/IJCNN52387.2021.9534264
+  serial-number:
+    doi: 10.1109/IJCNN52387.2021.9534264
+  parent:
+    type: proceedings
+    title: International Joint Conference on Neural Networks, {IJCNN} 2021, Shenzhen, China, July 18–22, 2021
+    publisher: '{IEEE}'
+HoK09:
+  type: article
+  title: Indexing and Retrieving Motions of Characters in Close Contact
+  author:
+  - Ho, Edmond S. L.
+  - Komura, Taku
+  date: 2009
+  page-range: 481–492
+  url: https://doi.org/10.1109/TVCG.2008.199
+  serial-number:
+    doi: 10.1109/TVCG.2008.199
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Vis. Comput. Graph.'
+    issue: 3
+    volume: 15
+GonthierLG22:
+  type: article
+  title: Multiple Instance Learning on Deep Features for Weakly Supervised Object Detection with Extreme Domain Shifts
+  author:
+  - Gonthier, Nicolas
+  - Ladjal, Saïd
+  - Gousseau, Yann
+  date: 2022
+  page-range: 103299
+  url: https://doi.org/10.1016/j.cviu.2021.103299
+  serial-number:
+    doi: 10.1016/j.cviu.2021.103299
+  parent:
+    type: periodical
+    title: Comput. Vis. Image Underst.
+    volume: 214
+chen2021artistic:
+  type: article
+  title: Artistic Style Transfer with Internal-external Learning and Contrastive Learning
+  author:
+  - Chen, Haibo
+  - Zhao, Lei
+  - Wang, Zhizhong
+  - Ming, Zhang Hui
+  - Zuo, Zhiwen
+  - Li, Ailin
+  - Xing, Wei
+  - Lu, Dongming
+  date: 2021
+  parent:
+    type: proceedings
+    title: Thirty-Fifth Conference on Neural Information Processing Systems
+ChenZNYWX11:
+  type: article
+  title: Learning a 3D Human Pose Distance Metric from Geometric Pose Descriptor
+  author:
+  - Chen, Cheng
+  - Zhuang, Yueting
+  - Nie, Feiping
+  - Yang, Yi
+  - Wu, Fei
+  - Xiao, Jun
+  date: 2011
+  page-range: 1676–1689
+  url: https://doi.org/10.1109/TVCG.2010.272
+  serial-number:
+    doi: 10.1109/TVCG.2010.272
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Vis. Comput. Graph.'
+    issue: 11
+    volume: 17
+HaradaTMS04:
+  type: article
+  title: Quantitative Evaluation Method for Pose and Motion Similarity Based on Human Perception
+  author:
+  - Harada, Tatsuya
+  - Taoka, So
+  - Mori, Taketoshi
+  - Sato, Tomomasa
+  date: 2004
+  page-range: 494–512
+  url: https://doi.org/10.1109/ICHR.2004.1442140
+  serial-number:
+    doi: 10.1109/ICHR.2004.1442140
+  parent:
+    type: proceedings
+    title: 4th {IEEE/RAS} International Conference on Humanoid Robots, Humanoids 2004, Santa Monica, CA, USA, November 10–12, 2004
+    publisher: '{IEEE}'
+abs-2106-13797:
+  type: article
+  title: 'PVTv2: Improved Baselines with Pyramid Vision Transformer'
+  author:
+  - Wang, Wenhai
+  - Xie, Enze
+  - Li, Xiang
+  - Fan, Deng-Ping
+  - Song, Kaitao
+  - Liang, Ding
+  - Lu, Tong
+  - Luo, Ping
+  - Shao, Ling
+  date: 2021
+  serial-number:
+    arxiv: '2106.13797'
+  parent:
+    type: periodical
+
+
+
+Wölfflin1915:
+  type: book
+  title: Kunstgeschichtliche Grundbegriffe
+  author: Wölfflin, Heinrich
+  date: 1915
+  publisher: Bruckmann
+  location: Munich
+Bruhn2005:
+  type: anthos
+  title: Der Bilderatlas vor und nach dem Zeitalter der Digitalisierung
+  author: Bruhn, Mathias
+  date: 2005
+  editor: Flach, Sabine
+  page-range: 181–200
+  parent:
+    type: anthology
+    title: Der Bilderatlas im Wechsel der Künste und Medien
+Monroy2014:
+  type: article
+  title: Morphological Analysis for Investigating Artistic Images
+  author:
+  - Monroy, Antonio
+  - Bell, Peter
+  - Ommer, Björn
+  date: 2014
+  page-range: 414–423
+  parent:
+    type: periodical
+    title: Image and Vision Computing
+    issue: 6
+    volume: 32
+Schlecht2011:
+  type: anthos
+  title: Detecting Gestures in Medieval Images
+  author:
+  - Schlecht, Joseph
+  - Carque, Bernd
+  - Ommer, Björn
+  date: 2011
+  page-range: 1285–1288
+  parent:
+    type: anthology
+    title: Proceedings of the 18th IEEE International Conference on Image Processing
+Bergel2013:
+  type: anthos
+  title: Content-based Image Recognition on Printed Broadside Ballads. {T}he Bodleian Libraries' Imagematch Tool
+  author:
+  - Bergel, Giles
+  - Franklin, Alexandra
+  - Heaney, Michael
+  - Arand-Jelovic, Relja
+  - Zisserman, Andrew
+  - Funke, Donata
+  date: 2013
+  parent:
+    type: anthology
+    title: Proceedings of the IFLA World Library and Information Congress
+Malaspina2017:
+  type: article
+  title: Image-matching Technology Applied to Fifteenth-century Printed Book Illustration
+  author:
+  - Malaspina, Matilde
+  - Zhong, Yujie
+  date: 2017
+  page-range: 287–292
+  parent:
+    type: periodical
+    title: Lettera Matematica
+    issue: 4
+    volume: 5
+Takami2014:
+  type: anthos
+  title: An Approach to Large Scale Interactive Retrieval of Cultural Heritage
+  author:
+  - Takami, Masato
+  - Bell, Peter
+  - Ommer, Björn
+  date: 2014
+  page-range: 87–95
+  parent:
+    type: anthology
+    title: Eurographics Workshop on Graphics and Cultural Heritage
+Yarlagadda2011:
+  type: anthos
+  title: Recognition and Analysis of Objects in Medieval Images
+  author:
+  - Yarlagadda, Pradeep
+  - Monroy, Antonio
+  - Carque, Bernd
+  - Ommer, Björn
+  date: 2011
+  page-range: 296–305
+  parent:
+    type: anthology
+    title: Proceedings of the ACCV Workshop on Computer Vision
+Hentschel2016:
+  type: anthos
+  title: An Approach to Large Scale Interactive Retrieval of Cultural Heritage
+  author:
+  - Hentschel, Christian
+  - Wiradarma, Timur P.
+  - Sack, Harald
+  date: 2016
+  page-range: 3693–3697
+  parent:
+    type: anthology
+    title: Proceedings of the 23th IEEE International Conference on Image Processing
+Gatys2015:
+  type: manuscript
+  title: A Neural Algorithm of Artistic Style
+  author:
+  - Gatys, Leon A.
+  - Ecker, Alexander S.
+  - Bethge, Matthias
+  date: 2015
+  url: https://arxiv.org/abs/1508.06576
+  serial-number:
+    arxiv: '1508.06576'
+Saleh2015:
+  type: manuscript
+  title: Large-scale Classification of Fine-art Paintings. {L}earning the Right Metric on the Right Feature
+  author:
+  - Saleh, Babak
+  - Elgammal, Ahmed M.
+  date: 2015
+  url: https://arxiv.org/abs/1505.00855
+  serial-number:
+    arxiv: '1505.00855'
+Oliva2001:
+  type: article
+  title: Modeling the Shape of the Scene. {A} Holistic Representation of the Spatial Envelope
+  author:
+  - Oliva, Aude
+  - Torralba, Antonio
+  date: 2001
+  page-range: 145–175
+  parent:
+    type: periodical
+    title: International Journal of Computer Vision
+    publisher: Kluwer Academic Publishers
+    location: Dordrecht
+    issue: 3
+    volume: 42
+Torresani2010:
+  type: anthos
+  title: Efficient Object Category Recognition Using Classemes
+  author:
+  - Torresani, Lorenzo
+  - Szummer, Martin
+  - Fitzgibbon, Andrew W.
+  date: 2010
+  page-range: 776–789
+  parent:
+    type: anthology
+    title: Proceedings of the 11th European Conference on Computer Vision
+    publisher: Springer
+    location: Berlin, Heidelberg
+Bergamo2011:
+  type: anthos
+  title: '{PiCoDes}. {L}earning a Compact Code for Novel-category Recognition'
+  author:
+  - Bergamo, Alessandro
+  - Torresani, Lorenzo
+  - Fitzgibbon, Andrew W.
+  date: 2011
+  page-range: 2088–2096
+  parent:
+    type: anthology
+    title: Advances in Neural Information Processing Systems
+    publisher: The MIT Press
+    location: Cambridge, Massachusetts
+Vaughan1992:
+  type: article
+  title: Automated Picture Referencing. {A} Further Look at \\enquote\{Morelli\}
+  author: Vaughan, William
+  date: 1992
+  page-range: 7–18
+  parent:
+    type: periodical
+    title: Computers and the History of Art
+    publisher: Harwood Academic Publishers
+    location: London
+    issue: 2
+    volume: 2
+Brantl2017:
+  type: article
+  title: '{Visuelle Suche in historischen Werken}'
+  author:
+  - Brantl, Markus
+  - Ceynowa, Klaus
+  - Meiers, Thomas
+  - Wolf, Thomas
+  date: 2017
+  page-range: 53–60
+  parent:
+    type: periodical
+    title: '{Datenbank-Spektrum. Zeitschrift für Datenbanktechnologien und Information Retrieval}'
+    publisher: Springer
+    location: Berlin, Heidelberg
+    issue: 1
+    volume: 17
+Manjunath2002:
+  type: book
+  title: Introduction to {MPEG-7}. {M}ultimedia Content Description Interface
+  author:
+  - Manjunath, B.S.
+  - Salembier, Philippe
+  - Sikora, Thomas
+  date: 2002
+  publisher: John Wiley & Sons Ltd.
+  location: Chichester
+Gonthier2018:
+  type: manuscript
+  title: Weakly Supervised Object Detection in Artworks
+  author:
+  - Gonthier, Nicolas
+  - Gousseau, Yann
+  - Ladjal, Said
+  - Bonfait, Olivier
+  date: 2018
+  url: https://arxiv.org/abs/1810.02569
+  serial-number:
+    arxiv: '1810.02569'
+Westlake2016:
+  type: article
+  title: Detecting People in Artwork with CNNs
+  author:
+  - Westlake, Nicholas
+  - Cai, Hongping
+  - Hall, Peter
+  date: 2016
+  parent:
+    type: proceedings
+    title: Computer Vision – ECCV 2016 Workshops
+    publisher: Springer
+    volume: 9913
+Mensink2014:
+  type: article
+  title: The Rijksmuseum Challenge. Museum-centered Visual Recognition
+  author:
+  - Mensink, Thomas
+  - name: Gemert
+    given-name: Jan
+    prefix: van
+  date: 2014
+  page-range: 451–454
+  parent:
+    type: proceedings
+    title: Proceedings of the International Conference on Multimedia Retrieval
+Sabatelli2018:
+  type: article
+  title: Deep Transfer Learning for Art Classification Problems
+  author:
+  - Sabatelli, Matthia
+  - Kestemont, Mike
+  - Daelemans, Walter
+  - Geurts, Pierre
+  date: 2018
+  parent:
+    type: proceedings
+    title: Computer Vision – ECCV 2018 Workshops
+    publisher: Springer
+    volume: 48
+Yang2018:
+  type: article
+  title: Historical Context-based Style Classification of Painting Images via Label Distribution Learning
+  author:
+  - Yang, Jufeng
+  - Chen, Liyi
+  - Zhang, Le
+  - Sun, Xiaoxiao
+  - She, Dongyu
+  - Lu, Shaoping
+  - Cheng, Ming-Ming
+  date: 2018
+  page-range: 1154–1162
+  parent:
+    type: proceedings
+    title: Proceedings of the 26th ACM International Conference on Multimedia
+Thomas2018:
+  type: article
+  title: Artistic Object Recognition by Unsupervised Style Adaptation
+  author:
+  - Thomas, Christopher
+  - Kovashka, Adriana
+  date: 2018
+  parent:
+    type: proceedings
+    title: Computer Vision – ACCV 2018
+    publisher: Springer
+    volume: 29
+Anwer2016:
+  type: article
+  title: Combining Holistic and Part-based Deep Representations for Computational Painting Categorization
+  author:
+  - Anwer, Rao Muhammed
+  - Khan, Fahad Shahbaz
+  - name: Weijer
+    given-name: Joost
+    prefix: van de
+  - Laaksonen, Jorma
+  date: 2016
+  page-range: 339–342
+  parent:
+    type: proceedings
+    title: Proceedings of the 2016 ACM International Conference on Multimedia Retrieval
+Bianco2019:
+  type: article
+  title: Multitask Painting Categorization by Deep Multibranch Neural Network
+  author:
+  - Bianco, Simone
+  - Mazzini, Davide
+  - Napoletano, Paolo
+  - Schettini, Raimondo
+  date: 2019
+  page-range: 90–101
+  parent:
+    type: proceedings
+    title: Expert Systems with Applications
+    volume: 135
+vandeWaal1973:
+  type: book
+  title: Iconclass. {A}n Iconographic Classification System. {C}ompleted and Edited by L. D. Couprie with R. H. Fuchs
+  author:
+    name: Waal
+    given-name: Henri
+    prefix: van de
+  date: 1973
+  publisher: North-Holland Publishing Company
+  location: Amsterdam
+Heusinger1985:
+  type: book
+  title: Marburger Index. {I}nventar der Kunst in Deutschland
+  author: Heusinger, Lutz
+  date: 1985
+  publisher: Saur
+  location: Munich
+GhiasiLKDS17:
+  type: article
+  title: Exploring the Structure of a Real-time, Arbitrary Neural Artistic Stylization Network
+  author:
+  - Ghiasi, Golnaz
+  - Lee, Honglak
+  - Kudlur, Manjunath
+  - Dumoulin, Vincent
+  - Shlens, Jonathon
+  date: 2017
+  url: https://www.dropbox.com/s/c88t805x40v4ype/0462.pdf?dl=1
+  parent:
+    type: proceedings
+    title: British Machine Vision Conference
+    publisher: '{BMVA} Press'
+GeirhosRMBWB19:
+  type: article
+  title: ImageNet-trained CNNs are Biased Towards Texture; Increasing Shape Bias Improves Accuracy and Robustness
+  author:
+  - Geirhos, Robert
+  - Rubisch, Patricia
+  - Michaelis, Claudio
+  - Bethge, Matthias
+  - Wichmann, Felix A.
+  - Brendel, Wieland
+  date: 2019
+  url: https://openreview.net/forum?id=Bygh9j09KX
+  parent:
+    type: proceedings
+    title: 7th International Conference on Learning Representations
+abs-1708-04552:
+  type: manuscript
+  title: Improved Regularization of Convolutional Neural Networks with Cutout
+  author:
+  - Devries, Terrance
+  - Taylor, Graham W.
+  date: 2017
+  url: http://arxiv.org/abs/1708.04552
+  serial-number:
+    arxiv: '1708.04552'
+abs-1909-13719:
+  type: manuscript
+  title: RandAugment. Practical Data Augmentation with No Separate Search
+  author:
+  - Cubuk, Ekin D.
+  - Zoph, Barret
+  - Shlens, Jonathon
+  - Le, Quoc V.
+  date: 2019
+  url: http://arxiv.org/abs/1909.13719
+  serial-number:
+    arxiv: '1909.13719'
+abs-2001-07685:
+  type: manuscript
+  title: FixMatch. Simplifying Semi-supervised Learning with Consistency and Confidence
+  author:
+  - Sohn, Kihyuk
+  - Berthelot, David
+  - Li, Chun-Liang
+  - Zhang, Zizhao
+  - Carlini, Nicholas
+  - Cubuk, Ekin D.
+  - Kurakin, Alex
+  - Zhang, Han
+  - Raffel, Colin
+  date: 2020
+  url: https://arxiv.org/abs/2001.07685
+  serial-number:
+    arxiv: '2001.07685'
+SutskeverMDH13:
+  type: article
+  title: On the Importance of Initialization and Momentum in Deep Learning
+  author:
+  - Sutskever, Ilya
+  - Martens, James
+  - Dahl, George E.
+  - Hinton, Geoffrey E.
+  date: 2013
+  page-range: 1139–1147
+  url: http://proceedings.mlr.press/v28/sutskever13.html
+  parent:
+    type: proceedings
+    title: Proceedings of the 30th International Conference on Machine Learning
+    publisher: JMLR.org
+    volume: 28
+    parent:
+      type: proceedings
+      title: '{JMLR} Workshop and Conference Proceedings'
+hermans2017defense:
+  type: manuscript
+  title: In Defense of the Triplet Loss for Person Re-identification
+  author:
+  - Hermans, Alexander
+  - Beyer, Lucas
+  - Leibe, Bastian
+  date: 2017
+  url: https://arxiv.org/abs/1703.07737
+  serial-number:
+    arxiv: '1703.07737'
+abs-2103-00020:
+  type: article
+  title: Learning Transferable Visual Models From Natural Language Supervision
+  author:
+  - Radford, Alec
+  - Kim, Jong Wook
+  - Hallacy, Chris
+  - Ramesh, Aditya
+  - Goh, Gabriel
+  - Agarwal, Sandhini
+  - Sastry, Girish
+  - Askell, Amanda
+  - Mishkin, Pamela
+  - Clark, Jack
+  - Krueger, Gretchen
+  - Sutskever, Ilya
+  date: 2021
+  url: https://arxiv.org/abs/2103.00020
+  parent:
+    type: periodical
+    title: CoRR
+GrillSATRBDPGAP20:
+  type: article
+  title: Bootstrap Your Own Latent - {A} New Approach to Self-Supervised Learning
+  author:
+  - Grill, Jean-Bastien
+  - Strub, Florian
+  - Altché, Florent
+  - Tallec, Corentin
+  - Richemond, Pierre H.
+  - Buchatskaya, Elena
+  - Doersch, Carl
+  - Pires, Bernardo Ávila
+  - Guo, Zhaohan
+  - Azar, Mohammad Gheshlaghi
+  - Piot, Bilal
+  - Kavukcuoglu, Koray
+  - Munos, Rémi
+  - Valko, Michal
+  date: 2020
+  editor:
+  - Larochelle, Hugo
+  - Ranzato, Marc'Aurelio
+  - Hadsell, Raia
+  - Balcan, Maria-Florina
+  - Lin, Hsuan-Tien
+  url: https://proceedings.neurips.cc/paper/2020/hash/f3ada80d5c4ee70142b17b8192b2958e-Abstract.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, {NeurIPS} 2020'
+JohnsonDJ17:
+  type: article
+  title: Billion-Scale Similarity Search with GPUs
+  author:
+  - Johnson, Jeff
+  - Douze, Matthijs
+  - Jégou, Hervé
+  date: 2017
+  url: http://arxiv.org/abs/1702.08734
+  parent:
+    type: periodical
+    title: CoRR
+Wieser2013:
+  type: article
+  title: 'ARTigo: Building an Artwork Search Engine with Games and Higher-Order Latent Semantic Analysis'
+  author:
+  - Wieser, Christoph
+  - Bry, François
+  - Bérard, Alexandre
+  - Lagrange, Richard
+  date: 2013
+  url: https://www.en.pms.ifi.lmu.de/publications/PMS-FB/PMS-FB-2013-3/PMS-FB-2013-3-paper.pdf
+  parent:
+    type: proceedings
+    title: Disco 2013, Workshop on Human Computation and Machine Learning in Games at the International Conference on Human Computation (HComp)
+abs-1802-03426:
+  type: article
+  title: '{UMAP:} Uniform Manifold Approximation and Projection for Dimension Reduction'
+  author:
+  - McInnes, Leland
+  - Healy, John
+  date: 2018
+  url: http://arxiv.org/abs/1802.03426
+  parent:
+    type: periodical
+    title: CoRR
+Lang2018:
+  type: article
+  title: 'Attesting Similarity: Supporting the Organization and Study of Art Image Collections with Computer Vision'
+  author:
+  - Lang, Sabine
+  - Ommer, Björn
+  date: 2018
+  page-range: 845–856
+  url: https://doi.org/10.1093/llc/fqy006
+  parent:
+    type: periodical
+    title: Digital Scholarship in the Humanities
+    issue: 4
+    volume: 33
+met:
+  type: web
+  title: The Metropolitan Museum of Art
+  author:
+    name: Art
+    given-name: The Metropolitan Museum
+    prefix: of
+  date: 2021
+  url: https://www.metmuseum.org/
+rijksmuseum:
+  type: web
+  title: Rijksmuseum Amsterdam, Home of the Dutch masters
+  author: Rijksmuseum
+  date: 2021
+  url: https://www.rijksmuseum.nl/en
+wikidata:
+  type: web
+  title: Wikidata
+  author: Wikimedia
+  date: 2019
+  url: https://www.wikidata.org/wiki/Wikidata:Main_Page
+kenom:
+  type: web
+  title: Kenom Digitaler Münzkatalog
+  author: Diedrichs, Reiner
+  date: 2021
+  url: https://www.kenom.de/
+iconclass:
+  type: web
+  title: Iconclass
+  author: Iconclass
+  date: 2021
+  url: http://www.iconclass.org/
+imet:
+  type: misc
+  title: iMet Collection 2020 - FGVC7
+  author:
+    name: Art
+    given-name: The Metropolitan Museum
+    prefix: of
+  date: 2020
+  url: https://www.kaggle.com/c/imet-2020-fgvc7
+Offert2021:
+  type: misc
+  title: imgs.ai
+  author:
+  - Offert, Fabian
+  - Bell, Peter
+  - Harlamov, Oleg
+  date: 2020
+  note: \\url\{https://imgs.ai/\}
+Rossetto2016:
+  type: article
+  title: 'vitrivr: A Flexible Retrieval Stack Supporting Multiple Query Modes for Searching in Multimedia Collections'
+  author:
+  - Rossetto, Luca
+  - Giangreco, Ivan
+  - Tanase, Claudiu
+  - Schuldt, Heiko
+  date: 2016
+  page-range: 1183–1186
+  url: https://dl.acm.org/doi/10.1145/2964284.2973797
+  parent:
+    type: proceedings
+    title: 24th ACM International Conference on Multimedia
+Wolfflin1915:
+  type: book
+  title: Kunstgeschichtliche Grundbegriffe
+  author: Wölfflin, Heinrich
+  date: 1915
+  publisher: Bruckmann
+  location: Munich
+Becker2018:
+  type: misc
+  title: ARTigo – Social Image Tagging [Dataset and Images]
+  author:
+  - Becker, Matthias
+  - Bogner, Martin
+  - Bross, Fabian
+  - Bry, François
+  - Campanella, Caterina
+  - Commare, Laura
+  - Cramerotti, Silvia
+  - Jakob, Katharina
+  - Josko, Martin
+  - Kneißl, Fabian
+  - Kohle, Hubertus
+  - Krefeld, Thomas
+  - Levushkina, Elena
+  - Lücke, Stephan
+  - Puglisi, Alessandra
+  - Regner, Anke
+  - Riepl, Christian
+  - Schefels, Clemens
+  - Schemainda, Corina
+  - Schmidt, Eva
+  - Schneider, Stefanie
+  - Schön, Gerhard
+  - Schulz, Klaus
+  - Siglmüller, Franz
+  - Steinmayr, Bartholomäus
+  - Störkle, Florian
+  - Teske, Iris
+  - Wieser, Christoph
+  date: 2018
+  note: \\url\{https://doi.org/10.5282/ubm/data.136.\}
+PaszkeGMLBCKLGA19:
+  type: article
+  title: 'PyTorch: An Imperative Style, High-Performance Deep Learning Library'
+  author:
+  - Paszke, Adam
+  - Gross, Sam
+  - Massa, Francisco
+  - Lerer, Adam
+  - Bradbury, James
+  - Chanan, Gregory
+  - Killeen, Trevor
+  - Lin, Zeming
+  - Gimelshein, Natalia
+  - Antiga, Luca
+  - Desmaison, Alban
+  - Köpf, Andreas
+  - Yang, Edward
+  - DeVito, Zachary
+  - Raison, Martin
+  - Tejani, Alykhan
+  - Chilamkurthy, Sasank
+  - Steiner, Benoit
+  - Fang, Lu
+  - Bai, Junjie
+  - Chintala, Soumith
+  date: 2019
+  editor:
+  - Wallach, Hanna M.
+  - Larochelle, Hugo
+  - Beygelzimer, Alina
+  - d'Alché-Buc, Florence
+  - Fox, Emily B.
+  - Garnett, Roman
+  page-range: 8024–8035
+  url: https://proceedings.neurips.cc/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019, Vancouver, BC, Canada'
+AbadiABBCCCDDDG16:
+  type: article
+  title: 'TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems'
+  author:
+  - Abadi, Martín
+  - Agarwal, Ashish
+  - Barham, Paul
+  - Brevdo, Eugene
+  - Chen, Zhifeng
+  - Citro, Craig
+  - Corrado, Gregory S.
+  - Davis, Andy
+  - Dean, Jeffrey
+  - Devin, Matthieu
+  - Ghemawat, Sanjay
+  - Goodfellow, Ian J.
+  - Harp, Andrew
+  - Irving, Geoffrey
+  - Isard, Michael
+  - Jia, Yangqing
+  - Józefowicz, Rafal
+  - Kaiser, Lukasz
+  - Kudlur, Manjunath
+  - Levenberg, Josh
+  - Mané, Dan
+  - Monga, Rajat
+  - Moore, Sherry
+  - Murray, Derek Gordon
+  - Olah, Chris
+  - Schuster, Mike
+  - Shlens, Jonathon
+  - Steiner, Benoit
+  - Sutskever, Ilya
+  - Talwar, Kunal
+  - Tucker, Paul A.
+  - Vanhoucke, Vincent
+  - Vasudevan, Vijay
+  - Viégas, Fernanda B.
+  - Vinyals, Oriol
+  - Warden, Pete
+  - Wattenberg, Martin
+  - Wicke, Martin
+  - Yu, Yuan
+  - Zheng, Xiaoqiang
+  date: 2016
+  url: http://arxiv.org/abs/1603.04467
+  serial-number:
+    arxiv: '1603.04467'
+  parent:
+    type: periodical
+    title: CoRR
+
+
+bailer2005joanneum:
+  type: article
+  title: Joanneum research at {TRECVID} 2005–camera motion detection
+  author:
+  - Bailer, Werner
+  - Schallauer, Peter
+  - Thallinger, Georg
+  date: 2005
+  page-range: 182–189
+  parent:
+    type: proceedings
+    title: Proc. of {TRECVID} Workshop
+ciregan2012multi:
+  type: article
+  title: Multi-column deep neural networks for image classification
+  author:
+  - Ciregan, Dan
+  - Meier, Ueli
+  - Schmidhuber, Jürgen
+  date: 2012
+  page-range: 3642–3649
+  parent:
+    type: proceedings
+    title: Conference on Computer Vision and Pattern Recognition ({CVPR})
+    organization: IEEE
+deng2009imagenet:
+  type: article
+  title: 'Imagenet: A large-scale hierarchical image database'
+  author:
+  - Deng, Jia
+  - Dong, Wei
+  - Socher, Richard
+  - Li, Li-Jia
+  - Li, Kai
+  - Fei-Fei, Li
+  date: 2009
+  page-range: 248–255
+  parent:
+    type: proceedings
+    title: Conference on Computer Vision and Pattern Recognition ({CVPR})
+    organization: IEEE
+everingham2010pascal:
+  type: article
+  title: The pascal visual object classes ({VOC}) challenge
+  author:
+  - Everingham, Mark
+  - Van Gool, Luc
+  - Williams, Christopher KI
+  - Winn, John
+  - Zisserman, Andrew
+  date: 2010
+  page-range: 303–338
+  parent:
+    type: periodical
+    title: International Journal of Computer Vision
+    publisher: Springer
+    issue: 2
+    volume: 88
+everingham2015pascal:
+  type: article
+  title: 'The pascal visual object classes challenge: A retrospective'
+  author:
+  - Everingham, Mark
+  - Eslami, SM Ali
+  - Van Gool, Luc
+  - Williams, Christopher KI
+  - Winn, John
+  - Zisserman, Andrew
+  date: 2015
+  page-range: 98–136
+  parent:
+    type: periodical
+    title: International Journal of Computer Vision
+    publisher: Springer
+    issue: 1
+    volume: 111
+ewerth2005university:
+  type: article
+  title: 'University of marburg at {TRECVID} 2005: Shot boundary detection and camera motion estimation results'
+  author:
+  - Ewerth, Ralph
+  - Beringer, Christian
+  - Kopp, Tobias
+  - Niebergall, Michael
+  - Stadelmann, Thilo
+  - Freisleben, Bernd
+  date: 2005
+  parent:
+    type: proceedings
+    title: Proceedings of the {TRECVID} Workshop
+hayes2007answering:
+  type: article
+  title: Answering the call for a standard reliability measure for coding data
+  author:
+  - Hayes, Andrew F
+  - Krippendorff, Klaus
+  date: 2007
+  page-range: 77–89
+  parent:
+    type: periodical
+    title: Communication Methods and Measures
+    publisher: Taylor & Francis
+    issue: 1
+    volume: 1
+he2015delving:
+  type: article
+  title: 'Delving Deep into Rectifiers: Surpassing human-level performance on imagenet classification'
+  author:
+  - He, Kaiming
+  - Zhang, Xiangyu
+  - Ren, Shaoqing
+  - Sun, Jian
+  date: 2015
+  page-range: 1026–1034
+  parent:
+    type: proceedings
+    title: Proceedings of the International Conference on Computer Vision ({ICCV})
+huang2008labeled:
+  type: article
+  title: 'Labeled faces in the wild: A database forstudying face recognition in unconstrained environments'
+  author:
+  - Huang, Gary B
+  - Mattar, Marwan
+  - Berg, Tamara
+  - Learned-Miller, Eric
+  date: 2008
+  parent:
+    type: proceedings
+    title: 'Workshop on Faces in''Real-Life''Images: Detection, Alignment, and Recognition'
+jiang2011consumer:
+  type: article
+  title: 'Consumer video understanding: A benchmark database and an evaluation of human and machine performance'
+  author:
+  - Jiang, Yu-Gang
+  - Ye, Guangnan
+  - Chang, Shih-Fu
+  - Ellis, Daniel
+  - Loui, Alexander C
+  date: 2011
+  page-range: 29
+  parent:
+    type: proceedings
+    title: Proc. of the Int'l Conf. on Multimedia Retrieval ({ICMR})
+    organization: ACM
+jonsson2016ten:
+  type: article
+  title: Ten Research Questions for Scalable Multimedia Analytics
+  author:
+  - Jónsson, Björn Þór
+  - Worring, Marcel
+  - Zahálka, Jan
+  - Rudinac, Stevan
+  - Amsaleg, Laurent
+  date: 2016
+  page-range: 290–302
+  parent:
+    type: proceedings
+    title: International Conference on Multimedia Modeling ({MMM})
+    organization: Springer
+krip2004reliability:
+  type: article
+  title: 'Reliability in Content Analysis: Some Common Misconceptions and Recommendations'
+  author: Krippendorff, Klaus
+  date: 2004
+  page-range: 411–433
+  parent:
+    type: periodical
+    title: Human Communication Research
+krip2011computing:
+  type: misc
+  title: Computing Krippendorff's Alpha-Reliability
+  author: Krippendorff, Klaus
+  date: 2011
+  page-range: 1–10
+  note: \\url\{http://repository.upenn.edu/asc_papers/43/\}
+kumar2009attribute:
+  type: article
+  title: Attribute and simile classifiers for face verification
+  author:
+  - Kumar, Neeraj
+  - Berg, Alexander C
+  - Belhumeur, Peter N
+  - Nayar, Shree K
+  date: 2009
+  page-range: 365–372
+  parent:
+    type: proceedings
+    title: International Conference on Computer Vision ({ICCV})
+    organization: IEEE
+kumar2011describable:
+  type: article
+  title: Describable visual attributes for face verification and image search
+  author:
+  - Kumar, Neeraj
+  - Berg, Alexander
+  - Belhumeur, Peter N
+  - Nayar, Shree
+  date: 2011
+  page-range: 1962–1977
+  parent:
+    type: periodical
+    title: Transactions on Pattern Analysis and Machine Intelligence
+    publisher: IEEE
+    issue: 10
+    volume: 33
+lake2015human:
+  type: article
+  title: Human-level concept learning through probabilistic program induction
+  author:
+  - Lake, Brenden M
+  - Salakhutdinov, Ruslan
+  - Tenenbaum, Joshua B
+  date: 2015
+  page-range: 1332–1338
+  parent:
+    type: periodical
+    title: Science
+    publisher: American Association for the Advancement of Science
+    issue: 6266
+    volume: 350
+lin2014microsoft:
+  type: article
+  title: 'Microsoft coco: Common objects in context'
+  author:
+  - Lin, Tsung-Yi
+  - Maire, Michael
+  - Belongie, Serge
+  - Hays, James
+  - Perona, Pietro
+  - Ramanan, Deva
+  - Dollár, Piotr
+  - Zitnick, C Lawrence
+  date: 2014
+  page-range: 740–755
+  parent:
+    type: proceedings
+    title: European Conference on Computer Vision ({ECCV})
+    organization: Springer
+nowak2010reliable:
+  type: article
+  title: 'How reliable are annotations via crowdsourcing: a study about inter-annotator agreement for multi-label image annotation'
+  author:
+  - Nowak, Stefanie
+  - Rüger, Stefan
+  date: 2010
+  page-range: 557–566
+  parent:
+    type: proceedings
+    title: Proc. of the Int'l Conf. on Multimedia Information Retrieval ({MIR})
+    organization: ACM
+nowak2011eval:
+  type: article
+  title: Evaluation Methodologies for Visual Information Retrieval and Annotation
+  author: Nowak, Stefanie
+  date: 2011
+  parent:
+    type: proceedings
+    title: PhD Thesis
+parikh2010role:
+  type: article
+  title: The role of features, algorithms and data in visual recognition
+  author:
+  - Parikh, Devi
+  - Zitnick, C Lawrence
+  date: 2010
+  page-range: 2328–2335
+  parent:
+    type: proceedings
+    title: Conference on Computer Vision and Pattern Recognition ({CVPR})
+    organization: IEEE
+pascal2011guide:
+  type: misc
+  title: '{VOC2011} Annotation Guidelines'
+  note: \\url\{http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html\}
+phillips2007frvt:
+  type: article
+  title: FRVT 2006 and ICE 2006 large-scale results
+  author:
+  - Phillips, P Jonathon
+  - Scruggs, W Todd
+  - O’Toole, Alice J
+  - Flynn, Patrick J
+  - Bowyer, Kevin W
+  - Schott, Cathy L
+  - Sharpe, Matthew
+  date: 2007
+  page-range: 1
+  parent:
+    type: periodical
+    title: National Institute of Standards and Technology, {NISTIR}
+    volume: 7408
+szegedy2015going:
+  type: article
+  title: Going deeper with convolutions
+  author:
+  - Szegedy, Christian
+  - Liu, Wei
+  - Jia, Yangqing
+  - Sermanet, Pierre
+  - Reed, Scott
+  - Anguelov, Dragomir
+  - Erhan, Dumitru
+  - Vanhoucke, Vincent
+  - Rabinovich, Andrew
+  date: 2015
+  page-range: 1–9
+  parent:
+    type: proceedings
+    title: Proc. of the Conf. on Computer Vision and Pattern Recognition ({CVPR})
+    organization: IEEE
+taigman2014deepface:
+  type: article
+  title: 'Deepface: Closing the gap to human-level performance in face verification'
+  author:
+  - Taigman, Yaniv
+  - Yang, Ming
+  - Ranzato, Marc'Aurelio
+  - Wolf, Lior
+  date: 2014
+  page-range: 1701–1708
+  parent:
+    type: proceedings
+    title: Proceedings of the Conference on Computer Vision and Pattern Recognition ({CVPR})
+    organization: IEEE
+turnbull2008semantic:
+  type: article
+  title: Semantic annotation and retrieval of music and sound effects
+  author:
+  - Turnbull, Douglas
+  - Barrington, Luke
+  - Torres, David
+  - Lanckriet, Gert
+  date: 2008
+  page-range: 467–476
+  parent:
+    type: periodical
+    title: Transactions on Audio, Speech, and Language Processing
+    publisher: IEEE
+    issue: 2
+    volume: 16
+weyand2016planet:
+  type: article
+  title: Planet-photo geolocation with convolutional neural networks
+  author:
+  - Weyand, Tobias
+  - Kostrikov, Ilya
+  - Philbin, James
+  date: 2016
+  parent:
+    type: periodical
+    title: arXiv preprint arXiv:1602.05314
+xiao2010sun:
+  type: article
+  title: 'Sun database: Large-scale scene recognition from abbey to zoo'
+  author:
+  - Xiao, Jianxiong
+  - Hays, James
+  - Ehinger, Krista A
+  - Oliva, Aude
+  - Torralba, Antonio
+  date: 2010
+  page-range: 3485–3492
+  parent:
+    type: proceedings
+    title: 'Conference on Computer Vision and Pattern Recognition ({CVPR}) '
+    organization: IEEE
+yang2008reliability:
+  type: article
+  title: (Un) Reliability of video concept detection
+  author:
+  - Yang, Jun
+  - Hauptmann, Alexander G
+  date: 2008
+  page-range: 85–94
+  parent:
+    type: proceedings
+    title: Proceedings of the International Conference on Content-based Image and Video Retrieval ({CIVR})
+    organization: ACM
+yuan2005tsinghua:
+  type: article
+  title: Tsinghua university at {TRECVID} 2005
+  author:
+  - Yuan, Jinhui
+  - Xiao, L
+  - Wang, D
+  - Ding, D
+  - Zuo, Y
+  - Tong, Z
+  - Liu, X
+  - Xu, S
+  - Zheng, W
+  - Li, X
+  - others
+  date: 2005
+  parent:
+    type: periodical
+    title: '{NIST} {TRECVID} 2005'
+zahalka2015analytic:
+  type: article
+  title: 'Analytic Quality: Evaluation of Performance and Insight in Multimedia Collection Analysis'
+  author:
+  - Zahálka, Jan
+  - Rudinac, Stevan
+  - Worring, Marcel
+  date: 2015
+  page-range: 231–240
+  parent:
+    type: proceedings
+    title: Proceedings of the International Conference on Multimedia ({MM})
+    organization: ACM
+he2015deep:
+  type: article
+  title: Deep residual learning for image recognition
+  author:
+  - He, Kaiming
+  - Zhang, Xiangyu
+  - Ren, Shaoqing
+  - Sun, Jian
+  date: 2015
+  parent:
+    type: periodical
+    title: arXiv preprint arXiv:1512.03385
+russakovsky2015imagenet:
+  type: article
+  title: Imagenet large scale visual recognition challenge
+  author:
+  - Russakovsky, Olga
+  - Deng, Jia
+  - Su, Hao
+  - Krause, Jonathan
+  - Satheesh, Sanjeev
+  - Ma, Sean
+  - Huang, Zhiheng
+  - Karpathy, Andrej
+  - Khosla, Aditya
+  - Bernstein, Michael
+  - others
+  date: 2015
+  page-range: 211–252
+  parent:
+    type: periodical
+    title: International Journal of Computer Vision
+    publisher: Springer
+    issue: 3
+    volume: 115
