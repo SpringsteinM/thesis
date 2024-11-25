@@ -34,7 +34,7 @@ especially in historical, biblical, and literary themes; see
 @fig:example-iconclass for an example.
 
 #figure(
-  image("../images/iconclass/hans_holbein-abendmahl-1501.png", width: 100%),
+  image("../images/iconclass/hans_holbein-abendmahl-1501.jpg", width: 100%),
   caption: [
     Utilizing #gls("Iconclass"), Hans Holbein the Elder’s #emph[Last Supper]
     (1501) could be labeled with the notations `73D24` ("Last Supper
@@ -214,7 +214,7 @@ notations, as in `79C52:42E3`.
     caption:[]
   ), <fig:clip_model_a>,
   figure(
-    image("../images/iconclass/iconclass_clip_v6-2.svg", height:3.1cm),  
+    image("../images/iconclass/iconclass_clip.svg", height:3.1cm),  
     caption:[]
   ), <fig:clip_model_b>,
   caption: [
@@ -761,11 +761,11 @@ position: top
   grid(
     columns: 1, 
     row-gutter:0.5em,
-    image("../images/iconclass/iconclass_samples_3_exp_1_s.svg", width:100%),
+    image("../images/iconclass/iconclass_samples_3_exp_1_s.jpg", width:100%),
     [(a) `11HH(THERESA)` (#quote[the foundress of the reformed (Discalced) Carmelites, T(h)eres(i)a of Avila ...])],
-    image("../images/iconclass/iconclass_samples_3_exp_5_s.svg", width:100%),
+    image("../images/iconclass/iconclass_samples_3_exp_5_s.jpg", width:100%),
     [(b) `71B4` (#quote[ story of the Tower of Babel (Genesis 11:1--9)])],
-    image("../images/iconclass/iconclass_samples_3_exp_2_s.svg", width:100%),
+    image("../images/iconclass/iconclass_samples_3_exp_2_s.jpg", width:100%),
     [(c) `92D19217` (#quote[Psyche performing various tasks set to her by Venus])]),
   caption: [
     Results of the `CAT` model on the #gls("ICARUS") test set.

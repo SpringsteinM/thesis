@@ -87,7 +87,7 @@ feature learning in CNNs for style classification. Sabatelli et al.
 @Sabatelli2018 investigate the general effect of fine-tuned CNNs
 in artist, material, and type classification tasks.
 
-#figure([#image("../images/saints/attr_sample.svg", width: 100%)],
+#figure([#image("../images/saints/attr_sample.jpg", width: 100%)],
   caption: [
     Images of the attributes "baptismal cup", "book", and "lamb",
     retrieved from #emph[Google Image Search] respectively.
@@ -194,7 +194,7 @@ containing (representations of) saints increases to 25667; the
 subsequent style transfer further increases the number to 120626. The
 number of images depicting attributes increases to 403788.
 
-#figure([#image("../images/saints/iart_saints_2.svg", width: 100%)],
+#figure([#image("../images/saints/iart_saints_2.jpg", width: 100%)],
   caption: [
     Four representations of Saint John the Baptist with the exemplary
     selected attribute "lamb".

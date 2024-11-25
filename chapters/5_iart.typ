@@ -124,13 +124,13 @@ operations, such as an interactive drag-select to juxtapose multiple
 objects, are supported with the aid of VisJs
 (@fig:sebastian-umap).
 
-#figure([#figure([#image("../images/iart/iart_sebastian_ranked_5.png", width: 100%)],
+#figure([#figure([#image("../images/iart/iart_sebastian_ranked.jpg", width: 100%)],
     caption: [
     ]
   )
   <fig:sebastian-ranked>
 
-  #figure([#image("../images/iart/iart_sebastian_umap_5.png", width: 100%)],
+  #figure([#image("../images/iart/iart_sebastian_umap.jpg", width: 100%)],
     caption: [
     ]
   )

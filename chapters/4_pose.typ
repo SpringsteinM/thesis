@@ -50,19 +50,19 @@ sets~@abs-2012-05616").
   columns: 4,
 
   figure(
-    image("../images/pose/pleydenwurff_kreuzabnahme(1).jpg", width: 100%),
+    image("../images/pose/pleydenwurff_kreuzabnahme.jpg", width: 100%),
     caption:[]
   ), <fig:deposition_a>,
   figure(
-    image("../images/pose/pontormo_kreuzabnahme(1).jpg", width: 100%),
+    image("../images/pose/pontormo_kreuzabnahme.jpg", width: 100%),
     caption:[]
   ), <fig:deposition_b>,
   figure(
-    image("../images/pose/caravaggio_grablegung(1).jpg", width: 100%),
+    image("../images/pose/caravaggio_grablegung.jpg", width: 100%),
     caption:[]
   ), <fig:deposition_c>,
   figure(
-    image("../images/pose/rubens_grablegung(1).jpg", width: 100%),
+    image("../images/pose/rubens_grablegung.jpg", width: 100%),
     caption:[]
   ), <fig:deposition_d>,
   caption: [The four depictions of Christ's deposition from the cross highlight slightly varying poses: (a) Hans Pleydenwurff, 1465; (b) Pontormo, 1525--1528; (c) Caravaggio, 1603--1604; (d) Peter Paul Rubens, ca. 1612. All images are in the public domain.],
@@ -182,7 +182,7 @@ generation~@Xu00WWWB021 @WangYZ0L18.
 The challenge increases, however, since not only the respective concept
 must be assigned, but also its position in the image must be detected.
 #figure(
-  image("../images/pose/detr_all_small_without.svg", width: 100%),
+  image("../images/pose/pose_detr.svg", width: 100%),
   caption:[
     The two-stage human pose estimator uses two Transformers~@VaswaniSPUJGKP17 @CarionMSUKZ20 to predict human poses in an image. 
 The input of the first model is the entire image, which, using a #gls("CNN") backend and appropriate positional encoding, serves as input to a Transformer that predicts a fixed set of person bounding boxes. 
@@ -708,19 +708,19 @@ The best performing approach is indicated in bold.],
   columns: 4,
 
   figure(
-    image("../images/pose/examples_gt_v2.svg", width: 100%),
+    image("../images/pose/examples_gt_v3.jpg", width: 100%),
     caption:[]
   ), <fig:examples_a>,
   figure(
-    image("../images/pose/examples_open_v2.svg", width: 100%),
+    image("../images/pose/examples_open_v3.jpg", width: 100%),
     caption:[]
   ), <fig:examples_b>,
   figure(
-    image("../images/pose/examples_coco_v2.svg", width: 100%),
+    image("../images/pose/examples_coco_v3.jpg", width: 100%),
     caption:[]
   ), <fig:examples_c>,
   figure(
-    image("../images/pose/examples_popart_semi_v2.svg", width: 100%),
+    image("../images/pose/examples_popart_semi_v3.jpg", width: 100%),
     caption:[]
   ), <fig:examples_d>,
   caption: [
@@ -815,7 +815,7 @@ person and his or her mirror image.
 )
 <tab:userstudy>
 
-#figure([#image("../images/pose/pose_query_small.svg", width: 100%)],
+#figure([#image("../images/pose/pose_query.jpg", width: 100%)],
   caption: [
     Query images for the user study include art-historical poses such as
     'Adlocutio' and 'Venus pudica.'
