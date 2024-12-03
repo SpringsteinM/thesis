@@ -1,5 +1,6 @@
 #import "template.typ": template
 #import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
+#import "chapters/0_glossary.typ": glossary
 
 // Your acknowledgments (Ringraziamenti) go here
 #let acknowledgments = []
@@ -61,7 +62,9 @@
 
   // Add as many keywords as you need, or remove the entry if none
   // are needed
-  keywords: none
+  keywords: none,
+
+  glossary:  glossary
 )
 
 // I suggest adding each chapter in a separate typst file under the
@@ -70,10 +73,10 @@
 // #include "chapters/introduction.typ"
 
 #include "chapters/0_glossary.typ"
+
 #include "chapters/1_intro.typ"
 
 #include "chapters/2_foundations.typ"
-
 
 #include "chapters/3_what.typ"
 

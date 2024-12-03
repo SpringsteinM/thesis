@@ -1,3 +1,7 @@
+#import "helper/outline_text.typ": in-outline
+#import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
+
+
 // Official declaration of originality, both in English and Italian
 // taken directly from Paola Gatti's email
 #let declaration-of-originality = (
@@ -64,12 +68,15 @@
 
   // The thesis' keywords, can be left empty if not needed
   keywords: none,
-
+  
+  // The thesis' glossary, can be left empty if not needed
+  glossary:none,
   // The thesis' content
   body
 ) = {
   // Set document matadata.
   set document(title: title, author: candidate.name)
+
 
   // Set the body font, "New Computer Modern" gives a LaTeX-like look
   set text(font: "New Computer Modern", lang: lang, size: 12pt)
@@ -84,13 +91,6 @@
   set par(justify: true)
 
 
-  // Tables
-  // let frame(stroke) = (x, y) => (
-  //   left: if x > 0 { 0pt } else { stroke },
-  //   right: stroke,
-  //   top: if y < 2 { stroke } else { 0pt },
-  //   bottom: stroke,
-  // )
   
   set table(
     // fill: (rgb("EAF2F5"), none),
@@ -102,70 +102,71 @@
     #it
   ]
 
-  let topline() = table.hline(start: 0, stroke: 1.0pt)
-
+  /////////////////////////////////////////////////////////////////
+  // Configure figures
+  /////////////////////////////////////////////////////////////////
+  
   // Configure figure's internal text
   show figure: set text(size:0.7em)
   set figure(gap: 2em)
+  
   // Configure figure's captions
   show figure.caption: set text(size: 1.2em)
   show figure.caption: set align(left)
   
-  // Configure equation numbering and spacing.
-  set math.equation(numbering: "(1)")
-  show math.equation: set block(spacing: 0.65em)
-
-  // Configure raw text/code blocks
-  show raw.where(block: true): set text(size: 0.8em, font: "Fira Code")
-  show raw.where(block: true): set par(justify: false)
-  show raw.where(block: true): block.with(
-    fill: gradient.linear(luma(240), luma(245), angle: 270deg),
-    inset: 10pt,
-    radius: 4pt,
-    width: 100%,
-  )
-  show raw.where(block: false): box.with(
-    fill: gradient.linear(luma(240), luma(245), angle: 270deg),
-    inset: (x: 3pt, y: 0pt),
-    outset: (y: 3pt),
-    radius: 2pt,
-  )
-
-
-  // Configure lists and enumerations.
-  set enum(indent: 10pt, body-indent: 9pt)
-  set list(indent: 10pt, body-indent: 9pt, marker: ([•], [--]))
-
+  /////////////////////////////////////////////////////////////////
   // Configure headings
+  /////////////////////////////////////////////////////////////////
   set heading(numbering: "1.1.1")
   show heading.where(level: 1): it => {
-    pagebreak(weak: true); it
-    // if it.body not in ([References],) {
-    //   block(width: 100%, height: 20%)[
-    //     #set align(center + horizon)
-    //     #set text(1.3em, weight: "bold")
-    //     #smallcaps(it)
-    //   ]
-    // } else {
-    //   block(width: 100%, height: 10%)[
-    //     #set align(center + horizon)
-    //     #set text(1.1em, weight: "bold")
-    //     #smallcaps(it)
-    //   ]
+    pagebreak(weak: true); 
     
-    // }
+    if it.numbering  == none {
+      set text(size: 20pt, weight: "bold")
+      block(above: 2em, below: 2em)[
+        #h(.5em) #it.body
+      ]
+    } else {
+      set text(size: 20pt, weight: "bold")
+      block(above: 2em, below: 2em)[
+        #counter(heading).display()#h(.5em) #it.body
+      ]
+    
+    }
   }
-  // show heading.where(level: 2): it => block(width: 100%, height: 4%)[
-  //   #set align(left)
-  //   #set text(1.1em, weight: "bold")
-  //   #smallcaps(it)
-  // ]
-  // show heading.where(level: 3): it => block(width: 100%, height: 2.5%)[
-  //   #set align(left)
-  //   #set text(1em, weight: "bold")
-  //   #smallcaps(it)
-  // ]
+  
+  show heading.where(level: 2): it => block(above: 2em, below: 1em)[
+        #counter(heading).display()#h(.5em) #it.body
+  ]
+  
+  show heading.where(level: 3): it => block(above: 2em, below: 1em)[
+        #counter(heading).display()#h(.5em) #it.body
+  ]
 
+  show heading.where(level: 4): it => block(above: 2em, below: 1em)[
+        #counter(heading).display()#h(.5em) #it.body
+  ]
+  
+  /////////////////////////////////////////////////////////////////
+  // Configure outline
+  /////////////////////////////////////////////////////////////////
+  
+  show outline: it => {
+    in-outline.update(true)
+    it
+    in-outline.update(false)
+  }
+
+  
+  show outline.where(target:  heading.where(outlined: true)): it => {
+    show outline.entry.where(level:1): set text(weight:"bold")  
+    it
+  }
+  
+  /////////////////////////////////////////////////////////////////
+  // Start document
+  /////////////////////////////////////////////////////////////////
+  
   // Title page
   set align(center)
   
@@ -231,15 +232,17 @@
   ])
 
   pagebreak(to: "odd")
+  
+  set page(numbering: "I")
   set par(first-line-indent: 1em)
   set align(top + left)
   
   // Declaration of originality, prints in English or Italian
   // depending on the `lang` parameter
   heading(
-    level: 2,
+    level: 1,
     numbering: none,
-    outlined: false,
+    outlined: true,
     if lang == "en" {
       "Declaration of Originality"
     } 
@@ -259,9 +262,9 @@
   // Acknowledgments
   if acknowledgments != none {
     heading(
-      level: 2,
+      level: 1,
       numbering: none,
-      outlined: false,
+      outlined: true,
       if lang == "en" {
         "Acknowledgments"
       }
@@ -274,9 +277,9 @@
   // Abstract
   if abstract != none {
     heading(
-      level: 2,
+      level: 1,
       numbering: none,
-      outlined: false,
+      outlined: true,
       "Abstract"
     )
     abstract
@@ -285,9 +288,9 @@
   // Keywords
   if keywords != none {
     heading(
-      level: 2,
+      level: 1,
       numbering: none,
-      outlined: false,
+      outlined: true,
       if lang == "en" {
         "Keywords"
       }
@@ -297,27 +300,33 @@
 
   pagebreak(weak: true, to: "odd")
 
-  // Table of contents
-  // Outline customization
-  show outline.entry.where(level: 1): it => {
-    if it.body != [References] {
-    v(12pt, weak: true)
-    link(it.element.location(), strong({
-      it.body
-      h(1fr)
-      it.page
-    }))}
-    else {
-      text(size: 1em, it)
-    }
-  }
-  show outline.entry.where(level: 3): it => {
-    text(size: 0.8em, it)
-  }
+ 
   
-  outline(depth: 3, indent: true)
+  outline(title:"Contents",depth: 3, indent: true)
 
   pagebreak(to: "odd")
+
+  outline(title: "List of Tables", target: figure.where(kind: table))
+  outline(title: "List of Figures", target: figure.where(kind: image))
+
+  if glossary != none {
+  
+    heading(
+      level: 1,
+      numbering: none,
+      outlined: true,
+      if lang == "en" {
+        "Acronyms"
+      }
+    )
+    print-glossary(
+      glossary,
+      // show all term even if they are not referenced, default to true
+      show-all: true,
+      // disable the back ref at the end of the descriptions
+      disable-back-references: true,
+    )
+}
 
   // Main body
 

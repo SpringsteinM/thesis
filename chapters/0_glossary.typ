@@ -1,9 +1,5 @@
-#import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
 
-
-= Glossary
-#print-glossary(
-  (
+#let glossary = (
     (
         key:"SGD",
         short:"SGD",
@@ -150,10 +146,5 @@
         short:"YOLO",
         long:"You Only Look Once"
     ),
-  ),
-  // show all term even if they are not referenced, default to true
-  show-all: true,
-  // disable the back ref at the end of the descriptions
-  disable-back-references: true,
-)
+  )
 

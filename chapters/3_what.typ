@@ -1,7 +1,8 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "../helper/outline_text.typ": outline-text
 
-= ``Are Machines Better Than Humans in Image Tagging?'' - A User Study Adds to the Puzzle
+= #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?])
 
 == Introduction
 <introduction>
