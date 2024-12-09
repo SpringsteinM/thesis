@@ -1,6 +1,6 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "../helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": outline-text
 
 = #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?])
 
@@ -89,7 +89,7 @@ evaluate machine performance at human level in a systematic way is
 suggested in @sec:what_methodology. Finally, some
 conclusions are drawn in @sec:what_conclusions.
 
-== Human and Machine Performance in Visual and Auditory Recognition Tasks
+== #outline-text([Human and Machine Performance in Visual and Auditory Recognition Tasks],[Human and Machine Performance in Recognition Tasks])
 <sec:what_human>
 In this section, we briefly survey related work which compared human and
 machine performance for some multimedia analysis tasks. Yet, human
@@ -449,8 +449,7 @@ we formally measure whether a machine-based result is comparable to or
 even better than a human result? This question is addressed in the
 subsequent section.
 
-=== An Experimental Methodology and Two Indices for Comparisons with Human-level Performance
-
+=== #outline-text([An Experimental Methodology and Two Indices for Comparisons with Human-level Performance],[Two Indices for Comparisons with Human-level Performance])
 
 In this section, we propose an experimental methodology and two novel
 easy-to-use measures, called human-level performance index ($H L P I$)

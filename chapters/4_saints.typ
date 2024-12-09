@@ -1,7 +1,8 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "/helper/outline_text.typ": outline-text
 
-= The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects
+= #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
 
 == Introduction
 <introduction>

@@ -1,7 +1,8 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "/helper/outline_text.typ": outline-text
 
-= iART: A Search Engine for Art-Historical Images to Support Research in the Humanities
+= #outline-text([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images])
 
 == Introduction
 <introduction>

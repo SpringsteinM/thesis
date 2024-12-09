@@ -29,7 +29,7 @@ In order to evaluate retrieval or classification methods, various metrics have b
 #figure([#image("../images/foundations/metric_eng.svg", width: 70%)],
   caption: outline-text([
     Representation of the entire set of all documents in a retrieval result and how it is divided into portions for false negatives $F N$, true negatives $T N$, true positives $T P$, and false positives $F P$.
-  ],[]) //TODO
+  ],[Categorization of retrieval results]) //TODO
 )
 <fig:precision_recall>
 

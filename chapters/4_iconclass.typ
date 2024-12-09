@@ -1,9 +1,10 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "@preview/subpar:0.1.0"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "/helper/outline_text.typ": outline-text
 
 
-= Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images
+= #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Large-scale Hierarchical Classification of Art-historical Images])
 
 == Abstract
 
@@ -109,7 +110,7 @@ real-world data. This section reviews related work in #gls("CV") for the visual
 arts, as well as #gls("HMC"), which is crucial for leveraging the hierarchical
 structure of the #gls("Iconclass") taxonomy.
 
-=== CV for the Visual Arts:
+=== Computer Vision for the Visual Arts
 <cv-for-the-visual-arts>
 Research in #gls("CV") for the visual arts focuses on several key areas
 including, but not limited to, aesthetic quality
@@ -142,7 +143,7 @@ Compared to these works, we not only scale our approach to the entire
 #emph[#gls("Iconclass")] system of over 20000 art-historical concepts, but fully
 exploit its hierarchical structure.
 
-=== #gls("HMC", long: true):
+=== #gls("HMC", long: true)
 <hmc>
 Approaches to #gls("HMC") can exploit the hierarchical structure of taxonomies
 such as #gls("Iconclass"). They have been used for many tasks, e.g., event

@@ -1,8 +1,9 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "@preview/subpar:0.1.0"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "/helper/outline_text.typ": outline-text
 
-= Semi-supervised Human Pose Estimation in Art-historical Images
+= #outline-text([Semi-supervised Human Pose Estimation in Art-historical Images],[Semi-supervised Human Pose Estimation in Art])
 
 == Introduction
 <sec:intro>
