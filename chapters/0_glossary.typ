@@ -21,6 +21,11 @@
         long:"Chinese Iconography Thesaurus"
     ),
     (
+        key:"CLIP",
+        short:"CLIP",
+        long:"Contrastive Language-Image Pre-Training"
+    ),
+    (
         key:"CV",
         short:"CV",
         long:"Computer Vision"

@@ -162,7 +162,9 @@
     show outline.entry.where(level:1): set text(weight:"bold")  
     it
   }
+
   
+
   /////////////////////////////////////////////////////////////////
   // Start document
   /////////////////////////////////////////////////////////////////
@@ -330,7 +332,7 @@
 
   // Main body
 
-  show link: underline
+  // show link: underline
   set page(numbering: "1")
   set align(top + left)
   counter(page).update(1)
