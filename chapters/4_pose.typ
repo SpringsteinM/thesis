@@ -321,7 +321,7 @@ smaller.
   image("../images/pose/detr_semi_v2.svg", width: 100%),
   caption: [
     In the semi-supervised training pipeline adapted from
-    #cite(<Xu00WWWB021>, form:"prose"), each batch consists of labeled
+    Xu et al. @Xu00WWWB021, each batch consists of labeled
     and unlabeled images with strong and weak augmentations generated
     for unlabeled ones. The teacher uses the weakly labeled data to
     generate pseudo bounding boxes (or pseudo keypoints) that are used
@@ -337,7 +337,7 @@ smaller.
 To extend the available data sets for bounding box and keypoint
 detection in art-historical images, we augment the training pipeline by
 adapting the semi-supervised approach from
-#cite(<Xu00WWWB021>, form:"prose"). Since we use a Transformer model
+Xu et al. @Xu00WWWB021. Since we use a Transformer model
 instead of a Faster R-CNN, the number of predicted bounding boxes and
 keypoints is considerably smaller and simplifies certain steps. An
 overview of the semi-supervised pipeline is shown in
@@ -349,7 +349,7 @@ purpose, weakly augmented unlabeled images are used for person detection
 and weakly augmented cropped bounding boxes for keypoint prediction.
 Subsequently, the predicted objects are filtered with the threshold
 $tau eq 0.9$ and projected onto the strongly augmented unlabeled images.
-Contrary to #cite(<Xu00WWWB021>, form:"prose"), it is not possible to
+Contrary to Xu et al. @Xu00WWWB021, it is not possible to
 determine target labels for the background class from the teacher,
 because negative teacher predictions do not have to contain any valid
 coordinates and therefore cannot be assigned to an output of the student
@@ -470,7 +470,7 @@ To evaluate the performance of the common scenario that uses style
 transfer to close the domain gap between annotated real-world training
 and art-historical inference data, we generate a stylized version of the
 data set. For this purpose, we leverage the style transfer approach
-from #cite(<chen2021artistic>, form:"prose") to create two style variants for each
+from Chen et al. @chen2021artistic to create two style variants for each
 COCO image, where the style images are randomly selected from the
 Painter by Numbers data set~@painter. \
 The models are grounded in two domain-specific, sufficiently large data
@@ -521,7 +521,7 @@ COCO 2017 and reinitialize the classification head. An Adam
 optimizer~@KingmaB14") with a learning rate of
 $l r eq 5 e minus 6$ is used for the Transformer and with
 $l r eq 1 e minus 7$ for the ResNet-50
-backbone~@HeZRS16. Similar to #cite(<0012WZXXT21>, form: "prose"), all classes except persons are
+backbone~@HeZRS16. Similar to Li et al. @0012WZXXT21, all classes except persons are
 ignored; small bounding boxes are not considered. Models are trained for
 $200 comma 000$ iterations with a batch size of four, with all images
 randomly scaled to a maximum size of $1 comma 333$ pixels per side. When
@@ -556,7 +556,7 @@ and $lambda_u eq 0.5$.
     bottomrule()
   ),
   caption: figure.caption(
-    [Person detection results are reported for the People-Art test set. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of #cite(<0012WZXXT21>, form: "prose") with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
+    [Person detection results are reported for the People-Art test set. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
     position:top
   )
 )
@@ -588,7 +588,7 @@ and $lambda_u eq 0.5$.
   
   ),
   caption: figure.caption(
-    [Person detection results are reported for the PoPArt test set. For PoPArt, $A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of #cite(<0012WZXXT21>, form: "prose") with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
+    [Person detection results are reported for the PoPArt test set. For PoPArt, $A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
     position:top
   )
 )
@@ -605,8 +605,8 @@ The domain-specific data further increases the performance
 significantly, such that AP rises from 0.428 to 0.4428 and AR from
 0.7041 to 0.7291. With $A P_50 eq 0.7381$, the performance of our
 approach is considerably above the best results of $A P_50 eq 0.68$ and
-$A P_50 eq 0.583$ reported so far by #cite(<KadishRL21>, form:"prose")
-and #cite(<GonthierLG22>, form:"prose") for the data set,
+$A P_50 eq 0.583$ reported so far by Kadish et al. @KadishRL21
+and Gonthier et al. @GonthierLG22 for the data set,
 respectively. For PoPArt, we find that semi-supervised learning with
 art-historical images enhances AP less; thus, our proposed method with
 COCO 2017 annotations has similar performance to using style transfer.
@@ -624,7 +624,7 @@ performance increases from 0.4898 to 0.5073 for AP and from 0.8468 to
 HRNet with 32 feature channels (HRNet-W32) as backbone with an input
 resolution of $384 times 288$ pixels~@0009XLW19.
 Again, we leverage the pre-trained weights on COCO 2017 from
-#cite(<0012WZXXT21>, form: "prose") and reinitialize the classification
+Li et al. @0012WZXXT21 and reinitialize the classification
 layer. The model is trained for $150 comma 000$ iterations with a batch
 size of $16$; the learning rates are set to $l r eq 1 e minus 5$ for the
 Transformer and $l r eq 1 e minus 6$ for the HRNet. We divide both rates
@@ -639,8 +639,7 @@ our semi-supervised learning technique. Models not only trained with
 style-transferred images show an increase in AP. In particular, for
 those using PoPArt, AP rises from 0.4844 to 0.5258 and AR from 0.7078 to
 0.7464. Results for the PoPArt test set are summarized in
-@tab:exp_keypoints. Unlike
-#cite(<JenicekC19>, form:"prose"), we find that
+@tab:exp_keypoints. Unlike Jenícek and Chum @JenicekC19, we find that
 OpenPose~@CaoHSWS21 with $A P eq 0.1388$ and
 $A R eq 0.4382$ is not competitive to approaches that are specifically
 trained for the given task.
@@ -840,12 +839,12 @@ relational configuration between body parts
 @HoK09, we do not leverage joint coordinates
 directly
 @HaradaTMS04.
-Instead, we build on #cite(<ChenZNYWX11>, form:"prose") and employ
+Instead, we build on Chen et al. @ChenZNYWX11 and employ
 a $52$-dimensional feature descriptor that uses the orientation between
 two keypoints. We obtain $1 comma 515$ images from the ART500k data set
 not used for training in @chp:ablation, to which bounding
 box and keypoint models are applied. For each pose, the descriptor from
-#cite(<ChenZNYWX11>, form:"prose") is calculated. In addition, we
+Chen et al. @ChenZNYWX11 is calculated. In addition, we
 selected $10$ poses with varying art-historical specificity and utilized
 them as query images (@fig:pose-query). The small
 number of examples naturally can only inadequately cover the large
@@ -911,8 +910,7 @@ of art and cultural objects, it is likely applicable to other domains
 with few labeled training data.
 
 In the future, we intend to analyze the potential of recently introduced
-Transformer models, such as the Pyramid Vision Transformer presented by
-#cite(<abs-2106-13797>, form:"prose"). Further improvement of the
+Transformer models, such as the Pyramid Vision Transformer presented by Wang et al. @abs-2106-13797. Further improvement of the
 training process could be achieved by applying style transfer to
 unlabeled instead of only labeled data. We also plan to extend the
 PoPArt data set with additional bounding boxes, enhancing its usefulness

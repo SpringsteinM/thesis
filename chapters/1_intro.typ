@@ -1,5 +1,7 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
+#import "@preview/subpar:0.1.0"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
+#import "/helper/outline_text.typ": outline-text
 
 = Introduction
 <chp:intro>
@@ -25,6 +27,22 @@ Within the context of visual analysis in art history, a critical challenge lies 
 The question therefore arises: How can we further scale automatic image analysis for the study of art without having new data available to us? Addressing this challenge requires innovative approaches, such as the generation of synthetic training to enlarge training corpora, semi- or self-supervised learning methods to minimize the reliance on labeled data, or transfer learning from pre-trained models on related domains. Such efforts could also address more complex challenges beyond basic concept recognition, such as iconographic concept detection or pose estimation in artistic figures.
 
 Another challenge lies in making these state-of-the-art methods available to art historians in a way that allows them to be easily integrated into their workflow. An ideal solution would be a platform containing a large collection of art historical images, which expands traditional metadata search by incorporating a variety of computer vision-guided search methods. This would allow researchers to gradually expand their search behavior based on existing methods, enabling them to not only filter by metadata but also combine it with visual features. This would open up several new research possibilities for art historians that were previously only feasible manually, such as:
+
+#subpar.grid(
+  columns: 1,
+
+  figure(
+    image("../images/intro/henry_8.svg", height: 12%),
+    caption:[]
+  ), <fig:intro_examples_a>,
+  figure(
+    image("../images/intro/liberte.svg", height: 12%),
+    caption:[]
+  ), <fig:intro_examples_a>,
+  caption: [],
+  label: <fig:intro_examples>,
+)
+
 
 - Finding Adoptaion
 - Persiflage
