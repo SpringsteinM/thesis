@@ -26,37 +26,41 @@ Within the context of visual analysis in art history, a critical challenge lies 
 
 The question therefore arises: How can we further scale automatic image analysis for the study of art without having new data available to us? Addressing this challenge requires innovative approaches, such as the generation of synthetic training to enlarge training corpora, semi- or self-supervised learning methods to minimize the reliance on labeled data, or transfer learning from pre-trained models on related domains. Such efforts could also address more complex challenges beyond basic concept recognition, such as iconographic concept detection or pose estimation in artistic figures.
 
-Another challenge lies in making these state-of-the-art methods available to art historians in a way that allows them to be easily integrated into their workflow. An ideal solution would be a platform containing a large collection of art historical images, which expands traditional metadata search by incorporating a variety of computer vision-guided search methods. This would allow researchers to gradually expand their search behavior based on existing methods, enabling them to not only filter by metadata but also combine it with visual features. This would open up several new research possibilities for art historians that were previously only feasible manually, such as:
 
-#subpar.grid(
-  columns: 1,
-
-  figure(
-    image("../images/intro/henry_8.svg", height: 12%),
-    caption:[]
-  ), <fig:intro_examples_a>,
-  figure(
-    image("../images/intro/liberte.svg", height: 12%),
-    caption:[]
-  ), <fig:intro_examples_a>,
-  caption: [],
+#subpar.super(
+ [#figure(
+      image("../images/intro/liberte.svg", height: 17.2%),
+      caption:[]
+    ) <fig:intro_examples_c>
+  #grid(
+    columns: 2,
+    gutter: 6pt,
+    [#figure(
+      image("../images/intro/henry_8.svg", height: 15%),
+      caption:[]
+    ) <fig:intro_examples_a>],
+    [#figure(
+      image("../images/intro/persiflage.svg", height: 15%),
+      caption:[]
+    ) <fig:intro_examples_a>],
+  )],
+  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
   label: <fig:intro_examples>,
 )
 
+Another challenge lies in making these state-of-the-art methods available to art historians in a way that allows them to be easily integrated into their workflow. An ideal solution would be a platform containing a large collection of art historical images, which expands traditional metadata search by incorporating a variety of computer vision-guided search methods. This would allow researchers to gradually expand their search behavior based on existing methods, enabling them to not only filter by metadata but also combine it with visual features. This would open up several new research possibilities for art historians that were previously only feasible manually. Some possible search scenarios are illustrated in @fig:intro_examples.
 
-- Finding Adoptaion
-- Persiflage
-
-== Motivation
-<sec:int_motivation>
 == Existing Challenges and Limitations
 <sec:int_challenges>
+
+
+
 == Contributions
 <sec:int_contributions>
 == List of Publications
 <sec:int_publications>
 
-The relevant publications that were published during the preparation of the dissertation and are used for this document are summarised here.
+The relevant publications that were published during the preparation of the dissertation and are used for this document are summarized here.
 
 #heading(text([Human Performance in Image Classification:],weight: "bold"), numbering: none, level: 5, supplement: none, bookmarked: false, outlined:false)
 #block(cite(<EwerthSPS17>, form: "full"))
