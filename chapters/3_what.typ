@@ -2,7 +2,7 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-= #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?])
+= #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
 
 == Introduction
 <introduction>
@@ -55,7 +55,7 @@ annotation tasks for realistic images, as they are used in the #gls("VOC") chall
 @everingham2010pascal @everingham2015pascal, for example. More
 than 1000 images have been annotated by 23 participants in a
 non-crowdsourcing setting. The number of images also allows us to draw
-conclusions about rarely occuring concept categories such as "cow" or
+conclusions about rarely occurring concept categories such as "cow" or
 "potted plant". It is suggested to evaluate the reliability of users’
 annotations by Krippendorff’s $alpha$
 @krip2004reliability @krip2011computing, which measures the

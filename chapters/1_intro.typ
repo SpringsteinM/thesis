@@ -1,5 +1,6 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
 #import "@preview/subpar:0.1.0"
+#import "@preview/ctheorems:1.1.3": *
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
@@ -53,10 +54,29 @@ Another challenge lies in making these state-of-the-art methods available to art
 == Existing Challenges and Limitations
 <sec:int_challenges>
 
+#let researchquestion = thmbox(
+  "rq", 
+  "Research Question", 
+  fill: rgb("#eeeeee"),
+  bodyfmt: body => ["#emph[#body]"]
+)
+
+#researchquestion(number: "1")[How does the performance of machines in multimedia annotation tasks compare to human performance and what methodologies can be used to determine if a recognition problem is solved at a human level?] <rq_1>
+
+
+#researchquestion(number: "2")[How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?] <rq_2>
+
+
+#researchquestion(number: "3")[] <rq_3>
 
 
 == Contributions
 <sec:int_contributions>
+
+== Thesis Structure
+<sec:int_thesis_structure>
+The remainder of the thesis is structured as follows. @chp:fnd provides the necessary foundations required for understanding the subsequent chapters. These include the basics of training neural networks, specific architectures, and the metrics used to evaluate the methods. @chp:what analyzes current computer vision methods in comparison to human performance. Subsequently, the @chp:art explores various approaches to enhancing the performance of art classification systems, leveraging self-supervised and semi-supervised learning techniques as well as data generation strategies. In the end, the presented methods, along with additional approaches, are integrated into a unified search platform and made available to art historians, as described in @chp:iart. The thesis concludes with a summary and a discussion of potential future developments in @chp:conclusion.
+
 == List of Publications
 <sec:int_publications>
 
@@ -64,21 +84,21 @@ The relevant publications that were published during the preparation of the diss
 
 #heading(text([Human Performance in Image Classification:],weight: "bold"), numbering: none, level: 5, supplement: none, bookmarked: false, outlined:false)
 #block(cite(<EwerthSPS17>, form: "full"))
-#text([Abstract:],weight: "bold")
-"Do machines perform better than humans in visual recognition tasks?" Not so long ago, this question would have been considered even somewhat provoking and the answer would have been clear: ``No''. In this paper, we present a comparison of human and machine performance with respect to annotation for multimedia retrieval tasks. Going beyond recent crowdsourcing studies in this respect, we also report results of two extensive user studies. In total, 23 participants were asked to annotate more than 1000 images of a benchmark dataset, which is the most comprehensive study in the field so far. Krippendorff's $alpha$ is used to measure inter-coder agreement among several coders and the results are compared with the best machine results. The study is preceded by a summary of studies which compared human and machine performance in different visual and auditory recognition tasks. We discuss the results and derive a methodology in order to compare machine performance in multimedia annotation tasks at human level. This allows us to formally answer the question whether a recognition problem can be considered as solved. Finally, we are going to answer the initial question. 
+#text([Abstract:], weight: "bold")
+"Do machines perform better than humans in visual recognition tasks?" Not so long ago, this question would have been considered even somewhat provoking and the answer would have been clear: "No". In this paper, we present a comparison of human and machine performance with respect to annotation for multimedia retrieval tasks. Going beyond recent crowdsourcing studies in this respect, we also report results of two extensive user studies. In total, 23 participants were asked to annotate more than 1000 images of a benchmark dataset, which is the most comprehensive study in the field so far. Krippendorff's $alpha$ is used to measure inter-coder agreement among several coders and the results are compared with the best machine results. The study is preceded by a summary of studies which compared human and machine performance in different visual and auditory recognition tasks. We discuss the results and derive a methodology in order to compare machine performance in multimedia annotation tasks at human level. This allows us to formally answer the question whether a recognition problem can be considered as solved. Finally, we are going to answer the initial question. 
 
 #heading(text([Art Historical Classification Systems:],weight: "bold"), numbering: none, level: 5, supplement: none, bookmarked: false, outlined:false)
 #block(cite(<SpringsteinSRSK24>, form: "full"))
-#text([Abstract:],weight: "bold")
+#text([Abstract:], weight: "bold")
 Iconography refers to the methodical study and interpretation of thematic content in the visual arts, distinguishing it, e.g., from purely formal or aesthetic considerations. In iconographic studies, #gls("Iconclass") is a widely used taxonomy that encapsulates historical, biblical, and literary themes, among others. However, given the hierarchical nature and inherent complexity of such a taxonomy,  it is highly desirable to use  automated methods for (#gls("Iconclass")-based) image classification. Previous studies   either focused narrowly on certain subsets of narratives or failed to exploit #glspl("Iconclass") hierarchical structure. In this paper, we propose a novel approach for  #gls("HMC") of iconographic concepts in images. We present three strategies, including #glspl("LM"), for the generation of textual image descriptions using keywords extracted from #gls("Iconclass"). These descriptions are utilized to pre-train a #gls("VLM") based on a newly introduced data set of 477,569 images with more than 20,000 #gls("Iconclass") concepts, far more than considered in previous studies. Furthermore, we present five approaches to multi-label classification, including a novel transformer decoder that leverages hierarchical information from the #gls("Iconclass") taxonomy. Experimental results show the superiority of this approach over reasonable baselines. 
 
 #block(cite(<SpringsteinSAE22>, form: "full"))
-#text([Abstract:],weight: "bold")
+#text([Abstract:], weight: "bold")
 Gesture as #quote[language] of non-verbal communication has been theoretically established since the 17th century. However, its relevance for the visual arts has been expressed only sporadically. This may be primarily due to the sheer overwhelming amount of data that traditionally had to be processed by hand. With the steady progress of digitization, though, a growing number of historical artifacts have been indexed and made available to the public, creating a need for automatic retrieval of art-historical motifs with similar body constellations or poses. Since the domain of art differs significantly from existing real-world data sets for human pose estimation due to its style variance, this presents new challenges. In this paper, we propose a novel approach to estimate human poses in art-historical images. In contrast to previous work that attempts to bridge the domain gap with pre-trained models or through style transfer, we suggest semi-supervised learning for both object and keypoint detection. Furthermore, we introduce a novel domain-specific art data set that includes both bounding box and keypoint annotations of human figures. Our approach achieves significantly better results than methods that use pre-trained models or style transfer.
 
 
 #block(cite(<SchneiderSRHEK20>, form: "full"))
-#text([Abstract:],weight: "bold")
+#text([Abstract:], weight: "bold")
 Due to the increasingly unmanageable number of art-historical inventories made available in digital form, methods that computationally arrange larger amounts of objects are becoming more important. The category of similarity, which is fundamental in all areas of art-historical description, gains new relevance in this context. In this paper, we propose a novel approach to the subject-specific classification of art-historical objects that utilizes expert-based attributes, i.e., significant figurative motifs. We evaluate our procedure on a concrete use case, representations of saints in the visual arts. A representative data set of saints images is collected and a semi-supervised learning technique applied to enrich the data set with neural style transfer as well as to improve the joint training of saints and their attributes. We show that this technique outperforms other approaches.
 
 
@@ -86,10 +106,10 @@ Due to the increasingly unmanageable number of art-historical inventories made a
 #block(cite(<SchneiderSRKEH22>, form: "full"))
 #[
   #set par(first-line-indent:0pt)
-  #text([Abstract (english):],weight: "bold")
+  #text([Abstract (english):], weight: "bold")
   With iART, an open web platform is introduced for searching art and cultural studies image inventories, inspired by methods established in the humanities, such as comparative viewing. The system integrates various machine learning techniques for keyword- and content-driven retrieval, as well as for category formation through clustering. Using a multimodal deep learning approach, it also enables text- and image-based searches for concepts that were not previously identified by trained classification models. Supported by an intuitive user interface that allows exploration of results through modifiable object views, users can explore approximately one million objects from art-historically significant image databases, such as those of the Dutch Rijksmuseum. Additionally, users can import their own collections.
   
-  #text([Abstract (german):],weight: "bold")
+  #text([Abstract (german):], weight: "bold")
   #[
     #set text(
       lang: "de"
@@ -126,8 +146,3 @@ In this paper, we introduce iART: an open Web platform for art-historical resear
 
 
 
-
-
-
-== Thesis Structure
-<sec:int_structure>

@@ -2,9 +2,9 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-= #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
+== #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
 
-== Introduction
+=== Introduction
 <introduction>
 The category of similarity is fundamental in all areas of art-historical
 description: in the history of style, the specification of formal
@@ -63,7 +63,7 @@ attribute-guided classification that utilizes Iconclass, and
 enrich the data set with neural style transfer as well as to improve the
 joint training of saints and their attributes.
 
-== Related Work
+=== Related Work
 <sec:relatedwork>
 Due to the recent growth in computerized analysis of cultural heritage,
 we primarily discuss studies that address the categorization of
@@ -111,9 +111,9 @@ are linked to the respective class, i.e., the respective saint—to
 improve the subject-specific classification of concepts with high
 in-class variability.
 
-== Data
+=== Data
 <data>
-=== Data set collection
+==== Data set collection
 <sec:collection>
 Our data set consists of two kinds of images: art-historical and
 non-art-historical, i.e., real-world imagery.
@@ -162,7 +162,7 @@ procedures.
 )
 <fig:preprocessing>
 
-=== Data set preprocessing
+==== Data set preprocessing
 <sec:preprocessing>
 Many of the previously harvested representations are scans and contain
 background noise or further information, e.g., signatures of the artist
@@ -203,7 +203,7 @@ number of images depicting attributes increases to 403788.
 )
 <fig:saints_with_attr>
 
-== Attribute-guided Classification
+=== Attribute-guided Classification
 <attribute>
 The idea behind our approach is as follows: generally, a saint cannot be
 identified exclusively by his or her physiognomy, but by a set of
@@ -300,7 +300,7 @@ were #emph[not] originally annotated. Second, images that are not
 recognizable by the model after style transfer are excluded from
 training.
 
-== Experiments
+=== Experiments
 <experiments>
 We employ a ResNet-50 architecture pre-trained on ImageNet
 @HeZRS16. The optimization is carried out using
@@ -386,7 +386,7 @@ our system for the entire test set.
 set with 343 attributes retrieved from #emph[Google Image Search].
 Average Precision (AP) is used to measure the retrieval performance.])
  
-=== Attribute classification
+==== Attribute classification
 <attribute-classification>
 We first evaluate whether the attributes data set is generally suitable
 for the prediction of saints. The model achieves a performance of 0.354
@@ -476,7 +476,8 @@ Scores of the classification methods based on the data
   position:top)
  )
   <tab:saints_result>
-=== Joint training of saints and attributes
+
+==== Joint training of saints and attributes
 <joint-training-of-saints-and-attributes>
 Our approach to jointly train saints and attributes is compared to two
 baseline strategies, with and without style transfer, respectively.
@@ -520,8 +521,7 @@ further improve classification, the harvested collections could be
 exploited more extensively, since many attributes are listed in
 Iconclass as separate notations.
 
-== Conclusion
-<conclusion>
+=== Conclusion <sec:saints_conclusion>
 In this work, we introduced a new data set and task for the
 identification of saints in the visual arts. We suggested a novel
 deep-learning approach that utilizes expert-based attributes to support

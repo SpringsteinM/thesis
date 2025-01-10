@@ -112,12 +112,27 @@
   
   // Configure figure's captions
   show figure.caption: set text(size: 1.2em)
-  // show figure.caption: set align(left)
+  // TODO
+  show figure.caption: set align(left)
   
   /////////////////////////////////////////////////////////////////
   // Configure headings
   /////////////////////////////////////////////////////////////////
-  set heading(numbering: "1.1.1")
+  set heading(numbering: "1.1.1.1")
+  set ref(supplement: it => {
+    if it.func() == heading {
+      if it.level == 1 {
+        [Chapter]  
+      }
+      else {
+        [Section]
+      }
+      
+    } else {
+      it.supplement
+    }
+  })
+  
   show heading.where(level: 1): it => {
     pagebreak(weak: true); 
     
@@ -304,7 +319,7 @@
 
  
   
-  outline(title:"Contents",depth: 3, indent: true)
+  outline(title:"Contents",depth: 4, indent: true)
 
   pagebreak(to: "odd")
 
@@ -321,6 +336,7 @@
         "Acronyms"
       }
     )
+    // set align(left)
     print-glossary(
       glossary,
       // show all term even if they are not referenced, default to true

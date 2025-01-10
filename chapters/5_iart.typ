@@ -2,7 +2,7 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-= #outline-text([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images])
+= #outline-text([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images]) <chp:iart>
 
 == Introduction
 <introduction>

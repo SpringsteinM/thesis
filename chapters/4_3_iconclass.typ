@@ -4,9 +4,9 @@
 #import "/helper/outline_text.typ": outline-text
 
 
-= #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Large-scale Hierarchical Classification of Art-historical Images])
+== #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Large-scale Hierarchical Classification of Art-historical Images])
 
-== Abstract
+=== Abstract
 
 Iconography refers to the methodical study and interpretation of thematic content in the visual arts, distinguishing it, e.g., from purely formal or aesthetic considerations.
 In iconographic studies, #gls("Iconclass") is a widely used taxonomy that encapsulates historical, biblical, and literary themes, among others.
@@ -21,7 +21,7 @@ We present three strategies, including #glspl("LM"), for the generation of textu
 These descriptions are utilized to pre-train a #gls("VLM") based on a newly introduced data set of 477,569 images with more than 20,000 #gls("Iconclass") concepts, far more than considered in previous studies. Furthermore, we present five approaches to multi-label classification, including a novel transformer decoder that leverages hierarchical information from the #gls("Iconclass") taxonomy.
 Experimental results show the superiority of this approach over reasonable baselines.
 
-== Introduction
+=== Introduction
 <chp:introduction>
 Iconography, as established by Panofsky~@panofsky1939, entails
 the systematic analysis of content or meaning in visual art,
@@ -96,9 +96,9 @@ The remainder of the paper is structured as follows. In @chp:iconclass:related-w
 synthesized image-text pairs. @chp:data-sets
 introduces a novel data set, while
 @chp:experimental-setup presents experimental results
-for several benchmarks. We conclude with @chp:conclusion and outline areas for future work.
+for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
 
-== Related Work
+=== Related Work
 <chp:iconclass:related-work>
 The rapidly advancing field of #gls("CV"), fueled by sophisticated deep learning
 models, is facilitating the in-depth analysis of complex data; a task
@@ -110,7 +110,7 @@ real-world data. This section reviews related work in #gls("CV") for the visual
 arts, as well as #gls("HMC"), which is crucial for leveraging the hierarchical
 structure of the #gls("Iconclass") taxonomy.
 
-=== Computer Vision for the Visual Arts
+==== Computer Vision for the Visual Arts
 <cv-for-the-visual-arts>
 Research in #gls("CV") for the visual arts focuses on several key areas
 including, but not limited to, aesthetic quality
@@ -143,7 +143,7 @@ Compared to these works, we not only scale our approach to the entire
 #emph[#gls("Iconclass")] system of over 20000 art-historical concepts, but fully
 exploit its hierarchical structure.
 
-=== #gls("HMC", long: true)
+==== #gls("HMC", long: true)
 <hmc>
 Approaches to #gls("HMC") can exploit the hierarchical structure of taxonomies
 such as #gls("Iconclass"). They have been used for many tasks, e.g., event
@@ -173,7 +173,7 @@ of classes~@GiunchigliaL20. Our proposed approach
 scales to several thousand concepts and is suitable for multiple
 annotations per sample.
 
-== Hierarchical Multi-label Classification of Iconographic Concepts
+=== Hierarchical Multi-label Classification of Iconographic Concepts
 <chp:method>
 In this section, we introduce our approach to the #gls("HMC") of iconographic
 concepts in images. First, we describe the #gls("Iconclass") notation scheme,
@@ -188,7 +188,7 @@ for #gls("HMC"), including a novel transformer-based classification decoder that
 incorporates structured information from the #gls("Iconclass")
 taxonomy~(@chp:method-hierarchical-classification).
 
-=== #gls("Iconclass") Notation Scheme
+==== #outline-text([#gls("Iconclass") Notation Scheme], [Iconclass Notation Scheme])
 <chp:method-notation-scheme>
 While #gls("Iconclass") is explicitly designed for the iconography of Western
 fine art, it also encompasses universal definitions ranging from natural
@@ -227,7 +227,7 @@ notations, as in `79C52:42E3`.
 )
 
 
-=== Image-Text Pairs for Contrastive Pre-Training
+==== Image-Text Pairs for Contrastive Pre-Training
 <chp:method-contrastice-pre-training>
 Several recent methods have shown that #glspl("VLM") pre-trained with image-text
 pairs from other domain-relevant~@CondeT21 @LiXWZ0Z0JC22
@@ -256,7 +256,7 @@ generating pairs of images and textual descriptions for
 language-supervised pre-training of #glspl("VLM"); examples are shown in
 @fig:clip_model_a.
 
-==== Descriptions based on #gls("Iconclass") Keywords (`KW`)
+===== Descriptions based on #gls("Iconclass") Keywords (`KW`)
 <descriptions-based-on-iconclass-keywords-kw>
 In this baseline strategy, a textual description~$D$ is created by
 comma-separating all unique keywords~$bb(K)_C$ from each annotated
@@ -268,7 +268,7 @@ avoided given #emph[CLIP’s] limited textual context length. Furthermore,
 the resulting descriptions are different from those typically used to
 train CLIP~(e.g.,LAION-400M~@abs-2111-02114), which may increase the optimization time.
 
-==== Descriptions based on Large Language Models (`GPT`)
+===== Descriptions based on Large Language Models (`GPT`)
 <descriptions-based-on-large-language-models-gpt>
 To address the issues with the aforementioned `KW`~approach, we use a #gls("LM")
 to generate descriptions based on a set of keywords provided by
@@ -288,7 +288,7 @@ concept~$C in bb(C)$. In doing so, we often found it helpful to provide
 the GPT-2 model with the start of the caption, such as "A photo of …" or
 "A drawing of …", along with the keywords.
 
-==== Descriptions based on Vision-language Models (`BLIP`)
+===== Descriptions based on Vision-language Models (`BLIP`)
 <descriptions-based-on-vision-language-models-blip>
 The introduction of instruction-based fine-tuning of #glspl("LLM") allows
 descriptions to be created without the need to optimize the #gls("LLM") itself
@@ -307,7 +307,7 @@ description of up to three sentences for this image and try to include
 the terms
 $angle.l K_1 angle.r comma angle.l K_2 angle.r comma dots.h comma angle.l K_n angle.r$."
 
-=== Constrastive Pre-Training
+==== Constrastive Pre-Training
 <chp:method-constrastive-pretraining>
 Given a data set containing a set of images and associated annotations
 according to the #gls("Iconclass") notation scheme, we create textual
@@ -324,7 +324,7 @@ are further optimized during classifier training for the hierarchical
 classification of iconographic concepts, as explained in
 @chp:method-hierarchical-classification.
 
-=== Iconographic Concept Classification
+==== Iconographic Concept Classification
 <chp:method-hierarchical-classification>
 Based on the pre-trained image encoder of the #gls("VLM"), we aim to train an
 image classifier that predicts the corresponding iconographic concepts.
@@ -381,7 +381,7 @@ Second, the cross-entropy $C E_l$ loss between the respective ground-truth and t
 )
 <fig:decoder-model>
 
-==== Zero-shot CLIP-based Classification (`CLIP`)
+===== Zero-shot CLIP-based Classification (`CLIP`)
 <chp:method-clip>
 For zero-shot classification, we measure the similarity between an image
 and the textual descriptions for all #gls("Iconclass") concepts~(as shown in
@@ -409,7 +409,7 @@ decision, this approach uses the similarity vector as a ranking to
 calculate the mean #gls("AP") for #gls("HMC") according to
 @chp:evaluation-metrics.
 
-==== Flattened Classification (`Flat`)
+===== Flattened Classification (`Flat`)
 <chp:method-flat>
 To create a baseline classifier, we 'flatten' the concepts~$bb(C)_h$ of
 all hierarchy levels in #gls("Iconclass")~(similar to
@@ -424,7 +424,7 @@ activation in the classification layer to predict a probability
 vector~$bold(hat(y)) in bb(R)^n$. The cross-entropy loss between the
 predicted and target vectors is used for optimization.
 
-==== Hierarchical Flattened Classification (`Flat-H`)
+===== Hierarchical Flattened Classification (`Flat-H`)
 <chp:method-flath>
 This classifier extends `Flat` with a 'flattened,' multi-hot encoded
 target vector~$bold(y) in brace.l 0 comma 1 brace.r^n$ that encodes not
@@ -447,7 +447,7 @@ classes is significantly reduced. During inference, the probability of a
 concept can be refined by considering the probabilities of its
 parents~(e.g., by multiplication).
 
-==== Weighted Flattened Classification (`Flat-W`)
+===== Weighted Flattened Classification (`Flat-W`)
 <chp:method-cos_cel>
 To integrate ontology information, we use a weighting scheme similar to
 that presented by Müller-Budack et
@@ -470,7 +470,7 @@ compared to the #emph[Visual Event Classification Data set]~(148 / 409;
 @Muller-BudackSH21). As a result, the weighting
 of concepts may be less significant.
 
-==== Hierarchical Cross-Attention Transformer (`CAT`)
+===== Hierarchical Cross-Attention Transformer (`CAT`)
 <chp:method-cat>
 To better represent the #gls("Iconclass") taxonomy, we introduce a novel
 approach that does not compute all #gls("Iconclass") concepts in one step, but
@@ -531,7 +531,7 @@ criteria: (i)~we can limit the maximum number of iterations~$p$; (ii)~we
 can stop the process if no concept has a probability above a certain
 threshold~$t$.
 
-== Data Sets
+=== Data Sets
 <chp:data-sets>
 Despite increasing efforts to digitize art-historical material, the
 amount of collections available online utilizing #gls("Iconclass") remains
@@ -553,7 +553,7 @@ $10$ %, respectively. Details of image pre-processing and duplicate
 removal are explained in SM, as is the unification of the annotations of
 #gls("ICAI") and #gls("ICARUS").
 
-== Experimental Setup and Results
+=== Experimental Setup and Results
 <chp:experimental-setup>
 In this section, we present the network architecture and
 parameters~(@chp:network-parameters), the
@@ -563,7 +563,7 @@ models~(@chp:experimental-results-pretraining), as
 well as the performance of the hierarchical classification
 approaches~(@chp:experimental-results-hierarchy).
 
-=== Implementation Details
+==== Implementation Details
 <chp:network-parameters>
 For #emph[CLIP], we use the vision transformer
 variant~#emph[ViT-B/16]~@dosovitskiy2021 as vision encoder and a
@@ -581,7 +581,7 @@ with a batch size of $256$ and a learning rate of $1 e minus 4$. More
 experiments and details on the hyperparameters as well as their
 selection are included in the SM.
 
-=== Evaluation Metrics
+==== Evaluation Metrics
 <chp:evaluation-metrics>
 
 Since we consider a #gls("HMC") problem for more than 20000 concepts and
@@ -592,7 +592,7 @@ least a certain number of training images. Setting the number of images
 to larger thresholds provides insights into the model performance for
 lower levels~(i.e., coarser iconographic concepts) of the taxonomy.
 
-=== Contrastive Pre-training with Image-Text Pairs
+==== Contrastive Pre-training with Image-Text Pairs
 <chp:experimental-results-pretraining>
 
 In this experiment, we evaluate the efficacy of different strategies for
@@ -652,7 +652,7 @@ sophisticated strategies for description synthesis, i.e., `GPT` and
 slightly better than for `GPT`. Thus, we choose `BLIP` for all
 subsequent experiments.
 
-=== Iconographic Concept Classification
+==== Iconographic Concept Classification
 <chp:experimental-results-hierarchy>
 In these experiments, we compare our proposed image classification
 approach `CAT` presented in @chp:method-cat with
@@ -814,8 +814,8 @@ model occasionally detects similarly predisposed compositions, even if
 they are false positives. Further information about the qualitative
 evaluation is given in the supplementary material.
 
-== Conclusions
-<chp:conclusion>
+=== Conclusions
+<sec:iconclass_conclusion>
 In this paper, we have presented a novel approach for #gls("HMC") of
 iconographic concepts. We have introduced three strategies for
 automatically creating image descriptions to pre-train a
@@ -840,7 +840,7 @@ are currently trained separately in two stages, affects the performance.
 Pre-training #glspl("LLM") on captions for art-historical documents for
 description generation is also worth investigating.
 
-== Acknowledgements
+=== Acknowledgements
 <acknowledgements>
 This work was partly funded by the German Research Foundation (DFG)
 under project numbers 415796915 and 510048106.

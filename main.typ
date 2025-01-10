@@ -80,13 +80,10 @@
 
 #include "chapters/3_what.typ"
 
-#include "chapters/4_saints.typ"
-
-#include "chapters/4_pose.typ"
-
-#include "chapters/4_iconclass.typ"
+#include "chapters/4_art_classification.typ"
 
 #include "chapters/5_iart.typ"
+#include "chapters/6_conclusions.typ"
 
 
 

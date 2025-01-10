@@ -3,9 +3,9 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-= #outline-text([Semi-supervised Human Pose Estimation in Art-historical Images],[Semi-supervised Human Pose Estimation in Art])
+== #outline-text([Semi-supervised Human Pose Estimation in Art-historical Images],[Semi-supervised Human Pose Estimation in Art])
 
-== Introduction
+=== Introduction
 <sec:intro>
 As 'language' of non-verbal communication, gesture has been
 theoretically established since the 17th century @Knowlson1965.
@@ -103,7 +103,7 @@ user study to evaluate retrieval results from a human perspective. We
 conclude with @chp:conc and outline areas of future
 work.
 
-== Related Work
+=== Related Work
 <sec:rw>
 As with many other computer vision tasks, there has been steady progress
 in human pose estimation over recent years, particularly with the
@@ -193,7 +193,7 @@ This second Transformer model computes a set of keypoints that serve as the fina
 )
 <fig:two_stages>
 
-== Semi-supervised Pose Estimation
+=== Semi-supervised Pose Estimation
 <chp:pose-method>
 In this section, we describe our method for automatic domain adaptation
 for human pose estimation. First, we introduce the two-stage
@@ -204,7 +204,7 @@ domain-specific images. In @sec:semi, we
 demonstrate how 'real' art-historical images can be used in the training
 stages with the extension of a semi-supervised process.
 
-=== Transformer-based Detection
+==== Transformer-based Detection
 <sec:detection>
 The proposed approach is organized in two steps: first, persons are
 detected in an input image and bounding boxes are computed; in a second
@@ -332,7 +332,7 @@ smaller.
 )
 <fig:semi>
 
-=== Semi-supervised Domain Adaptation
+==== Semi-supervised Domain Adaptation
 <sec:semi>
 To extend the available data sets for bounding box and keypoint
 detection in art-historical images, we augment the training pipeline by
@@ -396,7 +396,7 @@ L_(u, "cls", k) =& - sum_i^N bb(1)_({c_(k,i) eq.not nothing; hat(p)^t (c_(k,i)) 
                  & - sum_i^N bb(1)_({c_(k,i) eq.not nothing; hat(p)_hat(sigma) (c_(k,i)) gt.eq tau} ) log hat(p)_hat(sigma) (c_(k,i))
 $
     
-== Experimental Setup and Results
+=== Experimental Setup and Results
 <chp:exp>
 In this section, we introduce our data sets and discuss the quantitative
 and qualitative studies. For the training and test phases of our
@@ -455,7 +455,7 @@ API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 )
 <tab:data>
 
-=== Data Sets
+==== Data Sets
 <chp:datasets>
 An overview of the data sets used in our experiments with their
 respective splits is shown in @tab:data. All
@@ -513,7 +513,7 @@ instances into the training procedure. A 50~% split of all ART500k
 images with a total of $318 comma 869$ examples is generated, which we
 use in our semi-supervised learning approach as unlabeled data.
 
-=== Ablation Study
+==== Ablation Study
 <chp:ablation>
 For #strong[person detection], we leverage the weights
 of a DETR model~@CarionMSUKZ20") pre-trained on
@@ -750,7 +750,7 @@ of keypoints, it becomes apparent that the ratio between supervised
 and later on average more keypoints are detected in ART500k than in
 PoPArt.
 
-=== Qualitative Analysis
+==== Qualitative Analysis
 <chp:qualitative>
 To qualitatively assess our method’s ability to provide reasonable
 predictions, we visually compare it to ground-truth annotations and two
@@ -823,7 +823,7 @@ person and his or her mirror image.
 )
 <fig:pose-query>
 
-== User Study on Retrieval Results
+=== User Study on Retrieval Results
 <chp:study>
 In this section, we report the results of a user study that aimed to
 evaluate the quality of the automatically generated keypoints from a
@@ -879,7 +879,7 @@ instance, one participant excluded crucifixion scenes in which Christ
 looked to the left rather than downward with his head bowed, as in the
 query image.
 
-== Conclusions and Future Work
+=== Conclusions and Future Work
 <chp:conc>
 In this paper, we have investigated domain adaption techniques to
 estimate human poses in art-historical images. To this end, we have
