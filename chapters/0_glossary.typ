@@ -1,9 +1,28 @@
-
 #let glossary = (
     (
         key:"SGD",
         short:"SGD",
         long:"Stochastic Gradient Descent"
+    ),
+    (
+        key:"MSE",
+        short:"MSE",
+        long:"Mean Squared Error"
+    ),
+    (
+        key:"MAE",
+        short:"MAE",
+        long:"Mean Absolute Error"
+    ),
+    (
+        key:"CE",
+        short:"CE",
+        long:"Cross-Entropy"
+    ),
+    (
+        key:"BCE",
+        short:"BCE",
+        long:"Binary Cross-Entropy"
     ),
     (
         key:"AP",
@@ -75,6 +94,16 @@
         short:"Iconclass",
         long:"Iconographic Classification System",
         plural:"Iconclass's",
+    ),
+    (
+        key:"ReLU",
+        short:"ReLU",
+        long:"Rectified Linear Unit",
+    ),
+    (
+        key:"GELU",
+        short:"GELU",
+        long:"Gaussian Error Linear Unit",
     ),
     (
         key:"SAEM",

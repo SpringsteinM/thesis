@@ -1,6 +1,9 @@
 #import "helper/outline_text.typ": in-outline
 #import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
 
+#import "@preview/equate:0.2.1": equate
+
+
 
 // Official declaration of originality, both in English and Italian
 // taken directly from Paola Gatti's email
@@ -90,6 +93,10 @@
   )
   set par(justify: true)
 
+    
+  show: equate.with(breakable: true, sub-numbering: true)
+  set math.equation(numbering: "(1.1)")
+
 
   
   set table(
@@ -109,6 +116,8 @@
   // Configure figure's internal text
   show figure: set text(size:0.7em)
   // set figure(gap: 2em)
+
+  
   
   // Configure figure's captions
   show figure.caption: set text(size: 1.2em)

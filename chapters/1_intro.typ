@@ -27,6 +27,9 @@ Within the context of visual analysis in art history, a critical challenge lies 
 
 The question therefore arises: How can we further scale automatic image analysis for the study of art without having new data available to us? Addressing this challenge requires innovative approaches, such as the generation of synthetic training to enlarge training corpora, semi- or self-supervised learning methods to minimize the reliance on labeled data, or transfer learning from pre-trained models on related domains. Such efforts could also address more complex challenges beyond basic concept recognition, such as iconographic concept detection or pose estimation in artistic figures.
 
+// Human annotation study
+
+An additional question arising from the continuous scaling of AI systems is how humans perform on these tasks in comparison and whether AI-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
 
 #subpar.super(
  [#figure(
@@ -45,6 +48,7 @@ The question therefore arises: How can we further scale automatic image analysis
       caption:[]
     ) <fig:intro_examples_a>],
   )],
+  placement: auto,
   caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
   label: <fig:intro_examples>,
 )
@@ -61,13 +65,37 @@ Another challenge lies in making these state-of-the-art methods available to art
   bodyfmt: body => ["#emph[#body]"]
 )
 
+The rapid scaling of AI systems across various domains over the last decade increasingly raises the question of whether and for which tasks, they already surpass human performance. Over the years, several comparisons and studies have demonstrated that AI-powered automated systems can outperform human participants and even experts in their respective fields. Over the years, scientists have conducted various comparisons @bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun and some of these studies have demonstrated that certain AI-powered automated systems can outperform human participants and even experts in their respective fields @christiansen2025international @he2015delving. However, it's not only overall performance that matters, but also the agreement among a group of human annotators. If the annotators do not consistently agree, what can we expect from an automated system trained on this data?
+
 #researchquestion(number: "1")[How does the performance of machines in multimedia annotation tasks compare to human performance and what methodologies can be used to determine if a recognition problem is solved at a human level?] <rq_1>
 
+We utilize the insights gained from our user study, in which we measured the intercoder agreement, for the experiments in subsequent methods for art history.
+
+Research projects aimed at the exploration of art using computer-assisted image processing are significantly more data-limited compared to projects focused on the analysis of photographs. Some of the largest datasets, such as WikiArt @SalehE15, Met @METDataset, or Art500k @art500k, contain only a few hundred thousand images, which is considerably smaller than other commonly used datasets @RussakovskyDSKS15 @LinMBHPRDZ14 @abs-2111-02114 @SchuhmannBVGWCC22. Another factor is that the performance of deep learning classifiers scales with the number and variation of samples per class @HuhAE16. However, most art datasets contain only a limited number of samples for each individual concept.
+
+
+
+// Research in \ac{CV} for the visual arts focuses on several key areas including, but not limited to, aesthetic quality assessment~\cite{jenaesthetics}, human pose estimation~\cite{impett2016, springstein2022, madhu2023}, sentiment analysis~\cite{mart, wikiart-emotions}, correspondence matching~\cite{brueghel, jenicek2019}, and visual question answering~\cite{aqua}.
+// % 
+// % The most decisive role is arguably played by classification tasks.
+// %
+// To date, however, research efforts have largely been devoted to classification tasks of image-extrinsic features, such as the identification of artists, genres, or creation dates~\cite{rijksmuseum-challenge, art500k, omniart, multitaskpainting100k, artpedia, the-met, artbench-10, DBLP:conf/cvpr/CondeT21}.
+// While these tasks are significant, they only address tangible aspects of the domain, leaving, e.g., content-based features relatively unexplored.
+// Indeed, the classification of intrinsic features, particularly those related to iconographic elements, has been inadequately attended to:
+// prevailing studies have often focused narrowly on certain subsets of narratives, such as the prediction of saints~\cite{artdl, schneider2020}. % artdl: 10 saints; Schneider: 49 saints
+// A deviation from this tendency is illustrated by Gupta et al.~\cite{gupta2020}, who applied image captioning models based on an encoder-decoder architecture to art-historical images spanning across nine iconographies.
+// Moreover, there have been attempts to comprehensively map the entire \ac{Iconclass} system.
+// Banar et al.~\cite{banar2021} conducted an exploratory investigation into the feasibility of ascribing \ac{Iconclass} notations, with up to five levels of depth, through cross-modal retrieval. % , which expanded the scope of \ac{SAEM}~\cite{DBLP:conf/nips/VaswaniSPUJGKP17}. 
+// Cetinic~\cite{cetinic2021} transformed \acp{Iconclass} textual correlates into descriptions to create image-text pairs to fine-tune a transformer model, morphing the classification into an image captioning task.
+// % Despite these advancements, there remains a largely untapped potential to leverage the inherently hierarchical structure of Iconclass for training models.
+// % Exploiting this hierarchical structure could provide novel avenues to further the understanding of iconography in art and create more nuanced and accurate models.
+// % These advances could in turn offer significant improvements in image-internal feature classification, pushing the boundaries of what \ac{CV} can accomplish in the analysis of visual art.
+// Compared to these works, we not only scale our approach to the entire \textit{Iconclass} system of over \num{20000} art-historical concepts, but fully exploit its hierarchical structure.
 
 #researchquestion(number: "2")[How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?] <rq_2>
 
 
-#researchquestion(number: "3")[] <rq_3>
+#researchquestion(number: "3")[How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?] <rq_3>
 
 
 == Contributions
@@ -114,7 +142,6 @@ Due to the increasingly unmanageable number of art-historical inventories made a
     #set text(
       lang: "de"
     )
-    
     Mit iART wird eine offene Web-Plattform zur Suche in kunst- und kulturwissenschaftlichen Bildinventaren präsentiert, die von in den Geistes­wissenschaften etablierten Methoden wie dem Vergleichenden Sehen inspiriert ist. Das System integriert verschiedene maschinelle Lerntechniken für das schlagwort- und inhaltsgesteuerte Retrieval sowie die Kategorienbildung über Clustering. Mithilfe eines multimodalen Deep-Learning-Ansatzes ist es zudem möglich, text- und bildbasiert nach Konzepten zu suchen, die von trainierten Klassifikationsmodellen zuvor nicht erkannt wurden. Unterstützt von einer intuitiven Benutzeroberfläche, die die Untersuchung der Ergebnisse durch modifizierbare Objektansichten erlaubt, können Nutzer:innen circa eine Millionen Objekte aus kunsthistorisch relevanten Bilddatenbanken, etwa des niederländischen Rijksmuseums, explorieren. Ebenso können eigene Bestände importiert werden.
   ]
 ]

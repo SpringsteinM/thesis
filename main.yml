@@ -496,6 +496,38 @@ abs-2111-02114:
     arxiv: '2111.02114'
   parent:
     type: periodical
+SchuhmannBVGWCC22:
+  type: article
+  title: '{LAION-5B:} An open large-scale dataset for training next generation image-text models'
+  author:
+  - Schuhmann, Christoph
+  - Beaumont, Romain
+  - Vencu, Richard
+  - Gordon, Cade
+  - Wightman, Ross
+  - Cherti, Mehdi
+  - Coombes, Theo
+  - Katta, Aarush
+  - Mullis, Clayton
+  - Wortsman, Mitchell
+  - Schramowski, Patrick
+  - Kundurthy, Srivatsa
+  - Crowson, Katherine
+  - Schmidt, Ludwig
+  - Kaczmarczyk, Robert
+  - Jitsev, Jenia
+  date: 2022
+  editor:
+  - Koyejo, Sanmi
+  - Mohamed, S.
+  - Agarwal, A.
+  - Belgrave, Danielle
+  - Cho, K.
+  - Oh, A.
+  url: http://papers.nips.cc/paper/_files/paper/2022/hash/a1859debfb3b59d094f3504d5ebb6c25-Abstract-Datasets/_and/_Benchmarks.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022'
 panofsky1939:
   type: book
   title: Studies in Iconology. {H}umanistic Themes in the Art of the Renaissance
@@ -3654,24 +3686,6 @@ lake2015human:
     publisher: American Association for the Advancement of Science
     issue: 6266
     volume: 350
-lin2014microsoft:
-  type: article
-  title: 'Microsoft coco: Common objects in context'
-  author:
-  - Lin, Tsung-Yi
-  - Maire, Michael
-  - Belongie, Serge
-  - Hays, James
-  - Perona, Pietro
-  - Ramanan, Deva
-  - Dollár, Piotr
-  - Zitnick, C Lawrence
-  date: 2014
-  page-range: 740–755
-  parent:
-    type: proceedings
-    title: European Conference on Computer Vision ({ECCV})
-    organization: Springer
 nowak2010reliable:
   type: article
   title: 'How reliable are annotations via crowdsourcing: a study about inter-annotator agreement for multi-label image annotation'
@@ -3879,3 +3893,128 @@ russakovsky2015imagenet:
     publisher: Springer
     issue: 3
     volume: 115
+HornikSW89:
+  type: article
+  title: Multilayer feedforward networks are universal approximators
+  author:
+  - Hornik, Kurt
+  - Stinchcombe, Maxwell B.
+  - White, Halbert
+  date: 1989
+  page-range: 359-366
+  url: https://doi.org/10.1016/0893-6080(89)90020-8
+  serial-number:
+    doi: 10.1016/0893-6080(89)90020-8
+  parent:
+    type: periodical
+    title: Neural Networks
+    issue: 5
+    volume: 2
+maas2013rectifier:
+  type: article
+  title: Rectifier nonlinearities improve neural network acoustic models
+  author:
+  - Maas, Andrew L
+  - Hannun, Awni Y
+  - Ng, Andrew Y
+  date: 2013
+  parent:
+    type: proceedings
+    title: Proc. ICML
+    volume: 30
+HendrycksG16:
+  type: article
+  title: Bridging Nonlinearities and Stochastic Regularizers with Gaussian Error Linear Units
+  author:
+  - Hendrycks, Dan
+  - Gimpel, Kevin
+  date: 2016
+  url: http://arxiv.org/abs/1606.08415
+  serial-number:
+    arxiv: '1606.08415'
+  parent:
+    type: periodical
+    title: CoRR
+christiansen2025international:
+  type: article
+  title: International multicenter validation of AI-driven ultrasound detection of ovarian cancer
+  author:
+  - Christiansen, Filip
+  - Konuk, Emir
+  - Ganeshan, Adithya Raju
+  - Welch, Robert
+  - Palés Huix, Joana
+  - Czekierdowski, Artur
+  - Leone, Francesco Paolo Giuseppe
+  - Haak, Lucia Anna
+  - Fruscio, Robert
+  - Gaurilcikas, Adrius
+  - others
+  date: 2025
+  page-range: 1-8
+  parent:
+    type: periodical
+    title: Nature Medicine
+    publisher: Nature Publishing Group US New York
+SalehE15:
+  type: article
+  title: 'Large-scale Classification of Fine-Art Paintings: Learning The Right Metric on The Right Feature'
+  author:
+  - Saleh, Babak
+  - Elgammal, Ahmed M.
+  date: 2015
+  url: http://arxiv.org/abs/1505.00855
+  serial-number:
+    arxiv: '1505.00855'
+  parent:
+    type: periodical
+    title: CoRR
+METDataset:
+  type: article
+  title: 'The Met Dataset: Instance-level Recognition for Artworks'
+  author:
+  - Ypsilantis, Nikolaos-Antonios
+  - Garcia, Noa
+  - Han, Guangxing
+  - Ibrahimi, Sarah
+  - name: Noord
+    given-name: Nanne
+    prefix: van
+  - Tolias, Giorgos
+  date: 2021
+  editor:
+  - Vanschoren, J.
+  - Yeung, S.
+  page-range: ''
+  url: https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/5f93f983524def3dca464469d2cf9f3e-Paper-round2.pdf
+  parent:
+    type: proceedings
+    title: Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks
+    publisher: Curran
+    volume: 1
+HuhAE16:
+  type: article
+  title: What makes ImageNet good for transfer learning?
+  author:
+  - Huh, Mi-Young
+  - Agrawal, Pulkit
+  - Efros, Alexei A.
+  date: 2016
+  url: http://arxiv.org/abs/1608.08614
+  serial-number:
+    arxiv: '1608.08614'
+  parent:
+    type: periodical
+    title: CoRR
+polyak1964some:
+  type: article
+  title: Some methods of speeding up the convergence of iteration methods
+  author: Polyak, Boris T
+  date: 1964
+  page-range: 1-17
+  parent:
+    type: periodical
+    title: Ussr computational mathematics and mathematical physics
+    publisher: Elsevier
+    issue: 5
+    volume: 4

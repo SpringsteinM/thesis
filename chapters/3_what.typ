@@ -4,8 +4,7 @@
 
 = #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
 
-== Introduction
-<introduction>
+== Introduction <sec:what_introduction>
 In the fields of multimedia analysis and retrieval, human performance in
 recognition tasks was reported from time to time
 @bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun,
@@ -14,7 +13,7 @@ quality of human performance is not exactly known and estimates exist
 only for a number of recognition tasks. The design of the related human
 experiments also varies noticeably in many respects. For example,
 crowdsourcing was often utilized to employ annotators
-@jiang2011consumer @kumar2009attribute @lake2015human @lin2014microsoft @nowak2011eval @parikh2010role @xiao2010sun,
+@jiang2011consumer @kumar2009attribute @lake2015human @LinMBHPRDZ14 @nowak2011eval @parikh2010role @xiao2010sun,
 which is coming along with some methodological issues. The number of
 human participants varies from 1 to 40 in the studies considered in this
 paper. The same is true for the experimental instructions and their
@@ -97,7 +96,7 @@ performance has been considered only in a small number of studies.
 
 Some studies evaluated human performance in the task of visual concept
 classification. Nowak and Rüger @kumar2009attribute as well as
-Lin et al. @lin2014microsoft measured the human inter-coder
+Lin et al. @LinMBHPRDZ14 measured the human inter-coder
 agreement and compared experts against crowdsourcing annotators. Other
 papers reported the performance of humans and machine systems on some
 benchmark datasets. Jiang et al. @jiang2011consumer presented a
@@ -313,8 +312,8 @@ correlation of K’s $alpha$ and $A P$ with respect to the categories is
 observable that the machine learning approaches perform worst for the
 same five categories as humans do.
 
-==== Agreement when using VOC guidelines.
-<agreement-when-using-voc-guidelines.>
+==== Agreement when using VOC guidelines
+<sec:what_agreement-when-using-voc-guidelines>
 In this experiment, it is investigated whether the inter-coder agreement
 is improved when more precise definitions are provided to the users. For
 this purpose, we have asked five other students (from the same
@@ -426,7 +425,7 @@ participants in our study.
 <sec:what_methodology>
 
 === Issues of Measuring Human-level Performance
-<issues-of-measuring-human-level-performance>
+<sec:what_issues-of-measuring-human-level-performance>
 
 The performance of multimedia retrieval systems is often measured by
 average precision ($A P$). However, this measure has some drawbacks.
@@ -450,6 +449,7 @@ even better than a human result? This question is addressed in the
 subsequent section.
 
 === #outline-text([An Experimental Methodology and Two Indices for Comparisons with Human-level Performance],[Two Indices for Comparisons with Human-level Performance])
+<sec:what_metrics>
 
 In this section, we propose an experimental methodology and two novel
 easy-to-use measures, called human-level performance index ($H L P I$)

@@ -1,19 +1,217 @@
 #import "@preview/glossarium:0.4.0": gls, glspl 
-
+#import "@preview/subpar:0.1.0"
 #import "../helper/outline_text.typ": outline-text
+#import "@preview/equate:0.2.1": equate
 
 = Foundations
 <chp:fnd>
-== Neural Networks
+
+In this chapter, the concepts and methods necessary to understand this thesis are introduced. First, neural networks are described and how they are optimized (@sec:fnd_dl), followed by a detailed discussion of specific architectures, including #glspl("CNN") (@sec:fnd_cnn) and Transformers (@sec:fnd_tr). In particular, the variants used in the following chapters are explained. @sec:fnd_lr presents various self-supervised, semi-supervised, and unsupervised learning approaches that require little to no annotated training data for training neural networks. Finally in @sec:fnd_eval, several approaches for evaluating the performance of neural networks are introduced, which are relevant for the subsequent chapters.
+
+== Artificial Neural Networks
 <sec:fnd_dl>
+
+=== Artificial Neuron and Fully Connected Layer
+
+Artificial neural networks are mathematical models inspired by the structure and functioning of neural networks in the brains of living organisms. A neural network is composed of multiple individual neurons and their interconnections, known as synapses. The functionality of a neural network is determined by the distribution of weights between its individual neurons.
+
+The model of a single artificial neuron consists of an input vector $bold(x) in bb(R)^n$, a weight vector $bold(w) in bb(R)^n$, a bias $b in  bb(R)$, and an activation function $f(dot)$. The input to the neuron is calculated as the weighted sum of the input vector and the weight vector. Subsequently, the bias value is subtracted from the input, and an activation function is applied to obtain the final output $hat(y)$ of the neuron. A representation of such a neuron can be found in @fig:fnd_neuron.
+
+#figure([#image("../images/foundations/neural_network_wb_yhat.svg", width: 70%)],
+  placement: auto,
+  caption: outline-text([
+    Schematic structure of an artificial neuron with a input vector $bold(x)$, a weight vector $bold(w)$, a bias term $b$, and an activation function $f(dot)$
+  ],[Illustration of a simple artificial neuron])
+)
+<fig:fnd_neuron>
+
+To solve more complex problems, more than one neuron is required. These neurons are organized into layers. When every input connection is linked to every single neuron in a layer, this is referred to as a fully connected or dense layer. The computation of the output of the $j$-th neuron in such a layer is shown in @eq:n_1 and @eq:n_2.
+
+$
+  o_j &= sum_i w_(i j)*x_i #<eq:n_1> \
+  hat(y)_j &= f(o_j+b_j) #<eq:n_2>
+$
+For an entire layer with multiple neurons, matrix notation is often used, employing a weight matrix $bold(W) in bb(R)^(m times n)$ and a bias vector $bold(b) in bb(R)^m$, where $n$ represents the size of the input vector $bold(x)$, and $m$ denotes the number of neurons in the layer. The complete calculation is shown in @eq:n_matrix.
+
+$
+bold(hat(y)) &= f(bold(W)bold(x)+bold(b))
+$ <eq:n_matrix>
+
+=== Activation Functions in Neural Networks
+
+Typically, multiple layers of neural networks are required to solve more complex problems. The activation function plays a crucial role in this process. Usually, non-linear functions are used, as a linear activation function would result in several layers being reduced to one. In general, a neural network with two layers and nonlinear activation functions serves as a universal approximator. This means it can approximate any continuous function on a compact domain to an arbitrary degree of accuracy, given sufficient neurons in the hidden layer @HornikSW89.
+
+
+#subpar.grid(
+    columns: 4,
+    gutter: 6pt,
+    align:top,
+    figure(
+      box([
+        #set par(justify: false)
+        *Sigmoid*
+        #box(
+          image("/images/foundations/activation_sigmoid.svg", height:15%)
+        )
+        #math.equation(block: true, numbering: none)[
+          $
+          f(x) &= 1/(1+e^-x) \
+          f'(x) &= f(x)(1-f(x)) 
+          $	
+          ]
+        ]
+      ),
+    ), 
+    figure(
+      box([
+        #set par(justify: false)
+        *Hyperbolic Tangent*
+        #box(
+          image("/images/foundations/activation_tanh.svg", height:15%)
+        )
+        #math.equation(block: true, numbering: none)[
+          $
+          f(x) &= (e^x-e^-x)/(e^x+e^-x) \
+          f'(x) &= 1- f(x)^2 
+          $	
+          ]
+        ]
+      ),
+    ), 
+    figure(
+      box([
+        #set par(justify: false)
+        *Rectified Linear Unit*
+        #box(
+          image("/images/foundations/activation_relu.svg", height:15%)
+        )
+        #math.equation(block: true, numbering: none)[
+          $
+          f(x) &= max(0,x) \
+          f'(x) &= cases(0", if" x lt.eq 0, 1", if" x gt 0)
+          $	
+          ]
+        ]
+      ),
+    ), 
+    figure(
+      box([
+        #set par(justify: false)
+        *Gaussian Error Linear Unit*
+        #box(
+          image("/images/foundations/activation_gelu.svg", height:15%)
+        )
+        #math.equation(block: true, numbering: none)[
+          $
+          f(x) &=  1/2x(1+op("erf")(x/sqrt(2))) = x Phi(x) \
+          f'(x) &= Phi(x) + x/sqrt(2pi)*e^(-x^2/2)
+          $	
+          ]
+        ]
+      ),
+    ), 
+  placement: auto,
+  caption: [Various nonlinear activation functions used in neural networks.],
+  label: <fig:fnd_activation>,
+) 
+
+Other important properties of activation functions are their output range and whether they are continuously differentiable. The range of an activation function determines whether it provides a finite response, saturating its output at a specific value such as one or zero regardless of the input. Activation functions with a finite response are generally more robust during the learning process. However, they are also prone to the vanishing gradient problem. Examples of activation functions with a finite output range include classical functions such as the step function, sigmoid, or hyperbolic tangent. In contrast, functions like #gls("ReLU") @maas2013rectifier and #gls("GELU") @HendrycksG16 have an infinite output range. Examples of activation functions and their derivatives are shown in @fig:fnd_activation.
+
+In general, it is desirable for an activation function to be differentiable across its entire range of values and for its derivative to not be zero everywhere. This is important because the most commonly used method for optimizing a neural network is the backpropagation algorithm (@sec:fnd_backpropagation). A well-known example of an activation function that lacks a derivative at a specific point is the #gls("ReLU") function, which is not differentiable at $x=0$. To address this limitation, several functions have been developed to improve upon this drawback of #gls("ReLU"), such as the #gls("GELU") function, which is commonly used in #glspl("LLM").
+
+=== Optimization
+<sec:fnd_optimization>
+
+The weights of a neural network are typically initialized with random values, resulting in an initial output that is generally far from the desired output. To address this, the neural network must undergo optimization. Optimization of a neural networks $f(dot)$ typically refers to the training process, where the weights $theta$ are adjusted using training pairs $cal(D) = {(x, y) | x in cal(X), y in cal(Y)}$ to minimize the value of a loss or error function $E(hat(y),y)$. 
+
+==== Loss Function
+<sec:fnd_loss>
+
+The loss function is designed for model optimization and indicates how close the prediction $hat(y)$ is to a target value $y$. Unlike performance metrics, the loss function does not need to be directly interpretable by humans. Its primary purpose is to be minimized during the optimization process, whereas metrics are generally used to evaluate the model's performance after training. Another difference is that the loss function must be differentiable when the backpropagation (@sec:fnd_backpropagation) algorithm is used for weight adjustment.
+
+Generally, there is a wide range of loss functions, depending on factors such as whether a regression or classification problem is being solved. Examples of regression loss functions include #gls("MSE") (@eq:fnd_mse) and #gls("MAE") (@eq:fnd_mae). For classification tasks, #gls("CE") Loss (@eq:fnd_ce) is commonly used for multi-class problems, while #gls("BCE") (@eq:fnd_bce) is typical for single-class problems. In these examples, $n$ represents the number of training samples and $C$ denotes the number of classes to be distinguished. Additionally, multiple loss terms are often combined to achieve several optimization objectives, such as incorporating regularization to prevent overfitting (@sec:fnd_regularization). 
+
+$
+text("MSE") = 1/n sum_(i=1)^n (hat(y)_i - y_i)^2 #<eq:fnd_mse>\
+text("MAE") = 1/n sum_(i=1)^n |hat(y)_i - y_i| #<eq:fnd_mae> \
+text("Cross-Entropy") = - 1/n sum_(i=1)^n sum_(c=1)^C y_(i,c) log(hat(y)_(i,c)) #<eq:fnd_ce> \
+text("BCE") = -1/n sum_(i=1)^n (y_i log(hat(y)_i) + (1- y_i) log(1-hat(y)_i)) #<eq:fnd_bce>
+$
+
+==== Backpropagation
+<sec:fnd_backpropagation>
+
+The training of neural networks proceeds in multiple steps. In the first step, an input $x$ is fed into the network and a forward pass is executed, resulting in a scalar loss value $E$. Subsequently, during the backward step, the gradient of the loss function with respect to each layer $l$ and its parameters $theta^((l))$ is calculated, utilizing the Backpropagation algorithm. The operations are performed using a computation graph, where the outputs of a layer $l$ are computed as a composition of the previous layers. Backpropagation uses the chain rule to efficiently compute the derivatives for previous layers. A model of such a computation graph is shown in @fig:fnd_layer.
+
+#figure([#image("/images/foundations/layer_e.svg", width: 50%)],
+  placement: auto,
+  caption: outline-text([
+    Layer-wise separate computation of a neural network, divided into a forward pass $z^((l))=f(z^((l-1)), theta^((l)))$ and a backward pass $delta^((l)) =(partial E)/(partial z^((l)))$ 
+  ],[Layer wise calculation of a neural network])
+)
+<fig:fnd_layer>
+
+$
+z^((l+1)) &= f(z^((l))) #<eq:forward>\
+delta_i^((l)) &= (partial E)/(partial z_i^((l))) = sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial z_i^((l))) =  sum_j delta_j^(l+1)( partial z_j^((l+1)))/(partial z_i^((l))) #<eq:backward_derivatives>\
+(partial E)/(partial theta_i^((l))) &= sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial theta_i^((l))) =  sum_j delta_j^(l+1)( partial z_j^((l+1)))/(partial theta_i^((l)))#<eq:backward_parameters>
+$
+
+When implementing a new layer for a neural network, only three functions need to be defined for the computation using the chain rule: one for the forward pass @eq:forward, one for computing the derivatives based on the following layer @eq:backward_derivatives, and the derivative for each parameter within this layer @eq:backward_parameters. Normally, $z$, $delta$, and $theta$ are not scalars but rather matrices or vectors, with $i$ and $j$ serving as generic indices.
+
+==== Parameter Update
+<sec:fnd_parameter_update>
+
+The next step in the optimization process is to adjust the weights of the individual layers so that the error of the loss function is minimized for all training examples in the dataset. Generally, there are various methods to adjust the weights, for example, Genetic Algorithms, but here only the procedures and methods most relevant to training large neural networks are listed.
+
+#heading(level:5, numbering: none)[Gradient Descent]
+Gradient descent is a classic optimization technique, where one proceeds iteratively and adjusts the weights in the direction of the negative gradient. In gradient descent, the entire dataset is used to calculate the loss, which in practice can lead to problems if the dataset is too large to fit into memory. The weight adjustment is performed with the following algorithm:
+
+$
+theta_i^((t+1)) = theta_i^((t)) - eta (partial E(theta))/(partial theta_i)
+$
+
+In this equation, $eta$ is the learning rate, and $(partial E(theta))/(partial theta_i)$ is the partial derivative determined using backpropagation.
+
+#heading(level:5, numbering: none)[Stochastic Gradient Descent]
+#gls("SGD") functions like gradient descent, but instead of making a weight adjustment only after all training examples, it does so after each individual example. This accelerates the training process, but it also makes it more unstable, so the learning rate often needs to be reduced. To make the training process with #gls("SGD") more stable, in practice, an update is usually performed after each mini-batch, which makes the training process more stable. The following equation specifies the parameter update for $m$ samples in the training dataset:
+
+$
+theta_i^((t+1)) = theta_i^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i)
+$
+
+#heading(level:5, numbering: none)[Momentum]
+
+Another commonly used optimization technique for gradient descent is the use of the Momentum method @polyak1964some. In this method, the weight change is not directly applied through gradient descent but rather an exponentially decaying moving average of the past gradients is used. This helps to stabilize and accelerate the training process because, for example, in a canyon, the gradient would jump from one side to the other, but with Momentum, the final gradient would gradually move towards the canyon. An example of how the gradient behaves with momentum is shown in @fig:fnd_momentum.
+
+#figure([#image("/images/foundations/momentum.svg", width: 50%)],
+  placement: auto,
+  caption: outline-text([^],[])
+)
+<fig:fnd_momentum>
+
+$
+v^((t+1)) &= alpha v^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
+ theta_i^((t+1)) &= theta_i^((t)) + v^((t+1))
+$
+
+
+
+#heading(level:5, numbering: none)[Adam]
+
+==== Regularization
+<sec:fnd_regularization>
+
+
+
 == Convolutional Neural Networks for Computer Vision
-<sec:fnd_cv>
+<sec:fnd_cnn>
 == Visual and Textual based Transformer Models
 <sec:fnd_tr>
 == Semi-supervised and Unsupervised based Deep Learning
 <sec:fnd_lr>
 == Evaluation Methods
-<sec:fnd_method>
+<sec:fnd_eval>
 
 === Classification and Retrieval Metrics
 <sec:fnd_map>
@@ -36,7 +234,7 @@ In order to evaluate retrieval or classification methods, various metrics have b
 Figure @fig:precision_recall shows how these values relate to the number of documents retrieved and the total number of documents. Based on these values, we can calculate the following metrics.
 
 ==== Recall
-<sec:fnd_map>
+<sec:fnd_recall>
 
 Recall $R$ indicates how many of the found documents are relevant among the search results. The range of values for this metric is from zero to one, with one being the best possible outcome. However, recall alone is not sufficient for evaluating a retrieval system because if the system simply classifies all documents as positive, the metric would be one. Recall $R$ can be computed as follows:
 
@@ -45,7 +243,7 @@ R &= (T P) /(T P + F N)
 $
 
 ==== Precision
-<sec:fnd_map>
+<sec:fnd_precision>
 
 Precision $P$ indicates how many of the found documents match the sought concepts. The value range of this metric goes from zero to one, where one would be the best possible result. Precision $P$ can be calculated as follows:
 
@@ -81,7 +279,7 @@ $
 
 
 === Intersection over Union
-<sec:iou>
+<sec:fnd_iou>
 
 === Krippendorff's Alpha
 <sec:fnd_agreement>
