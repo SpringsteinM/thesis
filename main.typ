@@ -1,5 +1,5 @@
 #import "template.typ": template
-#import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
+#import "@preview/glossarium:0.5.3": make-glossary, print-glossary, gls, glspl 
 #import "chapters/0_glossary.typ": glossary
 
 // Your acknowledgments (Ringraziamenti) go here
@@ -66,6 +66,7 @@
 
   glossary:  glossary
 )
+
 
 // I suggest adding each chapter in a separate typst file under the
 // `chapters` directory, and then importing them here.

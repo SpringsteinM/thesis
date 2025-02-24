@@ -1,5 +1,5 @@
 #import "helper/outline_text.typ": in-outline
-#import "@preview/glossarium:0.4.0": make-glossary, print-glossary, gls, glspl 
+#import "@preview/glossarium:0.5.3": make-glossary, register-glossary, print-glossary, gls, glspl 
 
 #import "@preview/equate:0.2.1": equate
 
@@ -80,6 +80,8 @@
   // Set document matadata.
   set document(title: title, author: candidate.name)
 
+  show: make-glossary
+  register-glossary(glossary)
 
   // Set the body font, "New Computer Modern" gives a LaTeX-like look
   set text(font: "New Computer Modern", lang: lang, size: 12pt)
@@ -328,7 +330,7 @@
 
  
   
-  outline(title:"Contents",depth: 4, indent: true)
+  outline(title:"Contents",depth: 4, indent: auto)
 
   pagebreak(to: "odd")
 

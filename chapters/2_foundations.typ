@@ -1,4 +1,4 @@
-#import "@preview/glossarium:0.4.0": gls, glspl 
+#import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.1.0"
 #import "../helper/outline_text.typ": outline-text
 #import "@preview/equate:0.2.1": equate
@@ -190,9 +190,13 @@ Another commonly used optimization technique for gradient descent is the use of 
 )
 <fig:fnd_momentum>
 
+
+
+$alpha$
+
 $
-v^((t+1)) &= alpha v^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
- theta_i^((t+1)) &= theta_i^((t)) + v^((t+1))
+v^((t+1)) &= alpha v^((t)) - 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
+ theta_i^((t+1)) &= theta_i^((t)) + eta v^((t+1))
 $
 
 

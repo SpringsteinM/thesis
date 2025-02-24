@@ -1,4 +1,4 @@
-#import "@preview/glossarium:0.4.0": gls, glspl 
+#import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.1.0"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
@@ -494,7 +494,7 @@ artifacts in low-resolution reproductions. After these preparatory
 measures, People-Art features $1 comma 746$ training, $1 comma 489$
 validation, and $1 comma 616$ test images. The annotation of the novel
 #strong[PoPArt] data set was performed according to the following
-principles (see @fig:examples_a] for some examples
+principles (see @fig:examples_a) for some examples
 with ground-truth annotations): (1)~the body of a human figure must be
 recognizable, which implies that more than six keypoints are
 annotatable, covering at least head and shoulder area; (2)~a maximum of

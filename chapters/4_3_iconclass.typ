@@ -1,4 +1,4 @@
-#import "@preview/glossarium:0.4.0": gls, glspl 
+#import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.1.0"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
