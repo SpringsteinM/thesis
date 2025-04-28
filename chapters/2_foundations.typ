@@ -111,7 +111,7 @@ Typically, multiple layers of neural networks are required to solve more complex
       ),
     ), 
   placement: auto,
-  caption: [Various nonlinear activation functions used in neural networks.],
+  caption: outline-text([Various nonlinear activation functions used in neural networks.],[Various nonlinear activation functions used in neural networks]),
   label: <fig:fnd_activation>,
 ) 
 
@@ -153,8 +153,8 @@ The training of neural networks proceeds in multiple steps. In the first step, a
 
 $
 z^((l+1)) &= f(z^((l))) #<eq:forward>\
-delta_i^((l)) &= (partial E)/(partial z_i^((l))) = sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial z_i^((l))) =  sum_j delta_j^(l+1)( partial z_j^((l+1)))/(partial z_i^((l))) #<eq:backward_derivatives>\
-(partial E)/(partial theta_i^((l))) &= sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial theta_i^((l))) =  sum_j delta_j^(l+1)( partial z_j^((l+1)))/(partial theta_i^((l)))#<eq:backward_parameters>
+delta_i^((l)) &= (partial E)/(partial z_i^((l))) = sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial z_i^((l))) =  sum_j delta_j^((l+1))( partial z_j^((l+1)))/(partial z_i^((l))) #<eq:backward_derivatives>\
+(partial E)/(partial theta_i^((l))) &= sum_j (partial E)/( partial z_j^((l+1)))( partial z_j^((l+1)))/(partial theta_i^((l))) =  sum_j delta_j^((l+1))( partial z_j^((l+1)))/(partial theta_i^((l)))#<eq:backward_parameters>
 $
 
 When implementing a new layer for a neural network, only three functions need to be defined for the computation using the chain rule: one for the forward pass @eq:forward, one for computing the derivatives based on the following layer @eq:backward_derivatives, and the derivative for each parameter within this layer @eq:backward_parameters. Normally, $z$, $delta$, and $theta$ are not scalars but rather matrices or vectors, with $i$ and $j$ serving as generic indices.
@@ -177,7 +177,7 @@ In this equation, $eta$ is the learning rate, and $(partial E(theta))/(partial t
 #gls("SGD") functions like gradient descent, but instead of making a weight adjustment only after all training examples, it does so after each individual example. This accelerates the training process, but it also makes it more unstable, so the learning rate often needs to be reduced. To make the training process with #gls("SGD") more stable, in practice, an update is usually performed after each mini-batch, which makes the training process more stable. The following equation specifies the parameter update for $m$ samples in the training dataset:
 
 $
-theta_i^((t+1)) = theta_i^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i)
+theta_i^((t+1)) = theta_i^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) #<eq:gradient>
 $
 
 #heading(level:5, numbering: none)[Momentum]
@@ -186,22 +186,31 @@ Another commonly used optimization technique for gradient descent is the use of 
 
 #figure([#image("/images/foundations/momentum.svg", width: 50%)],
   placement: auto,
-  caption: outline-text([^],[])
+  caption: outline-text([Example of a gradient descent process with (green) and without (blue) a momentum term.],[Gradient descent process with and without momentum])
 )
 <fig:fnd_momentum>
 
-
-
-$alpha$
+There are several ways to implement the momentum term. An example of how it is calculated in PyTorch #footnote[https://pytorch.org/docs/stable/generated/torch.optim.SGD.html] is summarized in the following equation:
 
 $
-v^((t+1)) &= alpha v^((t)) - 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
- theta_i^((t+1)) &= theta_i^((t)) + eta v^((t+1))
+v_i^((t+1)) &= alpha v_i^((t)) - 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
+ theta_i^((t+1)) &= theta_i^((t)) + eta v_i^((t+1))
 $
 
+Compared to @eq:gradient, there is an additional term $alpha$ here that specifies the strength of the momentum. The higher this value is, the stronger the weighting on the previous gradients and the less influence the current gradient has. This value is usually kept at 0.9 in most approaches.
 
 
 #heading(level:5, numbering: none)[Adam]
+
+$
+g_i^((t)) &= 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
+m^((t)) &= beta_1 m^((t-1)) + (1-beta_1) g_t \
+v^((t)) &= beta_2 v^((t-1)) + (1-beta_2) g_t^2 \
+hat(m)^((t)) &= m^((t))/(1-beta_1^t) \
+hat(v)^((t)) &= v^((t))/(1-beta_2^t)
+
+
+$
 
 ==== Regularization
 <sec:fnd_regularization>
