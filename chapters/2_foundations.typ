@@ -168,19 +168,19 @@ The next step in the optimization process is to adjust the weights of the indivi
 Gradient descent is a classic optimization technique, where one proceeds iteratively and adjusts the weights in the direction of the negative gradient. In gradient descent, the entire dataset is used to calculate the loss, which in practice can lead to problems if the dataset is too large to fit into memory. The weight adjustment is performed with the following algorithm:
 
 $
-theta_i^((t+1)) = theta_i^((t)) - eta (partial E(theta))/(partial theta_i)
+theta_(t+1,i) = theta_(t,i) - eta (partial E(theta_t))/(partial theta_(t,i))
 $
 
-In this equation, $eta$ is the learning rate, and $(partial E(theta))/(partial theta_i)$ is the partial derivative determined using backpropagation.
+In this equation, $eta$ is the learning rate, and $(partial E(theta_t))/(partial theta_(t,i))$ is the partial derivative determined using backpropagation.
 
 #heading(level:5, numbering: none)[Stochastic Gradient Descent]
 #gls("SGD") functions like gradient descent, but instead of making a weight adjustment only after all training examples, it does so after each individual example. This accelerates the training process, but it also makes it more unstable, so the learning rate often needs to be reduced. To make the training process with #gls("SGD") more stable, in practice, an update is usually performed after each mini-batch, which makes the training process more stable. The following equation specifies the parameter update for $m$ samples in the training dataset:
 
 $
-theta_i^((t+1)) = theta_i^((t)) - eta 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) #<eq:gradient>
+theta_(t+1,i) = theta_(t,i) - eta 1/m sum_(j=1)^m (partial E(theta_t; x^((j)), y^((j))))/(partial theta_(t,i)) #<eq:gradient>
 $
 
-#heading(level:5, numbering: none)[Momentum]
+#heading(level:5, numbering: none)[Optimizer with Momentum]
 
 Another commonly used optimization technique for gradient descent is the use of the Momentum method @polyak1964some. In this method, the weight change is not directly applied through gradient descent but rather an exponentially decaying moving average of the past gradients is used. This helps to stabilize and accelerate the training process because, for example, in a canyon, the gradient would jump from one side to the other, but with Momentum, the final gradient would gradually move towards the canyon. An example of how the gradient behaves with momentum is shown in @fig:fnd_momentum.
 
@@ -190,27 +190,29 @@ Another commonly used optimization technique for gradient descent is the use of 
 )
 <fig:fnd_momentum>
 
-There are several ways to implement the momentum term. An example of how it is calculated in PyTorch #footnote[https://pytorch.org/docs/stable/generated/torch.optim.SGD.html] is summarized in the following equation:
+There are several ways to implement the momentum term. An example of how it is calculated in PyTorch #footnote[https://pytorch.org/docs/stable/generated/torch.optim.SGD.html] is summarized in the following equations:
 
 $
-v_i^((t+1)) &= alpha v_i^((t)) - 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
- theta_i^((t+1)) &= theta_i^((t)) + eta v_i^((t+1))
+v_(t+1,i) &= alpha v_(t,i) - 1/m sum_(j=1)^m (partial E(theta_t; x^((j)), y^((j))))/(partial theta_(t,i)) \
+ theta_(t+1,i) &= theta_(t,i) + eta v_(t+1,i)
 $
 
 Compared to @eq:gradient, there is an additional term $alpha$ here that specifies the strength of the momentum. The higher this value is, the stronger the weighting on the previous gradients and the less influence the current gradient has. This value is usually kept at 0.9 in most approaches.
 
 
-#heading(level:5, numbering: none)[Adam]
+#heading(level:5, numbering: none)[Adam Optimizer]
+Adam is a widely used optimizer for neural networks proposed by Ba and Kingma @KingmaB14. Like the previous optimizers, Adam is a first-order gradient-based algorithm, based on adaptive estimates of lower-order moments. In this process, the exponential moving average of the first ($m_t$) and second ($v_t$) raw moments is calculated for each parameter to be optimized. The calculation of these moving averages is controlled by the two hyper-parameters, $beta_1$ and $beta_2$. Since the variables $m_t$​ and $v_t$​ are initialized to zero, there is a bias in the moving averages. To correct this, the moments are normalized by the term $1/(1−beta_1^t)$ and $1/(1−beta_2^t)$, respectively. The following equations summarize the Adam optimizer update procedure:
 
 $
-g_i^((t)) &= 1/m sum_(j=1)^m (partial E(theta; x^((j)), y^((j))))/(partial theta_i) \
-m^((t)) &= beta_1 m^((t-1)) + (1-beta_1) g_t \
-v^((t)) &= beta_2 v^((t-1)) + (1-beta_2) g_t^2 \
-hat(m)^((t)) &= m^((t))/(1-beta_1^t) \
-hat(v)^((t)) &= v^((t))/(1-beta_2^t)
-
-
+g_(t+1,i) &= 1/m sum_(j=1)^m (partial E(theta_t; x^((j)), y^((j))))/(partial theta_(t,i)) \
+m_(t+1,i) &= beta_1 m_(t,i) + (1-beta_1) g_(t+1,i) \
+v_(t+1,i) &= beta_2 v_(t,i) + (1-beta_2) g_(t+1,i)^2 \
+hat(m)_(t+1,i) &= m_(t+1,i)/(1-beta_1^t) \
+hat(v)_(t+1,i) &= v_(t+1,i)/(1-beta_2^t) \
+theta_(t+1,i) &= theta_(t,i) - eta hat(m)_(t+1,i)/(sqrt(hat(v)_(t+1,i))+epsilon)
 $
+
+The parameters are typically set to $eta=0.001$  $beta_1 = 0.9$, $beta_2=0.999$ and $epsilon=10^(-8)$, where a fixed learning rate is often sufficient and a reduction of the learning rate $eta$ after some training epochs is not necessary.
 
 ==== Regularization
 <sec:fnd_regularization>

@@ -49,7 +49,7 @@ An additional question arising from the continuous scaling of AI systems is how 
     ) <fig:intro_examples_a>],
   )],
   placement: auto,
-  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
+  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptation++s of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
   label: <fig:intro_examples>,
 )
 
