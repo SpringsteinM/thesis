@@ -4018,3 +4018,19 @@ polyak1964some:
     publisher: Elsevier
     issue: 5
     volume: 4
+abs-1207-0580:
+  type: article
+  title: Improving neural networks by preventing co-adaptation of feature detectors
+  author:
+  - Hinton, Geoffrey E.
+  - Srivastava, Nitish
+  - Krizhevsky, Alex
+  - Sutskever, Ilya
+  - Salakhutdinov, Ruslan
+  date: 2012
+  url: http://arxiv.org/abs/1207.0580
+  serial-number:
+    arxiv: '1207.0580'
+  parent:
+    type: periodical
+    title: CoRR

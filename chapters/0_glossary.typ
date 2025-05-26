@@ -45,6 +45,11 @@
         long:"Contrastive Language-Image Pre-Training"
     ),
     (
+        key:"BLIP",
+        short:"BLIP",
+        long:"Bootstrapping Language-image Pre-training"
+    ),
+    (
         key:"CV",
         short:"CV",
         long:"Computer Vision"
@@ -60,9 +65,9 @@
         long:"Exponential Moving Average"
     ),
     (
-      key: "VOC",
-      short: "PASCAL VOC",
-      long: "Pattern Analysis, Statistical Modelling and Computational Learning Visual - Object Classes Challenge"
+        key: "VOC",
+        short: "PASCAL VOC",
+        long: "Pattern Analysis, Statistical Modelling and Computational Learning Visual - Object Classes Challenge"
     ),
     (
         key:"GLAM",

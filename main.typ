@@ -22,7 +22,7 @@
   // Change to your name and matricola
   candidate: (
     name: "Matthias Springstein",
-    matriculation: 947847
+    matriculation: 10009748
   ),
 
   // Change to your supervisor's name

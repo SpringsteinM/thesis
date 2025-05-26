@@ -217,10 +217,48 @@ The parameters are typically set to $eta=0.001$  $beta_1 = 0.9$, $beta_2=0.999$ 
 ==== Regularization
 <sec:fnd_regularization>
 
+During the training of neural networks, a common challenge is overfitting, where the model memorizes the training data instead of generalizing to new, unseen data. This is often characterized by
+continued improvement in performance on the training set while performance on validation or test datasets begins to decline. This effect is particularly pronounced in very large models or the amount of trainings samples is limited. Several regularization techniques are employed to mitigate overfitting in large neural networks.
 
+#heading(level:5, numbering: none)[Early Stopping]
+
+Early stopping is a straightforward regularization technique that involves monitoring the performance of a neural network during the iterative training process, such as gradient descent. In order to
+prevent overfitting, the model's performance is periodically evaluated on data outside of the training dataset (e.g., the validation dataset). The training process is then halted when performance on this
+validation set begins to degrade.
+
+#heading(level:5, numbering: none)[Parameter Norm Penalties]
+
+Another regularization technique involves limiting the magnitude of individual parameters, preventing the model from relying excessively on specific weights. This is achieved by adding a weighted norm penalty $Omega(theta)$ to the loss function $E$. Finally, the regularized loss function $tilde(E)$ is used during the optimization process.
+
+$
+tilde(E)(theta;cal(X), cal(Y)) &= E(theta;cal(X), cal(Y)) + lambda Omega(theta)\
+Omega_(L 1)(theta) &= ||theta||_1 #<eq:l1_regularization> \
+Omega_(L 2)(theta) &= 1/2||theta||_2^2 #<eq:l2_regularization> 
+$
+
+Utilizing the $L^2$ regularization (also known as weight decay) during the training process is a common technique in modern approaches (i.e. #gls("CLIP", long:false) @RadfordKHRGASAM21, #gls("BLIP", long:false)-2 @abs-2301-12597). This regularization method penalizes model parameters by incorporating the squared L^2 norm, denoted as $Omega_(L 2)(theta)$ in @eq:l2_regularization. Unlike $L^2$ normalization, $L^1$ normalization utilizes the absolute values of the weights as penalty, denoted as $Omega_(L 1)(theta)$ in @eq:l1_regularization. This leads to sparser models, as many parameters converge to a default value of zero. Current regularization practices frequently focus solely on penalizing neuron weights, often neglecting to regularize other parameters like biases.
+
+#heading(level:5, numbering: none)[Dropout]
+
+Dropout is a widely used regularization technique initially proposed by Hinton et al. @abs-1207-0580, designed to prevent co-adaptation between neurons. During training, a random subset of neurons are deactivated, effectively setting their output to zero. This results in only a fraction of the network being active during each iteration. Each Dropout layer requires a single hyper-parameter $p$, which represents the probability of a neuron being deactivated. To compensate for the missing outputs, the activations of the remaining neurons are normalized during training by a factor of $1/(1-p)$. During inference, dropout is not applied, so the entire network is always active. An illustrative example of Dropout implementation in a neural network with two hidden layers is shown in @fig:fnd_dropout.
+
+
+#figure([#image("../images/foundations/dropout.svg", width: 100%)],
+  placement: auto,
+  caption: outline-text([Neural network with dropout between individual layers. Dashed nodes are set to zero, effectively removing all dashed connections, so that only the solid ones exist and are trained in this iteration.],[Neuronal Network with Dropout])
+)
+<fig:fnd_dropout>
 
 == Convolutional Neural Networks for Computer Vision
 <sec:fnd_cnn>
+
+
+#figure([#image("../images/foundations/dcnn.svg", width: 100%)],
+  placement: auto,
+  caption: outline-text([Neural network with dropout between individual layers. Dashed nodes are set to zero, effectively removing all dashed connections, so that only the solid ones exist and are trained in this iteration.],[Neuronal Network with Dropout])
+)
+<fig:fnd_dcnn>
+
 == Visual and Textual based Transformer Models
 <sec:fnd_tr>
 == Semi-supervised and Unsupervised based Deep Learning
