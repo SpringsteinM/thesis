@@ -236,7 +236,7 @@ Omega_(L 1)(theta) &= ||theta||_1 #<eq:l1_regularization> \
 Omega_(L 2)(theta) &= 1/2||theta||_2^2 #<eq:l2_regularization> 
 $
 
-Utilizing the $L^2$ regularization (also known as weight decay) during the training process is a common technique in modern approaches (i.e. #gls("CLIP", long:false) @RadfordKHRGASAM21, #gls("BLIP", long:false)-2 @abs-2301-12597). This regularization method penalizes model parameters by incorporating the squared L^2 norm, denoted as $Omega_(L 2)(theta)$ in @eq:l2_regularization. Unlike $L^2$ normalization, $L^1$ normalization utilizes the absolute values of the weights as penalty, denoted as $Omega_(L 1)(theta)$ in @eq:l1_regularization. This leads to sparser models, as many parameters converge to a default value of zero. Current regularization practices frequently focus solely on penalizing neuron weights, often neglecting to regularize other parameters like biases.
+Utilizing the $L^2$ regularization (also known as weight decay) during the training process is a common technique in modern approaches (i.e. #gls("CLIP", long:false) @RadfordKHRGASAM21, #gls("BLIP", long:false)-2 @abs-2301-12597). This regularization method penalizes model parameters by incorporating the squared $L^2$ norm, denoted as $Omega_(L 2)(theta)$ in @eq:l2_regularization. Unlike $L^2$ normalization, $L^1$ normalization utilizes the absolute values of the weights as penalty, denoted as $Omega_(L 1)(theta)$ in @eq:l1_regularization. This leads to sparser models, as many parameters converge to a default value of zero. Current regularization practices frequently focus solely on penalizing neuron weights, often neglecting to regularize other parameters like biases.
 
 #heading(level:5, numbering: none)[Dropout]
 

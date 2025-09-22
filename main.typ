@@ -1,4 +1,4 @@
-#import "template.typ": template
+#import "template_simple.typ": template
 #import "@preview/glossarium:0.5.3": make-glossary, print-glossary, gls, glspl 
 #import "chapters/0_glossary.typ": glossary
 
@@ -73,17 +73,25 @@
 
 // #include "chapters/introduction.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/0_glossary.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/1_intro.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/2_foundations.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/3_what.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/4_art_classification.typ"
 
+#pagebreak(to:"odd")
 #include "chapters/5_iart.typ"
+
+#pagebreak(to:"odd")
 #include "chapters/6_conclusions.typ"
 
 

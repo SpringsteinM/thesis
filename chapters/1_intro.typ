@@ -3,6 +3,7 @@
 #import "@preview/ctheorems:1.1.3": *
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
+#import "@preview/unify:0.7.1": num
 
 = Introduction
 <chp:intro>
@@ -100,6 +101,17 @@ Research projects aimed at the exploration of art using computer-assisted image 
 
 == Contributions
 <sec:int_contributions>
+
+The goal of this thesis is to answer the research questions which were formulated in previous chapters by developing various image analysis methods that enable art historians to systematically search through larger image collections. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
+
+*The main contributions of this thesis can be summarized as follows:*
+
+- Present a new dataset for saint classification in art-historical images
+- #emph[PoPArt] data set consists of #num("2859") art images with #num("3514") annotated persons, comprising #num("51645") keypoints in #gls("COCO") format.
+- Introduce a novel pose estimation model optimized through semi-supervised learning for application in art historical images
+- #emph(gls("ICARUS")) data set consisting of #num("477569") images for iconographic concept recognition with #num("20596") different #gls("Iconclass") concepts
+- `CAT` a novel iterative #gls("HMC", long: true) approach for predicting #gls("Iconclass") concepts from an art-historical image
+- Search and analysis platform #emph("iArt") with various image indexes optimized for the needs of art historians
 
 == Thesis Structure
 <sec:int_thesis_structure>
