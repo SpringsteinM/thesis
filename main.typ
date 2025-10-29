@@ -21,7 +21,7 @@
 
   // Change to your name and matricola
   candidate: (
-    name: "Matthias Springstein",
+    name: "M. Eng. Matthias Springstein",
     matriculation: 10009748
   ),
 

@@ -1,5 +1,5 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
-#import "@preview/subpar:0.1.0"
+#import "@preview/subpar:0.2.2"
 #import "@preview/ctheorems:1.1.3": *
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
@@ -50,7 +50,7 @@ An additional question arising from the continuous scaling of AI systems is how 
     ) <fig:intro_examples_a>],
   )],
   placement: auto,
-  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptation++s of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
+  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
   label: <fig:intro_examples>,
 )
 
@@ -70,28 +70,10 @@ The rapid scaling of AI systems across various domains over the last decade incr
 
 #researchquestion(number: "1")[How does the performance of machines in multimedia annotation tasks compare to human performance and what methodologies can be used to determine if a recognition problem is solved at a human level?] <rq_1>
 
+
 We utilize the insights gained from our user study, in which we measured the intercoder agreement, for the experiments in subsequent methods for art history.
 
 Research projects aimed at the exploration of art using computer-assisted image processing are significantly more data-limited compared to projects focused on the analysis of photographs. Some of the largest datasets, such as WikiArt @SalehE15, Met @METDataset, or Art500k @art500k, contain only a few hundred thousand images, which is considerably smaller than other commonly used datasets @RussakovskyDSKS15 @LinMBHPRDZ14 @abs-2111-02114 @SchuhmannBVGWCC22. Another factor is that the performance of deep learning classifiers scales with the number and variation of samples per class @HuhAE16. However, most art datasets contain only a limited number of samples for each individual concept.
-
-
-
-// Research in \ac{CV} for the visual arts focuses on several key areas including, but not limited to, aesthetic quality assessment~\cite{jenaesthetics}, human pose estimation~\cite{impett2016, springstein2022, madhu2023}, sentiment analysis~\cite{mart, wikiart-emotions}, correspondence matching~\cite{brueghel, jenicek2019}, and visual question answering~\cite{aqua}.
-// % 
-// % The most decisive role is arguably played by classification tasks.
-// %
-// To date, however, research efforts have largely been devoted to classification tasks of image-extrinsic features, such as the identification of artists, genres, or creation dates~\cite{rijksmuseum-challenge, art500k, omniart, multitaskpainting100k, artpedia, the-met, artbench-10, DBLP:conf/cvpr/CondeT21}.
-// While these tasks are significant, they only address tangible aspects of the domain, leaving, e.g., content-based features relatively unexplored.
-// Indeed, the classification of intrinsic features, particularly those related to iconographic elements, has been inadequately attended to:
-// prevailing studies have often focused narrowly on certain subsets of narratives, such as the prediction of saints~\cite{artdl, schneider2020}. % artdl: 10 saints; Schneider: 49 saints
-// A deviation from this tendency is illustrated by Gupta et al.~\cite{gupta2020}, who applied image captioning models based on an encoder-decoder architecture to art-historical images spanning across nine iconographies.
-// Moreover, there have been attempts to comprehensively map the entire \ac{Iconclass} system.
-// Banar et al.~\cite{banar2021} conducted an exploratory investigation into the feasibility of ascribing \ac{Iconclass} notations, with up to five levels of depth, through cross-modal retrieval. % , which expanded the scope of \ac{SAEM}~\cite{DBLP:conf/nips/VaswaniSPUJGKP17}. 
-// Cetinic~\cite{cetinic2021} transformed \acp{Iconclass} textual correlates into descriptions to create image-text pairs to fine-tune a transformer model, morphing the classification into an image captioning task.
-// % Despite these advancements, there remains a largely untapped potential to leverage the inherently hierarchical structure of Iconclass for training models.
-// % Exploiting this hierarchical structure could provide novel avenues to further the understanding of iconography in art and create more nuanced and accurate models.
-// % These advances could in turn offer significant improvements in image-internal feature classification, pushing the boundaries of what \ac{CV} can accomplish in the analysis of visual art.
-// Compared to these works, we not only scale our approach to the entire \textit{Iconclass} system of over \num{20000} art-historical concepts, but fully exploit its hierarchical structure.
 
 #researchquestion(number: "2")[How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?] <rq_2>
 
@@ -115,7 +97,7 @@ The goal of this thesis is to answer the research questions which were formulate
 
 == Thesis Structure
 <sec:int_thesis_structure>
-The remainder of the thesis is structured as follows. @chp:fnd provides the necessary foundations required for understanding the subsequent chapters. These include the basics of training neural networks, specific architectures, and the metrics used to evaluate the methods. @chp:what analyzes current computer vision methods in comparison to human performance. Subsequently, the @chp:art explores various approaches to enhancing the performance of art classification systems, leveraging self-supervised and semi-supervised learning techniques as well as data generation strategies. In the end, the presented methods, along with additional approaches, are integrated into a unified search platform and made available to art historians, as described in @chp:iart. The thesis concludes with a summary and a discussion of potential future developments in @chp:conclusion.
+The remainder of the thesis is structured as follows. @chp:fnd provides the necessary foundations required for understanding the subsequent chapters. These include the basics of training neural networks, specific architectures, and the metrics used to evaluate the methods. @chp:what analyzes current computer vision methods in comparison to human performance. Subsequently, the @chp:art explores various approaches to enhancing the performance of art classification systems, leveraging self-supervised and semi-supervised learning techniques as well as data generation strategies. In the end, the presented methods, along with additional approaches, are integrated into a unified search platform and made available to art historians, as described in @chp:iart. The thesis concludes with a summary and a discussion of potential future developments in @chp:conclusion. 
 
 == List of Publications
 <sec:int_publications>

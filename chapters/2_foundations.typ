@@ -1,5 +1,5 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
-#import "@preview/subpar:0.1.0"
+#import "@preview/subpar:0.2.2"
 #import "../helper/outline_text.typ": outline-text
 #import "@preview/equate:0.2.1": equate
 

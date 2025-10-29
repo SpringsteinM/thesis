@@ -231,62 +231,71 @@
   block[
     #let jb = linebreak(justify: false)
   
-    #text(1.5em, weight: "bold", title) 
+    #text(2em, weight: "bold", title) 
     #jb
-    #v(2em)
+    #v(9em)
     #text(1.2em, [
-      #smallcaps(affiliation.school) #jb
-      #smallcaps(affiliation.university) #jb
+      Von der Fakultät für Elektrotechnik und Informatik der Gottfried Wilhelm Leibniz Universität Hannover
     ])
   ]
 
-  v(3fr)
-  if logo != none {
-    logo
-  }
-  v(3fr)
+  v(9em)
+  text(1.2em, [zur Erlangung des akademischen Grades])
+  v(0.5em)
+  text(1.2em, [*Doktor der Ingenieurwissenschaften*])
+  v(0.5em)
+  text(1.2em, [Dr.-Ing.])
+  
+  v(9em)
+  
+  // if logo != none {
+  //   logo
+  // }
+  // v(3fr)
 
-  text(1.5em, subtitle)
+  text(1.2em, [vorgelegte Dissertation von])
   v(1fr, weak: true)
+  text(1.2em, [*#candidate.name*])
 
   v(4fr)
 
-  grid(
-    columns: 2,
-    align: left,
-    grid.cell(
-      inset: (right: 40pt)
-    )[
-      #if lang == "en" {
-        smallcaps("supervisor")
-      }\
-      *#supervisor*
+  // grid(
+  //   columns: 2,
+  //   align: left,
+  //   grid.cell(
+  //     inset: (right: 40pt)
+  //   )[
+  //     #if lang == "en" {
+  //       smallcaps("supervisor")
+  //     }\
+  //     *#supervisor*
 
-      #if co-supervisor != none {
-        if lang == "en" {
-          smallcaps("co-supervisor")
-        }
-        linebreak()
-        co-supervisor.map(it => [
-          *#it*
-        ]).join(linebreak())
-      }
-    ],
-    grid.cell(
-      inset: (left: 40pt)
-    )[
-      #if lang == "en" {
-        smallcaps("candidate")
-      }\
-      *#candidate.name* \
-      #candidate.matriculation
-    ]
-  )
+  //     #if co-supervisor != none {
+  //       if lang == "en" {
+  //         smallcaps("co-supervisor")
+  //       }
+  //       linebreak()
+  //       co-supervisor.map(it => [
+  //         *#it*
+  //       ]).join(linebreak())
+  //     }
+  //   ],
+  //   grid.cell(
+  //     inset: (left: 40pt)
+  //   )[
+  //     #if lang == "en" {
+  //       smallcaps("candidate")
+  //     }\
+  //     *#candidate.name* \
+  //     #candidate.matriculation
+  //   ]
+  // )
+  
 
   v(5fr)
 
   text(1.2em, [
-    #date.display("[day]-[month]-[year]")
+    #date.display("[year]")
   ])
 
   pagebreak(to: "odd")
