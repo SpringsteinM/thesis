@@ -1,7 +1,5 @@
 = Computer Vision Methods for Art Recognition <chp:art>
 
-
-#pagebreak(to:"odd")
 #include "4_1_saints.typ"
 
 #pagebreak(to:"odd")

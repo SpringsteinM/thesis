@@ -1,7 +1,8 @@
 #import "helper/outline_text.typ": in-outline
 #import "@preview/glossarium:0.5.3": make-glossary, register-glossary, print-glossary, gls, glspl 
 
-#import "@preview/equate:0.2.1": equate
+
+#import "@preview/equate:0.3.2": equate
 
 #import "@preview/hydra:0.6.1": hydra,selectors
 #import selectors: custom
@@ -77,6 +78,9 @@
   
   // The thesis' glossary, can be left empty if not needed
   glossary:none,
+
+  // The thesis' notation, can be left empty if not needed
+  notation:none,
   // The thesis' content
   body
 ) = {
@@ -394,7 +398,21 @@
       // disable the back ref at the end of the descriptions
       disable-back-references: true,
     )
-}
+  }  
+  
+  if notation != none {
+  
+    heading(
+      level: 1,
+      numbering: none,
+      outlined: true,
+      if lang == "en" {
+        "Notation"
+      }
+    )
+    // set align(left)
+    notation()
+  }
 
   // Main body
 

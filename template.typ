@@ -1,8 +1,8 @@
 #import "helper/outline_text.typ": in-outline
 #import "@preview/glossarium:0.5.3": make-glossary, register-glossary, print-glossary, gls, glspl 
 
-#import "@preview/equate:0.2.1": equate
 
+#import "@preview/equate:0.3.2": equate
 
 
 // Official declaration of originality, both in English and Italian

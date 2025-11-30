@@ -1,6 +1,7 @@
 #import "template_simple.typ": template
 #import "@preview/glossarium:0.5.3": make-glossary, print-glossary, gls, glspl 
 #import "chapters/0_glossary.typ": glossary
+#import "chapters/0_notation.typ": notation
 
 // Your acknowledgments (Ringraziamenti) go here
 #let acknowledgments = []
@@ -64,7 +65,9 @@
   // are needed
   keywords: none,
 
-  glossary:  glossary
+  glossary:  glossary,
+  notation: notation
+
 )
 
 
@@ -73,8 +76,8 @@
 
 // #include "chapters/introduction.typ"
 
-#pagebreak(to:"odd")
-#include "chapters/0_glossary.typ"
+// #pagebreak(to:"odd")
+// #include "chapters/0_notation.typ"
 
 #pagebreak(to:"odd")
 #include "chapters/1_intro.typ"

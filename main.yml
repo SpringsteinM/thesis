@@ -3110,18 +3110,45 @@ abs-1708-04552:
   url: http://arxiv.org/abs/1708.04552
   serial-number:
     arxiv: '1708.04552'
-abs-1909-13719:
-  type: manuscript
-  title: RandAugment. Practical Data Augmentation with No Separate Search
+
+CubukZS020:
+  type: article
+  title: 'RandAugment: Practical Automated Data Augmentation with a Reduced Search Space'
+  author:
+  - Cubuk, Ekin Dogus
+  - Zoph, Barret
+  - Shlens, Jonathon
+  - Le, Quoc
+  date: 2020
+  editor:
+  - Larochelle, Hugo
+  - Ranzato, Marc'Aurelio
+  - Hadsell, Raia
+  - Balcan, Maria-Florina
+  - Lin, Hsuan-Tien
+  url: https://proceedings.neurips.cc/paper/2020/hash/d85b63ef0ccb114d0a3bb7b7d808028f-Abstract.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual'
+CubukZMVL19:
+  type: article
+  title: 'AutoAugment: Learning Augmentation Strategies From Data'
   author:
   - Cubuk, Ekin D.
   - Zoph, Barret
-  - Shlens, Jonathon
+  - Mané, Dandelion
+  - Vasudevan, Vijay
   - Le, Quoc V.
   date: 2019
-  url: http://arxiv.org/abs/1909.13719
+  page-range: 113-123
+  url: http://openaccess.thecvf.com/content/_CVPR/_2019/html/Cubuk/_AutoAugment/_Learning/_Augmentation/_Strategies/_From/_Data/_CVPR/_2019/_paper.html
   serial-number:
-    arxiv: '1909.13719'
+    doi: 10.1109/CVPR.2019.00020
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2019, Long Beach, CA, USA, June 16-20, 2019'
+    publisher: Computer Vision Foundation / {IEEE}
+
 abs-2001-07685:
   type: manuscript
   title: FixMatch. Simplifying Semi-supervised Learning with Consistency and Confidence
@@ -4034,3 +4061,100 @@ abs-1207-0580:
   parent:
     type: periodical
     title: CoRR
+
+LeCunBBH98:
+  type: article
+  title: Gradient-based learning applied to document recognition
+  author:
+  - LeCun, Yann
+  - Bottou, Léon
+  - Bengio, Yoshua
+  - Haffner, Patrick
+  date: 1998
+  page-range: 2278–2324
+  url: https://doi.org/10.1109/5.726791
+  serial-number:
+    doi: 10.1109/5.726791
+  parent:
+    type: periodical
+    title: Proc. {IEEE}
+    issue: 11
+    volume: 86
+
+KrizhevskySH12:
+  type: article
+  title: ImageNet Classification with Deep Convolutional Neural Networks
+  author:
+  - Krizhevsky, Alex
+  - Sutskever, Ilya
+  - Hinton, Geoffrey E.
+  date: 2012
+  editor:
+  - Bartlett, Peter L.
+  - Pereira, Fernando C. N.
+  - Burges, Christopher J. C.
+  - Bottou, Léon
+  - Weinberger, Kilian Q.
+  page-range: 1106–1114
+  url: https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 25: 26th Annual Conference on Neural Information Processing Systems 2012. Proceedings of a meeting held December 3-6, 2012, Lake Tahoe, Nevada, United States'
+Heaton18:
+  type: article
+  title: 'Ian Goodfellow, Yoshua Bengio, and Aaron Courville: Deep learning - The {MIT} Press, 2016, 800 pp, {ISBN:} 0262035618'
+  author: Heaton, Jeff
+  date: 2018
+  page-range: 305–307
+  url: https://doi.org/10.1007/s10710-017-9314-z
+  serial-number:
+    doi: 10.1007/S10710-017-9314-Z
+  parent:
+    type: periodical
+    title: Genet. Program. Evolvable Mach.
+    issue: 1–2
+    volume: 19
+
+Marburg25:
+  type: web
+  title: Bildarchiv Foto Marburg bietet kostenfreie Nutzung von mehr als einer Million Kunstbildern
+  author: Bracht, Christian
+  date: 2025-01-17
+  url:
+    value: https://www.uni-marburg.de/de/aktuelles/news/2025/bildarchiv
+    date: 2025-11-27
+
+Getty24:
+  type: web
+  title: Download, Edit, and Print Your Favorite Getty Artwork for Free
+  author: Calhoun, Cole 
+  date: 2024-05-07
+  url:
+    value: https://www.getty.edu/news/download-edit-print-your-favorite-getty-artwork-for-free
+    date: 2025-11-27
+
+DijkshoornJAOSW18:
+  type: article
+  title: The Rijksmuseum collection as Linked Data
+  author:
+  - Dijkshoorn, Chris
+  - Jongma, Lizzy
+  - Aroyo, Lora
+  - name: Ossenbruggen
+    given-name: Jacco
+    prefix: van
+  - Schreiber, Guus
+  - name: Weele
+    given-name: Wesley
+    prefix: ter
+  - Wielemaker, Jan
+  date: 2018
+  page-range: 221-230
+  url: https://doi.org/10.3233/SW-170257
+  serial-number:
+    doi: 10.3233/SW-170257
+  parent:
+    type: periodical
+    title: Semantic Web
+    issue: 2
+    volume: 9

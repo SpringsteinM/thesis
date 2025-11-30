@@ -485,7 +485,7 @@ Thus, both saints classifiers do not use explicitly defined visual
 attributes during training. Random horizontal flip is used as
 augmentation step. In addition, we use #emph[RandAugment] for the
 FixMatch approach, which applies a random transformation with a defined
-strength from a fixed set @abs-1909-13719. We
+strength from a fixed set @CubukZS020. We
 moreover use style-transferred images from the saints and attributes
 data set, respectively, as unlabeled input for FixMatch. The performance
 of the procedure is reported for the 49 saints with the most images, and

@@ -305,7 +305,7 @@ $n$~associated keywords~$K in bb(K)_C$ for each #gls("Iconclass")
 concept~$C in bb(C)$, and the following instruction as input: "Create a
 description of up to three sentences for this image and try to include
 the terms
-$angle.l K_1 angle.r comma angle.l K_2 angle.r comma dots.h comma angle.l K_n angle.r$."
+$chevron.l K_1 chevron.r comma chevron.l K_2 chevron.r comma dots.h comma chevron.l K_n chevron.r$."
 
 ==== Constrastive Pre-Training
 <chp:method-constrastive-pretraining>

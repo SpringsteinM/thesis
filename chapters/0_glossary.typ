@@ -185,5 +185,10 @@
         short:"YOLO",
         long:"You Only Look Once"
     ),
+    (
+        key:"AI",
+        short:"AI",
+        long:"Artificial Intelligence"
+    ),
   )
 

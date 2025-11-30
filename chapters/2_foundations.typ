@@ -1,7 +1,7 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.2.2"
 #import "../helper/outline_text.typ": outline-text
-#import "@preview/equate:0.2.1": equate
+#import "@preview/equate:0.3.2": equate
 
 = Foundations
 <chp:fnd>
@@ -12,6 +12,7 @@ In this chapter, the concepts and methods necessary to understand this thesis ar
 <sec:fnd_dl>
 
 === Artificial Neuron and Fully Connected Layer
+<sec:fnd_fully>
 
 Artificial neural networks are mathematical models inspired by the structure and functioning of neural networks in the brains of living organisms. A neural network is composed of multiple individual neurons and their interconnections, known as synapses. The functionality of a neural network is determined by the distribution of weights between its individual neurons.
 
@@ -252,12 +253,44 @@ Dropout is a widely used regularization technique initially proposed by Hinton e
 == Convolutional Neural Networks for Computer Vision
 <sec:fnd_cnn>
 
+While traditional neural networks (@sec:fnd_dl) with fully connected layers (@sec:fnd_fully), can approximate any function, other architectures have proven more efficient in practice. Among these, #glspl("CNN") are particularly effective in visual domains. This is made possible by exploiting the spatial structure of images, because the interpretation of a given image region depends primarily on the surrounding observable regions. Convolutional layers, unlike fully connected layers that rely on matrix multiplication, employ a convolution operation in which a filter kernel is moved across the image and an output is computed at each spatial location. Consequently, #glspl("CNN") typically contain far fewer trainable parameters than fully connected layers, because the same set of weights is shared across all positions and only the weights inside the kernel are trainable. The idea behind these convolutional layers is that they operate analogously to the visual cortex in the brain, they extract simple patterns (e.g. edges and lines) and pass the resulting activations to subsequent layers. By stacking such layers, each successive layer covers a larger receptive field and extracts increasingly complex features.
 
-#figure([#image("../images/foundations/dcnn.svg", width: 100%)],
+#figure([#image("../images/foundations/dcnn_new.svg", width: 100%)],
   placement: auto,
-  caption: outline-text([Neural network with dropout between individual layers. Dashed nodes are set to zero, effectively removing all dashed connections, so that only the solid ones exist and are trained in this iteration.],[Neuronal Network with Dropout])
+  caption: outline-text([Example #gls("CNN") architecture (LeNet-5 @LeCunBBH98) with two convolutional layers, two pooling layers, and three fully connected layers for the automatic recognition of digits from 28 × 28‑pixel grayscale images.],[LeNet from Yann LeCun et al. 1998])
 )
 <fig:fnd_dcnn>
+
+Since one of the first successful #glspl("CNN") introduced by Yann LeCun et al. in 1998 @LeCunBBH98 (@fig:fnd_dcnn), #glspl("CNN") have repeatedly demonstrated their ability to achieve state-of-the-art results @KrizhevskySH12 @szegedy2015going @he2015deep and even match or surpass human performance @he2015delving. Over the past years, various #gls("CNN") variants have been proposed to address diverse challenges in computer vision, including visual concept  classification @KrizhevskySH12, image segmentation @ChenPSA17 and object localization @RenHGS15.
+
+=== Convolutional Layer
+<sec:fnd_convolutional_layer>
+
+Every convolutional neural network includes at least one convolutional layer, which performs the convolution operation. In each layer, a filter kernels is moved across the input and at each position, an output is computed for the subsequent layer. The convolutional operation for a single position is illustrated in @fig:fnd_cnn_kernel. The filter kernel illustrated in @fig:fnd_cnn_kernel is represented as a three-dimensional tensor, which, when slid over the three-dimensional input, produces a two-dimensional output. In practice, however, the kernel is four-dimensional, with an additional dimension accounting for the number of channels (i.e., the number of distinct filters) in the subsequent layer.
+
+#figure([#image("../images/foundations/conv.svg", width: 80%)],
+  placement: auto,
+  caption: outline-text([A convolutional neural network with two convolutional layers. The kernels (blue and green) illustrate the computation at a single position in the input image, where the three-dimensional tensor determines exactly one output in the subsequent layer.],[A convolutional neural network with two convolutional layers.])
+)
+<fig:fnd_cnn_kernel>
+
+
+
+$
+sans(Y)_(i',j',f') &= b_(f') + sum_(i=1)^(H_F)sum_(j=1)^(W_F)sum_(f=1)^(F) sans(X)_(i'+i-1,j'+j-1,f) dot sans(W)_(i,j,f,f') \
+(partial E)/(partial W_(i,j,f,f')) &= sum_(i',j',f') delta_(i',j',f')^(l+1) (partial f_(i',j',f')(x,theta_(f')))/(partial theta_(i,j,f,f')) \
+&=sum_(i',j',f') delta_(i',j',f')^(l+1) x_(i'+i-1,j'+j-1,f) \
+delta_(i,j,f) &= sum_(i',j',f') delta_(i',j',f')^(l+1) theta_(i-i'+1,j-j'+1,f,f') 
+$
+
+The four-dimensional kernel $bold(sans(upright(W)))$ tensor parameters are: $H_F$ for the height of the kernel, $W_F$ for the width of the kernel, $F$ for the number of filters in the current layer, and $F'$ for the number of filters in the subsequent layer. 
+
+
+=== Pooling Layer
+<sec:fnd_pooling_layer>
+
+
+
 
 == Visual and Textual based Transformer Models
 <sec:fnd_tr>
