@@ -26,7 +26,7 @@ Experimental results show the superiority of this approach over reasonable basel
 Iconography, as established by Panofsky~@panofsky1939, entails
 the systematic analysis of content or meaning in visual art,
 distinguishing these elements from mere formal characteristics. For this
-purpose, #gls("Iconclass"), short for #emph[], provides a widely used taxonomy
+purpose, #gls("Iconclass"), provides a widely used taxonomy
 for annotating visual
 content @vandewaal1973 @vanstraten1994.#footnote[#link("https://iconclass.org/")
 (last accessed on 2024-05-20).] In particular, the system makes it

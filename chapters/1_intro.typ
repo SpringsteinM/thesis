@@ -8,18 +8,6 @@
 = Introduction
 <chp:intro>
 
-// - Kunst suchmaschinen funktionieren nur über metadaten
-// - Content basierte analysen werden erst durch große neuronale netzwerke ermöglicht, die auch auf kunst generalisieren
-// - Problem bestehen, da Kunst weiter darüber hinaus gehen kann:
-//   - was durch datensatze die aus fotografie bestehen abgedeckt wird
-//   - Andere Fragestellung aufwirft, die durch die exitierenden Datensätze nur schlecht abgedeckt wird
-
-// - CV Entwickelt sich von 
-// - Content basierte analysen werden erst durch große neuronale netzwerke ermöglicht, die auch auf kunst generalisieren
-// - Problem bestehen, da Kunst weiter darüber hinaus gehen kann:
-//   - was durch datensatze die aus fotografie bestehen abgedeckt wird
-//   - Andere Fragestellung aufwirft, die durch die exitierenden Datensätze nur schlecht abgedeckt wird
-
 The discipline of art history seeks to systematically document and analyze works of art through established methodologies. This process encompasses various aspects, including content-based iconographic interpretation, formal design analysis, contextual classification in terms of place and time, and the perception of these works by their audience. While many of the methods employed have been refined over centuries, the documentation of art collections has traditionally relied on manual assessments conducted by experts. This reliance significantly limits the ability to analyze larger collections, as the process is highly time-intensive and constrained by the availability of qualified individuals. Existing image search platforms used in art historical research provide only limited support, often relying on a narrow set of metadata such as title, artist, or year of creation. These constraints underscore the need for advanced tools capable of addressing the scale and complexity of contemporary art historical research, paving the way for the integration of computer vision and machine learning technologies.
 
 In recent years, automatic image content analysis through computer vision and machine learning has advanced rapidly. The adoption of #glspl("CNN") for image analysis marked a turning point, enabling automatic classification systems to surpass human annotators in performance for the first time. Achieving such performance, however, necessitates vast amounts of annotated training data. The demand for annotated data has grown exponentially, with current approaches such as #gls("CLIP") and #glspl("LLM") requiring billions of data examples. Given the impracticality of manual annotation at this scale, alternative learning approaches, including self-supervised and semi-supervised methods, are increasingly employed. Studies have demonstrated the emergence of scaling laws linking the size of neural networks, training datasets, and computational resources to performance gains. However, limitations are becoming apparent, as the training data requirements for #glspl("LLM") approach the total volume of all data available on the internet.
@@ -28,9 +16,8 @@ Within the context of visual analysis in art history, a critical challenge lies 
 
 The question therefore arises: How can we further scale automatic image analysis for the study of art without having new data available to us? Addressing this challenge requires innovative approaches, such as the generation of synthetic training to enlarge training corpora, semi- or self-supervised learning methods to minimize the reliance on labeled data, or transfer learning from pre-trained models on related domains. Such efforts could also address more complex challenges beyond basic concept recognition, such as iconographic concept detection or pose estimation in artistic figures.
 
-// Human annotation study
 
-An additional question arising from the continuous scaling of AI systems is how humans perform on these tasks in comparison and whether AI-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
+An additional question arising from the continuous scaling of #gls("AI") systems is how humans perform on these tasks in comparison and whether #gls("AI")-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
 
 #subpar.super(
  [#figure(
@@ -56,6 +43,30 @@ An additional question arising from the continuous scaling of AI systems is how 
 
 Another challenge lies in making these state-of-the-art methods available to art historians in a way that allows them to be easily integrated into their workflow. An ideal solution would be a platform containing a large collection of art historical images, which expands traditional metadata search by incorporating a variety of computer vision-guided search methods. This would allow researchers to gradually expand their search behavior based on existing methods, enabling them to not only filter by metadata but also combine it with visual features. This would open up several new research possibilities for art historians that were previously only feasible manually. Some possible search scenarios are illustrated in @fig:intro_examples.
 
+== Background
+
+The analysis and interpretation of artworks is a time-consuming process carried out by art historians. Various methods are typically used, and these methods differ in how easily they can be automated. This section describes how and according to which criteria art historians analyze images, as well as the current state of research on automatic analysis using image processing methods.
+
+=== Art-historical Analysis of Artworks
+
+Art-historical analysis goes beyond simply describing an artwork’s visual language or subject matter. Instead, the artwork is treated as a complex cultural artifact that requires careful contextualization in relation to other artistic productions, established art movements, and relevant socio-historical developments. This demand for comprehensive interpretation has historically driven the development of a wide range of analytical methods, each designed to foreground particular aspects of the artwork or to apply specific interpretive techniques. Some of the classic analysis techniques are explained and introduced below:
+
+*Style Analysis*: This method primarily focuses on composition and aesthetics, while the work’s provenance and the artist’s background are treated as secondary. Artworks are compared with one another based on forms and structures to highlight shared stylistic elements or differences in design. The art historian Heinrich Wölfflin, renowned for this method, defined five conceptual pairs of opposites to distinguish artworks of the Renaissance from those of the Baroque @wolfflin1921kunstgeschichtliche. These criteria are: linear-painterly, plane-recession, closed-open, multiplicity-unity, and absolute clarity-relative clarity.
+
+*Structural Analysis*: Unlike style analysis, which compares artworks to identify commonalities, structural analysis focuses on the forms and their relationships within a single image. The aim is to understand how meaning, coherence, and visual order are generated through the arrangement and interrelation of formal elements within the artwork itself @sedlmayr2017art @adams2018methodologies. 
+
+*Iconology and Iconography*: Iconography analyzes which symbols are depicted in a work of art, with these symbols usually being cultural and religious in nature. An example of such a symbol in Western art is the depiction of the cross as a symbol for Christianity. A related but broader term is iconology. This investigates the specific meaning this symbol has within the analyzed work of art. This meaning is usually only discernible through the historical background or the artist's complete body of work. Panofsky @panofsky1939 further defined the process of iconographic analysis by outlining three stages:
+- Pre-iconographic analysis (What is depicted?)
+- Iconographic analysis (How is it depicted?)
+- Iconological interpretation (What does it mean?)
+To classify these iconographic symbols, various iconographic terminologies or thesauri have been developed to assist art historians in their analysis. The most well-known system for Western art is #gls("Iconclass", long:false)#footnote[#link("https://iconclass.org")] (short for Iconographic Classification System), which enables the indexing of visual symbols in works of art @vandewaal1973 @vanstraten1994. Additionally, there are other annotation schemes, such as the #gls("CIT")#footnote[#link("https://chineseiconography.org")], which focuses specifically on the description of Chinese symbols.
+
+This work primarily focuses on the recognition of iconographic symbols in artworks. On one hand, the classification of visual concepts is an established field in computer vision. On the other hand, it is significantly more challenging to incorporate information beyond the image itself, such as historical context or the artist’s broader body of work, into the analysis.
+
+=== Analysis of Works of Art using Computer Vision
+
+Over the years, several approaches have been developed to support the methodological frameworks of art historians introduced in the previous section. These approaches range from simple classification and object detection to the interpretation of the artwork @pado2025artwork @HayashiSKHW24 and the emotions it evokes in the viewer @abs-2110-06486 @AslanCDMSV22 @AchlioptasOHEG21 @pado2025artwork.
+
 == Existing Challenges and Limitations
 <sec:int_challenges>
 
@@ -66,7 +77,7 @@ Another challenge lies in making these state-of-the-art methods available to art
   bodyfmt: body => ["#emph[#body]"]
 )
 
-The rapid scaling of AI systems across various domains over the last decade increasingly raises the question of whether and for which tasks, they already surpass human performance. Over the years, several comparisons and studies have demonstrated that AI-powered automated systems can outperform human participants and even experts in their respective fields. Over the years, scientists have conducted various comparisons @bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun and some of these studies have demonstrated that certain AI-powered automated systems can outperform human participants and even experts in their respective fields @christiansen2025international @he2015delving. However, it's not only overall performance that matters, but also the agreement among a group of human annotators. If the annotators do not consistently agree, what can we expect from an automated system trained on this data?
+The rapid scaling of #gls("AI") systems across various domains over the last decade increasingly raises the question of whether and for which tasks, they already surpass human performance. Over the years, several comparisons and studies have demonstrated that #gls("AI")-powered automated systems can outperform human participants and even experts in their respective fields. Over the years, scientists have conducted various comparisons @bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun and some of these studies have demonstrated that certain #gls("AI")-powered automated systems can outperform human participants and even experts in their respective fields @christiansen2025international @he2015delving. However, it's not only overall performance that matters, but also the agreement among a group of human annotators. If the annotators do not consistently agree, what can we expect from an automated system trained on this data?
 
 #researchquestion(number: "1")[How does the performance of machines in multimedia annotation tasks compare to human performance and what methodologies can be used to determine if a recognition problem is solved at a human level?] <rq_1>
 
@@ -81,7 +92,7 @@ Therefore, it is crucial to identify ways to enhance the performance of #gls("AI
 
 #researchquestion(number: "2")[How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?] <rq_2>
 
-By expanding the training data, it becomes possible to train larger models and improve prediction performance. However, this approach also has its limitations. For instance, synthetic data generated with generative AI may not faithfully represent the desired concept, thereby degrading the overall quality of the dataset. Moreover, automatically synthesizing labels is not always straightforward for every problem, especially for more complex tasks such as iconographic concept classification or pose estimation. To exploit the potential of these possibly error‑laden synthetic data and the unlabeled data, conventional supervised‑learning algorithms are not ideally suited and alternative approaches must be evaluated. Semi‑supervised learning techniques, which rely on only a small part of the training set being annotated, can play a particularly important role in this context.
+By expanding the training data, it becomes possible to train larger models and improve prediction performance @abs-2001-08361 @RosenfeldRBS20 @abs-2010-14701 @FanCKKIT24. However, this approach also has its limitations @FanCKKIT24. For instance, synthetic data generated with generative #gls("AI") may not faithfully represent the desired concept, thereby degrading the overall quality of the dataset. Moreover, automatically synthesizing labels is not always straightforward for every problem, especially for more complex tasks such as iconographic concept classification or pose estimation. To exploit the potential of these possibly error‑laden synthetic data and the unlabeled data, conventional supervised‑learning algorithms are not ideally suited and alternative approaches must be evaluated. Semi‑supervised learning techniques @SohnBCZZRCKL20 @BerthelotCCKSZR20 @BerthelotCGPOR19, which rely on only a small part of the training set being annotated, can play a particularly important role in this context.
 
 #researchquestion(number: "3")[How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?] <rq_3>
 
@@ -89,7 +100,7 @@ By expanding the training data, it becomes possible to train larger models and i
 == Contributions
 <sec:int_contributions>
 
-The goal of this thesis is to answer the research questions which were formulated in previous chapters by developing various image analysis methods that enable art historians to systematically search through larger image collections. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
+The goal of this thesis is to answer the research questions which were formulated in previous section by developing various image analysis methods that enable art historians to systematically search through larger image collections. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
 
 *The main contributions of this thesis can be summarized as follows:*
 

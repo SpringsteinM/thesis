@@ -4158,3 +4158,248 @@ DijkshoornJAOSW18:
     title: Semantic Web
     issue: 2
     volume: 9
+
+# scaling laws
+abs-2001-08361:
+  type: article
+  title: Scaling Laws for Neural Language Models
+  author:
+  - Kaplan, Jared
+  - McCandlish, Sam
+  - Henighan, Tom
+  - Brown, Tom B.
+  - Chess, Benjamin
+  - Child, Rewon
+  - Gray, Scott
+  - Radford, Alec
+  - Wu, Jeffrey
+  - Amodei, Dario
+  date: 2020
+  url: https://arxiv.org/abs/2001.08361
+  serial-number:
+    arxiv: '2001.08361'
+  parent:
+    type: periodical
+    title: CoRR
+
+RosenfeldRBS20:
+  type: article
+  title: A Constructive Prediction of the Generalization Error Across Scales
+  author:
+  - Rosenfeld, Jonathan S.
+  - Rosenfeld, Amir
+  - Belinkov, Yonatan
+  - Shavit, Nir
+  date: 2020
+  url: https://openreview.net/forum?id=ryenvpEKDr
+  parent:
+    type: proceedings
+    title: 8th International Conference on Learning Representations, {ICLR} 2020, Addis Ababa, Ethiopia, April 26-30, 2020
+    publisher: OpenReview.net
+
+abs-2010-14701:
+  type: article
+  title: Scaling Laws for Autoregressive Generative Modeling
+  author:
+  - Henighan, Tom
+  - Kaplan, Jared
+  - Katz, Mor
+  - Chen, Mark
+  - Hesse, Christopher
+  - Jackson, Jacob
+  - Jun, Heewoo
+  - Brown, Tom B.
+  - Dhariwal, Prafulla
+  - Gray, Scott
+  - Hallacy, Chris
+  - Mann, Benjamin
+  - Radford, Alec
+  - Ramesh, Aditya
+  - Ryder, Nick
+  - Ziegler, Daniel M.
+  - Schulman, John
+  - Amodei, Dario
+  - McCandlish, Sam
+  date: 2020
+  url: https://arxiv.org/abs/2010.14701
+  serial-number:
+    arxiv: '2010.14701'
+  parent:
+    type: periodical
+    title: CoRR
+
+FanCKKIT24:
+  type: article
+  title: Scaling Laws of Synthetic Images for Model Training ... for Now
+  author:
+  - Fan, Lijie
+  - Chen, Kaifeng
+  - Krishnan, Dilip
+  - Katabi, Dina
+  - Isola, Phillip
+  - Tian, Yonglong
+  date: 2024
+  page-range: 7382–7392
+  url: https://doi.org/10.1109/CVPR52733.2024.00705
+  serial-number:
+    doi: 10.1109/CVPR52733.2024.00705
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2024, Seattle, WA, USA, June 16-22, 2024'
+    publisher: '{IEEE}'
+wolfflin1921kunstgeschichtliche:
+  type: book
+  title: 'Kunstgeschichtliche Grundbegriffe: das Problem der Stilentwicklung in der neueren Kunst'
+  author: Wölfflin, Heinrich
+  date: 1921
+  publisher: Bruckmann
+
+sedlmayr2017art:
+  type: book
+  title: 'Art in crisis: the lost center'
+  author: Sedlmayr, Hans
+  date: 2017
+  publisher: Routledge
+adams2018methodologies:
+  type: book
+  title: 'The methodologies of art: An introduction'
+  author: Adams, Laurie Schneider
+  date: 2018
+  publisher: Routledge
+
+  
+JhaCE21:
+  type: article
+  title: W{ö}lfflin's Affective Generative Analysis for Visual Art
+  author:
+  - Jha, Divyansh
+  - Chang, Hanna H.
+  - Elhoseiny, Mohamed
+  date: 2021
+  editor:
+  - name: Silva Garza
+    given-name: Andrés Gómez
+    prefix: de
+  - Veale, Tony
+  - Aguilar, Wendy
+  - name: Pérez
+    given-name: Rafael Pérez
+    prefix: y
+  page-range: 429–433
+  url: https://computationalcreativity.net/iccc21/wp-content/uploads/2021/09/ICCC/_2021/_paper/_129.pdf
+  parent:
+    type: proceedings
+    title: Proceedings of the Twelfth International Conference on Computational Creativity, {ICCC} 2021, M{é}xico City, M{é}xico (Virtual), September 14-18, 2021
+    publisher: Association for Computational Creativity {(ACC)}
+CetinicLG20:
+  type: article
+  title: Learning the Principles of Art History with convolutional neural networks
+  author:
+  - Cetinic, Eva
+  - Lipic, Tomislav
+  - Grgic, Sonja
+  date: 2020
+  page-range: 56–62
+  url: https://doi.org/10.1016/j.patrec.2019.11.008
+  serial-number:
+    doi: 10.1016/J.PATREC.2019.11.008
+  parent:
+    type: periodical
+    title: Pattern Recognit. Lett.
+    volume: 129
+abs-2110-06486:
+  type: article
+  title: Understanding of Emotion Perception from Art
+  author:
+  - Bose, Digbalay
+  - Somandepalli, Krishna
+  - Kundu, Souvik
+  - Lahiri, Rimita
+  - Gratch, Jonathan
+  - Narayanan, Shrikanth
+  date: 2021
+  url: https://arxiv.org/abs/2110.06486
+  serial-number:
+    arxiv: '2110.06486'
+  parent:
+    type: periodical
+    title: CoRR
+AslanCDMSV22:
+  type: article
+  title: Recognizing the Emotions Evoked by Artworks Through Visual Features and Knowledge Graph-Embeddings
+  author:
+  - Aslan, Sinem
+  - Castellano, Giovanna
+  - Digeno, Vincenzo
+  - Migailo, Giuseppe
+  - Scaringi, Raffaele
+  - Vessio, Gennaro
+  date: 2022
+  editor:
+  - Mazzeo, Pier Luigi
+  - Frontoni, Emanuele
+  - Sclaroff, Stan
+  - Distante, Cosimo
+  page-range: 129–140
+  url: https://doi.org/10.1007/978-3-031-13321-3/_12
+  serial-number:
+    doi: 10.1007/978-3-031-13321-3\_12
+  parent:
+    type: proceedings
+    title: Image Analysis and Processing. {ICIAP} 2022 Workshops - {ICIAP} International Workshops, Lecce, Italy, May 23-27, 2022, Revised Selected Papers, Part {I}
+    publisher: Springer
+    volume: 13373
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+AchlioptasOHEG21:
+  type: article
+  title: 'ArtEmis: Affective Language for Visual Art'
+  author:
+  - Achlioptas, Panos
+  - Ovsjanikov, Maks
+  - Haydarov, Kilichbek
+  - Elhoseiny, Mohamed
+  - Guibas, Leonidas J.
+  date: 2021
+  page-range: 11569–11579
+  url: https://openaccess.thecvf.com/content/CVPR2021/html/Achlioptas/_ArtEmis/_Affective/_Language/_for/_Visual/_Art/_CVPR/_2021/_paper.html
+  serial-number:
+    doi: 10.1109/CVPR46437.2021.01140
+  parent:
+    type: proceedings
+    title: '{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021, virtual, June 19-25, 2021'
+    publisher: Computer Vision Foundation / {IEEE}
+pado2025artwork:
+  type: article
+  title: 'Artwork Interpretation with Vision Language Models: A Case Study on Emotions and Emotion Symbols'
+  author:
+  - Padó, Sebastian
+  - Thomas, Kerstin
+  date: 2025
+  parent:
+    type: periodical
+    title: arXiv preprint arXiv:2511.22929
+
+HayashiSKHW24:
+  type: article
+  title: Towards Artwork Explanation in Large-scale Vision Language Models
+  author:
+  - Hayashi, Kazuki
+  - Sakai, Yusuke
+  - Kamigaito, Hidetaka
+  - Hayashi, Katsuhiko
+  - Watanabe, Taro
+  date: 2024
+  editor:
+  - Ku, Lun-Wei
+  - Martins, Andre
+  - Srikumar, Vivek
+  page-range: 705–729
+  url: https://doi.org/10.18653/v1/2024.acl-short.65
+  serial-number:
+    doi: 10.18653/V1/2024.ACL-SHORT.65
+  parent:
+    type: proceedings
+    title: Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics, {ACL} 2024 - Short Papers, Bangkok, Thailand, August 11-16, 2024
+    publisher: Association for Computational Linguistics
