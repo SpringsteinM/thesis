@@ -43,9 +43,9 @@ approaches uses pre-trained models, but without adapting them to the new
 domain~@MadhuMKBMC20 @JenicekC19,
 while others apply style transfer to real-world data sets to obtain
 domain-specific training
-data~@abs-2012-05616"), or fine-tune
+data~@madhu2023"), or fine-tune
 pre-trained models using small, keypoint-level annotated data
-sets~@abs-2012-05616").
+sets~@madhu2023").
 
 #subpar.grid(
   columns: 4,
@@ -154,9 +154,9 @@ performing inference~@ImpettS16"); (2) use trained
 pose estimators from another domain without adaptation
 @MadhuMKBMC20 @JenicekC19; (3)
 apply style transfer to real-world data sets to close the domain
-gap~@abs-2012-05616"); or (4) leverage small,
+gap~@madhu2023"); or (4) leverage small,
 keypoint-level annotated data sets to fine-tune pre-trained
-models~@abs-2012-05616").
+models~@madhu2023").
 
 #strong[Semi-supervised learning] aims to exploit a (potentially large)
 set of unlabeled data in addition to a (typically small) set of labeled

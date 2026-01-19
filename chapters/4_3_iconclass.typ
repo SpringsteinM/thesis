@@ -57,7 +57,7 @@ efficient indexing process via automated image classification methods.
 To date, related work on visual art objects primarily considered
 classification tasks of image-related metadata features, such as the
 identification of artists, genres, or creation
-dates~@rijksmuseum-challenge @art500k @omniart @multitaskpainting100k @artpedia @the-met @artbench-10 @CondeT21.
+dates~@rijksmuseum-challenge @art500k @omniart @multitaskpainting100k @artpedia @METDataset @artbench-10 @CondeT21.
 While these tasks are important, they do not take into account the
 classification of semantic concepts represented in artworks. Previous
 studies often focused narrowly on particular subsets of
@@ -121,7 +121,7 @@ matching~@brueghel @jenicek2019, and visual question
 answering~@aqua. To date, however, research efforts have largely
 been devoted to classification tasks of image-extrinsic features, such
 as the identification of artists, genres, or creation
-dates~@rijksmuseum-challenge @art500k @omniart @multitaskpainting100k @artpedia @the-met @artbench-10 @CondeT21.
+dates~@rijksmuseum-challenge @art500k @omniart @multitaskpainting100k @artpedia @METDataset @artbench-10 @CondeT21.
 While these tasks are significant, they only address tangible aspects of
 the domain, leaving, e.g., content-based features relatively unexplored.
 Indeed, the classification of intrinsic features, particularly those

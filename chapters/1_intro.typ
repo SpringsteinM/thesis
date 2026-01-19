@@ -4,6 +4,7 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 #import "@preview/unify:0.7.1": num
+#import "@preview/drafting:0.2.2": margin-note
 
 = Introduction
 <chp:intro>
@@ -47,7 +48,7 @@ Another challenge lies in making these state-of-the-art methods available to art
 
 The analysis and interpretation of artworks is a time-consuming process carried out by art historians. Various methods are typically used, and these methods differ in how easily they can be automated. This section describes how and according to which criteria art historians analyze images, as well as the current state of research on automatic analysis using image processing methods.
 
-=== Art-historical Analysis of Artworks
+=== Art-historical Analysis of Artworks <sec:int_art_analyses>
 
 Art-historical analysis goes beyond simply describing an artwork’s visual language or subject matter. Instead, the artwork is treated as a complex cultural artifact that requires careful contextualization in relation to other artistic productions, established art movements, and relevant socio-historical developments. This demand for comprehensive interpretation has historically driven the development of a wide range of analytical methods, each designed to foreground particular aspects of the artwork or to apply specific interpretive techniques. Some of the classic analysis techniques are explained and introduced below:
 
@@ -56,16 +57,35 @@ Art-historical analysis goes beyond simply describing an artwork’s visual lang
 *Structural Analysis*: Unlike style analysis, which compares artworks to identify commonalities, structural analysis focuses on the forms and their relationships within a single image. The aim is to understand how meaning, coherence, and visual order are generated through the arrangement and interrelation of formal elements within the artwork itself @sedlmayr2017art @adams2018methodologies. 
 
 *Iconology and Iconography*: Iconography analyzes which symbols are depicted in a work of art, with these symbols usually being cultural and religious in nature. An example of such a symbol in Western art is the depiction of the cross as a symbol for Christianity. A related but broader term is iconology. This investigates the specific meaning this symbol has within the analyzed work of art. This meaning is usually only discernible through the historical background or the artist's complete body of work. Panofsky @panofsky1939 further defined the process of iconographic analysis by outlining three stages:
-- Pre-iconographic analysis (What is depicted?)
-- Iconographic analysis (How is it depicted?)
-- Iconological interpretation (What does it mean?)
+- Pre-iconographic analysis (Natural Meaning): What objects, compositions, actions, and expressive qualities (like a pose or a color) are visible in the artwork without interpreting their meaning or relationship to each other.
+- Iconographic analysis (Conventional Meaning): Identify concepts and relations in the depicted objects without interpreting their deeper meaning.
+- Iconological interpretation (Intrinsic Meaning): Deeper interpretation and analysis of the depicted concepts. Understanding the artist's intention.
+
+
+#figure(
+  image("../images/intro/vermeer.jpg", height: 50%),
+  placement: auto,
+  caption: outline-text([
+    Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer. (1) Natural Meaning: A woman standing at a table in a room. (2) Conventional Meaning: Iconography concept of "Women weighing gold or money" (3) Intrinsic Meaning: "She is the personification of Divine Justice" @van1986panofsky
+  ],[Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer]),
+) <fig:intro_panofsky_example>
+
+An analysis of 'Woman Holding a Balance' by Johannes Vermeer (@fig:intro_panofsky_example) using the method presented by Panofsky could look as follows @van1986panofsky: (1) Through a simple observation of the painting, one can identify a woman standing at a table, along with a balance, some coins, and strings of pearls. (2) The iconographic concept behind this could be the depiction of a woman weighing gold or money. (3) The portrayal of the lady weighing could represent 'Divine Justice'.
+
 To classify these iconographic symbols, various iconographic terminologies or thesauri have been developed to assist art historians in their analysis. The most well-known system for Western art is #gls("Iconclass", long:false)#footnote[#link("https://iconclass.org")] (short for Iconographic Classification System), which enables the indexing of visual symbols in works of art @vandewaal1973 @vanstraten1994. Additionally, there are other annotation schemes, such as the #gls("CIT")#footnote[#link("https://chineseiconography.org")], which focuses specifically on the description of Chinese symbols.
 
 This work primarily focuses on the recognition of iconographic symbols in artworks. On one hand, the classification of visual concepts is an established field in computer vision. On the other hand, it is significantly more challenging to incorporate information beyond the image itself, such as historical context or the artist’s broader body of work, into the analysis.
 
 === Analysis of Works of Art using Computer Vision
 
-Over the years, several approaches have been developed to support the methodological frameworks of art historians introduced in the previous section. These approaches range from simple classification and object detection to the interpretation of the artwork @pado2025artwork @HayashiSKHW24 and the emotions it evokes in the viewer @abs-2110-06486 @AslanCDMSV22 @AchlioptasOHEG21 @pado2025artwork.
+Over the years, several approaches have been developed to support the methodological frameworks of art historians introduced in the previous section. These approaches range from simple classification and object detection to the interpretation of the artwork @pado2025artwork @HayashiSKHW24 and the emotions it evokes in the viewer @abs-2110-06486 @AslanCDMSV22 @AchlioptasOHEG21 @pado2025artwork. These methods can be applied to various stages of the iconological and iconographic analysis, as discussed in @sec:int_art_analyses.
+
+The automatic analysis of pre-iconographic concepts and stylistic properties is primarily based on the extraction of low-level visual features, such as color distributions @SwainB91, textures @HaralickSD73, edges @Canny86a, and shape descriptors @BelongieMP02. These features correspond to visually observable properties that can be identified without recourse to cultural or historical knowledge, and thus align closely with the pre-iconographic stage of analysis. Early computational approaches to art-historical image analysis relied predominantly on handcrafted feature representations, including #gls("SIFT") @Lowe04 and #gls("HOG") @DalalT05, which were subsequently used for classification tasks such as style recognition @AroraE12, genre classification @ZujovicGFPP09, or artist attribution @JohnsonHBBHDLPW08. While these approaches demonstrated that certain stylistic and formal properties can be captured computationally, their reliance on manually designed features limited their ability to model complex visual semantics and contextual relationships.
+
+Current methods predominantly employ deep neural networks based on #gls("CNN") @LeCunBBH98 or Transformer @VaswaniSPUJGKP17 architectures, achieving significantly more accurate predictions and enabling the handling of more complex problem settings. Using these methods, it is possible not only to assign an entire image to a category @SalehE15 @KarayevTHADHW14 @art500k @GarciaRN19, but also to segment images @CohenNS22 @HeitzingerS22, localize objects within artworks @KadishRL21 @Gonthier2018, or estimate human poses @ZhaoSS22 @MarsocciL21 @madhu2023. These approaches enable iconographic analysis, as they allow the recognition of specific objects and the prediction of their relationships within an image.
+
+The final stage of iconographic analysis, the iconographic interpretation, is considerably more complex, as it requires knowledge external to the visual elements of the artwork, such as historical context or the artist's intent. While datasets featuring detailed annotations that extend beyond the individual work do exist @abs-2105-15028, this level of analysis nonetheless remains largely inaccessible to fully automated methods. Nevertheless, recent developments in #glspl("LLM") and specifically #glspl("VLM") show great promise for addressing these challenges, as demonstrated by recent studies @pado2025artwork.
+
 
 == Existing Challenges and Limitations
 <sec:int_challenges>
@@ -97,10 +117,18 @@ By expanding the training data, it becomes possible to train larger models and i
 #researchquestion(number: "3")[How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?] <rq_3>
 
 
-== Contributions
+== Contributions#margin-note[Add references]
 <sec:int_contributions>
 
-The goal of this thesis is to answer the research questions which were formulated in previous section by developing various image analysis methods that enable art historians to systematically search through larger image collections. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
+The goal of this thesis is to answer the research questions which were formulated in previous @sec:int_challenges by developing various image analysis methods that enable art historians to systematically search through larger image collections and then help them analyze these art historical objects. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
+
+The scarcity of art-historical datasets represents one of the principal challenges in training deep neural networks. This scarcity arises from the fact that the annotation of artworks is often considerably more complex than the annotation of photographic images and typically requires domain-specific expert knowledge. While this thesis aims to develop and evaluate methods that reduce the reliance on annotated datasets, such datasets nevertheless remain essential, particularly for the evaluation of trained models. Within the scope of this work, we therefore introduce three new art related datasets that are substantially more extensive than existing ones, not only in terms of the number of samples but also with regard to the complexity of their annotations. This includes a dataset for the classification of depictions of saints comprising #num("21,479") images of #num("239") saints; the #emph[PoPArt] dataset, which consists of #num("2,859") art images with #num("3,514") annotated persons, comprising #num("51,645") keypoints; and the #emph(gls("ICARUS"))  dataset, consisting of #num("477,569") images for iconographic concept recognition covering #num("20,596") different #gls("Iconclass") concepts.
+
+Due to a lack of large-scale annotated datasets, many existing approaches are restricted to small-scale models or rely on models pre-trained on out-of-domain data and subsequently applied to artworks. To address this, we developed two novel semi-supervised training approaches that leverage unlabeled data during the training process: (1) We introduce a model capable of predicting the representation of saints in images by leveraging the fact that saints are symbolized through specific attributes in artworks. We utilize an additional dataset containing these attribute representations to automatically annotate unlabeled attributes within the saint depictions via a teacher model, thereby encouraging the student model to place a greater focus on these critical iconographic features. (2) We present a two-stage pose estimation procedure that employs a teacher model to generate pseudo-labels for human bounding boxes and pose joints on an unlabeled dataset. The evaluation of these two approaches demonstrates that we were able to enhance the performance of the baseline models without requiring the manual annotation of additional data.
+
+An additional possibility we evaluated is whether the synthesis of training materials and annotations can improve the performance of art-historical analysis methods. To this end, we first investigated the impact of style transfer techniques on the performance of saint representation prediction, pose estimation, and iconographic classification. Furthermore, we explored how models can be pre-trained using #gls("CLIP") by leveraging image-text pairs in which the textual labels were synthetically generated.
+
+Finally, we developed a unified web platform that integrates several AI methodologies to provide art historians with an intuitive search interface. This tool enables users to query collections using natural language descriptions. Furthermore, individual artworks within the platform are enriched with automated annotations, facilitating faceted search and filtering. The platform also offers various visualizations for result sets, including spatial clustering to reveal patterns within the data
 
 *The main contributions of this thesis can be summarized as follows:*
 

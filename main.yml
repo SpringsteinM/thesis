@@ -909,26 +909,6 @@ artpedia:
     parent:
       type: proceedings
       title: Lecture Notes in Computer Science
-the-met:
-  type: article
-  title: The {Met} Dataset. {I}nstance-level Recognition for Artworks
-  author:
-  - Ypsilantis, Nikolaos-Antonios
-  - Garcia, Noa
-  - Han, Guangxing
-  - Ibrahimi, Sarah
-  - name: Noord
-    given-name: Nanne
-    prefix: van
-  - Tolias, Giorgos
-  date: 2021
-  editor:
-  - Vanschoren, Joaquin
-  - Yeung, Sai-Kit
-  url: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/5f93f983524def3dca464469d2cf9f3e-Paper-round2.pdf
-  parent:
-    type: proceedings
-    title: Neural Information Processing Systems, {NeurIPS} 2021
 artbench-10:
   type: article
   title: The {ArtBench} Dataset. {B}enchmarking Generative Models with Artworks
@@ -1933,23 +1913,6 @@ JenicekC19:
     type: proceedings
     title: 2019 International Conference on Document Analysis and Recognition, {ICDAR} 2019, Sydney, Australia, September 20–25, 2019
     publisher: '{IEEE}'
-abs-2012-05616:
-  type: article
-  title: Enhancing Human Pose Estimation in Ancient Vase Paintings via Perceptually-grounded Style Transfer Learning
-  author:
-  - Madhu, Prathmesh
-  - Villar-Corrales, Angel
-  - Kosti, Ronak
-  - Bendschus, Torsten
-  - Reinhardt, Corinna
-  - Bell, Peter
-  - Maier, Andreas K.
-  - Christlein, Vincent
-  date: 2020
-  serial-number:
-    arxiv: '2012.05616'
-  parent:
-    type: periodical
 0012WZXXT21:
   type: article
   title: Pose Recognition With Cascade Transformers
@@ -4403,3 +4366,282 @@ HayashiSKHW24:
     type: proceedings
     title: Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics, {ACL} 2024 - Short Papers, Bangkok, Thailand, August 11-16, 2024
     publisher: Association for Computational Linguistics
+van1986panofsky:
+  type: article
+  title: Panofsky and ICONCLASS
+  author: Van Straten, Roelof
+  date: 1986
+  page-range: 165–181
+  parent:
+    type: periodical
+    title: Artibus et Historiae
+    publisher: JSTOR
+
+SwainB91:
+  type: article
+  title: Color indexing
+  author:
+  - Swain, Michael J.
+  - Ballard, Dana H.
+  date: 1991
+  page-range: 11–32
+  url: https://doi.org/10.1007/BF00130487
+  serial-number:
+    doi: 10.1007/BF00130487
+  parent:
+    type: periodical
+    title: Int. J. Comput. Vis.
+    issue: 1
+    volume: 7
+HaralickSD73:
+  type: article
+  title: Textural Features for Image Classification
+  author:
+  - Haralick, Robert M.
+  - Shanmugam, Karthikeyan S.
+  - Dinstein, Its'hak
+  date: 1973
+  page-range: 610–621
+  url: https://doi.org/10.1109/TSMC.1973.4309314
+  serial-number:
+    doi: 10.1109/TSMC.1973.4309314
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Syst. Man Cybern.'
+    issue: 6
+    volume: 3
+Canny86a:
+  type: article
+  title: A Computational Approach to Edge Detection
+  author: Canny, John F.
+  date: 1986
+  page-range: 679–698
+  url: https://doi.org/10.1109/TPAMI.1986.4767851
+  serial-number:
+    doi: 10.1109/TPAMI.1986.4767851
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Pattern Anal. Mach. Intell.'
+    issue: 6
+    volume: 8
+BelongieMP02:
+  type: article
+  title: Shape Matching and Object Recognition Using Shape Contexts
+  author:
+  - Belongie, Serge J.
+  - Malik, Jitendra
+  - Puzicha, Jan
+  date: 2002
+  page-range: 509–522
+  url: https://doi.org/10.1109/34.993558
+  serial-number:
+    doi: 10.1109/34.993558
+  parent:
+    type: periodical
+    title: '{IEEE} Trans. Pattern Anal. Mach. Intell.'
+    issue: 4
+    volume: 24
+
+ZujovicGFPP09:
+  type: article
+  title: 'Classifying paintings by artistic genre: An analysis of features {&} classifiers'
+  author:
+  - Zujovic, Jana
+  - Gandy, Lisa
+  - Friedman, Scott
+  - Pardo, Bryan
+  - Pappas, Thrasyvoulos N.
+  date: 2009
+  page-range: 1-5
+  url: https://doi.org/10.1109/MMSP.2009.5293271
+  serial-number:
+    doi: 10.1109/MMSP.2009.5293271
+  parent:
+    type: proceedings
+    title: 2009 {IEEE} International Workshop on Multimedia Signal Processing, {MMSP} '09, Rio de Janeiro, Brazil, October 5-7, 2009
+    publisher: '{IEEE}'
+AroraE12:
+  type: article
+  title: 'Towards automated classification of fine-art painting style: {A} comparative study'
+  author:
+  - Arora, Ravneet Singh
+  - Elgammal, Ahmed M.
+  date: 2012
+  page-range: 3541-3544
+  url: https://ieeexplore.ieee.org/document/6460929/
+  parent:
+    type: proceedings
+    title: Proceedings of the 21st International Conference on Pattern Recognition, {ICPR} 2012, Tsukuba, Japan, November 11-15, 2012
+    publisher: '{IEEE} Computer Society'
+JohnsonHBBHDLPW08:
+  type: article
+  title: Image processing for artist identification
+  author:
+  - Jr., C. Richard Johnson
+  - Hendriks, Ella
+  - Berezhnoy, Igor J.
+  - Brevdo, Eugene
+  - Hughes, Shannon M.
+  - Daubechies, Ingrid
+  - Li, Jia
+  - Postma, Eric O.
+  - Wang, James Z.
+  date: 2008
+  page-range: 37-48
+  url: https://doi.org/10.1109/MSP.2008.923513
+  serial-number:
+    doi: 10.1109/MSP.2008.923513
+  parent:
+    type: periodical
+    title: '{IEEE} Signal Process. Mag.'
+    issue: 4
+    volume: 25
+Lowe04:
+  type: article
+  title: Distinctive Image Features from Scale-Invariant Keypoints
+  author: Lowe, David G.
+  date: 2004
+  page-range: 91-110
+  url: https://doi.org/10.1023/B:VISI.0000029664.99615.94
+  serial-number:
+    doi: 10.1023/B:VISI.0000029664.99615.94
+  parent:
+    type: periodical
+    title: Int. J. Comput. Vis.
+    issue: 2
+    volume: 60
+
+DalalT05:
+  type: article
+  title: Histograms of Oriented Gradients for Human Detection
+  author:
+  - Dalal, Navneet
+  - Triggs, Bill
+  date: 2005
+  page-range: 886-893
+  url: https://doi.org/10.1109/CVPR.2005.177
+  serial-number:
+    doi: 10.1109/CVPR.2005.177
+  parent:
+    type: proceedings
+    title: 2005 {IEEE} Computer Society Conference on Computer Vision and Pattern Recognition {(CVPR} 2005), 20-26 June 2005, San Diego, CA, {USA}
+    publisher: '{IEEE} Computer Society'
+
+ZhaoSS22:
+  type: article
+  title: Automatic Analysis of Human Body Representations in Western Art
+  author:
+  - Zhao, Shu
+  - Salah, Almila Akdag
+  - Salah, Albert Ali
+  date: 2022
+  editor:
+  - Karlinsky, Leonid
+  - Michaeli, Tomer
+  - Nishino, Ko
+  page-range: 282–297
+  url: https://doi.org/10.1007/978-3-031-25056-9/_19
+  serial-number:
+    doi: 10.1007/978-3-031-25056-9\_19
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2022 Workshops - Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part {I}
+    publisher: Springer
+    volume: 13801
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+
+MarsocciL21:
+  type: article
+  title: POSE-ID-on - {A} Novel Framework for Artwork Pose Clustering
+  author:
+  - Marsocci, Valerio
+  - Lastilla, Lorenzo
+  date: 2021
+  page-range: 257
+  url: https://doi.org/10.3390/ijgi10040257
+  serial-number:
+    doi: 10.3390/IJGI10040257
+  parent:
+    type: periodical
+    title: '{ISPRS} Int. J. Geo Inf.'
+    issue: 4
+    volume: 10
+
+CohenNS22:
+  type: article
+  title: Semantic Segmentation in Art Paintings
+  author:
+  - Cohen, Nadav
+  - Newman, Yael
+  - Shamir, Ariel
+  date: 2022
+  page-range: 261–275
+  url: https://doi.org/10.1111/cgf.14473
+  serial-number:
+    doi: 10.1111/CGF.14473
+  parent:
+    type: periodical
+    title: Comput. Graph. Forum
+    issue: 2
+    volume: 41
+
+HeitzingerS22:
+  type: article
+  title: Improving semantic segmentation of fine art images using photographs rendered in a style learned from artworks
+  author:
+  - Heitzinger, Thomas
+  - Stork, David G.
+  date: 2022
+  editor:
+  - Heumiller, Kurt
+  - Stork, David G.
+  page-range: 1–5
+  url: https://doi.org/10.2352/EI.2022.34.13.CVAA-169
+  serial-number:
+    doi: 10.2352/EI.2022.34.13.CVAA-169
+  parent:
+    type: proceedings
+    title: Computer Vision and Image Analysis of Art 2022, online, January 15-26, 2022
+    publisher: Society for Imaging Science, Technology
+
+GarciaRN19:
+  type: article
+  title: Context-Aware Embeddings for Automatic Art Analysis
+  author:
+  - Garcia, Noa
+  - Renoust, Benjamin
+  - Nakashima, Yuta
+  date: 2019
+  editor:
+  - El-Saddik, Abdulmotaleb
+  - Bimbo, Alberto Del
+  - Zhang, Zhongfei
+  - Hauptmann, Alexander G.
+  - Candan, K. Selçuk
+  - Bertini, Marco
+  - Xie, Lexing
+  - Wei, Xiao-Yong
+  page-range: 25–33
+  url: https://doi.org/10.1145/3323873.3325028
+  serial-number:
+    doi: 10.1145/3323873.3325028
+  parent:
+    type: proceedings
+    title: Proceedings of the 2019 on International Conference on Multimedia Retrieval, {ICMR} 2019, Ottawa, ON, Canada, June 10-13, 2019
+    publisher: '{ACM}'
+abs-2105-15028:
+  type: article
+  title: 'ArtGraph: Towards an Artistic Knowledge Graph'
+  author:
+  - Castellano, Giovanna
+  - Sansaro, Giovanni
+  - Vessio, Gennaro
+  date: 2021
+  url: https://arxiv.org/abs/2105.15028
+  serial-number:
+    arxiv: '2105.15028'
+  parent:
+    type: periodical
+    title: CoRR

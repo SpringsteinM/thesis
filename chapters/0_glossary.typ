@@ -190,5 +190,15 @@
         short:"AI",
         long:"Artificial Intelligence"
     ),
+    (
+        key:"SIFT",
+        short:"SIFT",
+        long:"Scale-invariant Feature Transform"
+    ),
+    (
+        key:"HOG",
+        short:"HOG",
+        long:"Histogram of Oriented Gradients"
+    ),
   )
 
