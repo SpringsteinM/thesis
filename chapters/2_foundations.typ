@@ -278,9 +278,9 @@ Every convolutional neural network includes at least one convolutional layer, wh
 
 $
 sans(Y)_(i',j',f') &= b_(f') + sum_(i=1)^(H_F)sum_(j=1)^(W_F)sum_(f=1)^(F) sans(X)_(i'+i-1,j'+j-1,f) dot sans(W)_(i,j,f,f') \
-(partial E)/(partial W_(i,j,f,f')) &= sum_(i',j',f') delta_(i',j',f')^(l+1) (partial f_(i',j',f')(x,theta_(f')))/(partial theta_(i,j,f,f')) \
-&=sum_(i',j',f') delta_(i',j',f')^(l+1) x_(i'+i-1,j'+j-1,f) \
-delta_(i,j,f) &= sum_(i',j',f') delta_(i',j',f')^(l+1) theta_(i-i'+1,j-j'+1,f,f') 
+(partial E)/(partial W_(i,j,f,f')) &= sum_(i',j',f') delta_(i',j',f')^((l+1)) (partial f_(i',j',f')(x,theta_(f')))/(partial theta_(i,j,f,f')) \
+&=sum_(i',j',f') delta_(i',j',f')^((l+1)) x_(i'+i-1,j'+j-1,f) \
+delta_(i,j,f) &= sum_(i',j',f') delta_(i',j',f')^((l+1)) theta_(i-i'+1,j-j'+1,f,f') 
 $
 
 The four-dimensional kernel $bold(sans(upright(W)))$ tensor parameters are: $H_F$ for the height of the kernel, $W_F$ for the width of the kernel, $F$ for the number of filters in the current layer, and $F'$ for the number of filters in the subsequent layer. 
@@ -289,11 +289,99 @@ The four-dimensional kernel $bold(sans(upright(W)))$ tensor parameters are: $H_F
 === Pooling Layer
 <sec:fnd_pooling_layer>
 
+The pooling operation constitutes a fundamental component of #glspl("CNN"). The primary objective of the pooling layer is to perform spatial down-sampling, thereby reducing the dimensionality of the input data. This process effectively minimizes the number of parameters and the overall computational complexity of the model. Furthermore, by constraining the parameter space, the pooling layer enhances the model’s robustness against overfitting and provides a degree of translational invariance, enabling the network to identify features regardless of their specific spatial coordinates within the frame. The most prominent variant is max pooling, which operates by applying a spatial kernel across the input to extract the maximum value from each local neighborhood $Omega$. The following equations define the computational operations for a 2D max-pooling layer:
 
+#let argmax = $op("arg max", limits: #true)$
 
+$
+y_(i',j') &= max_((i,j) in Omega (i',j')) x_(i, j) \
+delta_(i,j) &= sum_(i', j') delta^((l+1))_(i',j')(partial f_(i',j')(x))/(partial x_(i, j)) \
+&= delta^((l+1))_(i',j') bb(1)((i,j)=argmax_((i'',j'') in Omega (i',j'))x_(i'',j'')) #<eq:delta_maxpooling> 
+$
+
+Specifically, @eq:delta_maxpooling stipulates that the error signal $delta_(i,j) $ from the higher-level layers is propagated exclusively to the specific input unit that was selected during the forward pass. Consequently, for all other non-selected units within the pooling region, the error signal is set to zero.
 
 == Visual and Textual based Transformer Models
 <sec:fnd_tr>
+
+For years, #glspl("RNN") were the state-of-the-art method for processing sequential data, specifically their more advanced variants: #glspl("LSTM")@hochreiter1997long and #glspl("GRU")@cho2014learning. This kind of neural network contains a feedback loop, where the output of the #gls("RNN") layer is fed back into the input for the subsequent iteration. Despite their success and widespread adoption, #gls("RNN")-based models have several disadvantages:
+
+- The recurrent feedback within an #gls("RNN") has a fixed dimensionality and must compress the entire history into this fixed-size vector, which can lead to information loss from earlier iterations.
+- The computation of an #gls("RNN") layer cannot be efficiently parallelized on #glspl("GPU"), since the recurrent feedback requires the computations to be performed sequentially.
+- During backpropagation in #glspl("GPU"), the so-called vanishing gradient problem can occur for long sequences. This arises because the error must be backpropagated through each individual time step, causing the gradient to become extremely small, which hinders the training of early time steps.
+
+These problems were addressed with the introduction of the Transformer architecture @VaswaniSPUJGKP17, whose central idea is to replace recurrent feedback with a focus on attention mechanisms. The attention mechanism introduces a learnable weighting system that determines the relative importance of different parts of the input data within a neural network. The Transformer architecture utilizes multihead attention to parallelize the attention mechanism. This enables the model to jointly focus on different parts of the sequence from multiple perspectives, capturing a richer set of dependencies than a single attention head could. In practice, Transformers have proven to be exceptionally versatile and adaptable across a wide range of tasks. Their primary advantage lies in their superior scalability, which has enabled the development of #glspl("LLM") featuring hundreds of billions of parameters @abs-2303-08774 @radford2019language @abs-2302-13971.
+
+=== Architecture 
+
+As proposed by Vaswani et al. @VaswaniSPUJGKP17, the Transformer architecture consists of an encoder and a decoder. The encoder processes an input sequence of tokens $x = (x_1,dots,x_n)$ and maps it into a latent representation $z = (z_1,dots,z_n)$. Subsequently, the decoder iteratively generates an output sequence $y = (y_1,dots,y_m)$, where an attention mechanism provides access to the input embeddings during each iteration. Both the encoder and the decoder are composed of multiple stacked blocks, each containing a self-attention mechanism and a feed-forward layer. Each sub-block is encapsulated by a residual connection @HeZRS16 followed by a normalization layer. This encoder–decoder Transformer architecture is illustrated in @fig:fnd_arch_transformer and @fig:fnd_arch_encoder_decoder_transformer.
+
+#figure([#image("../images/foundations/arch_transformer.svg", width: 60%)],
+  placement: auto,
+  caption: outline-text([Transformer architecture with $N$ encoder blocks and $M$ decoder blocks.],[Transformer model architecture])
+)
+<fig:fnd_arch_transformer>
+
+In contrast to the originally proposed encoder-decoder structures, encoder-only or decoder-only Transformers have also gained prominence in practice for various scenarios:
+
+
+==== Encoder-Decoder Transformer
+
+This architectural flexibility is particularly advantageous in cross-lingual tasks, such as machine translation. Furthermore, the encoder-decoder framework excels in tasks where the input and output lengths vary significantly. While the encoder generates a high-dimensional representation of the entire input sequence, the decoder consumes this information via the cross-attention mechanism to generate the output auto-regressively. This separation allows the model to capture complex mappings between disparate data distributions that might be lost in a unified, single-vocabulary system. An example of translation using an encoder-decoder structure is shown in @fig:fnd_arch_encoder_decoder_transformer. This architecture is not only relevant to #gls("NLP")@LewisLGGMLSZ20 @ChungHLZTFL00BW24 @RaffelSRLNMZLL20 but also to computer vision tasks. For instance, the #gls("DETR") employs this encoder-decoder structure for bounding box prediction.
+
+#figure([#image("../images/foundations/encoder_decoder_transformer.svg", width: 100%)],
+  placement: auto,
+  caption: outline-text([Transformer encoder-decoder for sentence translation.],[Transformer encoder-decoder for sentence translation])
+)
+<fig:fnd_arch_encoder_decoder_transformer>
+
+==== Encoder-only Transformer
+
+In encoder-only Transformer architectures, the self-attention mechanism allows each sequence element to attend to all other elements simultaneously. Unlike models that process text strictly from left to right, encoder-only models generate a bidirectional contextual representation. Consequently, this architecture is well-suited for tasks such as embedding sequences into a single vector, sequence classification, or the labeling of individual sequence elements. The example in @fig:fnd_arch_encoder_transformer illustrates a text classification task, where a special [cls] token is prepended to the input. A feed-forward classification head is then attached to the output of this token to perform the final prediction. While #gls("BERT") is the most prominent example of this architecture in the #gls("NLP") domain, these models have also become ubiquitous in computer vision through architectures such as the #gls("ViT") and the image-encoder components of multimodal frameworks like #gls("CLIP").
+
+#figure([#image("../images/foundations/encoder_transformer.svg", width: 80%)],
+  placement: auto,
+  caption: outline-text([Transformer encoder for sentence classification.],[Transformer encoder for sentence classification])
+)
+<fig:fnd_arch_encoder_transformer>
+
+==== Decoder-only Transformer
+
+In decoder-only Transformer architectures, the self-attention mechanism is restricted to attending only to the current and preceding elements by masking connections to future positions. This design makes the architecture ideal for autoregressive modeling, where the objective is to predict subsequent tokens. Typically, during inference, the output from the previous step serves as the input for the current iteration. As a result, the vast majority of contemporary #glspl("LLM")@abs-2302-13971 @abs-2303-08774 @abs-2310-06825 and conversational agents @Ouyang0JAWMZASR22 utilize a decoder-only architecture, as it provides the most efficient framework for large-scale generative tasks. An example of such a decoder-only architecture for text generation is illustrated in @fig:fnd_arch_decoder_transformer. 
+
+#figure([#image("../images/foundations/decoder_transformer.svg", width: 80%)],
+  placement: auto,
+  caption: outline-text([Transformer decoder for generative tasks.],[Transformer decoder for generative tasks])
+)
+<fig:fnd_arch_decoder_transformer>
+
+
+=== Scaled Dot-Product Attention and Multi-Head Attention 
+
+The Transformer architecture utilizes multiple so called #emph[Scaled Dot-Product Attention] layers. The primary objective of these layers is to reroute information within the network, enabling every element in a sequence to attend to every other element simultaneously. Attention as implemented in a Transformer is defined as the mapping of a query vector to a set of key–value pairs, where the output is a weighted sum of all value vectors $V$, based on the similarity between the query vector $Q$ and the corresponding key vectors $K$. To prevent the dot products from growing excessively large in magnitude, which could push the softmax function into regions with vanishing gradients, the scores are scaled by $sqrt(1/d_k)$​​, where dk​ represents the dimensionality of the key vectors. The attention is calculated as following:
+
+#let attention = $op("Attention", limits: #true)$
+#let softmax = $op("softmax", limits: #true)$
+
+$
+attention(Q,K,V) &= softmax((Q K^T)/sqrt(d_k))V
+$
+
+While a single Scaled Dot-Product Attention layer allows each sequence element to focus on only one type of relationship at a time,constrained by a single set of learned weight matrices for the query and key, it is often insufficient for capturing complex dependencies. To enable the model to simultaneously attend to information from different representation subspaces at different positions, the Transformer introduces the Multi-Head Attention module.
+
+Com
+
+#let mha = $op("MultiHead", limits: #true)$
+#let concat = $op("Concat", limits: #true)$
+#let head = $op("head")$
+
+$
+mha(Q, K, V) &= concat(head_1, dots, head_h)W_O \
+head_i &= attention(Q W_i^(Q),K  W_i^(K),V  W_i^(V))
+$
+
+In this 
+
 == Semi-supervised and Unsupervised based Deep Learning
 <sec:fnd_lr>
 == Evaluation Methods

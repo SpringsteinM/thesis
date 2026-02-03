@@ -4645,3 +4645,234 @@ abs-2105-15028:
   parent:
     type: periodical
     title: CoRR
+
+hochreiter1997long:
+  type: article
+  title: Long short-term memory
+  author:
+  - Hochreiter, Sepp
+  - Schmidhuber, Jürgen
+  date: 1997
+  page-range: 1735–1780
+  parent:
+    type: periodical
+    title: Neural computation
+    publisher: MIT press
+    issue: 8
+    volume: 9
+
+cho2014learning:
+  type: article
+  title: Learning phrase representations using RNN encoder-decoder for statistical machine translation
+  author:
+  - Cho, Kyunghyun
+  - Van Merriënboer, Bart
+  - Gulcehre, Caglar
+  - Bahdanau, Dzmitry
+  - Bougares, Fethi
+  - Schwenk, Holger
+  - Bengio, Yoshua
+  date: 2014
+  parent:
+    type: periodical
+    title: arXiv preprint arXiv:1406.1078
+abs-2303-08774:
+  type: article
+  title: '{GPT-4} Technical Report'
+  author: OpenAI
+  date: 2023
+  url: https://doi.org/10.48550/arXiv.2303.08774
+  serial-number:
+    arxiv: '2303.08774'
+    doi: 10.48550/ARXIV.2303.08774
+  parent:
+    type: periodical
+    title: CoRR
+abs-2302-13971:
+  type: article
+  title: 'LLaMA: Open and Efficient Foundation Language Models'
+  author:
+  - Touvron, Hugo
+  - Lavril, Thibaut
+  - Izacard, Gautier
+  - Martinet, Xavier
+  - Lachaux, Marie-Anne
+  - Lacroix, Timothée
+  - Rozière, Baptiste
+  - Goyal, Naman
+  - Hambro, Eric
+  - Azhar, Faisal
+  - Rodriguez, Aurélien
+  - Joulin, Armand
+  - Grave, Edouard
+  - Lample, Guillaume
+  date: 2023
+  url: https://doi.org/10.48550/arXiv.2302.13971
+  serial-number:
+    arxiv: '2302.13971'
+    doi: 10.48550/ARXIV.2302.13971
+  parent:
+    type: periodical
+    title: CoRR
+
+LewisLGGMLSZ20:
+  type: article
+  title: '{BART:} Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension'
+  author:
+  - Lewis, Mike
+  - Liu, Yinhan
+  - Goyal, Naman
+  - Ghazvininejad, Marjan
+  - Mohamed, Abdelrahman
+  - Levy, Omer
+  - Stoyanov, Veselin
+  - Zettlemoyer, Luke
+  date: 2020
+  editor:
+  - Jurafsky, Dan
+  - Chai, Joyce
+  - Schluter, Natalie
+  - Tetreault, Joel R.
+  page-range: 7871-7880
+  url: https://doi.org/10.18653/v1/2020.acl-main.703
+  serial-number:
+    doi: 10.18653/V1/2020.ACL-MAIN.703
+  parent:
+    type: proceedings
+    title: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, {ACL} 2020, Online, July 5-10, 2020
+    publisher: Association for Computational Linguistics
+ChungHLZTFL00BW24:
+  type: article
+  title: Scaling Instruction-Finetuned Language Models
+  author:
+  - Chung, Hyung Won
+  - Hou, Le
+  - Longpre, Shayne
+  - Zoph, Barret
+  - Tay, Yi
+  - Fedus, William
+  - Li, Yunxuan
+  - Wang, Xuezhi
+  - Dehghani, Mostafa
+  - Brahma, Siddhartha
+  - Webson, Albert
+  - Gu, Shixiang Shane
+  - Dai, Zhuyun
+  - Suzgun, Mirac
+  - Chen, Xinyun
+  - Chowdhery, Aakanksha
+  - Castro-Ros, Alex
+  - Pellat, Marie
+  - Robinson, Kevin
+  - Valter, Dasha
+  - Narang, Sharan
+  - Mishra, Gaurav
+  - Yu, Adams
+  - Zhao, Vincent Y.
+  - Huang, Yanping
+  - Dai, Andrew M.
+  - Yu, Hongkun
+  - Petrov, Slav
+  - Chi, Ed H.
+  - Dean, Jeff
+  - Devlin, Jacob
+  - Roberts, Adam
+  - Zhou, Denny
+  - Le, Quoc V.
+  - Wei, Jason
+  date: 2024
+  page-range: 1-53
+  url: https://jmlr.org/papers/v25/23-0870.html
+  parent:
+    type: periodical
+    title: J. Mach. Learn. Res.
+    volume: 25
+RaffelSRLNMZLL20:
+  type: article
+  title: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+  author:
+  - Raffel, Colin
+  - Shazeer, Noam
+  - Roberts, Adam
+  - Lee, Katherine
+  - Narang, Sharan
+  - Matena, Michael
+  - Zhou, Yanqi
+  - Li, Wei
+  - Liu, Peter J.
+  date: 2020
+  page-range: 1-67
+  url: https://jmlr.org/papers/v21/20-074.html
+  parent:
+    type: periodical
+    title: J. Mach. Learn. Res.
+    volume: 21
+abs-2310-06825:
+  type: article
+  title: Mistral 7B
+  author:
+  - Jiang, Albert Q.
+  - Sablayrolles, Alexandre
+  - Mensch, Arthur
+  - Bamford, Chris
+  - Chaplot, Devendra Singh
+  - name: Las Casas
+    given-name: Diego
+    prefix: de
+  - Bressand, Florian
+  - Lengyel, Gianna
+  - Lample, Guillaume
+  - Saulnier, Lucile
+  - Lavaud, Lélio Renard
+  - Lachaux, Marie-Anne
+  - Stock, Pierre
+  - Scao, Teven Le
+  - Lavril, Thibaut
+  - Wang, Thomas
+  - Lacroix, Timothée
+  - Sayed, William El
+  date: 2023
+  url: https://doi.org/10.48550/arXiv.2310.06825
+  serial-number:
+    arxiv: '2310.06825'
+    doi: 10.48550/ARXIV.2310.06825
+  parent:
+    type: periodical
+    title: CoRR
+
+Ouyang0JAWMZASR22:
+  type: article
+  title: Training language models to follow instructions with human feedback
+  author:
+  - Ouyang, Long
+  - Wu, Jeffrey
+  - Jiang, Xu
+  - Almeida, Diogo
+  - Wainwright, Carroll L.
+  - Mishkin, Pamela
+  - Zhang, Chong
+  - Agarwal, Sandhini
+  - Slama, Katarina
+  - Ray, Alex
+  - Schulman, John
+  - Hilton, Jacob
+  - Kelton, Fraser
+  - Miller, Luke
+  - Simens, Maddie
+  - Askell, Amanda
+  - Welinder, Peter
+  - Christiano, Paul F.
+  - Leike, Jan
+  - Lowe, Ryan
+  date: 2022
+  editor:
+  - Koyejo, Sanmi
+  - Mohamed, S.
+  - Agarwal, A.
+  - Belgrave, Danielle
+  - Cho, K.
+  - Oh, A.
+  url: http://papers.nips.cc/paper/_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022'

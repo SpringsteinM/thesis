@@ -19,7 +19,7 @@ The question therefore arises: How can we further scale automatic image analysis
 
 
 An additional question arising from the continuous scaling of #gls("AI") systems is how humans perform on these tasks in comparison and whether #gls("AI")-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
-
+ 
 #subpar.super(
  [#figure(
       image("../images/intro/liberte.svg", height: 17.2%),
@@ -38,7 +38,7 @@ An additional question arising from the continuous scaling of #gls("AI") systems
     ) <fig:intro_examples_a>],
   )],
   placement: auto,
-  caption: [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
+  caption: outline-text([Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],[Examples of art historical search scenarios]),
   label: <fig:intro_examples>,
 )
 
@@ -67,7 +67,7 @@ Art-historical analysis goes beyond simply describing an artwork’s visual lang
   placement: auto,
   caption: outline-text([
     Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer. (1) Natural Meaning: A woman standing at a table in a room. (2) Conventional Meaning: Iconography concept of "Women weighing gold or money" (3) Intrinsic Meaning: "She is the personification of Divine Justice" @van1986panofsky
-  ],[Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer]),
+  ],[Iconographical analysis of Woman Holding a Balance]),
 ) <fig:intro_panofsky_example>
 
 An analysis of 'Woman Holding a Balance' by Johannes Vermeer (@fig:intro_panofsky_example) using the method presented by Panofsky could look as follows @van1986panofsky: (1) Through a simple observation of the painting, one can identify a woman standing at a table, along with a balance, some coins, and strings of pearls. (2) The iconographic concept behind this could be the depiction of a woman weighing gold or money. (3) The portrayal of the lady weighing could represent 'Divine Justice'.

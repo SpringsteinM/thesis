@@ -200,5 +200,35 @@
         short:"HOG",
         long:"Histogram of Oriented Gradients"
     ),
+    (
+        key:"RNN",
+        short:"RNN",
+        long:"Recurrent Neural Network"
+    ),
+    (
+        key:"LSTM",
+        short:"LSTM",
+        long:"Long Short-Term Memory"
+    ),
+    (
+        key:"GRU",
+        short:"GRU",
+        long:"Gated Recurrent Unit"
+    ),
+    (
+        key:"NLP",
+        short:"NLP",
+        long:"Natural Language Processing"
+    ),
+    (
+        key:"BERT",
+        short:"BERT",
+        long:"Bidirectional Encoder Representations from Transformers"
+    ),
+    (
+        key:"ViT",
+        short:"ViT",
+        long:"Vision Transformer"
+    ),
   )
 
