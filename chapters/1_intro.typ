@@ -117,7 +117,7 @@ By expanding the training data, it becomes possible to train larger models and i
 #researchquestion(number: "3")[How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?] <rq_3>
 
 
-== Contributions#margin-note[Add references]
+== Contributions
 <sec:int_contributions>
 
 The goal of this thesis is to answer the research questions which were formulated in previous @sec:int_challenges by developing various image analysis methods that enable art historians to systematically search through larger image collections and then help them analyze these art historical objects. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.

@@ -4876,3 +4876,161 @@ Ouyang0JAWMZASR22:
   parent:
     type: proceedings
     title: 'Advances in Neural Information Processing Systems 35: Annual Conference on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28 - December 9, 2022'
+ParmarVUKSKT18:
+  type: article
+  title: Image Transformer
+  author:
+  - Parmar, Niki
+  - Vaswani, Ashish
+  - Uszkoreit, Jakob
+  - Kaiser, Lukasz
+  - Shazeer, Noam
+  - Ku, Alexander
+  - Tran, Dustin
+  date: 2018
+  editor:
+  - Dy, Jennifer G.
+  - Krause, Andreas
+  page-range: 4052–4061
+  url: http://proceedings.mlr.press/v80/parmar18a.html
+  parent:
+    type: proceedings
+    title: Proceedings of the 35th International Conference on Machine Learning, {ICML} 2018, Stockholmsm{ä}ssan, Stockholm, Sweden, July 10-15, 2018
+    publisher: '{PMLR}'
+    volume: 80
+    parent:
+      type: proceedings
+      title: Proceedings of Machine Learning Research
+
+ArazoOAOM20:
+  type: article
+  title: Pseudo-Labeling and Confirmation Bias in Deep Semi-Supervised Learning
+  author:
+  - Arazo, Eric
+  - Ortego, Diego
+  - Albert, Paul
+  - O'Connor, Noel E.
+  - McGuinness, Kevin
+  date: 2020
+  page-range: 1–8
+  url: https://doi.org/10.1109/IJCNN48605.2020.9207304
+  serial-number:
+    doi: 10.1109/IJCNN48605.2020.9207304
+  parent:
+    type: proceedings
+    title: 2020 International Joint Conference on Neural Networks, {IJCNN} 2020, Glasgow, United Kingdom, July 19-24, 2020
+    publisher: '{IEEE}'
+
+0001VTN23:
+  type: article
+  title: 'Dataset Diffusion: Diffusion-based Synthetic Data Generation for Pixel-Level Semantic Segmentation'
+  author:
+  - Nguyen, Quang
+  - Vu, Truong
+  - Tran, Anh
+  - Nguyen, Khoi
+  date: 2023
+  editor:
+  - Oh, Alice
+  - Naumann, Tristan
+  - Globerson, Amir
+  - Saenko, Kate
+  - Hardt, Moritz
+  - Levine, Sergey
+  url: http://papers.nips.cc/paper/_files/paper/2023/hash/f2957e48240c1d90e62b303574871b47-Abstract-Conference.html
+  parent:
+    type: proceedings
+    title: 'Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10 - 16, 2023'
+
+SunSSG17:
+  type: article
+  title: Revisiting Unreasonable Effectiveness of Data in Deep Learning Era
+  author:
+  - Sun, Chen
+  - Shrivastava, Abhinav
+  - Singh, Saurabh
+  - Gupta, Abhinav
+  date: 2017
+  page-range: 843-852
+  url: https://doi.org/10.1109/ICCV.2017.97
+  serial-number:
+    doi: 10.1109/ICCV.2017.97
+  parent:
+    type: proceedings
+    title: '{IEEE} International Conference on Computer Vision, {ICCV} 2017, Venice, Italy, October 22-29, 2017'
+    publisher: '{IEEE} Computer Society'
+
+NorooziF16:
+  type: article
+  title: Unsupervised Learning of Visual Representations by Solving Jigsaw Puzzles
+  author:
+  - Noroozi, Mehdi
+  - Favaro, Paolo
+  date: 2016
+  editor:
+  - Leibe, Bastian
+  - Matas, Jiri
+  - Sebe, Nicu
+  - Welling, Max
+  page-range: 69-84
+  url: https://doi.org/10.1007/978-3-319-46466-4/_5
+  serial-number:
+    doi: 10.1007/978-3-319-46466-4\_5
+  parent:
+    type: proceedings
+    title: Computer Vision - {ECCV} 2016 - 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part {VI}
+    publisher: Springer
+    parent:
+      type: proceedings
+      title: Lecture Notes in Computer Science
+GidarisSK18:
+  type: article
+  title: Unsupervised Representation Learning by Predicting Image Rotations
+  author:
+  - Gidaris, Spyros
+  - Singh, Praveer
+  - Komodakis, Nikos
+  date: 2018
+  url: https://openreview.net/forum?id=S1v4N2l0-
+  parent:
+    type: proceedings
+    title: 6th International Conference on Learning Representations, {ICLR} 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track Proceedings
+    publisher: OpenReview.net
+HeCXLDG22:
+  type: article
+  title: Masked Autoencoders Are Scalable Vision Learners
+  author:
+  - He, Kaiming
+  - Chen, Xinlei
+  - Xie, Saining
+  - Li, Yanghao
+  - Dollár, Piotr
+  - Girshick, Ross B.
+  date: 2022
+  page-range: 15979-15988
+  url: https://doi.org/10.1109/CVPR52688.2022.01553
+  serial-number:
+    doi: 10.1109/CVPR52688.2022.01553
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022'
+    publisher: '{IEEE}'
+
+ChenK0H20:
+  type: article
+  title: A Simple Framework for Contrastive Learning of Visual Representations
+  author:
+  - Chen, Ting
+  - Kornblith, Simon
+  - Norouzi, Mohammad
+  - Hinton, Geoffrey E.
+  date: 2020
+  page-range: 1597-1607
+  url: http://proceedings.mlr.press/v119/chen20j.html
+  parent:
+    type: proceedings
+    title: Proceedings of the 37th International Conference on Machine Learning, {ICML} 2020, 13-18 July 2020, Virtual Event
+    publisher: '{PMLR}'
+    parent:
+      type: proceedings
+      title: Proceedings of Machine Learning Research

@@ -367,23 +367,69 @@ $
 attention(Q,K,V) &= softmax((Q K^T)/sqrt(d_k))V
 $
 
-While a single Scaled Dot-Product Attention layer allows each sequence element to focus on only one type of relationship at a time,constrained by a single set of learned weight matrices for the query and key, it is often insufficient for capturing complex dependencies. To enable the model to simultaneously attend to information from different representation subspaces at different positions, the Transformer introduces the Multi-Head Attention module.
-
-Com
+While a single Scaled Dot-Product Attention layer allows each sequence element to attend to only a single type of relationship at a time, constrained by a single set of learned weight matrices for the query and key, it is often insufficient for capturing complex dependencies. To enable the model to simultaneously attend to information from different representation subspaces at different positions, the Transformer introduces the Multi-Head Attention module. Here, the weight matrices $W^((Q))$, $W^((K))$, and $W^((V))$ are projected into $h$ different subspaces, allowing the network to focus on multiple perspectives without negatively affecting the number of parameters or the computational cost:
 
 #let mha = $op("MultiHead", limits: #true)$
 #let concat = $op("Concat", limits: #true)$
 #let head = $op("head")$
 
 $
-mha(Q, K, V) &= concat(head_1, dots, head_h)W_O \
-head_i &= attention(Q W_i^(Q),K  W_i^(K),V  W_i^(V))
+mha(Q, K, V) &= concat(head_1, dots, head_h)W^((O)) \
+head_i &= attention(Q W_i^((Q)),K  W_i^((K)),V  W_i^((V)))
 $
 
-In this 
+In this context, the weight matrices are defined as follows: $W^((Q))_i in bb(R)^(d_("model") times d_k)$, $W^((K))_i in bb(R)^(d_("model") times d_k)$,  $W^((V))_i in bb(R)^(d_("model") times d_v)$ and $W^((O))_i in bb(R)^(h d_v times d_("model"))$.
 
-== Semi-supervised and Unsupervised based Deep Learning
+=== Transformers for Visual Tasks
+
+While originally proposed for #gls("NLP") tasks, recent studies demonstrate that this architecture is equally effective for image and video processing. The primary challenge in applying Transformers to images and videos is that visual data is significantly higher-dimensional than text. For instance, the standard AlexNet @KrizhevskySH12 input resolution of $224 times 224$ pixels results in a sequence length exceeding $50,000$ tokens. Due to the quadratic complexity of self-attention, processing such sequences would require a prohibitive amount of computational resources. Consequently, early attempts to employ Transformers in the visual domain were either restricted to low-resolution images @ParmarVUKSKT18 or utilized a #gls("CNN") as a feature extractor to reduce the input dimensionality to a manageable scale @CarionMSUKZ20.
+
+This paradigm shifted with the introduction of the #gls("ViT") @dosovitskiy2021, which operates on image patches rather than individual pixels. These spatial regions are transformed via linear projection into a sequence significantly shorter than the raw pixel count. By utilizing patch sizes of $32 times 32$, $16 times 16$, or $14 times 14$, the #gls("ViT") reduces the sequence length and the computational overhead by several orders of magnitude. The proposed architecture for a classification task is illustrated in @fig:fnd_arch_vit.
+
+#figure([#image("../images/foundations/vit_art.svg", width: 100%)],
+  placement: auto,
+  caption: outline-text([Architecture of the #gls("ViT",long:true). The image is partitioned into individual patches and transformed into a sequence of vectors. This sequence, along with a classification token [cls], is combined with one-dimensional position embeddings and fed into the Transformer encoder. Finally, a feed-forward classification head is attached to the output position of the [cls] token.],[Vision Transformer])
+)
+<fig:fnd_arch_vit>
+
+Unlike convolutional layers, which use fixed filters to extract features from local regions, the Transformer architecture lacks these inherent inductive biases. Through the self-attention mechanism, the model can access all image regions simultaneously, even in the very first layers. Empirical studies on @ViT @dosovitskiy2021 have shown that while the model predominantly develops local attention patterns similar to #glspl("CNN") during training, it also attends to distant regions in the early stages. Because #glspl("CNN") have these inductive biases baked into their architecture while Transformers must learn these spatial relationships from scratch, the latter generally requires significantly more training data. However, the Transformer architecture scales more effectively with larger datasets and increased model parameters.
+
+== Leveraging Unlabeled and Noisy Data in Deep Learning
 <sec:fnd_lr>
+
+The predominant method for training neural networks is supervised learning, which utilizes a dataset wherein each training instance is associated with a corresponding label. As the parameter count of neural networks continues to scale, the demand for increasingly large datasets has grown to enhance model generalization. However, the curation of such data is becoming prohibitively time-consuming and expensive. Consequently, research is increasingly exploring alternative strategies for the initial training phase, specifically those that do not demand manual annotations.
+
+To overcome the limitations imposed by the scarcity of annotated datasets, researchers are increasingly incorporating unlabeled data into the training of neural networks. The primary strategies employed in this context are semi-supervised learning and unsupervised learning.
+
+=== Semi-supervised Learning
+<sec:fnd_semi>
+
+Semi-supervised learning involves training a model with a dataset comprised of both labeled and unlabeled data, where the labeled portion is significantly smaller than the unlabeled portion. Numerous diverse approaches exist for leveraging unlabeled data to enhance model performance during training. Many recent methods rely on techniques such as consistency regularization or pseudo-labeling.
+
+#strong[Consistency Regularization:] The fundamental principle behind these methods is that perturbations to the input or the internal state of the model should not significantly alter the model's prediction. For instance, the semantic identity of a cat remains unchanged despite rotations or pixel level noise. A prominent implementation of this principle is the Mean Teacher framework @TarvainenV17. In this architecture, a student model and a teacher model whose weights are an #gls("EMA") of the student weights process different augmented versions of the same unlabeled input. The training objective then minimizes a consistency cost such as mean squared error between the student prediction and the teacher targets.
+
+#strong[Pseudo-Labeling:] This method utilizes a teacher model to generate labels for unlabeled data, which then serve as the optimization targets. The teacher can be a previous iteration of the student model or, more commonly, an #gls("EMA") of the weights from previous steps @SohnBCZZRCKL20. Depending on the implementation, the pseudo-labeling process can generate either soft labels (a probability distribution) or hard labels (a one-hot vector). To mitigate the effects of confirmation bias @ArazoOAOM20, these generated labels are only utilized if the model exhibits high confidence, i.e. the class probability exceeds a predefined threshold @SohnBCZZRCKL20.
+
+=== Weakly Supervised Learning
+<sec:fnd_weakly>
+
+In contrast to semi-supervised learning, weakly supervised learning utilizes labels that are low-quality, coarse, or noisy. This training challenge arises when the specific annotations required for a given task are unavailable, necessitating the substitution of target annotations with auxiliary or lower-level labels. These labels are typically easier to collect in large quantities and do not require manual annotation.
+
+Weakly supervised learning encompasses a broad range of data challenges and strategies. In the context of this work, weakly supervised learning is applied in the following scenarios:
+
+#strong[Synthetic Label Generation:] This involves the creation of annotations using auxiliary models, such as Large Language Models (LLMs) or Vision-Language Models (VLMs). These labels can be derived from various inputs, including the image content itself or associated metadata such as tag lists. However, because these labels are machine-generated rather than human-verified, the final training signal may contain noise or hallucinations.
+
+#strong[Synthetic Data Generation:] This strategy involves generating input data for model training rather than relying exclusively on real-world samples. Examples of this approach include the use of diffusion models to create class-specific training images @0001VTN23 or style transfer techniques to adapt existing datasets to a target domain @madhu2023. By synthesizing data, it is possible to bridge domain gaps and expand training sets where authentic data is scarce.
+
+#strong[Web-Supervised Learning:]
+This approach involves generating datasets by crawling images from the internet based on specific keywords, leveraging existing metadata as supervision targets. However, this introduces significant label noise, as the visual content is not always perfectly aligned with the search query or metadata. The utility of web-crawled data for weakly-supervised learning has been demonstrated in various works @SpringsteinE16, @SunSSG17. One notable example is #gls("CLIP") @RadfordKHRGASAM21, which utilizes 400 million (image, text) pairs for training.
+
+
+=== Unsupervised and Self-supervised Learning
+<sec:fnd_unsuper>
+
+Unsupervised and self-supervised learning are closely related, as both share the common challenge of lacking target labels for data points. In unsupervised learning, algorithms like k-means clustering typically aim to identify underlying patterns within the data without a formal training stage. In contrast, self-supervised learning generates the necessary supervision feedback directly from the data itself. The standard strategy for self-supervised learning in computer vision is to define a pretext task that enables the model to acquire useful representations for subsequent downstream tasks. Examples of such tasks include solving jigsaw puzzles @NorooziF16, detecting image rotation @GidarisSK18, restoring masked image patches @HeCXLDG22, or training a unified embedding by maximizing the similarity between differently augmented views of the same image @ChenK0H20, @GrillSATRBDPGAP20.
+
 == Evaluation Methods
 <sec:fnd_eval>
 
