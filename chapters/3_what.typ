@@ -1,92 +1,34 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
+#import "@preview/unify:0.7.1": num
 
-= #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
+// = #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
 
-== Introduction <sec:what_introduction>
-In the fields of multimedia analysis and retrieval, human performance in
-recognition tasks was reported from time to time
-@bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun,
-but has not been evaluated in a consistent manner. As a consequence, the
-quality of human performance is not exactly known and estimates exist
-only for a number of recognition tasks. The design of the related human
-experiments also varies noticeably in many respects. For example,
-crowdsourcing was often utilized to employ annotators
-@jiang2011consumer @kumar2009attribute @lake2015human @LinMBHPRDZ14 @nowak2011eval @parikh2010role @xiao2010sun,
-which is coming along with some methodological issues. The number of
-human participants varies from 1 to 40 in the studies considered in this
-paper. The same is true for the experimental instructions and their
-expertise, in particular for crowdworkers. This, for example, makes it
-nearly unfeasible to evaluate and compare machine performance at human
-level across different tasks. In fact, we know little #emph[in general]
-about human performance in multimedia content analysis tasks. As a
-consequence, the question when such a task can be considered as solved
-cannot be answered easily. The related question is addressed by this
-paper: How can we systematically set machine performance in relation to
-human performance? If human ground truth data are the (only) baseline,
-machine performance can basically never be better than (human) ground
-truth data. But considering the impressive recent advances in deep
-learning for pattern recognition tasks, it is desirable to set machine
-performance in relation to human-level performance in a systematic
-manner.
 
-Another issue is related to ground truth data for retrieval tasks: The
-relevance of multimedia documents at retrieval time for a certain user
-is not known in advance and it depends on the user’s current search task
-and context. The issue of evaluating multimedia analytics systems has
-been recently also stressed by Zahálka et al.
-@zahalka2015analytic. For example, a detective is interested in
-every occurrence of a suspicious object (e.g., a car) in any size. On
-the other hand, a TV journalist, who searches for material for re-use in
-order to illustrate the topic mobility, might be interested only in
-retrieval results showing a car in an "iconic" view, i.e., placed
-clearly in the foreground.
+= #outline-text([A Comparative Analysis of Human Performance and Machine Learning in Visual Concept Detection],[Analysis of Human Performance and Machine Learning]) <chp:what>
 
-In this paper, we review a number of papers reporting human performance
-in visual and auditory recognition tasks. This aims at putting together
-some parts of the puzzle: How well do machines perform in such tasks
-compared to humans? To answer this question, the results are set in
-relation to the current state of the art of automatic pattern
-recognition systems. Furthermore, we present a comprehensive user study
-that fills the gap of analyzing in detail human performance in
-annotation tasks for realistic images, as they are used in the #gls("VOC") challenge
-@everingham2010pascal @everingham2015pascal, for example. More
-than 1000 images have been annotated by 23 participants in a
-non-crowdsourcing setting. The number of images also allows us to draw
-conclusions about rarely occurring concept categories such as "cow" or
-"potted plant". It is suggested to evaluate the reliability of users’
-annotations by Krippendorff’s $alpha$
-@krip2004reliability @krip2011computing, which measures the
-agreement among several coders. The results of the presented study are
-discussed and conclusions are drawn for the evaluation of computer
-vision and multimedia retrieval systems: A methodology is introduced
-that enables researchers to formally compare machine performance at
-human level in visual and auditory recognition tasks. To summarize, the
+
+In the fields of multimedia analysis and retrieval, human performance in recognition tasks has been reported from time to time @bailer2005joanneum @jiang2011consumer @kumar2009attribute @lake2015human @nowak2011eval @parikh2010role @taigman2014deepface @turnbull2008semantic @weyand2016planet @xiao2010sun, but has not been evaluated in a consistent manner. As a consequence, the quality of human performance is not exactly known and estimates exist only for a number of recognition tasks. The design of the related human experiments also varies noticeably in many respects. For example, crowdsourcing was often utilized to employ annotators @jiang2011consumer @kumar2009attribute @lake2015human @LinMBHPRDZ14 @nowak2011eval @parikh2010role @xiao2010sun, which is coming along with some methodological issues. The number of human participants varies from 1 to 40 in the studies considered in this thesis. The same is true for the experimental instructions and their expertise, in particular for crowdworkers. This, for example, makes it nearly unfeasible to evaluate and compare machine performance at human level across different tasks. In fact, we know little #emph[in general] about human performance in multimedia content analysis tasks. As a consequence, the question when such a task can be considered as solved cannot be answered easily. The related question is addressed in this chapter: How can we systematically set machine performance in relation to human performance? If human ground truth data are the (only) baseline, machine performance can basically never be better than (human) ground truth data. But considering the impressive recent advances in deep learning for pattern recognition tasks, it is desirable to set machine performance in relation to human-level performance in a systematic manner.
+
+Another issue is related to ground truth data for retrieval tasks: The relevance of multimedia documents at retrieval time for a certain user is not known in advance and it depends on the user’s current search task and context. The issue of evaluating multimedia analytics systems has been recently also stressed by Zahálka et al. @zahalka2015analytic. For example, a detective is interested in every occurrence of a suspicious object (e.g., a car) in any size. On the other hand, a TV journalist, who searches for material for re-use in order to illustrate the topic mobility, might be interested only in retrieval results showing a car in an "iconic" view, i.e., placed clearly in the foreground.
+
+This question also arises within the overarching focus of this thesis: the automated classification of fine art. Within the specific context of art historical evaluation of artworks, even a group of domain experts may fail to reach a definitive ground truth for a particular question due to the inherently interpretive nature of the field. This subjectivity complicates evaluation, making it difficult to answer the question of whether the performance of the automated analysis methods exceeds or falls short of human capabilities. However, developing an evaluation framework directly within the highly subjective domain of art introduces too many uncontrolled variables. To systematically address this challenge for the broader thesis, it is necessary to first decouple the proposed evaluation methodology from the complexities of art interpretation and validate it in a controlled environment.
+
+In this chapter, we review a number of papers reporting human performance in visual and auditory recognition tasks. This aims at putting together some parts of the puzzle: How well do machines perform in such tasks compared to humans? To answer this question, the results are set in relation to the current state of the art of automatic pattern recognition systems. Furthermore, we present a comprehensive user study that fills the gap of analyzing in detail human performance in annotation tasks for realistic images, as they are used in the #gls("VOC") challenge @everingham2010pascal @everingham2015pascal, for example. More than #num(1000) images have been annotated by #num(23) participants in a non-crowdsourcing setting. The number of images also allows us to draw conclusions about rarely occurring concept categories such as "cow" or "potted plant". It is suggested to evaluate the reliability of users’ annotations by Krippendorff’s $alpha$ @krip2004reliability @krip2011computing, which measures the agreement among several coders. The results of the presented study are discussed and conclusions are drawn for the evaluation of computer vision and multimedia retrieval systems: A methodology is introduced that enables researchers to formally compare machine performance at human level in visual and auditory recognition tasks. To summarize, the
 contributions of this paper are as follows:
 
-- Surveying and comparing human and machine performance in a number of
-  visual and auditory pattern recognition tasks,
+- Surveying and comparing human and machine performance in a number of visual and auditory pattern recognition tasks,
 
-- presenting a comprehensive user study regarding image annotation
-  yielding insights into the relation of human and machine performance,
+- presenting a comprehensive user study regarding image annotation yielding insights into the relation of human and machine performance,
 
-- introducing the concept of inter-coder reliability in the field of
-  multimedia retrieval evaluation for comparing human and machine
-  performance,
+- introducing the concept of inter-coder reliability in the field of multimedia retrieval evaluation for comparing human and machine performance,
 
-- proposing an evaluation methodology that allows us to evaluate machine
-  performance at human level in a systematic manner, and
+- proposing an evaluation methodology that allows us to evaluate machine performance at human level in a systematic manner, and
 
-- suggesting two indices for measuring human-level performance of
-  systems.
+- suggesting two indices for measuring human-level performance of systems.
 
-The remainder of the paper is structured as follows. @sec:what_human surveys studies that compared human and machine
-performance for different visual and auditory recognition tasks. @sec:what_user deals with a comprehensive user study regarding
-image annotation and related results are presented. A methodology to
-evaluate machine performance at human level in a systematic way is
-suggested in @sec:what_methodology. Finally, some
-conclusions are drawn in @sec:what_conclusions.
+The remainder of the paper is structured as follows. @sec:what_human surveys studies that compared human and machine performance for different visual and auditory recognition tasks. @sec:what_user deals with a comprehensive user study regarding image annotation and related results are presented. A methodology to evaluate machine performance at human level in a systematic way is suggested in @sec:what_methodology. Finally, some conclusions are drawn in @sec:what_conclusions.
 
 == #outline-text([Human and Machine Performance in Visual and Auditory Recognition Tasks],[Human and Machine Performance in Recognition Tasks])
 <sec:what_human>
@@ -363,9 +305,7 @@ results on both sets are depicted in @fig:what_plot_1.
 
 #figure([#image("../images/what/plot_line.svg", width: 100%)],
   caption: [
-    Results (average precision in %) of the best and the worst human
-    annotator, as well as of the best #gls("VOC") leaderboard submissions
-    for comp1 and comp2.
+    Results (average precision in %) of the best and the worst human annotator, as well as of the best #gls("VOC") leaderboard submissions for comp1 and comp2.
   ]
 )
 <fig:what_plot_1>
@@ -510,25 +450,25 @@ respectively.
 
 == Conclusions
 <sec:what_conclusions>
-In this paper, we have investigated the question, whether today’s
+In this chapter, we have investigated the question, whether today’s
 automatic indexing systems can achieve human-level performance in
 multimedia retrieval applications. First, we have presented a brief
 survey comparing human and machine performance in a number of visual and
 auditory recognition tasks. The survey has been complemented by two
 extensive user studies which investigated human performance in an image
-annotation task with respect to a realistic photo collection with 20
+annotation task with respect to a realistic photo collection with #num(20)
 common categories of daily life. For this purpose, the well-knwon #gls("VOC")
 benchmark has been used. We have measured the human inter-coder
 agreement by Krippendorff’s $alpha$ and observed that the annotation
 reliability noticeably varies for the concepts. Krippendorff’s $alpha$
-was below 0.8 for 5 out of 20 categories, which indicates that these
+was below #num(0.8) for #num(5) out of #num(20) categories, which indicates that these
 categories are not well-defined and are prone to inconsistent
 annotation. This is an issue for the creation of ground truth data and
-subsequent evaluation as well.
+subsequent evaluation as well. These findings are of high importance for the subsequent chapters, as they demonstrate that even with these relatively simple concepts within the #gls("VOC") dataset, agreement is remarkably poor. Therefore, it is to be expected that disagreement in highly subjective tasks, such as art classification, will be even more pronounced.
 
 In addition, we have carefully compared human and machine performance.
 It turned out that the best submission at #gls("VOC")’s leaderboard is
-better than 11 or at least on a par with 19 out of 23 participants of
+better than #num(11) or at least on a par with #num(19) out of #num(23) participants of
 our study. This indicates that the submission has indeed reached
 above-average human-level performance for the annotation of the
 considered visual concepts.
@@ -538,4 +478,4 @@ multimedia analysis and retrieval systems in general. For this purpose,
 we have suggested an experimental methodology that integrates the
 assessment of human-level performance in a well-defined manner. Finally,
 we have derived two easy-to-use indices for measuring and
-differentiating human-level performance.
+differentiating human-level performance. The methodology and metrics developed within this baseline study provide a domain-agnostic foundation that will be directly transferred and deployed to evaluate the complex, interpretive art classification tasks in the following chapters.

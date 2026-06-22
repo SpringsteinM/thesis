@@ -3,10 +3,9 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-== #outline-text([Semi-supervised Human Pose Estimation in Art-historical Images],[Semi-supervised Human Pose Estimation in Art])
+== #outline-text([Semi-supervised Human Pose Estimation],[Semi-supervised Human Pose Estimation])
+<chp:pose>
 
-=== Introduction
-<sec:intro>
 As 'language' of non-verbal communication, gesture has been
 theoretically established since the 17th century @Knowlson1965.
 Its relevance for the visual arts, however, has so far been expressed at

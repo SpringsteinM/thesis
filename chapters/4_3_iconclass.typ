@@ -4,25 +4,10 @@
 #import "/helper/outline_text.typ": outline-text
 
 
-== #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Large-scale Hierarchical Classification of Art-historical Images])
+// == #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Hierarchical Classification of Iconographic Concepts])
+== #outline-text([Hierarchical Classification of Iconographic Concepts],[Hierarchical Classification of Iconographic Concepts])
+<chp:iconclass>
 
-=== Abstract
-
-Iconography refers to the methodical study and interpretation of thematic content in the visual arts, distinguishing it, e.g., from purely formal or aesthetic considerations.
-In iconographic studies, #gls("Iconclass") is a widely used taxonomy that encapsulates historical, biblical, and literary themes, among others.
-However, given the hierarchical nature and inherent complexity of such a taxonomy, 
-it is highly desirable to use 
-automated methods for (#gls("Iconclass")-based) image classification.
-Previous studies  
-either focused narrowly on certain subsets of narratives or failed to exploit #glspl("Iconclass") hierarchical structure.
-In this paper, we propose a novel approach for 
-#gls("HMC") of iconographic concepts in images.
-We present three strategies, including #glspl("LM"), for the generation of textual image descriptions using keywords extracted from #gls("Iconclass").
-These descriptions are utilized to pre-train a #gls("VLM") based on a newly introduced data set of 477,569 images with more than 20,000 #gls("Iconclass") concepts, far more than considered in previous studies. Furthermore, we present five approaches to multi-label classification, including a novel transformer decoder that leverages hierarchical information from the #gls("Iconclass") taxonomy.
-Experimental results show the superiority of this approach over reasonable baselines.
-
-=== Introduction
-<chp:introduction>
 Iconography, as established by Panofsky~@panofsky1939, entails
 the systematic analysis of content or meaning in visual art,
 distinguishing these elements from mere formal characteristics. For this

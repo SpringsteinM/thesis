@@ -2,10 +2,10 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 
-== #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
+// == #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
+== #outline-text([Attribute-guided Saint Classification],[Attribute-guided Saint Classification])
+<chp:saints>
 
-=== Introduction
-<introduction>
 The category of similarity is fundamental in all areas of art-historical
 description: in the history of style, the specification of formal
 characteristics determines the assignment of artistic phenomena to
@@ -37,7 +37,7 @@ They thus do only partially account for the great diversity of
 historical artefacts and lack the generalizability necessary for this
 domain.
 
-In this work, we concentrate on the broader category of iconographic
+In this section, we concentrate on the broader category of iconographic
 similarity and propose a generic approach to the subject-specific
 classification of art-historical objects that utilizes expert-based
 attributes of the classification system Iconclass, i.e., figurative

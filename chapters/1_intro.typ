@@ -17,7 +17,6 @@ Within the context of visual analysis in art history, a critical challenge lies 
 
 The question therefore arises: How can we further scale automatic image analysis for the study of art without having new data available to us? Addressing this challenge requires innovative approaches, such as the generation of synthetic training to enlarge training corpora, semi- or self-supervised learning methods to minimize the reliance on labeled data, or transfer learning from pre-trained models on related domains. Such efforts could also address more complex challenges beyond basic concept recognition, such as iconographic concept detection or pose estimation in artistic figures.
 
-
 An additional question arising from the continuous scaling of #gls("AI") systems is how humans perform on these tasks in comparison and whether #gls("AI")-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
  
 #subpar.super(
