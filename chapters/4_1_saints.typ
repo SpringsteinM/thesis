@@ -522,15 +522,4 @@ exploited more extensively, since many attributes are listed in
 Iconclass as separate notations.
 
 === Conclusion <sec:saints_conclusion>
-In this work, we introduced a new data set and task for the
-identification of saints in the visual arts. We suggested a novel
-deep-learning approach that utilizes expert-based attributes to support
-the subject-specific classification especially of concepts with high
-in-class variability. The proposed semi-supervised joint training
-technique increases the performance compared to multiple baselines. In
-the future, we will apply this procedure to the classification of other
-art-historically relevant narratives and motifs that can possibly also
-be improved by the use of visual attributes. To further improve the
-discrimination of saints (or other individuals relevant to art history),
-we plan to explore different loss functions, e.g., contrastive or
-triplet loss, as they are successfully used in face recognition tasks.
+In this section, we introduced a new data set and task for the identification of saints in the visual arts. We suggested a novel deep-learning approach that utilizes expert-based attributes to support the subject-specific classification especially of concepts with high in-class variability. The proposed semi-supervised joint training technique increases the performance compared to multiple baselines. In the future, we will apply this procedure to the classification of other art-historically relevant narratives and motifs that can possibly also be improved by the use of visual attributes. To further improve the discrimination of saints (or other individuals relevant to art history), we plan to explore different loss functions, e.g., contrastive or triplet loss, as they are successfully used in face recognition tasks.

@@ -79,6 +79,7 @@
 // #pagebreak(to:"odd")
 // #include "chapters/0_notation.typ"
 
+
 #pagebreak(to:"odd")
 #include "chapters/1_intro.typ"
 
@@ -96,6 +97,3 @@
 
 #pagebreak(to:"odd")
 #include "chapters/6_conclusions.typ"
-
-
-
