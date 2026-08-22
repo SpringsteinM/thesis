@@ -2,21 +2,22 @@
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
 #import "@preview/unify:0.7.1": num
-
+#import "../helper/enviroments.typ": info, info_with_bib
 // = #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
 
 
 = #outline-text([A Comparative Analysis of Human Performance and Machine Learning in Visual Concept Detection],[Analysis of Human Performance and Machine Learning]) <chp:what>
 
+This chapter is based on the following publication:
+
+#info_with_bib[
+ #cite(<EwerthSPS17>, form: none)
+]
+
+
 This chapter analyzes human performance in recognizing visual concepts in comparison to automated visual concept detection systems. This problem is particularly relevant within the overarching scope of this thesis: the automated classification of fine art. In the context of art historical evaluation, even domain experts frequently fail to reach a definitive consensus or ground truth due to the inherently interpretive nature of the discipline. This subjectivity complicates evaluation, making it difficult to determine whether automated analysis methods exceed or fall short of human capabilities. However, establishing an evaluation framework directly within the highly subjective domain of art introduces too many uncontrolled variables. To systematically address this challenge, it is necessary to first decouple the proposed evaluation methodology from the complexities of art interpretation and validate it within a controlled environment. This chapter addresses the first research question introduced in @sec:int_challenges.
 
-#block(
-  width: 100%,
-  inset: 1.2em,
-  radius: 0.3em,
-  breakable: false,
-  fill: rgb("eeeeee"),
-)[
+#info[
   #strong[RQ1:] "How does the performance of machines in multimedia annotation tasks compare to human performance and what methodologies can be used to determine if a recognition problem is solved at a human level?"
 ]
 

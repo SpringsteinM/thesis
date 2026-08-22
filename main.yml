@@ -61,7 +61,7 @@ EwerthSPS17:
   - Tait, John
   page-range: 186–198
   serial-number:
-    doi: 10.1007/978-3-319-56608-5\_15
+    doi: 10.1007/978-3-319-56608-5_15
   parent:
     type: proceedings
     title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
@@ -132,7 +132,7 @@ Mueller2017:
   date: 2017
   page-range: 619–625
   serial-number:
-    doi: 10.1007/978-3-319-56608-5\_57
+    doi: 10.1007/978-3-319-56608-5_57
   parent:
     type: proceedings
     title: European Conference on Information Retrieval, {ECIR} 2017, Aberdeen, UK, April 8-13, 2017
@@ -323,9 +323,9 @@ SchneiderSRHEK20:
   - Koziolek, Anne
   - Heinrich, Robert
   page-range: 1355–1364
-  url: https://doi.org/10.18420/inf2020/_127
+  url: https://doi.org/10.18420/inf2020_127
   serial-number:
-    doi: 10.18420/INF2020\_127
+    doi: 10.18420/INF2020_127
   parent:
     type: proceedings
     title: Jahrestagung der Gesellschaft f{ü}r Informatik, {INFORMATIK} 2020, Karlsruhe, Germany, September 28 - October 2, 2020
@@ -350,7 +350,7 @@ SpringsteinNHE18:
   - Lopes, João Correia
   page-range: 295–298
   serial-number:
-    doi: 10.1007/978-3-030-00066-0\_26
+    doi: 10.1007/978-3-030-00066-0_26
   parent:
     type: proceedings
     title: International Conference on Theory and Practice of Digital Libraries, {TPDL} 2018, Porto, Portugal, September 10-13, 2018
@@ -1227,7 +1227,7 @@ MadhuMKBMC20:
   - Fusiello, Andrea
   page-range: 109–125
   serial-number:
-    doi: 10.1007/978-3-030-66096-3\_9
+    doi: 10.1007/978-3-030-66096-3_9
   parent:
     type: proceedings
     title: Workshop co-located with the European Conference on Computer Vision, {ECCV} 2020
@@ -1296,7 +1296,7 @@ LinMBHPRDZ14:
   - Tuytelaars, Tinne
   page-range: 740–755
   serial-number:
-    doi: 10.1007/978-3-319-10602-1\_48
+    doi: 10.1007/978-3-319-10602-1_48
   parent:
     type: proceedings
     title: European Conference on Computer Vision, {ECCV} 2014
@@ -1511,7 +1511,7 @@ DengBLF10:
   - Paragios, Nikos
   page-range: 71–84
   serial-number:
-    doi: 10.1007/978-3-642-15555-0\_6
+    doi: 10.1007/978-3-642-15555-0_6
   parent:
     type: proceedings
     title: European Conference on Computer Vision, {ECCV} 2010
@@ -1992,9 +1992,9 @@ XiaoWW18:
   - Sminchisescu, Cristian
   - Weiss, Yair
   page-range: 472–487
-  url: https://doi.org/10.1007/978-3-030-01231-1/_29
+  url: https://doi.org/10.1007/978-3-030-01231-1_29
   serial-number:
-    doi: 10.1007/978-3-030-01231-1\_29
+    doi: 10.1007/978-3-030-01231-1_29
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2018 - 15th European Conference, Munich, Germany, September 8–14, 2018, Proceedings, Part {VI}
@@ -2099,9 +2099,9 @@ PapandreouZCGTM18:
   - Sminchisescu, Cristian
   - Weiss, Yair
   page-range: 282–299
-  url: https://doi.org/10.1007/978-3-030-01264-9/_17
+  url: https://doi.org/10.1007/978-3-030-01264-9_17
   serial-number:
-    doi: 10.1007/978-3-030-01264-9\_17
+    doi: 10.1007/978-3-030-01264-9_17
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2018 - 15th European Conference, Munich, Germany, September 8–14, 2018, Proceedings, Part {XIV}
@@ -2141,9 +2141,9 @@ GarciaV18:
   - Leal-Taixé, Laura
   - Roth, Stefan
   page-range: 676–691
-  url: https://doi.org/10.1007/978-3-030-11012-3/_52
+  url: https://doi.org/10.1007/978-3-030-11012-3_52
   serial-number:
-    doi: 10.1007/978-3-030-11012-3\_52
+    doi: 10.1007/978-3-030-11012-3_52
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2018 Workshops - Munich, Germany, September 8–14, 2018, Proceedings, Part {II}
@@ -2235,9 +2235,9 @@ ImpettS16:
   - Hua, Gang
   - Jégou, Hervé
   page-range: 888–902
-  url: https://doi.org/10.1007/978-3-319-46604-0/_61
+  url: https://doi.org/10.1007/978-3-319-46604-0_61
   serial-number:
-    doi: 10.1007/978-3-319-46604-0\_61
+    doi: 10.1007/978-3-319-46604-0_61
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2016 Workshops - Amsterdam, The Netherlands, October 8–10 and 15–16, 2016, Proceedings, Part {I}
@@ -2464,9 +2464,9 @@ CarionMSUKZ20:
   - Brox, Thomas
   - Frahm, Jan-Michael
   page-range: 213–229
-  url: https://doi.org/10.1007/978-3-030-58452-8/_13
+  url: https://doi.org/10.1007/978-3-030-58452-8_13
   serial-number:
-    doi: 10.1007/978-3-030-58452-8\_13
+    doi: 10.1007/978-3-030-58452-8_13
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2020 - 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part {I}
@@ -2536,9 +2536,9 @@ WestlakeCH16:
   - Hua, Gang
   - Jégou, Hervé
   page-range: 825–841
-  url: https://doi.org/10.1007/978-3-319-46604-0/_57
+  url: https://doi.org/10.1007/978-3-319-46604-0_57
   serial-number:
-    doi: 10.1007/978-3-319-46604-0\_57
+    doi: 10.1007/978-3-319-46604-0_57
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2016 Workshops - Amsterdam, The Netherlands, October 8–10 and 15–16, 2016, Proceedings, Part {I}
@@ -4304,9 +4304,9 @@ AslanCDMSV22:
   - Sclaroff, Stan
   - Distante, Cosimo
   page-range: 129–140
-  url: https://doi.org/10.1007/978-3-031-13321-3/_12
+  url: https://doi.org/10.1007/978-3-031-13321-3_12
   serial-number:
-    doi: 10.1007/978-3-031-13321-3\_12
+    doi: 10.1007/978-3-031-13321-3_12
   parent:
     type: proceedings
     title: Image Analysis and Processing. {ICIAP} 2022 Workshops - {ICIAP} International Workshops, Lecce, Italy, May 23-27, 2022, Revised Selected Papers, Part {I}
@@ -4540,9 +4540,9 @@ ZhaoSS22:
   - Michaeli, Tomer
   - Nishino, Ko
   page-range: 282–297
-  url: https://doi.org/10.1007/978-3-031-25056-9/_19
+  url: https://doi.org/10.1007/978-3-031-25056-9_19
   serial-number:
-    doi: 10.1007/978-3-031-25056-9\_19
+    doi: 10.1007/978-3-031-25056-9_19
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2022 Workshops - Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part {I}
@@ -4973,9 +4973,9 @@ NorooziF16:
   - Sebe, Nicu
   - Welling, Max
   page-range: 69-84
-  url: https://doi.org/10.1007/978-3-319-46466-4/_5
+  url: https://doi.org/10.1007/978-3-319-46466-4_5
   serial-number:
-    doi: 10.1007/978-3-319-46466-4\_5
+    doi: 10.1007/978-3-319-46466-4_5
   parent:
     type: proceedings
     title: Computer Vision - {ECCV} 2016 - 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part {VI}

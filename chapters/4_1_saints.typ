@@ -6,6 +6,24 @@
 == #outline-text([Attribute-guided Saint Classification],[Attribute-guided Saint Classification])
 <chp:saints>
 
+A widespread challenge in the art-historical categorization of Western art is the recognition of depicted saints in Christian imagery. In the initial task investigated in this thesis, we explore how synthetic data and semi-supervised learning techniques can be leveraged for model training, thereby addressing the following research questions:
+
+#block(
+  width: 100%,
+  inset: 1.2em,
+  radius: 0.3em,
+  breakable: false,
+  fill: rgb("eeeeee"),
+)[
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
+  #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
+
+]
+
+This chapter is organized as follows: @sec:saints_intro introduces the problem of saint classification in art-historical images, while @sec:saints_related_work reviews the related work. Next, @sec:saints_data describes the collected datasets, and @sec:saints_joint_training presents our attribute-guided classification system. Finally, the experimental results and conclusions are presented in @sec:saints_experiments and @sec:saints_conclusion, respectively. 
+
+=== Introduction
+<sec:saints_intro>
 The category of similarity is fundamental in all areas of art-historical
 description: in the history of style, the specification of formal
 characteristics determines the assignment of artistic phenomena to
@@ -64,7 +82,7 @@ enrich the data set with neural style transfer as well as to improve the
 joint training of saints and their attributes.
 
 === Related Work
-<sec:relatedwork>
+<sec:saints_related_work>
 Due to the recent growth in computerized analysis of cultural heritage,
 we primarily discuss studies that address the categorization of
 art-historical objects.
@@ -112,9 +130,9 @@ improve the subject-specific classification of concepts with high
 in-class variability.
 
 === Data
-<data>
+<sec:saints_data>
 ==== Data set collection
-<sec:collection>
+<sec:saints_collection>
 Our data set consists of two kinds of images: art-historical and
 non-art-historical, i.e., real-world imagery.
 
@@ -163,7 +181,7 @@ procedures.
 <fig:preprocessing>
 
 ==== Data set preprocessing
-<sec:preprocessing>
+<sec:saints_preprocessing>
 Many of the previously harvested representations are scans and contain
 background noise or further information, e.g., signatures of the artist
 or linear color control charts of the institution responsible for the
@@ -204,7 +222,7 @@ number of images depicting attributes increases to 403788.
 <fig:saints_with_attr>
 
 === Attribute-guided Classification
-<attribute>
+<sec:saints_attribute>
 The idea behind our approach is as follows: generally, a saint cannot be
 identified exclusively by his or her physiognomy, but by a set of
 pictorial signs, #emph[attributes], that exemplify a special event in
@@ -233,14 +251,14 @@ are needed to detect @Gonthier2018.]
     targets for the same image with a different augmentation strategy.
   ]
 )
-<fig:semi_supervised>
+<fig:saints_semi_supervised>
 
 Two problems arise. On the one hand, a saint can be identified by more
 than one attribute; however, not #emph[all] attributes need to be
 present in the image of a saint. On the other hand, the images found via
 #emph[Google Image Search] do not always show the desired attribute, or
 solely modernized versions of it, as already illustrated in
-@sec:collection. We thus propose a
+@sec:saints_collection. We thus propose a
 semi-supervised learning technique based on FixMatch
 @abs-2001-07685. The original objective of
 FixMatch is to use unlabeled data for training an image classifier. In
@@ -250,7 +268,7 @@ training process. In our case, we use this technique to automatically
 annotate attributes in images of saints that were #emph[not] originally
 annotated.
 
-The training process for a batch is shown in @fig:semi_supervised. During each iteration, the model
+The training process for a batch is shown in @fig:saints_semi_supervised. During each iteration, the model
 forwards two batches of labeled images, $B_(l comma s)$ for saints and
 $B_(l comma a)$ for attributes, as well as two batches of unlabeled
 images, $B_(u comma s)$ for saints and $B_(u comma a)$ for attributes.
@@ -301,7 +319,7 @@ recognizable by the model after style transfer are excluded from
 training.
 
 === Experiments
-<experiments>
+<sec:saints_experiments>
 We employ a ResNet-50 architecture pre-trained on ImageNet
 @HeZRS16. The optimization is carried out using
 #gls("SGD") with Nesterov momentum of 0.9
@@ -380,17 +398,17 @@ our system for the entire test set.
     #gls("AP") is used to measure the retrieval performance.
   ],
   position:top)
-) <tab:attribute_results>
+) <tab:saints_attribute_results>
 
 #align(center, [Best and worst classification results based on the data
 set with 343 attributes retrieved from #emph[Google Image Search].
 Average Precision (AP) is used to measure the retrieval performance.])
  
 ==== Attribute classification
-<attribute-classification>
+<sec:saints_attribute-classification>
 We first evaluate whether the attributes data set is generally suitable
 for the prediction of saints. The model achieves a performance of 0.354
-mAP. As shown in @tab:attribute_results, attributes
+mAP. As shown in @tab:saints_attribute_results, attributes
 that are difficult to define ("three") or cannot be found by
 #emph[Google Image Search] ("mitre") lead to poor classification
 performance, whereas objects still common in modern everyday life
@@ -478,7 +496,8 @@ Scores of the classification methods based on the data
   <tab:saints_result>
 
 ==== Joint training of saints and attributes
-<joint-training-of-saints-and-attributes>
+<sec:saints_joint_training>
+
 Our approach to jointly train saints and attributes is compared to two
 baseline strategies, with and without style transfer, respectively.
 Thus, both saints classifiers do not use explicitly defined visual
@@ -490,7 +509,7 @@ moreover use style-transferred images from the saints and attributes
 data set, respectively, as unlabeled input for FixMatch. The performance
 of the procedure is reported for the 49 saints with the most images, and
 only for images after the bounding box detection (see
-@sec:preprocessing>). As shown in
+@sec:saints_preprocessing>). As shown in
 @tab:saints_result, the proposed system performs best,
 $ gls("mAP") eq 0.136$, when a threshold of $tau eq 0.5$ is chosen.
 If the threshold is set too high, not enough images are selected for
@@ -521,5 +540,6 @@ further improve classification, the harvested collections could be
 exploited more extensively, since many attributes are listed in
 Iconclass as separate notations.
 
-=== Conclusion <sec:saints_conclusion>
+=== Summary 
+<sec:saints_conclusion>
 In this section, we introduced a new data set and task for the identification of saints in the visual arts. We suggested a novel deep-learning approach that utilizes expert-based attributes to support the subject-specific classification especially of concepts with high in-class variability. The proposed semi-supervised joint training technique increases the performance compared to multiple baselines. In the future, we will apply this procedure to the classification of other art-historically relevant narratives and motifs that can possibly also be improved by the use of visual attributes. To further improve the discrimination of saints (or other individuals relevant to art history), we plan to explore different loss functions, e.g., contrastive or triplet loss, as they are successfully used in face recognition tasks.
