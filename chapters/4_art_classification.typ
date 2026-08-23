@@ -2,19 +2,7 @@
 
 The general objective of this thesis is to support art-historical analysis through the use of computer-aided methods. Art historians utilize diverse methodologies to analyze works of art, ranging from formal analysis of visual qualities @Wölfflin1915 to iconographic and iconological interpretations that uncover intended symbolic meanings and the work’s broader social, historical, and cultural significance @panofsky1939. The time-consuming nature of manual annotation by art historians hinders the analysis of larger datasets, particularly given the exponential growth of images within digital collections.
 
-This chapter presents several computational methods designed to address distinct facets of art-historical inquiry. The focus is exclusively on formalist and iconographic approaches that utilize the visual properties of an artwork, deliberately excluding analytical methods that rely on extrinsic metadata, such as an artist’s biographical background. Specifically, we evaluate strategies to overcome the severe scarcity of annotated training data in the art domain. To this end, we investigate how synthetic data generation and alternative learning paradigms, such as semi-supervised and weakly-supervised training, can enhance the performance and scalability of computer vision models for art-historical tasks. Through these investigations, this chapter directly addresses two central research questions:
-
-#block(
-  width: 100%,
-  inset: 1.2em,
-  radius: 0.3em,
-  breakable: false,
-  fill: rgb("eeeeee"),
-)[
-  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
-  #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
-
-]
+This chapter presents several computational methods designed to address distinct facets of art-historical inquiry. The focus is exclusively on formalist and iconographic approaches that utilize the visual properties of an artwork, deliberately excluding analytical methods that rely on extrinsic metadata, such as an artist’s biographical background. Specifically, we evaluate strategies to overcome the severe scarcity of annotated training data in the art domain. To this end, we investigate how synthetic data generation and alternative learning paradigms, such as semi-supervised and weakly-supervised training, can enhance the performance and scalability of computer vision models for art-historical tasks. Through these investigations, this chapter directly addresses the two central research questions #strong[RQ2] and #strong[RQ3].
 
 The structure of this chapter is as follows: it first introduces a framework for the identification of hagiographic depictions based on visual attributes (@chp:saints). Subsequently, it delineates a system for automated pose estimation in artworks (@chp:pose). The chapter concludes with the proposal of a robust system for iconographic concept recognition (@chp:iconclass). Finally, these methods are integrated into an AI-supported platform, enabling art historians to search and evaluate vast selections of artworks efficiently (@chp:iart).
 

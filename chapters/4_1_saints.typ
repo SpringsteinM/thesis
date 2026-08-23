@@ -1,23 +1,23 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
+#import "../helper/enviroments.typ": info_with_bib, info
 
 // == #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
 == #outline-text([Attribute-guided Saint Classification],[Attribute-guided Saint Classification])
 <chp:saints>
 
+This chapter is based on the following publication:
+
+#info_with_bib[
+  #cite(<SchneiderSRHEK20>, form: none)
+]
+
 A widespread challenge in the art-historical categorization of Western art is the recognition of depicted saints in Christian imagery. In the initial task investigated in this thesis, we explore how synthetic data and semi-supervised learning techniques can be leveraged for model training, thereby addressing the following research questions:
 
-#block(
-  width: 100%,
-  inset: 1.2em,
-  radius: 0.3em,
-  breakable: false,
-  fill: rgb("eeeeee"),
-)[
+#info[
   #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
   #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
-
 ]
 
 This chapter is organized as follows: @sec:saints_intro introduces the problem of saint classification in art-historical images, while @sec:saints_related_work reviews the related work. Next, @sec:saints_data describes the collected datasets, and @sec:saints_joint_training presents our attribute-guided classification system. Finally, the experimental results and conclusions are presented in @sec:saints_experiments and @sec:saints_conclusion, respectively. 

@@ -2,6 +2,9 @@
 #import "@preview/glossarium:0.5.3": make-glossary, print-glossary, gls, glspl 
 #import "chapters/0_glossary.typ": glossary
 #import "chapters/0_notation.typ": notation
+#import "@preview/wordometer:0.1.5": word-count, total-words
+
+#let is-draft = true
 
 // Your acknowledgments (Ringraziamenti) go here
 #let acknowledgments = []
@@ -80,6 +83,8 @@
 // #include "chapters/0_notation.typ"
 
 
+#show: word-count
+
 #pagebreak(to:"odd")
 #include "chapters/1_intro.typ"
 
@@ -97,3 +102,11 @@
 
 #pagebreak(to:"odd")
 #include "chapters/6_conclusions.typ"
+
+#if is-draft [
+#pagebreak(to:"odd")
+= Statistics
+Word count 22-08-2026: 27904
+
+Word count now: #total-words
+]

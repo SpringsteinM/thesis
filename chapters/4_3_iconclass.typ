@@ -2,11 +2,25 @@
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
+#import "../helper/enviroments.typ": info_with_bib, info
+
 
 
 // == #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Hierarchical Classification of Iconographic Concepts])
 == #outline-text([Hierarchical Classification of Iconographic Concepts],[Hierarchical Classification of Iconographic Concepts])
 <chp:iconclass>
+
+This chapter is based on the following publication:
+
+#info_with_bib[
+  #cite(<SpringsteinSRSK24>, form: none)  
+]
+
+#info[
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?"
+]
+
+== Introduction
 
 Iconography, as established by Panofsky~@panofsky1939, entails
 the systematic analysis of content or meaning in visual art,
@@ -57,7 +71,7 @@ although they achieve impressive performance in many downstream
 applications, including the classification of metadata in art-historical
 images, e.g., the country of origin~@CondeT21.
 
-In this paper, we propose a novel approach to extensively classify
+In this chapter, we propose a novel approach to extensively classify
 hierarchical iconographic concepts in order to mitigate, or at least
 minimize, the need for manual annotation. Our contributions can be
 summarized as follows: (i)~We propose three strategies that use, for
@@ -77,7 +91,7 @@ concepts. The source code, models, and data set will be made publicly
 available.#footnote[#link("https://github.com/TIBHannover/iconclass-classification")
 (last accessed on 2024-05-20).]
 
-The remainder of the paper is structured as follows. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with
+The remainder of the chapter is structured as follows. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with
 synthesized image-text pairs. @chp:data-sets
 introduces a novel data set, while
 @chp:experimental-setup presents experimental results
@@ -801,7 +815,7 @@ evaluation is given in the supplementary material.
 
 === Conclusions
 <sec:iconclass_conclusion>
-In this paper, we have presented a novel approach for #gls("HMC") of
+In this chapter, we have presented a novel approach for #gls("HMC") of
 iconographic concepts. We have introduced three strategies for
 automatically creating image descriptions to pre-train a
 state-of-the-art #gls("VLM") based on a novel data set comprising 477569 images

@@ -2,9 +2,28 @@
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": outline-text
+#import "../helper/enviroments.typ": info_with_bib, info
 
 == #outline-text([Semi-supervised Human Pose Estimation],[Semi-supervised Human Pose Estimation])
 <chp:pose>
+
+This chapter is based on the following publication:
+
+#info_with_bib[
+  #cite(<SpringsteinSAE22>, form: none)  
+]
+
+A key task in art history is identifying similar artworks, where various visual aspects can establish similarity between works and motifs. In this context, the pose of depicted figures constitutes an important feature that may, for example, indicate a parody or satirical adaptation. However, annotating poses in art is highly complex because artistic works often feature significantly more abstract representations of people than standard photographs, leaving existing datasets severely limited. Furthermore, semi-supervised approaches remain less common in automated pose estimation. This domain therefore presents an ideal testbed to address the following research questions:
+
+#info[
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
+  #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
+]
+
+The rest of this chapter is structured as follows. @sec:pose_intro introduces the topic of pose estimation in art-historical images. @sec:pose_rw then reviews related work on pose estimation and semi-supervised learning. In @sec:pose_method, we describe our pose estimator and its extension to a semi-supervised approach. @sec:pose_exp introduces our datasets and reports the results of our ablation studies. @sec:pose_study presents a user study evaluating retrieval results from a human perspective. Finally, @sec:pose_conc concludes the chapter and outlines directions for future work.
+
+=== Introduction
+<sec:pose_intro>
 
 As 'language' of non-verbal communication, gesture has been
 theoretically established since the 17th century @Knowlson1965.
@@ -70,7 +89,7 @@ sets~@madhu2023").
 )
 
 
-In this paper, we propose a novel approach to quantitatively systematize
+In this chapter, we propose a novel approach to quantitatively systematize
 the exploration of pose types in visual art utilizing semi-supervised
 learning. We suggest a two-stage approach based on two Transformer
 models: the first model detects bounding boxes of human figures, while
@@ -92,18 +111,9 @@ the training and test phases. The code and models are
 available.#footnote[#link("https://github.com/TIBHannover/iart-semi-pose"),
 all last accessed on 2024-05-20.]
 
-The rest of the paper is structured as follows.
-@sec:rw reviews related work on pose estimation and
-semi-supervised learning. In @chp:pose-method, we describe
-our pose estimator and its extension to a semi-supervised approach. In
-@chp:exp, we introduce our data sets and report on
-the ablation studies performed. @chp:study presents a
-user study to evaluate retrieval results from a human perspective. We
-conclude with @chp:conc and outline areas of future
-work.
 
 === Related Work
-<sec:rw>
+<sec:pose_rw>
 As with many other computer vision tasks, there has been steady progress
 in human pose estimation over recent years, particularly with the
 continued development of increasingly advanced deep learning models and
@@ -193,7 +203,7 @@ This second Transformer model computes a set of keypoints that serve as the fina
 <fig:two_stages>
 
 === Semi-supervised Pose Estimation
-<chp:pose-method>
+<sec:pose_method>
 In this section, we describe our method for automatic domain adaptation
 for human pose estimation. First, we introduce the two-stage
 Transformer-based detection model in
@@ -396,15 +406,15 @@ L_(u, "cls", k) =& - sum_i^N bb(1)_({c_(k,i) eq.not nothing; hat(p)^t (c_(k,i)) 
 $
     
 === Experimental Setup and Results
-<chp:exp>
+<sec:pose_exp>
 In this section, we introduce our data sets and discuss the quantitative
 and qualitative studies. For the training and test phases of our
 pipelines, we use various real-world, synthetically generated, and
-art-historical data sets (@chp:datasets). To
+art-historical data sets (@sec:datasets). To
 evaluate the performance of each model and approach, we first conduct a
-series of ablation studies (@chp:ablation) and then
+series of ablation studies (@sec:ablation) and then
 qualitatively assess our method’s ability to provide reasonable
-predictions (@chp:qualitative). To evaluate the
+predictions (@sec:qualitative). To evaluate the
 experiments, we use the metrics and tools from the COCO
 API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 
@@ -455,7 +465,7 @@ API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 <tab:data>
 
 ==== Data Sets
-<chp:datasets>
+<sec:datasets>
 An overview of the data sets used in our experiments with their
 respective splits is shown in @tab:data. All
 data sets are based on the COCO format, where each person instance is
@@ -513,7 +523,7 @@ images with a total of $318 comma 869$ examples is generated, which we
 use in our semi-supervised learning approach as unlabeled data.
 
 ==== Ablation Study
-<chp:ablation>
+<sec:ablation>
 For #strong[person detection], we leverage the weights
 of a DETR model~@CarionMSUKZ20") pre-trained on
 COCO 2017 and reinitialize the classification head. An Adam
@@ -619,7 +629,7 @@ performance increases from 0.4898 to 0.5073 for AP and from 0.8468 to
 0.8561 for AR.
 
 
-<chp:exp_keypoint> In the #strong[keypoint prediction] stage, we use the
+<sec:pose_exp_keypoint> In the #strong[keypoint prediction] stage, we use the
 HRNet with 32 feature channels (HRNet-W32) as backbone with an input
 resolution of $384 times 288$ pixels~@0009XLW19.
 Again, we leverage the pre-trained weights on COCO 2017 from
@@ -750,7 +760,7 @@ and later on average more keypoints are detected in ART500k than in
 PoPArt.
 
 ==== Qualitative Analysis
-<chp:qualitative>
+<sec:qualitative>
 To qualitatively assess our method’s ability to provide reasonable
 predictions, we visually compare it to ground-truth annotations and two
 of the other models. @fig:examples_b
@@ -823,7 +833,7 @@ person and his or her mirror image.
 <fig:pose-query>
 
 === User Study on Retrieval Results
-<chp:study>
+<sec:pose_study>
 In this section, we report the results of a user study that aimed to
 evaluate the quality of the automatically generated keypoints from a
 human perspective in a retrieval scenario. We first describe the
@@ -841,7 +851,7 @@ directly
 Instead, we build on Chen et al. @ChenZNYWX11 and employ
 a $52$-dimensional feature descriptor that uses the orientation between
 two keypoints. We obtain $1 comma 515$ images from the ART500k data set
-not used for training in @chp:ablation, to which bounding
+not used for training in @sec:ablation, to which bounding
 box and keypoint models are applied. For each pose, the descriptor from
 Chen et al. @ChenZNYWX11 is calculated. In addition, we
 selected $10$ poses with varying art-historical specificity and utilized
@@ -879,8 +889,8 @@ looked to the left rather than downward with his head bowed, as in the
 query image.
 
 === Conclusions and Future Work
-<chp:conc>
-In this paper, we have investigated domain adaption techniques to
+<sec:pose_conc>
+In this chapter, we have investigated domain adaption techniques to
 estimate human poses in art-historical images. To this end, we have
 suggested a two-stage approach based on two Transformer models that
 utilizes a semi-supervised teacher-student design. To reduce the gap
