@@ -16,11 +16,16 @@ This chapter is based on the following publication:
   #cite(<SpringsteinSRSK24>, form: none)  
 ]
 
+The recognition of iconographical concepts in artworks represents a foundational method of art-historical analysis, addressing the second level of Panofsky's traditional analytical framework (as discussed in detail in @sec:int_art_analyses). One of the most widely used classification systems for iconographical concepts is #gls("Iconclass"), which structures several thousand distinct concepts within a hierarchical taxonomy. In this chapter, we employ computer vision methods to automatically recognize iconographical concepts in artworks. To tackle the structural complexity and extreme scale of the system, we frame the task as a #gls("HMC") problem. To enhance model performance across this complex taxonomy, we leverage generative methods to construct synthetic image-text training data directly from #gls("Iconclass") concepts and visual content. This chapter addresses the following research questions:
+
 #info[
   #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?"
 ]
 
+The remainder of the chapter is structured as follows. @sec:iconclass_intro introduces the task of iconographical concept classification with the help of the #gls("Iconclass") system. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with synthesized image-text pairs. @chp:data-sets introduces a novel data set, while @chp:experimental-setup presents experimental results for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
+
 == Introduction
+<sec:iconclass_intro>
 
 Iconography, as established by Panofsky~@panofsky1939, entails
 the systematic analysis of content or meaning in visual art,
@@ -31,7 +36,7 @@ content @vandewaal1973 @vanstraten1994.#footnote[#link("https://iconclass.org/")
 (last accessed on 2024-05-20).] In particular, the system makes it
 possible to convey semantically complex narratives, which are found
 especially in historical, biblical, and literary themes; see
-@fig:example-iconclass for an example.
+@fig:iconclass-example for an example.
 
 #figure(
   image("../images/iconclass/hans_holbein-abendmahl-1501.jpg", width: 100%),
@@ -41,7 +46,7 @@ especially in historical, biblical, and literary themes; see
     \[…\]") and `41C3` ("laid table \[…\]").
   ]
 )
-<fig:example-iconclass>
+<fig:iconclass-example>
 
 
 Corpora labeled with #gls("Iconclass") are essential for text-based retrieval of
@@ -90,12 +95,6 @@ new data set of 477569 images with more than 20000 unique #gls("Iconclass")
 concepts. The source code, models, and data set will be made publicly
 available.#footnote[#link("https://github.com/TIBHannover/iconclass-classification")
 (last accessed on 2024-05-20).]
-
-The remainder of the chapter is structured as follows. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with
-synthesized image-text pairs. @chp:data-sets
-introduces a novel data set, while
-@chp:experimental-setup presents experimental results
-for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
 
 === Related Work
 <chp:iconclass:related-work>
@@ -373,7 +372,7 @@ The details for the optimization of the classifier are visualized in @fig:decode
 
 #figure(image("../images/iconclass/transformer_decoder_5.svg", width:50%),
   caption: [
-Optimization of the multi-label `CAT` classification. Using two notations, `41C3` and `73D24` from @fig:example-iconclass, we apply the `CAT` model twice.
+Optimization of the multi-label `CAT` classification. Using two notations, `41C3` and `73D24` from @fig:iconclass-example, we apply the `CAT` model twice.
 First, the input of the transformer is the sequence `#s`~(#emph(`start`)), `4`, `1`, where the ground-truth annotation is highlighted in orange.
 Second, the cross-entropy $C E_l$ loss between the respective ground-truth and the prediction is calculated for each level~$l in [0, L-1]$ considering only the valid parent.
   ]
