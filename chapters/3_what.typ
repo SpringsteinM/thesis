@@ -14,7 +14,6 @@ This chapter is based on the following publication:
  #cite(<EwerthSPS17>, form: none)
 ]
 
-
 This chapter analyzes human performance in recognizing visual concepts in comparison to automated visual concept detection systems. This problem is particularly relevant within the overarching scope of this thesis: the automated classification of fine art. In the context of art historical evaluation, even domain experts frequently fail to reach a definitive consensus or ground truth due to the inherently interpretive nature of the discipline. This subjectivity complicates evaluation, making it difficult to determine whether automated analysis methods exceed or fall short of human capabilities. However, establishing an evaluation framework directly within the highly subjective domain of art introduces too many uncontrolled variables. To systematically address this challenge, it is necessary to first decouple the proposed evaluation methodology from the complexities of art interpretation and validate it within a controlled environment. This chapter addresses the first research question introduced in @sec:int_challenges.
 
 #info[

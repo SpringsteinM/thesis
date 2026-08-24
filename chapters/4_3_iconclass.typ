@@ -24,7 +24,7 @@ The recognition of iconographical concepts in artworks represents a foundational
 
 The remainder of the chapter is structured as follows. @sec:iconclass_intro introduces the task of iconographical concept classification with the help of the #gls("Iconclass") system. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with synthesized image-text pairs. @chp:data-sets introduces a novel data set, while @chp:experimental-setup presents experimental results for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
 
-== Introduction
+=== Introduction
 <sec:iconclass_intro>
 
 Iconography, as established by Panofsky~@panofsky1939, entails

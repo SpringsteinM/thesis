@@ -58,9 +58,9 @@ domain.
 In this section, we concentrate on the broader category of iconographic
 similarity and propose a generic approach to the subject-specific
 classification of art-historical objects that utilizes expert-based
-attributes of the classification system Iconclass, i.e., figurative
+attributes of the classification system #gls("Iconclass"), i.e., figurative
 motifs significant from an art-historical point-of-view. This is the
-first attempt to actively exploit Iconclass in automatic classification
+first attempt to actively exploit #gls("Iconclass") in automatic classification
 tasks, to the best of our knowledge. We evaluate our procedure on a
 concrete use case, representations of saints in the visual arts. This
 example is advantageous because it is usually possible to clearly assign
@@ -76,7 +76,7 @@ widely applicable.
 
 The contributions are as follows: #emph[(i)] collection of a
 representative data set of saints, #emph[(ii)] a novel approach to
-attribute-guided classification that utilizes Iconclass, and
+attribute-guided classification that utilizes #gls("Iconclass"), and
 #emph[(iii)] application of a semi-supervised learning technique to
 enrich the data set with neural style transfer as well as to improve the
 joint training of saints and their attributes.
@@ -157,7 +157,7 @@ the visual arts.#footnote[#link("artemis.uni-muenchen.de"),
 2020).] The obtained reproductions are extremely varied and, e.g.,
 include stained glass paintings of the Middle Ages, 16th-century emblems
 as well as Polish folk woodcuts. Each source is at least partially
-indexed by experts with the decimal classification system Iconclass that
+indexed by experts with the decimal classification system #gls("Iconclass") that
 was specially conceived for the Western motifs of the visual arts
 @vandeWaal1973. It thus also contains definitions of male and
 female saints, where each saint is provided with an explanatory textual
@@ -538,8 +538,10 @@ sophisticated domain adaptation techniques @Thomas2018.
 Moreover, to mitigate the dependency on non-art-historical imagery and
 further improve classification, the harvested collections could be
 exploited more extensively, since many attributes are listed in
-Iconclass as separate notations.
+#gls("Iconclass") as separate notations.
 
 === Summary 
 <sec:saints_conclusion>
-In this section, we introduced a new data set and task for the identification of saints in the visual arts. We suggested a novel deep-learning approach that utilizes expert-based attributes to support the subject-specific classification especially of concepts with high in-class variability. The proposed semi-supervised joint training technique increases the performance compared to multiple baselines. In the future, we will apply this procedure to the classification of other art-historically relevant narratives and motifs that can possibly also be improved by the use of visual attributes. To further improve the discrimination of saints (or other individuals relevant to art history), we plan to explore different loss functions, e.g., contrastive or triplet loss, as they are successfully used in face recognition tasks.
+// In this section, we introduced a new data set and task for the identification of saints in the visual arts. We suggested a novel deep-learning approach that utilizes expert-based attributes to support the subject-specific classification especially of concepts with high in-class variability. The proposed semi-supervised joint training technique increases the performance compared to multiple baselines. In the future, we will apply this procedure to the classification of other art-historically relevant narratives and motifs that can possibly also be improved by the use of visual attributes. To further improve the discrimination of saints (or other individuals relevant to art history), we plan to explore different loss functions, e.g., contrastive or triplet loss, as they are successfully used in face recognition tasks.
+
+In this section, we introduced a new data set and task for identifying saints in the visual arts. To address #strong[RQ3], we proposed a novel deep-learning approach that utilizes expert-based attributes alongside a semi-supervised joint training technique. This method improved performance over multiple baselines, though it yielded only minor gains compared to purely supervised baselines. To address #strong[RQ2], we integrated style transfer to generate synthetic training samples. While style transfer failed to improve performance in the supervised setting, likely because synthetic images introduced additional noise that supervised training could not accommodate, our semi-supervised framework successfully filtered informative synthetic samples. This demonstrates that generative data augmentation and semi-supervised learning can synergistically enhance model performance. In the future, we will extend this procedure to other art-historically relevant narratives and motifs. Furthermore, we plan to explore loss functions such as contrastive or triplet loss to refine fine-grained discrimination between visually similar entities.
