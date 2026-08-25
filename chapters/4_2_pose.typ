@@ -1,11 +1,11 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-heading
 #import "../helper/enviroments.typ": info_with_bib, info
 
-== #outline-text([Semi-supervised Human Pose Estimation],[Semi-supervised Human Pose Estimation])
-<chp:pose>
+#flex-heading([Semi-supervised Human Pose Estimation],[Semi-supervised Human Pose Estimation], level:2, label: <chp:pose>)
+
 
 This chapter is based on the following publication:
 
@@ -16,7 +16,7 @@ This chapter is based on the following publication:
 A key task in art history is identifying similar artworks, where various visual aspects can establish similarity between works and motifs. In this context, the pose of depicted figures constitutes an important feature that may, for example, indicate a parody or satirical adaptation. However, annotating poses in art is highly complex because artistic works often feature significantly more abstract representations of people than standard photographs, leaving existing datasets severely limited. Furthermore, semi-supervised approaches remain less common in automated pose estimation. This domain therefore presents an ideal testbed to address the following research questions:
 
 #info[
-  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?" \
   #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
 ]
 

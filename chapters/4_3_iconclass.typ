@@ -1,14 +1,13 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-heading
 #import "../helper/enviroments.typ": info_with_bib, info
 
 
 
 // == #outline-text([Visual Narratives: Large-scale Hierarchical Classification of Art-historical Images],[Hierarchical Classification of Iconographic Concepts])
-== #outline-text([Hierarchical Classification of Iconographic Concepts],[Hierarchical Classification of Iconographic Concepts])
-<chp:iconclass>
+#flex-heading([Hierarchical Classification of Iconographic Concepts],[Hierarchical Classification of Iconographic Concepts], level:2, label: <chp:iconclass>)
 
 This chapter is based on the following publication:
 
@@ -19,7 +18,7 @@ This chapter is based on the following publication:
 The recognition of iconographical concepts in artworks represents a foundational method of art-historical analysis, addressing the second level of Panofsky's traditional analytical framework (as discussed in detail in @sec:int_art_analyses). One of the most widely used classification systems for iconographical concepts is #gls("Iconclass"), which structures several thousand distinct concepts within a hierarchical taxonomy. In this chapter, we employ computer vision methods to automatically recognize iconographical concepts in artworks. To tackle the structural complexity and extreme scale of the system, we frame the task as a #gls("HMC") problem. To enhance model performance across this complex taxonomy, we leverage generative methods to construct synthetic image-text training data directly from #gls("Iconclass") concepts and visual content. This chapter addresses the following research questions:
 
 #info[
-  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?"
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?"
 ]
 
 The remainder of the chapter is structured as follows. @sec:iconclass_intro introduces the task of iconographical concept classification with the help of the #gls("Iconclass") system. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with synthesized image-text pairs. @chp:data-sets introduces a novel data set, while @chp:experimental-setup presents experimental results for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
@@ -186,8 +185,8 @@ for #gls("HMC"), including a novel transformer-based classification decoder that
 incorporates structured information from the #gls("Iconclass")
 taxonomy~(@chp:method-hierarchical-classification).
 
-==== #outline-text([#gls("Iconclass") Notation Scheme], [Iconclass Notation Scheme])
-<chp:method-notation-scheme>
+#flex-heading([#gls("Iconclass") Notation Scheme], [Iconclass Notation Scheme], level:4, label: <chp:method-notation-scheme>)
+
 While #gls("Iconclass") is explicitly designed for the iconography of Western
 fine art, it also encompasses universal definitions ranging from natural
 phenomena to socio-economic aspects~@vanstraten1994. As shown in

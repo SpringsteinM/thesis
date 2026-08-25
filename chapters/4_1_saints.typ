@@ -1,11 +1,11 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-heading, flex-figure
 #import "../helper/enviroments.typ": info_with_bib, info
 
 // == #outline-text([The Dissimilar in the Similar. An Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects],[Attribute-guided Classification of Art-historical Objects])
-== #outline-text([Attribute-guided Saint Classification],[Attribute-guided Saint Classification])
-<chp:saints>
+#flex-heading([Attribute-guided Saint Classification],[Attribute-guided Saint Classification], level:2, label: <chp:saints>)
+
 
 This chapter is based on the following publication:
 
@@ -16,7 +16,7 @@ This chapter is based on the following publication:
 A widespread challenge in the art-historical categorization of Western art is the recognition of depicted saints in Christian imagery. In the initial task investigated in this thesis, we explore how synthetic data and semi-supervised learning techniques can be leveraged for model training, thereby addressing the following research questions:
 
 #info[
-  #strong[RQ2:] "How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?" \
+  #strong[RQ2:] "How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?" \
   #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
 ]
 
@@ -106,13 +106,15 @@ feature learning in CNNs for style classification. Sabatelli et al.
 @Sabatelli2018 investigate the general effect of fine-tuned CNNs
 in artist, material, and type classification tasks.
 
-#figure([#image("../images/saints/attr_sample.jpg", width: 100%)],
-  caption: [
+#flex-figure(
+  image("../images/saints/attr_sample.jpg", width: 100%),
+  [
     Images of the attributes "baptismal cup", "book", and "lamb",
     retrieved from #emph[Google Image Search] respectively.
-  ]
+  ],
+  [Attribute images retrieved from Google Image Search],
+  label:<fig:attr_example>
 )
-<fig:attr_example>
 
 However, studies rarely incorporate concepts significant to iconography.
 In one of the few exceptions, Gonthier et al. @Gonthier2018
@@ -172,13 +174,15 @@ as well as lamb meat. In so doing, we collect 21479 images of 239 saints
 and 124133 images of 343 attributes for training and testing our
 procedures.
 
-#figure([#image("../images/saints/iart_preprocessing.svg", width: 100%)],
-  caption: [
+#flex-figure(
+  image("../images/saints/iart_preprocessing.svg", width: 100%),
+  [
     Detection of bounding boxes (left) and application of style transfer
     to enrich the data set (right).
-  ]
+  ],
+  [Bounding box detection and style transfer],
+  label: <fig:preprocessing>
 )
-<fig:preprocessing>
 
 ==== Data set preprocessing
 <sec:saints_preprocessing>
@@ -213,13 +217,13 @@ containing (representations of) saints increases to 25667; the
 subsequent style transfer further increases the number to 120626. The
 number of images depicting attributes increases to 403788.
 
-#figure([#image("../images/saints/iart_saints_2.jpg", width: 100%)],
-  caption: [
-    Four representations of Saint John the Baptist with the exemplary
-    selected attribute "lamb".
-  ]
+#flex-figure(
+  image("../images/saints/iart_saints_2.jpg", width: 100%),
+  [Four representations of Saint John the Baptist with the exemplary selected attribute "lamb".],
+  [Saint the Baptist with the attribute lamb],
+  label:<fig:saints_with_attr>
 )
-<fig:saints_with_attr>
+
 
 === Attribute-guided Classification
 <sec:saints_attribute>
@@ -414,7 +418,7 @@ that are difficult to define ("three") or cannot be found by
 performance, whereas objects still common in modern everyday life
 ("scissors") naturally show more promising results.
 
-#figure(
+#flex-figure(
   table(
     columns: 7,
     align: (col, row) => (left,right,right,right,right,right,right,).at(col),
@@ -483,17 +487,16 @@ performance, whereas objects still common in modern everyday life
     [0.245],
     bottomrule(),
   ),
-  caption: figure.caption([ 
-Scores of the classification methods based on the data
+  [Scores of the classification methods based on the data
   set with 49 saints. $B_(l comma s)$ and $B_(l comma a)$ denote the batch
   sizes of labeled images for saints and attributes, respectively,
   $B_(u comma s)$ and $B_(u comma a)$ the batch sizes of unlabeled images
   for saints and attributes, respectively. The best performing approach is
   bold.
   ],
-  position:top)
+  [Saint classification results],
+  label: <tab:saints_result>
  )
-  <tab:saints_result>
 
 ==== Joint training of saints and attributes
 <sec:saints_joint_training>

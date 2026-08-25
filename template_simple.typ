@@ -1,4 +1,4 @@
-#import "helper/outline_text.typ": in-outline
+#import "helper/outline_text.typ": flex-figure, flex-heading
 #import "@preview/glossarium:0.5.3": make-glossary, register-glossary, print-glossary, gls, glspl 
 
 
@@ -210,14 +210,7 @@
   /////////////////////////////////////////////////////////////////
   // Configure outline
   /////////////////////////////////////////////////////////////////
-  
-  show outline: it => {
-    in-outline.update(true)
-    it
-    in-outline.update(false)
-  }
 
-  
   show outline.where(target:  heading.where(outlined: true)): it => {
     show outline.entry.where(level:1): set text(weight:"bold")  
     it

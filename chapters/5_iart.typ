@@ -1,8 +1,8 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-heading, flex-figure
 
-= #outline-text([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images]) <chp:iart>
+#flex-heading([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images], level:1, label:<chp:iart>) 
 
 == Introduction
 <introduction>
@@ -34,22 +34,29 @@ keywords but also by utilizing state-of-the-art multimodal embeddings
 that enable search based on accurate, detailed scene descriptions given
 by the user.
 
-#figure(
+#flex-figure(
   image("../images/iart/iart_architecture_color_4.svg", width:100%),
-  caption: [
+  [
     Architecture with associated database structure and RedisAI inference server;
-  ]
+  ],  
+  [
+    Architecture with associated database structure and RedisAI inference server;
+  ],
+  label: <fig:arch>
 )
-<fig:arch>
 
 
-#figure(
+
+#flex-figure(
   image("../images/iart/iart_pipeline_color_without_redisai_small.svg", width:100%),
-  caption: [
+  [
     Indexing and post-processing steps with relevant plug-ins. The generated keywords and features are stored with the help of Elasticsearch and Faiss @JohnsonDJ17.
-  ]
+  ],[
+    Indexing and post-processing steps with relevant plug-ins. The generated keywords and features are stored with the help of Elasticsearch and Faiss @JohnsonDJ17.
+  ], 
+  label: <fig:pipeline>
 )
-<fig:pipeline>
+
 
 == System Architecture
 <system-architecture>

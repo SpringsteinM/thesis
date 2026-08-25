@@ -1,12 +1,12 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-heading, flex-grid, flex-figure
 #import "@preview/unify:0.7.1": num
 #import "../helper/enviroments.typ": info, info_with_bib
 // = #outline-text(["Are Machines Better Than Humans in Image Tagging?" - A User Study Adds to the Puzzle],[Are Machines Better Than Humans in Image Tagging?]) <chp:what>
 
 
-= #outline-text([A Comparative Analysis of Human Performance and Machine Learning in Visual Concept Detection],[Analysis of Human Performance and Machine Learning]) <chp:what>
+#flex-heading([A Comparative Analysis of Human Performance and Machine Learning in Visual Concept Detection],[Analysis of Human Performance and Machine Learning], level:1, label: <chp:what>) 
 
 This chapter is based on the following publication:
 
@@ -125,8 +125,9 @@ contributions of this chapter are as follows:
   systems.
 
 
-== #outline-text([Human and Machine Performance in Visual and Auditory Recognition Tasks],[Human and Machine Performance in Recognition Tasks])
-<sec:what_human>
+#flex-heading([Human and Machine Performance in Visual and Auditory Recognition Tasks],[Human and Machine Performance in Recognition Tasks], level:2, label: <sec:what_human>)
+
+
 In this section, we briefly survey related work which compared human and
 machine performance for some multimedia analysis tasks. Yet, human
 performance has been considered only in a small number of studies.
@@ -398,12 +399,15 @@ subset and the whole test set) is larger for some classes, e.g., chair
 and train. The system AI-3 performs slightly better than AI-1. The
 results on both sets are depicted in @fig:what_plot_1.
 
-#figure([#image("../images/what/plot_line.svg", width: 100%)],
-  caption: [
+#flex-figure(
+  image("../images/what/plot_line.svg", width: 100%),
+  [
     Results (average precision in %) of the best and the worst human annotator, as well as of the best #gls("VOC") leaderboard submissions for comp1 and comp2.
-  ]
+  ],
+  [Human results and leaderboard on #gls("VOC")],
+  label:<fig:what_plot_1>
 )
-<fig:what_plot_1>
+
 
 Now, based on this analysis, the ground truth data allow us to compare
 human and machine performance using the same evaluation measure (average
@@ -483,7 +487,7 @@ we formally measure whether a machine-based result is comparable to or
 even better than a human result? This question is addressed in the
 subsequent section.
 
-=== #outline-text([An Experimental Methodology and Two Indices for Comparisons with Human-level Performance],[Two Indices for Comparisons with Human-level Performance])
+#flex-heading([An Experimental Methodology and Two Indices for Comparisons with Human-level Performance],[Two Indices for Comparisons with Human-level Performance], level:3)
 <sec:what_metrics>
 
 In this section, we propose an experimental methodology and two novel

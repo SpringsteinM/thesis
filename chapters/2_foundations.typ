@@ -1,6 +1,6 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.2.2"
-#import "../helper/outline_text.typ": outline-text
+#import "../helper/outline_text.typ": flex-figure, flex-grid
 #import "@preview/equate:0.3.2": equate
 
 = Foundations
@@ -18,13 +18,13 @@ Artificial neural networks are mathematical models inspired by the structure and
 
 The model of a single artificial neuron consists of an input vector $bold(x) in bb(R)^n$, a weight vector $bold(w) in bb(R)^n$, a bias $b in  bb(R)$, and an activation function $f(dot)$. The input to the neuron is calculated as the weighted sum of the input vector and the weight vector. Subsequently, the bias value is subtracted from the input, and an activation function is applied to obtain the final output $hat(y)$ of the neuron. A representation of such a neuron can be found in @fig:fnd_neuron.
 
-#figure([#image("../images/foundations/neural_network_wb_yhat.svg", width: 70%)],
+#flex-figure([#image("../images/foundations/neural_network_wb_yhat.svg", width: 70%)],
+  [Schematic structure of an artificial neuron with a input vector $bold(x)$, a weight vector $bold(w)$, a bias term $b$, and an activation function $f(dot)$],
+  [Illustration of a simple artificial neuron],
   placement: auto,
-  caption: outline-text([
-    Schematic structure of an artificial neuron with a input vector $bold(x)$, a weight vector $bold(w)$, a bias term $b$, and an activation function $f(dot)$
-  ],[Illustration of a simple artificial neuron])
+  label: <fig:fnd_neuron>
 )
-<fig:fnd_neuron>
+
 
 To solve more complex problems, more than one neuron is required. These neurons are organized into layers. When every input connection is linked to every single neuron in a layer, this is referred to as a fully connected or dense layer. The computation of the output of the $j$-th neuron in such a layer is shown in @eq:n_1 and @eq:n_2.
 
@@ -43,10 +43,7 @@ $ <eq:n_matrix>
 Typically, multiple layers of neural networks are required to solve more complex problems. The activation function plays a crucial role in this process. Usually, non-linear functions are used, as a linear activation function would result in several layers being reduced to one. In general, a neural network with two layers and nonlinear activation functions serves as a universal approximator. This means it can approximate any continuous function on a compact domain to an arbitrary degree of accuracy, given sufficient neurons in the hidden layer @HornikSW89.
 
 
-#subpar.grid(
-    columns: 4,
-    gutter: 6pt,
-    align:top,
+#flex-grid(
     figure(
       box([
         #set par(justify: false)
@@ -111,9 +108,13 @@ Typically, multiple layers of neural networks are required to solve more complex
         ]
       ),
     ), 
-  placement: auto,
-  caption: outline-text([Various nonlinear activation functions used in neural networks.],[Various nonlinear activation functions used in neural networks]),
+  long:[Various nonlinear activation functions used in neural networks.],
+  short:[Various nonlinear activation functions used in neural networks],
   label: <fig:fnd_activation>,
+  columns: 4,
+  gutter: 6pt,
+  align: top,
+  placement: auto,
 ) 
 
 Other important properties of activation functions are their output range and whether they are continuously differentiable. The range of an activation function determines whether it provides a finite response, saturating its output at a specific value such as one or zero regardless of the input. Activation functions with a finite response are generally more robust during the learning process. However, they are also prone to the vanishing gradient problem. Examples of activation functions with a finite output range include classical functions such as the step function, sigmoid, or hyperbolic tangent. In contrast, functions like #gls("ReLU") @maas2013rectifier and #gls("GELU") @HendrycksG16 have an infinite output range. Examples of activation functions and their derivatives are shown in @fig:fnd_activation.
@@ -144,13 +145,16 @@ $
 
 The training of neural networks proceeds in multiple steps. In the first step, an input $x$ is fed into the network and a forward pass is executed, resulting in a scalar loss value $E$. Subsequently, during the backward step, the gradient of the loss function with respect to each layer $l$ and its parameters $theta^((l))$ is calculated, utilizing the Backpropagation algorithm. The operations are performed using a computation graph, where the outputs of a layer $l$ are computed as a composition of the previous layers. Backpropagation uses the chain rule to efficiently compute the derivatives for previous layers. A model of such a computation graph is shown in @fig:fnd_layer.
 
-#figure([#image("/images/foundations/layer_e.svg", width: 50%)],
-  placement: auto,
-  caption: outline-text([
+#flex-figure(
+  [#image("/images/foundations/layer_e.svg", width: 50%)],
+  [
     Layer-wise separate computation of a neural network, divided into a forward pass $z^((l))=f(z^((l-1)), theta^((l)))$ and a backward pass $delta^((l)) =(partial E)/(partial z^((l)))$ 
-  ],[Layer wise calculation of a neural network])
+  ],
+  [Layer wise calculation of a neural network],
+  placement: auto,
+  label: <fig:fnd_layer>
 )
-<fig:fnd_layer>
+
 
 $
 z^((l+1)) &= f(z^((l))) #<eq:forward>\
@@ -185,11 +189,14 @@ $
 
 Another commonly used optimization technique for gradient descent is the use of the Momentum method @polyak1964some. In this method, the weight change is not directly applied through gradient descent but rather an exponentially decaying moving average of the past gradients is used. This helps to stabilize and accelerate the training process because, for example, in a canyon, the gradient would jump from one side to the other, but with Momentum, the final gradient would gradually move towards the canyon. An example of how the gradient behaves with momentum is shown in @fig:fnd_momentum.
 
-#figure([#image("/images/foundations/momentum.svg", width: 50%)],
-  placement: auto,
-  caption: outline-text([Example of a gradient descent process with (green) and without (blue) a momentum term.],[Gradient descent process with and without momentum])
+#flex-figure(
+  image("/images/foundations/momentum.svg", width: 50%),
+  [Example of a gradient descent process with (green) and without (blue) a momentum term.],
+  [Gradient descent process with and without momentum],
+   placement: auto,
+   label: <fig:fnd_momentum>
 )
-<fig:fnd_momentum>
+
 
 There are several ways to implement the momentum term. An example of how it is calculated in PyTorch #footnote[https://pytorch.org/docs/stable/generated/torch.optim.SGD.html] is summarized in the following equations:
 
@@ -244,22 +251,28 @@ Utilizing the $L^2$ regularization (also known as weight decay) during the train
 Dropout is a widely used regularization technique initially proposed by Hinton et al. @abs-1207-0580, designed to prevent co-adaptation between neurons. During training, a random subset of neurons are deactivated, effectively setting their output to zero. This results in only a fraction of the network being active during each iteration. Each Dropout layer requires a single hyper-parameter $p$, which represents the probability of a neuron being deactivated. To compensate for the missing outputs, the activations of the remaining neurons are normalized during training by a factor of $1/(1-p)$. During inference, dropout is not applied, so the entire network is always active. An illustrative example of Dropout implementation in a neural network with two hidden layers is shown in @fig:fnd_dropout.
 
 
-#figure([#image("../images/foundations/dropout.svg", width: 100%)],
+#flex-figure(
+  image("../images/foundations/dropout.svg", width: 100%),
+  [Neural network with dropout between individual layers. Dashed nodes are set to zero, effectively removing all dashed connections, so that only the solid ones exist and are trained in this iteration.],
+  [Neuronal Network with Dropout],
   placement: auto,
-  caption: outline-text([Neural network with dropout between individual layers. Dashed nodes are set to zero, effectively removing all dashed connections, so that only the solid ones exist and are trained in this iteration.],[Neuronal Network with Dropout])
+  label: <fig:fnd_dropout>
 )
-<fig:fnd_dropout>
+
 
 == Convolutional Neural Networks for Computer Vision
 <sec:fnd_cnn>
 
 While traditional neural networks (@sec:fnd_dl) with fully connected layers (@sec:fnd_fully), can approximate any function, other architectures have proven more efficient in practice. Among these, #glspl("CNN") are particularly effective in visual domains. This is made possible by exploiting the spatial structure of images, because the interpretation of a given image region depends primarily on the surrounding observable regions. Convolutional layers, unlike fully connected layers that rely on matrix multiplication, employ a convolution operation in which a filter kernel is moved across the image and an output is computed at each spatial location. Consequently, #glspl("CNN") typically contain far fewer trainable parameters than fully connected layers, because the same set of weights is shared across all positions and only the weights inside the kernel are trainable. The idea behind these convolutional layers is that they operate analogously to the visual cortex in the brain, they extract simple patterns (e.g. edges and lines) and pass the resulting activations to subsequent layers. By stacking such layers, each successive layer covers a larger receptive field and extracts increasingly complex features.
 
-#figure([#image("../images/foundations/dcnn_new.svg", width: 100%)],
+#flex-figure(
+  image("../images/foundations/dcnn_new.svg", width: 100%),
+  [Example #gls("CNN") architecture (LeNet-5 @LeCunBBH98) with two convolutional layers, two pooling layers, and three fully connected layers for the automatic recognition of digits from 28 × 28‑pixel grayscale images.],
+  [LeNet from Yann LeCun et al. 1998],
   placement: auto,
-  caption: outline-text([Example #gls("CNN") architecture (LeNet-5 @LeCunBBH98) with two convolutional layers, two pooling layers, and three fully connected layers for the automatic recognition of digits from 28 × 28‑pixel grayscale images.],[LeNet from Yann LeCun et al. 1998])
+  label: <fig:fnd_dcnn>
 )
-<fig:fnd_dcnn>
+
 
 Since one of the first successful #glspl("CNN") introduced by Yann LeCun et al. in 1998 @LeCunBBH98 (@fig:fnd_dcnn), #glspl("CNN") have repeatedly demonstrated their ability to achieve state-of-the-art results @KrizhevskySH12 @szegedy2015going @he2015deep and even match or surpass human performance @he2015delving. Over the past years, various #gls("CNN") variants have been proposed to address diverse challenges in computer vision, including visual concept  classification @KrizhevskySH12, image segmentation @ChenPSA17 and object localization @RenHGS15.
 
@@ -268,13 +281,12 @@ Since one of the first successful #glspl("CNN") introduced by Yann LeCun et al. 
 
 Every convolutional neural network includes at least one convolutional layer, which performs the convolution operation. In each layer, a filter kernels is moved across the input and at each position, an output is computed for the subsequent layer. The convolutional operation for a single position is illustrated in @fig:fnd_cnn_kernel. The filter kernel illustrated in @fig:fnd_cnn_kernel is represented as a three-dimensional tensor, which, when slid over the three-dimensional input, produces a two-dimensional output. In practice, however, the kernel is four-dimensional, with an additional dimension accounting for the number of channels (i.e., the number of distinct filters) in the subsequent layer.
 
-#figure([#image("../images/foundations/conv.svg", width: 80%)],
+#flex-figure(
+  image("../images/foundations/conv.svg", width: 80%),
+  [A convolutional neural network with two convolutional layers. The kernels (blue and green) illustrate the computation at a single position in the input image, where the three-dimensional tensor determines exactly one output in the subsequent layer.],[A convolutional neural network with two convolutional layers.],
   placement: auto,
-  caption: outline-text([A convolutional neural network with two convolutional layers. The kernels (blue and green) illustrate the computation at a single position in the input image, where the three-dimensional tensor determines exactly one output in the subsequent layer.],[A convolutional neural network with two convolutional layers.])
+  label: <fig:fnd_cnn_kernel>
 )
-<fig:fnd_cnn_kernel>
-
-
 
 $
 sans(Y)_(i',j',f') &= b_(f') + sum_(i=1)^(H_F)sum_(j=1)^(W_F)sum_(f=1)^(F) sans(X)_(i'+i-1,j'+j-1,f) dot sans(W)_(i,j,f,f') \
@@ -316,11 +328,13 @@ These problems were addressed with the introduction of the Transformer architect
 
 As proposed by Vaswani et al. @VaswaniSPUJGKP17, the Transformer architecture consists of an encoder and a decoder. The encoder processes an input sequence of tokens $x = (x_1,dots,x_n)$ and maps it into a latent representation $z = (z_1,dots,z_n)$. Subsequently, the decoder iteratively generates an output sequence $y = (y_1,dots,y_m)$, where an attention mechanism provides access to the input embeddings during each iteration. Both the encoder and the decoder are composed of multiple stacked blocks, each containing a self-attention mechanism and a feed-forward layer. Each sub-block is encapsulated by a residual connection @HeZRS16 followed by a normalization layer. This encoder–decoder Transformer architecture is illustrated in @fig:fnd_arch_transformer and @fig:fnd_arch_encoder_decoder_transformer.
 
-#figure([#image("../images/foundations/arch_transformer.svg", width: 60%)],
+#flex-figure(
+  image("../images/foundations/arch_transformer.svg", width: 60%),
+  [Transformer architecture with $N$ encoder blocks and $M$ decoder blocks.],[Transformer model architecture],
   placement: auto,
-  caption: outline-text([Transformer architecture with $N$ encoder blocks and $M$ decoder blocks.],[Transformer model architecture])
+  label: <fig:fnd_arch_transformer>
 )
-<fig:fnd_arch_transformer>
+
 
 In contrast to the originally proposed encoder-decoder structures, encoder-only or decoder-only Transformers have also gained prominence in practice for various scenarios:
 
@@ -329,31 +343,39 @@ In contrast to the originally proposed encoder-decoder structures, encoder-only 
 
 This architectural flexibility is particularly advantageous in cross-lingual tasks, such as machine translation. Furthermore, the encoder-decoder framework excels in tasks where the input and output lengths vary significantly. While the encoder generates a high-dimensional representation of the entire input sequence, the decoder consumes this information via the cross-attention mechanism to generate the output auto-regressively. This separation allows the model to capture complex mappings between disparate data distributions that might be lost in a unified, single-vocabulary system. An example of translation using an encoder-decoder structure is shown in @fig:fnd_arch_encoder_decoder_transformer. This architecture is not only relevant to #gls("NLP")@LewisLGGMLSZ20 @ChungHLZTFL00BW24 @RaffelSRLNMZLL20 but also to computer vision tasks. For instance, the #gls("DETR") employs this encoder-decoder structure for bounding box prediction.
 
-#figure([#image("../images/foundations/encoder_decoder_transformer.svg", width: 100%)],
+#flex-figure(
+  image("../images/foundations/encoder_decoder_transformer.svg", width: 100%),
+  [Transformer encoder-decoder for sentence translation.],[Transformer encoder-decoder for sentence translation],
   placement: auto,
-  caption: outline-text([Transformer encoder-decoder for sentence translation.],[Transformer encoder-decoder for sentence translation])
+  label: <fig:fnd_arch_encoder_decoder_transformer>
 )
-<fig:fnd_arch_encoder_decoder_transformer>
+
 
 ==== Encoder-only Transformer
 
 In encoder-only Transformer architectures, the self-attention mechanism allows each sequence element to attend to all other elements simultaneously. Unlike models that process text strictly from left to right, encoder-only models generate a bidirectional contextual representation. Consequently, this architecture is well-suited for tasks such as embedding sequences into a single vector, sequence classification, or the labeling of individual sequence elements. The example in @fig:fnd_arch_encoder_transformer illustrates a text classification task, where a special [cls] token is prepended to the input. A feed-forward classification head is then attached to the output of this token to perform the final prediction. While #gls("BERT") is the most prominent example of this architecture in the #gls("NLP") domain, these models have also become ubiquitous in computer vision through architectures such as the #gls("ViT") and the image-encoder components of multimodal frameworks like #gls("CLIP").
 
-#figure([#image("../images/foundations/encoder_transformer.svg", width: 80%)],
+#flex-figure(
+  image("../images/foundations/encoder_transformer.svg", width: 80%),
+  [Transformer encoder for sentence classification.],
+  [Transformer encoder for sentence classification],
   placement: auto,
-  caption: outline-text([Transformer encoder for sentence classification.],[Transformer encoder for sentence classification])
+  label: <fig:fnd_arch_encoder_transformer>
 )
-<fig:fnd_arch_encoder_transformer>
+
 
 ==== Decoder-only Transformer
 
 In decoder-only Transformer architectures, the self-attention mechanism is restricted to attending only to the current and preceding elements by masking connections to future positions. This design makes the architecture ideal for autoregressive modeling, where the objective is to predict subsequent tokens. Typically, during inference, the output from the previous step serves as the input for the current iteration. As a result, the vast majority of contemporary #glspl("LLM")@abs-2302-13971 @abs-2303-08774 @abs-2310-06825 and conversational agents @Ouyang0JAWMZASR22 utilize a decoder-only architecture, as it provides the most efficient framework for large-scale generative tasks. An example of such a decoder-only architecture for text generation is illustrated in @fig:fnd_arch_decoder_transformer. 
 
-#figure([#image("../images/foundations/decoder_transformer.svg", width: 80%)],
+#flex-figure(
+  image("../images/foundations/decoder_transformer.svg", width: 80%),
+  [Transformer decoder for generative tasks.],
+  [Transformer decoder for generative tasks],
   placement: auto,
-  caption: outline-text([Transformer decoder for generative tasks.],[Transformer decoder for generative tasks])
+  label: <fig:fnd_arch_decoder_transformer>
 )
-<fig:fnd_arch_decoder_transformer>
+
 
 
 === Scaled Dot-Product Attention and Multi-Head Attention 
@@ -386,11 +408,14 @@ While originally proposed for #gls("NLP") tasks, recent studies demonstrate that
 
 This paradigm shifted with the introduction of the #gls("ViT") @dosovitskiy2021, which operates on image patches rather than individual pixels. These spatial regions are transformed via linear projection into a sequence significantly shorter than the raw pixel count. By utilizing patch sizes of $32 times 32$, $16 times 16$, or $14 times 14$, the #gls("ViT") reduces the sequence length and the computational overhead by several orders of magnitude. The proposed architecture for a classification task is illustrated in @fig:fnd_arch_vit.
 
-#figure([#image("../images/foundations/vit_art.svg", width: 100%)],
+#flex-figure(
+  image("../images/foundations/vit_art.svg", width: 100%),
+  [Architecture of the #gls("ViT",long:true). The image is partitioned into individual patches and transformed into a sequence of vectors. This sequence, along with a classification token [cls], is combined with one-dimensional position embeddings and fed into the Transformer encoder. Finally, a feed-forward classification head is attached to the output position of the [cls] token.],
+  [Vision Transformer],
   placement: auto,
-  caption: outline-text([Architecture of the #gls("ViT",long:true). The image is partitioned into individual patches and transformed into a sequence of vectors. This sequence, along with a classification token [cls], is combined with one-dimensional position embeddings and fed into the Transformer encoder. Finally, a feed-forward classification head is attached to the output position of the [cls] token.],[Vision Transformer])
+  label: <fig:fnd_arch_vit>
 )
-<fig:fnd_arch_vit>
+
 
 Unlike convolutional layers, which use fixed filters to extract features from local regions, the Transformer architecture lacks these inherent inductive biases. Through the self-attention mechanism, the model can access all image regions simultaneously, even in the very first layers. Empirical studies on @ViT @dosovitskiy2021 have shown that while the model predominantly develops local attention patterns similar to #glspl("CNN") during training, it also attends to distant regions in the early stages. Because #glspl("CNN") have these inductive biases baked into their architecture while Transformers must learn these spatial relationships from scratch, the latter generally requires significantly more training data. However, the Transformer architecture scales more effectively with larger datasets and increased model parameters.
 
@@ -444,12 +469,15 @@ In order to evaluate retrieval or classification methods, various metrics have b
 - $F N$: False negative is the number of all falsely recognized negative examples
 
 
-#figure([#image("../images/foundations/metric_eng.svg", width: 70%)],
-  caption: outline-text([
+#flex-figure(
+  image("../images/foundations/metric_eng.svg", width: 70%),
+  [
     Representation of the entire set of all documents in a retrieval result and how it is divided into portions for false negatives $F N$, true negatives $T N$, true positives $T P$, and false positives $F P$.
-  ],[Categorization of retrieval results]) //TODO
+  ],
+  [Categorization of retrieval results], //TODO
+  label: <fig:precision_recall>
 )
-<fig:precision_recall>
+
 
 Figure @fig:precision_recall shows how these values relate to the number of documents retrieved and the total number of documents. Based on these values, we can calculate the following metrics.
 

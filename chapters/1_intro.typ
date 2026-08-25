@@ -1,8 +1,7 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
-#import "@preview/subpar:0.2.2"
 #import "@preview/ctheorems:1.1.3": *
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": outline-text
+#import "/helper/outline_text.typ": flex-figure, flex-heading, flex-super
 #import "@preview/unify:0.7.1": num
 #import "@preview/drafting:0.2.2": margin-note
 
@@ -19,8 +18,8 @@ The question therefore arises: How can we further scale automatic image analysis
 
 An additional question arising from the continuous scaling of #gls("AI") systems is how humans perform on these tasks in comparison and whether #gls("AI")-based methods already achieve superior performance. Especially in a field like art, where some concepts are highly abstract and even experts often disagree on the correct classification, new questions arise about how performance improvements will manifest and be evaluated.
  
-#subpar.super(
- [#figure(
+#flex-super(
+  [#figure(
       image("../images/intro/liberte.svg", height: 17.2%),
       caption:[]
     ) <fig:intro_examples_c>
@@ -34,12 +33,37 @@ An additional question arising from the continuous scaling of #gls("AI") systems
     [#figure(
       image("../images/intro/persiflage.svg", height: 15%),
       caption:[]
-    ) <fig:intro_examples_a>],
+    ) <fig:intro_examples_b>],
   )],
+    [Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],
+    [Examples of art historical search scenarios],
+ 
   placement: auto,
-  caption: outline-text([Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],[Examples of art historical search scenarios]),
+
   label: <fig:intro_examples>,
 )
+
+// #subpar.super(
+//  [#figure(
+//       image("../images/intro/liberte.svg", height: 17.2%),
+//       caption:[]
+//     ) <fig:intro_examples_c>
+//   #grid(
+//     columns: 2,
+//     gutter: 6pt,
+//     [#figure(
+//       image("../images/intro/henry_8.svg", height: 15%),
+//       caption:[]
+//     ) <fig:intro_examples_a>],
+//     [#figure(
+//       image("../images/intro/persiflage.svg", height: 15%),
+//       caption:[]
+//     ) <fig:intro_examples_a>],
+//   )],
+//   placement: auto,
+//   caption: outline-text([Different types of search scenarios that should be possible in a search portal. (a) Identifying preliminary sketches for parts of an artwork or locating reused elements within an artwork. (b) Identifying adaptations of a young boy based on the image of Henry VIII. (c) Finding a caricature of a kissing scene as a persiflage of a biblical depiction.],[Examples of art historical search scenarios]),
+//   label: <fig:intro_examples>,
+// )
 
 Another challenge lies in making these state-of-the-art methods available to art historians in a way that allows them to be easily integrated into their workflow. An ideal solution would be a platform containing a large collection of art historical images, which expands traditional metadata search by incorporating a variety of computer vision-guided search methods. This would allow researchers to gradually expand their search behavior based on existing methods, enabling them to not only filter by metadata but also combine it with visual features. This would open up several new research possibilities for art historians that were previously only feasible manually. Some possible search scenarios are illustrated in @fig:intro_examples.
 
@@ -61,13 +85,13 @@ Art-historical analysis goes beyond simply describing an artwork’s visual lang
 - Iconological interpretation (Intrinsic Meaning): Deeper interpretation and analysis of the depicted concepts. Understanding the artist's intention.
 
 
-#figure(
+#flex-figure(
   image("../images/intro/vermeer.jpg", height: 50%),
+  [Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer. (1) Natural Meaning: A woman standing at a table in a room. (2) Conventional Meaning: Iconography concept of "Women weighing gold or money" (3) Intrinsic Meaning: "She is the personification of Divine Justice" @van1986panofsky],
+  [Iconographical analysis of Woman Holding a Balance],
   placement: auto,
-  caption: outline-text([
-    Iconographical analysis of "Woman Holding a Balance" by Johannes Vermeer. (1) Natural Meaning: A woman standing at a table in a room. (2) Conventional Meaning: Iconography concept of "Women weighing gold or money" (3) Intrinsic Meaning: "She is the personification of Divine Justice" @van1986panofsky
-  ],[Iconographical analysis of Woman Holding a Balance]),
-) <fig:intro_panofsky_example>
+  label: <fig:intro_panofsky_example>
+) 
 
 An analysis of 'Woman Holding a Balance' by Johannes Vermeer (@fig:intro_panofsky_example) using the method presented by Panofsky could look as follows @van1986panofsky: (1) Through a simple observation of the painting, one can identify a woman standing at a table, along with a balance, some coins, and strings of pearls. (2) The iconographic concept behind this could be the depiction of a woman weighing gold or money. (3) The portrayal of the lady weighing could represent 'Divine Justice'.
 
@@ -109,7 +133,7 @@ Although more and more art collections are being digitized and made accessible t
 
 Therefore, it is crucial to identify ways to enhance the performance of #gls("AI")-based analytical methods for art without relying on more original training examples. One approach could involve using #gls("AI")-methods to generate new training examples, which we can subsequently use to train new models. In doing so, these methods can surpass simple data‑augmentation techniques @CubukZS020 @CubukZMVL19 that merely expand the training set, as they enable a substantially greater variability of the input data. This would enable us, for instance, to generate new artworks by artists who have long since passed away or to apply their style to new content. Another possibility could involve enriching existing datasets with additional labels or completing missing labels using generative #gls("AI").
 
-#researchquestion(number: "2")[How can generative methods be used to create training material for neural network training to enhance the performance of computer vision methods in the field of art?] <rq_2>
+#researchquestion(number: "2")[How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?] <rq_2>
 
 By expanding the training data, it becomes possible to train larger models and improve prediction performance @abs-2001-08361 @RosenfeldRBS20 @abs-2010-14701 @FanCKKIT24. However, this approach also has its limitations @FanCKKIT24. For instance, synthetic data generated with generative #gls("AI") may not faithfully represent the desired concept, thereby degrading the overall quality of the dataset. Moreover, automatically synthesizing labels is not always straightforward for every problem, especially for more complex tasks such as iconographic concept classification or pose estimation. To exploit the potential of these possibly error‑laden synthetic data and the unlabeled data, conventional supervised‑learning algorithms are not ideally suited and alternative approaches must be evaluated. Semi‑supervised learning techniques @SohnBCZZRCKL20 @BerthelotCCKSZR20 @BerthelotCGPOR19, which rely on only a small part of the training set being annotated, can play a particularly important role in this context.
 
