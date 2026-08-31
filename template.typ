@@ -117,9 +117,6 @@
   
   // Configure figure's internal text
   show figure: set text(size:0.7em)
-  // set figure(gap: 2em)
-
-  
   
   // Configure figure's captions
   show figure.caption: set text(size: 1.2em)

@@ -1,4 +1,4 @@
-#import "@preview/glossarium:0.5.3": gls, glspl 
+#import "@preview/glossarium:0.5.3": gls, gls-short, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": flex-heading, flex-grid, flex-figure
 #import "@preview/unify:0.7.1": num
@@ -268,7 +268,7 @@ whereas the categories sofa, bottle, and dining table yield the lowest
 agreement.
 
 // TODO
-#figure(
+#flex-figure(
   grid(
     columns: 2,
     column-gutter: 1em,
@@ -315,11 +315,10 @@ agreement.
       bottomrule(),
     )
   ),
-  caption: figure.caption([ 
-    User agreement (K's $alpha$) on a subset of #gls("VOC") test set and best machine-generated results (AI-1 and AI-2, avg. precision) on the whole test set.
-  ],
-  position:top)
-)<tab:what_krip_compare>
+  [User agreement (K's $alpha$) on a subset of #gls-short("VOC") test set and best machine-generated results (AI-1 and AI-2, avg. precision) on the whole test set.],
+  [User agreement and top-performing machine models],
+  label:<tab:what_krip_compare>
+)
 
 Some interesting observations can be made. First, larger deviations of
 inter-coder agreement are observable for the different categories.
@@ -401,10 +400,8 @@ results on both sets are depicted in @fig:what_plot_1.
 
 #flex-figure(
   image("../images/what/plot_line.svg", width: 100%),
-  [
-    Results (average precision in %) of the best and the worst human annotator, as well as of the best #gls("VOC") leaderboard submissions for comp1 and comp2.
-  ],
-  [Human results and leaderboard on #gls("VOC")],
+  [Results (average precision in %) of the best and the worst human annotator, as well as of the best #gls-short("VOC") leaderboard submissions for comp1 and comp2.],
+  [Human results and leaderboard on #gls-short("VOC")],
   label:<fig:what_plot_1>
 )
 

@@ -150,15 +150,32 @@
   /////////////////////////////////////////////////////////////////
   
   // Configure figure's internal text
-  show figure: set text(size:0.7em)
-  // set figure(gap: 2em)
+  show figure: set text(size:0.8em)
+  
+  show figure: set block(above: 2em, below: 2em)
+  show figure: set figure(gap: 1em)
+  
 
   
   
   // Configure figure's captions
   show figure.caption: set text(size: 1.2em)
   // TODO
-  show figure.caption: set align(left)
+  // show figure.caption: set align(left)
+
+  show figure.caption: it => context {
+    let prefix = box(strong({
+      it.supplement
+      [ ]
+      it.counter.display(it.numbering)
+      it.separator
+    }))
+    let indent = measure(prefix).width
+    set align(left)
+    par(hanging-indent: indent)[#prefix#it.body]
+  }
+
+  show figure.where(kind:table): set figure.caption(position: top)
   
   /////////////////////////////////////////////////////////////////
   // Configure headings

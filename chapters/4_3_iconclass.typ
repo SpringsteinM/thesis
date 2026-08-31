@@ -1,7 +1,7 @@
-#import "@preview/glossarium:0.5.3": gls, glspl 
+#import "@preview/glossarium:0.5.3": gls, glspl, gls-short
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": flex-heading
+#import "/helper/outline_text.typ": flex-heading, flex-figure, flex-grid
 #import "../helper/enviroments.typ": info_with_bib, info
 
 
@@ -37,15 +37,14 @@ possible to convey semantically complex narratives, which are found
 especially in historical, biblical, and literary themes; see
 @fig:iconclass-example for an example.
 
-#figure(
+#flex-figure(
   image("../images/iconclass/hans_holbein-abendmahl-1501.jpg", width: 100%),
-  caption: [
-    Utilizing #gls("Iconclass"), Hans Holbein the Elder’s #emph[Last Supper]
-    (1501) could be labeled with the notations `73D24` ("Last Supper
-    \[…\]") and `41C3` ("laid table \[…\]").
-  ]
+  [Utilizing #gls("Iconclass"), Hans Holbein the Elder’s #emph[Last Supper] (1501) could be labeled with the notations `73D24` ("Last Supper \[…\]") and `41C3` ("laid table \[…\]").],
+  // [Hans Holbein the Elder’s #emph[Last Supper] #gls-short("Iconclass") example image],
+  [#gls-short("Iconclass") annotation example],
+  label: <fig:iconclass-example>
 )
-<fig:iconclass-example>
+
 
 
 Corpora labeled with #gls("Iconclass") are essential for text-based retrieval of
@@ -204,9 +203,7 @@ components~@vandewaal1973 @vanstraten1994. Notations may be
 linked using a colon to establish a relationship between two or more
 notations, as in `79C52:42E3`.
 
-#subpar.grid(
-  columns: 2,
-  column-gutter: 0em,
+#flex-grid(
   figure(
     image("../images/iconclass/iconclass_clip_v6-1.svg", height:3.1cm),
     caption:[]
@@ -215,11 +212,10 @@ notations, as in `79C52:42E3`.
     image("../images/iconclass/iconclass_clip.svg", height:3.1cm),  
     caption:[]
   ), <fig:clip_model_b>,
-  caption: [
-    The proposed approach for #gls("VLM") pre-training based on images labeled according to the #gls("Iconclass") notation scheme: 
-    (a)~Based on the keywords~$bb(K)_C$ from each annotated #gls("Iconclass") concept~$C in bb(C)$ of an image~$I$, three strategies are used~(`KW`, `GPT`, `BLIP`) to create image descriptions~(@chp:method-contrastice-pre-training); 
-    (b)~They are used for contrastive pre-training of #emph("CLIP")~@RadfordKHRGASAM21~(@chp:method-constrastive-pretraining).
-    ],
+  columns: 2,
+  column-gutter: 0em,
+  long: [The proposed approach for #gls("VLM") pre-training based on images labeled according to the #gls("Iconclass") notation scheme: (a)~Based on the keywords~$bb(K)_C$ from each annotated #gls("Iconclass") concept~$C in bb(C)$ of an image~$I$, three strategies are used~(`KW`, `GPT`, `BLIP`) to create image descriptions~(@chp:method-contrastice-pre-training); (b)~They are used for contrastive pre-training of #emph("CLIP")~@RadfordKHRGASAM21~(@chp:method-constrastive-pretraining).],
+  short:[Proposed #gls-short("VLM") pre-training framework using #gls-short("Iconclass")],
   label: <fig:clip_model>,
 )
 
@@ -348,35 +344,30 @@ approach~(@chp:method-clip) and four supervised
 classifiers~(@chp:method-flat to
 @chp:method-cat).
 
-#figure(image("../images/iconclass/iconclass_yolo_2.svg", width:100%),
-  caption: [
-Workflow of the Hierarchical Flattened Classification (`Flat-H`).
-A vision transformer~@dosovitskiy2021 is used to create a semantic representation of the images. 
-The classification head is used as input for a fully-connected feed-forward layer with #emph("sigmoid") activation that flattens the #gls("Iconclass") taxonomy using as many neurons as iconographic concepts in the whole taxonomy. The colors in the flattened prediction represent all concepts $bb(C)_l$ in a given taxonomy level $l$;
-the blocks within the colors have the same parental notation.
-  ]
+#flex-figure(
+  image("../images/iconclass/iconclass_yolo_2.svg", width:100%),
+  [Workflow of the Hierarchical Flattened Classification (`Flat-H`). A vision transformer~@dosovitskiy2021 is used to create a semantic representation of the images. The classification head is used as input for a fully-connected feed-forward layer with #emph("sigmoid") activation that flattens the #gls("Iconclass") taxonomy using as many neurons as iconographic concepts in the whole taxonomy. The colors in the flattened prediction represent all concepts $bb(C)_l$ in a given taxonomy level $l$; the blocks within the colors have the same parental notation.],
+  [Workflow of the Hierarchical Flattened Classification (`Flat-H`)],
+  label: <fig:flat-model>
 )
-<fig:flat-model>
 
 
-#figure(image("../images/iconclass/iconclass_onto_2.svg", width:100%),
-  caption: [
-Workflow of the Hierarchical Cross-Attention Transformer~(`CAT`) based on a vision transformer~@dosovitskiy2021 as encoder and an hierarchical decoder extended from Vaswani et al.~@VaswaniSPUJGKP17.
-The hierarchical decoder applies cross-attention to include features from all image regions and learns individual class embedding for all #gls("Iconclass") concepts~$|bb(C)_l|$ in a particular level~$l in [0, L-1]$ of the taxonomy. 
-The `CAT` model predicts in each iteration the concepts of a level~(illustrated with different colors) based on the input embedding from the previous level~(parent #gls("Iconclass") concept). Thus, in each step, only one of the blocks in the concepts $bb(C)_l$ is predicted. 
-The details for the optimization of the classifier are visualized in @fig:decoder-model.
-  ]
-)
-<fig:hierarchical-model>
 
-#figure(image("../images/iconclass/transformer_decoder_5.svg", width:50%),
-  caption: [
-Optimization of the multi-label `CAT` classification. Using two notations, `41C3` and `73D24` from @fig:iconclass-example, we apply the `CAT` model twice.
-First, the input of the transformer is the sequence `#s`~(#emph(`start`)), `4`, `1`, where the ground-truth annotation is highlighted in orange.
-Second, the cross-entropy $C E_l$ loss between the respective ground-truth and the prediction is calculated for each level~$l in [0, L-1]$ considering only the valid parent.
-  ]
+#flex-figure(
+  image("../images/iconclass/iconclass_onto_2.svg", width:100%),
+  [Workflow of the Hierarchical Cross-Attention Transformer~(`CAT`) based on a vision transformer~@dosovitskiy2021 as encoder and an hierarchical decoder extended from Vaswani et al.~@VaswaniSPUJGKP17. The hierarchical decoder applies cross-attention to include features from all image regions and learns individual class embedding for all #gls("Iconclass") concepts~$|bb(C)_l|$ in a particular level~$l in [0, L-1]$ of the taxonomy. The `CAT` model predicts in each iteration the concepts of a level~(illustrated with different colors) based on the input embedding from the previous level~(parent #gls("Iconclass") concept). Thus, in each step, only one of the blocks in the concepts $bb(C)_l$ is predicted. The details for the optimization of the classifier are visualized in @fig:decoder-model.],
+  [Workflow of the Hierarchical Cross-Attention Transformer~(`CAT`)],
+  label: <fig:hierarchical-model>
 )
-<fig:decoder-model>
+
+
+#flex-figure(
+  image("../images/iconclass/transformer_decoder_5.svg", width:50%),
+  [Optimization of the multi-label `CAT` classification. Using two notations, `41C3` and `73D24` from @fig:iconclass-example, we apply the `CAT` model twice. First, the input of the transformer is the sequence `#s`~(#emph(`start`)), `4`, `1`, where the ground-truth annotation is highlighted in orange. Second, the cross-entropy $C E_l$ loss between the respective ground-truth and the prediction is calculated for each level~$l in [0, L-1]$ considering only the valid parent.],
+  [Optimization of the multi-label `CAT` classification],
+  label:<fig:decoder-model>
+)
+
 
 ===== Zero-shot CLIP-based Classification (`CLIP`)
 <chp:method-clip>
@@ -610,7 +601,7 @@ set~@abs-2111-02114. Therefore, no
 pre-training takes place in this experiment. The results of this
 experiment are shown in Table~@tab:pre-training.
 
-#figure(
+#flex-figure(
 table(
   columns: (30%, 15%,15%,15%, 15%),
   align: (col, row) => (left,right,right,right,right,).at(col),
@@ -627,17 +618,11 @@ table(
   [`LAION-400M`], [0.1845], [0.2017], [0.2540], [0.3936],
   table.hline(start: 0, stroke: 0.5pt),
 ),
-  caption: figure.caption([ 
-    Results of contrastive pre-training with image-text
-    pairs on different text generation strategies on the #gls("ICARUS") test set
-    using the `CAT` classifier. The results show the #gls("mAP") for all concepts
-    that have at least one image in the test set. The best-performing
-    strategy is denoted in bold. 
-  ],
-  position:top)
-
+ [Results of contrastive pre-training with image-text pairs on different text generation strategies on the #gls("ICARUS") test set using the `CAT` classifier. The results show the #gls("mAP") for all concepts that have at least one image in the test set. The best-performing strategy is denoted in bold.],
+  [Results of contrastive pre-training with image-text pairs],
+  label:<tab:pre-training>
 ) 
-<tab:pre-training>
+
 Models that were first pre-trained on one of the synthesized image-text
 pairs generally outperform the original #emph[CLIP] model trained on
 #emph[LAION-400M]. In particular, the results improve for concepts that
@@ -671,7 +656,7 @@ approaches use the image encoder of the #gls("VLM") model pre-trained with
 `BLIP` descriptions optimized on the #gls("ICARUS") training set. The results
 are shown in Table~@tab:result-data-sets.
 
-#figure(
+#flex-figure(
   table(
     columns: (15%,15%, 15%,15%,15%, 15%),
     align: (col, row) => (left,left,right,right,right,right,).at(col),
@@ -745,17 +730,13 @@ are shown in Table~@tab:result-data-sets.
     [#strong[0.3716]],
   table.hline(start: 0, stroke: 0.5pt),
   ),
-  caption: figure.caption([ Results of the individual classification approaches on
-the #gls("ICAI") and #gls("ICARUS") test sets using the `BLIP` text generation. The
-results show the #gls("mAP") for all concepts that have at least one example in
-the test data set. The best-performing classifier per test set is
-denoted in bold. ],
-position: top
-)
-) <tab:result-data-sets>
+  [Results of the individual classification approaches on the #gls("ICAI") and #gls("ICARUS") test sets using the `BLIP` text generation. The results show the #gls("mAP") for all concepts that have at least one example in the test data set. The best-performing classifier per test set is denoted in bold.],
+  [Classification results on the #gls-short("ICAI") and #gls-short("ICARUS") test sets],
+  label: <tab:result-data-sets>
+) 
 
 
-#figure(
+#flex-figure(
   grid(
     columns: 1, 
     row-gutter:0.5em,
@@ -765,15 +746,11 @@ position: top
     [(b) `71B4` (#quote[ story of the Tower of Babel (Genesis 11:1--9)])],
     image("../images/iconclass/iconclass_samples_3_exp_2_s.jpg", width:100%),
     [(c) `92D19217` (#quote[Psyche performing various tasks set to her by Venus])]),
-  caption: [
-    Results of the `CAT` model on the #gls("ICARUS") test set.
-For visualization, we randomly selected three #gls("Iconclass") concepts with $"AP" > 0.5$ and at least five images in the test set.
-The images are arranged in descending order of prediction probability.
-Green borders indicate correctly classified images;
-red bordered images do not include the selected concept in their ground-truth annotations. 
-  ]
+  [Results of the `CAT` model on the #gls("ICARUS") test set. For visualization, we randomly selected three #gls("Iconclass") concepts with $"AP" > 0.5$ and at least five images in the test set. The images are arranged in descending order of prediction probability. Green borders indicate correctly classified images; red bordered images do not include the selected concept in their ground-truth annotations.],
+  [Results of the `CAT` model on the #gls-short("ICARUS") test set.],
+  label:<fig:iconclass-samples>
 )
-<fig:iconclass-samples>
+
 
 On both test data sets we can see that the `CAT` approach performs
 significantly better than all other baseline classification methods.

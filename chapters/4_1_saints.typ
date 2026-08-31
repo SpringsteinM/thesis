@@ -108,10 +108,7 @@ in artist, material, and type classification tasks.
 
 #flex-figure(
   image("../images/saints/attr_sample.jpg", width: 100%),
-  [
-    Images of the attributes "baptismal cup", "book", and "lamb",
-    retrieved from #emph[Google Image Search] respectively.
-  ],
+  [Images of the attributes "baptismal cup", "book", and "lamb", retrieved from #emph[Google Image Search] respectively.],
   [Attribute images retrieved from Google Image Search],
   label:<fig:attr_example>
 )
@@ -176,10 +173,7 @@ procedures.
 
 #flex-figure(
   image("../images/saints/iart_preprocessing.svg", width: 100%),
-  [
-    Detection of bounding boxes (left) and application of style transfer
-    to enrich the data set (right).
-  ],
+  [Detection of bounding boxes (left) and application of style transfer to enrich the data set (right).],
   [Bounding box detection and style transfer],
   label: <fig:preprocessing>
 )
@@ -246,16 +240,13 @@ this purpose.#footnote[This is in stark contrast to Gonthier et al., who
 state that "more specific objects or attributes such as ruins or nudity"
 are needed to detect @Gonthier2018.]
 
-#figure([#image("../images/saints/iart_semi_4.svg", width: 100%)],
-  caption: [
-    Visualization of the semi-supervised learning technique. During each
-    iteration, the system predicts a probability distribution for
-    attributes (#emph[blue]) and saints (#emph[red]) that is used to
-    generate pseudo-labels. These labels are then used as optimization
-    targets for the same image with a different augmentation strategy.
-  ]
+#flex-figure(
+  image("../images/saints/iart_semi_4.svg", width: 100%),
+  [Visualization of the semi-supervised learning technique. During each iteration, the system predicts a probability distribution for attributes (#emph[blue]) and saints (#emph[red]) that is used to generate pseudo-labels. These labels are then used as optimization targets for the same image with a different augmentation strategy.],
+  [Visualization of the semi-supervised learning technique],
+  label:<fig:saints_semi_supervised>
 )
-<fig:saints_semi_supervised>
+
 
 Two problems arise. On the one hand, a saint can be identified by more
 than one attribute; however, not #emph[all] attributes need to be
@@ -333,7 +324,7 @@ a splitting ratio of 3:1:1. We evaluate the model with the highest
 accuracy on the validation set on the test set, respectively. #gls("mAP", long: true) is used to measure the retrieval performance of
 our system for the entire test set.
 
-#figure(
+#flex-figure(
   grid(
     columns: 2,
     column-gutter: 2em,
@@ -396,13 +387,10 @@ our system for the entire test set.
       bottomrule(),
     )
   ),
-  caption: figure.caption([ 
-    Best and worst classification results based on the data
-    set with 343 attributes retrieved from #emph[Google Image Search].
-    #gls("AP") is used to measure the retrieval performance.
-  ],
-  position:top)
-) <tab:saints_attribute_results>
+  [Best and worst classification results based on the data set with 343 attributes retrieved from #emph[Google Image Search]. #gls("AP") is used to measure the retrieval performance.],
+  [Attribut classifiaction results],
+  label: <tab:saints_attribute_results>
+) 
 
 #align(center, [Best and worst classification results based on the data
 set with 343 attributes retrieved from #emph[Google Image Search].

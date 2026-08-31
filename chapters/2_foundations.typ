@@ -146,10 +146,8 @@ $
 The training of neural networks proceeds in multiple steps. In the first step, an input $x$ is fed into the network and a forward pass is executed, resulting in a scalar loss value $E$. Subsequently, during the backward step, the gradient of the loss function with respect to each layer $l$ and its parameters $theta^((l))$ is calculated, utilizing the Backpropagation algorithm. The operations are performed using a computation graph, where the outputs of a layer $l$ are computed as a composition of the previous layers. Backpropagation uses the chain rule to efficiently compute the derivatives for previous layers. A model of such a computation graph is shown in @fig:fnd_layer.
 
 #flex-figure(
-  [#image("/images/foundations/layer_e.svg", width: 50%)],
-  [
-    Layer-wise separate computation of a neural network, divided into a forward pass $z^((l))=f(z^((l-1)), theta^((l)))$ and a backward pass $delta^((l)) =(partial E)/(partial z^((l)))$ 
-  ],
+  image("/images/foundations/layer_e.svg", width: 50%),
+  [Layer-wise separate computation of a neural network, divided into a forward pass $z^((l))=f(z^((l-1)), theta^((l)))$ and a backward pass $delta^((l)) =(partial E)/(partial z^((l)))$],
   [Layer wise calculation of a neural network],
   placement: auto,
   label: <fig:fnd_layer>
@@ -471,9 +469,7 @@ In order to evaluate retrieval or classification methods, various metrics have b
 
 #flex-figure(
   image("../images/foundations/metric_eng.svg", width: 70%),
-  [
-    Representation of the entire set of all documents in a retrieval result and how it is divided into portions for false negatives $F N$, true negatives $T N$, true positives $T P$, and false positives $F P$.
-  ],
+  [Representation of the entire set of all documents in a retrieval result and how it is divided into portions for false negatives $F N$, true negatives $T N$, true positives $T P$, and false positives $F P$.],
   [Categorization of retrieval results], //TODO
   label: <fig:precision_recall>
 )

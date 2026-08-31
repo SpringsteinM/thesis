@@ -1,7 +1,7 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "@preview/subpar:0.2.2"
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": flex-heading
+#import "/helper/outline_text.typ": flex-heading, flex-figure, flex-grid
 #import "../helper/enviroments.typ": info_with_bib, info
 
 #flex-heading([Semi-supervised Human Pose Estimation],[Semi-supervised Human Pose Estimation], level:2, label: <chp:pose>)
@@ -65,9 +65,7 @@ data~@madhu2023"), or fine-tune
 pre-trained models using small, keypoint-level annotated data
 sets~@madhu2023").
 
-#subpar.grid(
-  columns: 4,
-
+#flex-grid(
   figure(
     image("../images/pose/pleydenwurff_kreuzabnahme.jpg", width: 100%),
     caption:[]
@@ -84,7 +82,10 @@ sets~@madhu2023").
     image("../images/pose/rubens_grablegung.jpg", width: 100%),
     caption:[]
   ), <fig:deposition_d>,
-  caption: [The four depictions of Christ's deposition from the cross highlight slightly varying poses: (a) Hans Pleydenwurff, 1465; (b) Pontormo, 1525--1528; (c) Caravaggio, 1603--1604; (d) Peter Paul Rubens, ca. 1612. All images are in the public domain.],
+  
+  columns: 4,
+  long: [The four depictions of Christ's deposition from the cross highlight slightly varying poses: (a) Hans Pleydenwurff, 1465; (b) Pontormo, 1525--1528; (c) Caravaggio, 1603--1604; (d) Peter Paul Rubens, ca. 1612. All images are in the public domain.],
+  short: [Depictions of Christ's deposition from the cross],
   label: <fig:deposition>,
 )
 
@@ -191,16 +192,18 @@ and pseudo-label
 generation~@Xu00WWWB021 @WangYZ0L18.
 The challenge increases, however, since not only the respective concept
 must be assigned, but also its position in the image must be detected.
-#figure(
+
+#flex-figure(
   image("../images/pose/pose_detr.svg", width: 100%),
-  caption:[
-    The two-stage human pose estimator uses two Transformers~@VaswaniSPUJGKP17 @CarionMSUKZ20 to predict human poses in an image. 
+  [The two-stage human pose estimator uses two Transformers~@VaswaniSPUJGKP17 @CarionMSUKZ20 to predict human poses in an image. 
 The input of the first model is the entire image, which, using a #gls("CNN") backend and appropriate positional encoding, serves as input to a Transformer that predicts a fixed set of person bounding boxes. 
 After filtering irrelevant detections, the individual boxes are cropped and serve as input for the second stage. 
 This second Transformer model computes a set of keypoints that serve as the final prediction after filtering background classes.
-  ]
+  ],
+  [Architecture of the two-stage human pose estimator],
+  label: <fig:two_stages>
 )
-<fig:two_stages>
+
 
 === Semi-supervised Pose Estimation
 <sec:pose_method>
@@ -326,10 +329,9 @@ no overlapping bounding boxes are predicted for same-person instances,
 and the imbalance between background and foreground classes is much
 smaller.
 
-#figure(
+#flex-figure(
   image("../images/pose/detr_semi_v2.svg", width: 100%),
-  caption: [
-    In the semi-supervised training pipeline adapted from
+  [In the semi-supervised training pipeline adapted from
     Xu et al. @Xu00WWWB021, each batch consists of labeled
     and unlabeled images with strong and weak augmentations generated
     for unlabeled ones. The teacher uses the weakly labeled data to
@@ -337,9 +339,11 @@ smaller.
     to train the strongly augmented images. This involves thresholding
     the predictions and then transferring the corresponding boxes (or
     keypoints) to the coordinate system of the strongly augmented image.
-  ]
+  ],
+  [Semi-supervised training pipeline for pose estimation],
+  label: <fig:semi>
 )
-<fig:semi>
+
 
 ==== Semi-supervised Domain Adaptation
 <sec:semi>
@@ -419,7 +423,7 @@ experiments, we use the metrics and tools from the COCO
 API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 
 // TODO
-#figure(
+#flex-figure(
   table(
     columns: (20%,20%,20%,20%,20%),
     align: (left,left,right,right,right,),
@@ -458,11 +462,11 @@ API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
     [], [Total], [318,869], [0], [0],
     bottomrule(),
   ),
-  caption: figure.caption([ An overview is given of the data sets used in our experiments. Persons are indicated by bounding boxes associated with them. Up to 17 keypoints are stored per person.
-  ],
-  position:top)
+  [An overview is given of the data sets used in our experiments. Persons are indicated by bounding boxes associated with them. Up to 17 keypoints are stored per person.],
+  [Pose estimation data sets statistics],
+  label:<tab:data>
 )
-<tab:data>
+
 
 ==== Data Sets
 <sec:datasets>
@@ -540,68 +544,50 @@ hyperparameters are set to $lambda_(L 1) eq 5$, $lambda_(i o u) eq 2$,
 and $lambda_u eq 0.5$.
 
 
-#figure(
+#flex-figure(
   table(
     columns: 10,
-
     toprule(),
-        table.header([Train
-      set], [Stylized], [Semi], [$A P$], [$A P_50$], [$A P_75$], [$A P_S$], [$A P_M$], [$A P_L$], [$A R$],),
+    table.header([Train set], [Stylized], [Semi], [$A P$], [$A P_50$], [$A P_75$], [$A P_S$], [$A P_M$], [$A P_L$], [$A R$],),
     midrule(),
-     [COCO
-    2017], [0~%], [], [0.3118], [0.5106], [0.3175], [0.0075], [0.2118], [0.3294], [0.6728],
-    [COCO
-    2017], [0~%], sym.checkmark, [0.3696], [0.597], [0.3885], [0.0007], [0.2115], [0.395], [#strong[0.7351];],
-    [COCO
-    2017], [50~%], [], [0.3686], [0.6113], [0.3871], [0.0045], [0.2386], [0.3941], [0.7257],
-    [COCO
-    2017], [50~%], sym.checkmark, [0.3744], [0.6277], [0.3792], [0.0024], [0.2193], [0.4011], [0.7296],
-    [COCO
-    2017], [100~%], [], [0.3727], [0.6256], [0.3922], [0.024], [0.2406], [0.3981], [0.7165],
-    [COCO
-    2017], [100~%], sym.checkmark, [0.3846], [0.6333], [0.4047], [0.0115], [0.2313], [0.4108], [0.7221],
+    [COCO 2017], [0~%], [], [0.3118], [0.5106], [0.3175], [0.0075], [0.2118], [0.3294], [0.6728],
+    [COCO 2017], [0~%], sym.checkmark, [0.3696], [0.597], [0.3885], [0.0007], [0.2115], [0.395], [#strong[0.7351];],
+    [COCO 2017], [50~%], [], [0.3686], [0.6113], [0.3871], [0.0045], [0.2386], [0.3941], [0.7257],
+    [COCO 2017], [50~%], sym.checkmark, [0.3744], [0.6277], [0.3792], [0.0024], [0.2193], [0.4011], [0.7296],
+    [COCO 2017], [100~%], [], [0.3727], [0.6256], [0.3922], [0.024], [0.2406], [0.3981], [0.7165],
+    [COCO 2017], [100~%], sym.checkmark, [0.3846], [0.6333], [0.4047], [0.0115], [0.2313], [0.4108], [0.7221],
     [People-Art], [0~%], [], [0.428], [0.7279], [0.435], [#strong[0.0676];], [0.2123], [0.4636], [0.7041],
     [People-Art], [0~%], sym.checkmark, [#strong[0.4428];], [#strong[0.7381];], [#strong[0.459];], [0.0509], [#strong[0.2412];], [#strong[0.4769];], [0.7291],
     bottomrule()
   ),
-  caption: figure.caption(
-    [Person detection results are reported for the People-Art test set. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
-    position:top
-  )
+  [Person detection results are reported for the People-Art test set. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
+  [Person detection results on the People-Art test set],
+  label:<tab:exp_boxes_people>
 )
-<tab:exp_boxes_people>
 
 
-#figure(
+
+#flex-figure(
   table(
     columns: 10,
-
     toprule(),
-    table.header([Train
-      set], [Stylized], [Semi], [$A P$], [$A P_50$], [$A P_75$], [$A P_S$], [$A P_M$], [$A P_L$], [$A R$],),
+    table.header([Train set], [Stylized], [Semi], [$A P$], [$A P_50$], [$A P_75$], [$A P_S$], [$A P_M$], [$A P_L$], [$A R$],),
     midrule(),
-    [COCO    2017], [0~%], [], [0.2287], [0.3041], [0.2433], [], [0.1096], [0.2336], [0.7997],
-    [COCO
-    2017], [0~%], sym.checkmark, [0.2422], [0.3353], [0.2612], [], [0.0324], [0.2469], [0.8377],
-    [COCO
-    2017], [50~%], [], [0.2322], [0.3168], [0.248], [], [0.04], [0.2397], [0.8365],
-    [COCO
-    2017], [50~%], sym.checkmark, [0.2261], [0.3125], [0.2452], [], [0.0347], [0.2324], [0.8277],
-    [COCO
-    2017], [100~%], [], [0.2542], [0.354], [0.273], [], [0.036], [0.2624], [0.8128],
-    [COCO
-    2017], [100~%], sym.checkmark, [0.2359], [0.331], [0.2516], [], [0.048], [0.2423], [0.8284],
+    [COCO 2017], [0~%], [], [0.2287], [0.3041], [0.2433], [], [0.1096], [0.2336], [0.7997],
+    [COCO 2017], [0~%], sym.checkmark, [0.2422], [0.3353], [0.2612], [], [0.0324], [0.2469], [0.8377],
+    [COCO 2017], [50~%], [], [0.2322], [0.3168], [0.248], [], [0.04], [0.2397], [0.8365],
+    [COCO 2017], [50~%], sym.checkmark, [0.2261], [0.3125], [0.2452], [], [0.0347], [0.2324], [0.8277],
+    [COCO 2017], [100~%], [], [0.2542], [0.354], [0.273], [], [0.036], [0.2624], [0.8128],
+    [COCO 2017], [100~%], sym.checkmark, [0.2359], [0.331], [0.2516], [], [0.048], [0.2423], [0.8284],
     [PoPArt], [0~%], [], [0.4898], [0.6566], [0.5279], [], [#strong[0.2639];], [0.4945], [0.8468],
     [PoPArt], [0~%], sym.checkmark, [#strong[0.5073];], [#strong[0.6728];], [#strong[0.5302];], [], [0.2132], [#strong[0.5119];], [#strong[0.8561];],
     bottomrule()
-  
   ),
-  caption: figure.caption(
-    [Person detection results are reported for the PoPArt test set. For PoPArt, $A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
-    position:top
-  )
+  [Person detection results are reported for the PoPArt test set. For PoPArt, $A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. Entries without style transfer and without semi-supervised learning correspond to the state-of-the-art method of Li et al. @0012WZXXT21 with fine-tuning to the respective training data set. The best performing approach per test set is indicated in bold.],
+  [Person detection results on the PoPArt test set],
+  label:<tab:exp_boxes_popart>
 )
-<tab:exp_boxes_popart>
+
 
 The results for the respective test sets are shown in
 Table~@tab:exp_boxes_people and Table~@tab:exp_boxes_popart, including a comparison
@@ -653,7 +639,7 @@ OpenPose~@CaoHSWS21 with $A P eq 0.1388$ and
 $A R eq 0.4382$ is not competitive to approaches that are specifically
 trained for the given task.
 
-#figure(
+#flex-figure(
   table(
     columns: 9,
     align: (left,right,right,right,right,right,right,right,right,),
@@ -681,19 +667,14 @@ trained for the given task.
     [PoPArt/PoPArt], [0~%], sym.checkmark, [#strong[0.5258];], [#strong[0.6392];], [#strong[0.5735];], [0.0308], [#strong[0.535];], [0.7464],
     bottomrule()
   ),
-  caption: figure.caption(
-    [Keypoint detection results are reported for the PoPArt test set with predicted bounding boxes of the model with the same strategy. 
-$A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. 
-For PoPArt train sets, the first entry refers to the training data set used for bounding box detection and the second to the training data set used for keypoint prediction. 
-The best performing approach is indicated in bold.],
-    position:top
-  )
+  [Keypoint detection results are reported for the PoPArt test set with predicted bounding boxes of the model with the same strategy. $A P_S$ is neglected as no test data is available for small human figures, most of which have no annotatable pose due to their size. For PoPArt train sets, the first entry refers to the training data set used for bounding box detection and the second to the training data set used for keypoint prediction. The best performing approach is indicated in bold.],
+  [Keypoint detection results are reported for the PoPArt test set],
+  label: <tab:exp_keypoints>
 )
-<tab:exp_keypoints>
 
 
-#subpar.grid(
-  columns: 2,
+
+#flex-grid(
 
   figure(
     image("../images/pose/boxes_fraction_v2.svg", width: 100%),
@@ -703,19 +684,16 @@ The best performing approach is indicated in bold.],
     image("../images/pose/poses_fraction_v3.svg", width: 100%),
     caption:[]
   ), <fig:distribution_b>,
-  caption: [
-    The distribution of positive and negative classes on PoPArt (orange)
-    and the teacher’s predicted distribution for unlabeled data on
-    ART500k (blue) are shown. It is evident that the teacher recognizes
-    fewer bounding boxes in the person detection phase (a) and estimates
-    more points in the keypoint prediction phase (b) in comparison.
-  ],
+  
+  columns: 2,
+  long: [The distribution of positive and negative classes on PoPArt (orange) and the teacher’s predicted distribution for unlabeled data on ART500k (blue) are shown. It is evident that the teacher recognizes fewer bounding boxes in the person detection phase (a) and estimates more points in the keypoint prediction phase (b) in comparison.],
+  short:[Comparison of label distributions on PoPArt and ART500k],
   label: <fig:distribution>,
 )
 
-#subpar.grid(
-  columns: 4,
 
+
+#flex-grid(
   figure(
     image("../images/pose/examples_gt_v3.jpg", width: 100%),
     caption:[]
@@ -732,12 +710,9 @@ The best performing approach is indicated in bold.],
     image("../images/pose/examples_popart_semi_v3.jpg", width: 100%),
     caption:[]
   ), <fig:examples_d>,
-  caption: [
-    Ground-truth annotations (a), as well as predictions of
-    OpenPose~@CaoHSWS21~(b), the model
-    trained without style transfer and without semi-supervised
-    learning~(c), and PoPArt~(d) overlaid on test examples from PoPArt.
-  ],
+  columns: 4,
+  long: [Ground-truth annotations (a), as well as predictions of OpenPose~@CaoHSWS21~(b), the model trained without style transfer and without semi-supervised learning~(c), and PoPArt~(d) overlaid on test examples from PoPArt.],
+  short:[Comparison of ground-truth annotations and model predictions],
   label: <fig:examples>,
 )
 
@@ -793,7 +768,7 @@ the correct assignment of points can be disturbed if the image shows a
 person and his or her mirror image.
 
 
-#figure(
+#flex-figure(
   table(
     columns: 6,
     align: (center,center,center,center,center,center,),
@@ -817,20 +792,18 @@ person and his or her mirror image.
     [PoPArt], [0~%], [], [#strong[0.6413402576973029];], [#strong[0.6204677429158516];], [#strong[0.6343858477271396];],
     bottomrule()
   ),
-  caption: figure.caption(
-    [Results of the user study are reported on the retrieval of similar poses with #gls("NDCG") as the ranking metric.],
-    position:top
-  )
+  [Results of the user study are reported on the retrieval of similar poses with #gls("NDCG") as the ranking metric.],
+  [User study results for pose retrieval],
+  label:<tab:userstudy>
 )
-<tab:userstudy>
 
-#figure([#image("../images/pose/pose_query.jpg", width: 100%)],
-  caption: [
-    Query images for the user study include art-historical poses such as
-    'Adlocutio' and 'Venus pudica.'
-  ]
+
+#flex-figure(
+  image("../images/pose/pose_query.jpg", width: 100%),
+  [Query images for the user study include art-historical poses such as 'Adlocutio' and 'Venus pudica.'],
+  [Query images for the pose retrieval user study],
+  label:<fig:pose-query>
 )
-<fig:pose-query>
 
 === User Study on Retrieval Results
 <sec:pose_study>

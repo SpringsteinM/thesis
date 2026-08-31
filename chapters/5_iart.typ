@@ -1,6 +1,6 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
-#import "/helper/outline_text.typ": flex-heading, flex-figure
+#import "/helper/outline_text.typ": flex-heading, flex-figure, flex-super, flex-grid
 
 #flex-heading([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images], level:1, label:<chp:iart>) 
 
@@ -36,12 +36,8 @@ by the user.
 
 #flex-figure(
   image("../images/iart/iart_architecture_color_4.svg", width:100%),
-  [
-    Architecture with associated database structure and RedisAI inference server;
-  ],  
-  [
-    Architecture with associated database structure and RedisAI inference server;
-  ],
+  [Architecture with associated database structure and RedisAI inference server.],  
+  [iART architecture],
   label: <fig:arch>
 )
 
@@ -49,11 +45,8 @@ by the user.
 
 #flex-figure(
   image("../images/iart/iart_pipeline_color_without_redisai_small.svg", width:100%),
-  [
-    Indexing and post-processing steps with relevant plug-ins. The generated keywords and features are stored with the help of Elasticsearch and Faiss @JohnsonDJ17.
-  ],[
-    Indexing and post-processing steps with relevant plug-ins. The generated keywords and features are stored with the help of Elasticsearch and Faiss @JohnsonDJ17.
-  ], 
+  [Indexing and post-processing steps with relevant plug-ins. The generated keywords and features are stored with the help of Elasticsearch and Faiss @JohnsonDJ17.],
+  [Indexing and post-processing steps with relevant plug-ins], 
   label: <fig:pipeline>
 )
 
@@ -132,26 +125,24 @@ operations, such as an interactive drag-select to juxtapose multiple
 objects, are supported with the aid of VisJs
 (@fig:sebastian-umap).
 
-#figure([#figure([#image("../images/iart/iart_sebastian_ranked.jpg", width: 100%)],
-    caption: [
-    ]
-  )
-  <fig:sebastian-ranked>
 
-  #figure([#image("../images/iart/iart_sebastian_umap.jpg", width: 100%)],
-    caption: [
-    ]
-  )
-  <fig:sebastian-umap>
-
-  ],
-  caption: [
-    Search results for a reference image of Saint Sebastian, combined
-    with the text query "crucifixion." (a) Default image grid; (b)
-    two-dimensional canvas view.
-  ]
+#flex-grid(
+figure([#image("../images/iart/iart_sebastian_ranked.jpg", width: 100%)],
+    caption: []
+  ),
+  <fig:sebastian-ranked>,
+  
+  figure([#image("../images/iart/iart_sebastian_umap.jpg", width: 100%)],
+    caption: []
+  ),
+  <fig:sebastian-umap>,
+  
+  columns: 1,
+  long: [Search results for a reference image of Saint Sebastian, combined with the text query "crucifixion." (a) Default image grid; (b) two-dimensional canvas view.],
+  short: [Search results for a reference image of Saint Sebastian],
+  label: <fig:sebastian>
 )
-<fig:sebastian>
+
 
 == Conclusion
 <conclusion>
