@@ -21,7 +21,7 @@ The recognition of iconographical concepts in artworks represents a foundational
   #strong[RQ2:] "How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?"
 ]
 
-The remainder of the chapter is structured as follows. @sec:iconclass_intro introduces the task of iconographical concept classification with the help of the #gls("Iconclass") system. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with synthesized image-text pairs. @chp:data-sets introduces a novel data set, while @chp:experimental-setup presents experimental results for several benchmarks. We conclude with @sec:iconclass_conclusion and outline areas for future work.
+The remainder of the chapter is structured as follows. @sec:iconclass_intro introduces the task of iconographical concept classification with the help of the #gls("Iconclass") system. In @chp:iconclass:related-work, we review related work. @chp:method describes our proposed transformer model for #gls("HMC") of art-historical concepts, which uses contrastive pre-training with synthesized image-text pairs. @chp:data-sets introduces a novel data set, while @chp:experimental-setup presents experimental results for several benchmarks. We conclude with @sec:iconclass:conclusion and outline areas for future work.
 
 === Introduction
 <sec:iconclass_intro>
@@ -789,32 +789,11 @@ they are false positives. Further information about the qualitative
 evaluation is given in the supplementary material.
 
 === Conclusions
-<sec:iconclass_conclusion>
-In this chapter, we have presented a novel approach for #gls("HMC") of
-iconographic concepts. We have introduced three strategies for
-automatically creating image descriptions to pre-train a
-state-of-the-art #gls("VLM") based on a novel data set comprising 477569 images
-for more than 20000 unique iconographic concepts. Furthermore, we
-proposed five classification approaches, including a novel transformer
-decoder that leverages hierarchical knowledge from the #gls("Iconclass")
-taxonomy, which is the first decoder adopted to the problem of
-multi-label classification. We have demonstrated that our proposed
-solution benefits significantly from the adoption of #glspl("Iconclass")
-structure: if a concept situated at a lower hierarchy level is not
-detected, the taxonomy allows for an upward traversal, facilitating the
-identification of a related concept. This decisively increases the
-potential usefulness of digital collections for research and education
-in the visual arts.
+<sec:iconclass:conclusion>
+In this chapter, we have presented a novel approach for #gls("HMC") of iconographic concepts. We have introduced three strategies for automatically creating image descriptions to pre-train a state-of-the-art #gls("VLM") based on a novel data set comprising 477569 images for more than 20000 unique iconographic concepts. Furthermore, we proposed five classification approaches, including a novel transformer decoder that leverages hierarchical knowledge from the #gls("Iconclass") taxonomy, which is the first decoder adopted to the problem of multi-label classification. We have demonstrated that our proposed solution benefits significantly from the adoption of #glspl("Iconclass") structure: if a concept situated at a lower hierarchy level is not detected, the taxonomy allows for an upward traversal, facilitating the identification of a related concept. This decisively increases the potential usefulness of digital collections for research and education in the visual arts.
 
-In the future, we aim to extend our approach to other, particularly
-non-western, taxonomies such as the #gls("CIT"), as well as other hierarchical
-multi-label classification tasks in #gls("CV"). It would also be interesting to
-explore how simultaneous optimization of a #gls("VLM") and a classifier, which
-are currently trained separately in two stages, affects the performance.
-Pre-training #glspl("LLM") on captions for art-historical documents for
-description generation is also worth investigating.
+In the future, we aim to extend our approach to other, particularly non-western, taxonomies such as the #gls("CIT"), as well as other hierarchical multi-label classification tasks in #gls("CV"). It would also be interesting to explore how simultaneous optimization of a #gls("VLM") and a classifier, which are currently trained separately in two stages, affects the performance. Pre-training #glspl("LLM") on captions for art-historical documents for description generation is also worth investigating.
 
 === Acknowledgements
-<acknowledgements>
-This work was partly funded by the German Research Foundation (DFG)
-under project numbers 415796915 and 510048106.
+<sec:iconclass:acknowledgements>
+This work was partly funded by the German Research Foundation (DFG) under project numbers 415796915 and 510048106.

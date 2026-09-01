@@ -1,11 +1,23 @@
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": flex-heading, flex-figure, flex-super, flex-grid
+#import "../helper/enviroments.typ": info_with_bib, info
 
 #flex-heading([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images], level:1, label:<chp:iart>) 
 
+This chapter is based on the following publication:
+
+#info_with_bib[
+  #cite(<SchneiderSRKEH22>, form: none)
+  #cite(<SpringsteinSRHK21>, form: none)
+]
+
+The overarching objective of this thesis is to develop and refine approaches that enable art historians to automatically analyze and search large volumes of artworks, as described in @chp:intro. Improving these methods represents only the first step toward that end. An equally important step is making these models accessible to the research community. To fulfill this aim, we develop a web based platform that applies these methods to a large scale collection of art-historical images. Beyond our proposed techniques, the platform incorporates a wide range of complementary deep learning approaches, providing users with a comprehensive suite of search and analysis tools.
+
+The rest of this chapter is organized as follows. @sec:iart:introduction introduces the concept and requirements of a search engine for art-historical images. @sec:iart:system-architecture explains the designed system architecture. @sec:iart:image-retrieval and @sec:iart:result-visualization explain how image retrieval works and how the results are visualized, respectively. Finally, @sec:iart:conclusion provides a short conclusion and gives an outlook on future developments.
+
 == Introduction
-<introduction>
+<sec:iart:introduction>
 Basic art-historical techniques of analysis are essentially built on
 comparative processes. Heinrich Wölfflin, e.g., practised comparative
 vision in determining the stylistic history of the Renaissance and the
@@ -52,7 +64,7 @@ by the user.
 
 
 == System Architecture
-<system-architecture>
+<sec:iart:system-architecture>
 The software was designed to be as modular as possible to facilitate
 adaptation to different research interests: the individual indexing
 steps are outsourced to plug-ins and user administration is separated
@@ -67,7 +79,7 @@ Django Web service. @fig:arch displays the
 architecture of iART.
 
 == Image Retrieval
-<image-retrieval>
+<sec:iart:image-retrieval>
 Due to the diffuseness of the concept of similarity, iART~supports
 different types of search queries that can be precisely targeted by the
 user. Hence, the underlying system was developed with the idea that each
@@ -111,7 +123,7 @@ Amsterdam Rijksmuseum~@rijksmuseum, Wikidata~@wikidata,
 Kenom~@kenom, and ARTigo~@Wieser2013@Becker2018.
 
 == Result Visualization
-<result-visualization>
+<sec:iart:result-visualization>
 To simplify the exploration of the results, different object views are
 implemented. By default, an image grid sorted by relevance is displayed,
 via which further details are provided on demand, such as metadata from
@@ -145,7 +157,7 @@ figure([#image("../images/iart/iart_sebastian_ranked.jpg", width: 100%)],
 
 
 == Conclusion
-<conclusion>
+<sec:iart:conclusion>
 With iART, we introduced an open Web platform for art-historical
 research that facilitates the process of comparative vision. As the
 system is extensible and supports various classification plug-ins and
