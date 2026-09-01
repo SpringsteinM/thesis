@@ -1,4 +1,4 @@
-#import "template_simple.typ": template
+#import "template_marburg.typ": template
 #import "@preview/glossarium:0.5.3": make-glossary, print-glossary, gls, glspl 
 #import "chapters/0_glossary.typ": glossary
 #import "chapters/0_notation.typ": notation
@@ -54,7 +54,8 @@
   lang: "en",
 
   // University logo
-  logo: image("images/welfen.svg", width: 100%),
+  // logo: image("images/welfen.svg", width: 100%),
+  // logo: image("images/marburg_logo.svg", width: 40%),
 
   // Hayagriva bibliography is the default one, if you want to use a
   // BibTeX file, pass a .bib file instead (e.g. "works.bib")
