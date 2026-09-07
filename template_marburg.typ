@@ -253,9 +253,8 @@
     #v(10em)
     #text(1.2em, weight: "bold","Dissertation")
     #v(0.1em)
-    #text(1.2em, [
-      zur Erlangung des Doktorgrades \
-der Naturwissenschaften (Dr. rer. nat.) ])
+    #text(1.2em, [zur Erlangung des Doktorgrades \
+      der Naturwissenschaften (Dr. rer. nat.) ])
   #v(1em)
     
     #text(1.2em, [dem Fachbereich Mathematik und Informatik \

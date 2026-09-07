@@ -20,7 +20,7 @@ A widespread challenge in the art-historical categorization of Western art is th
   #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
 ]
 
-This chapter is organized as follows: @sec:saints_intro introduces the problem of saint classification in art-historical images, while @sec:saints_related_work reviews the related work. Next, @sec:saints_data describes the collected datasets, and @sec:saints_joint_training presents our attribute-guided classification system. Finally, the experimental results and conclusions are presented in @sec:saints_experiments and @sec:saints_conclusion, respectively. 
+This chapter is organized as follows: @sec:saints_intro introduces the problem of saint classification in art-historical images, while @sec:saints_related_work reviews the related work. Next, @sec:saints_data describes the collected datasets, and @sec:saints_joint_training presents our attribute-guided classification system. Finally, the experimental results and conclusions are presented in @sec:saints_experiments and @sec:saints:summary, respectively. 
 
 === Introduction
 <sec:saints_intro>
@@ -532,7 +532,7 @@ exploited more extensively, since many attributes are listed in
 #gls("Iconclass") as separate notations.
 
 === Summary 
-<sec:saints_conclusion>
+<sec:saints:summary>
 // In this section, we introduced a new data set and task for the identification of saints in the visual arts. We suggested a novel deep-learning approach that utilizes expert-based attributes to support the subject-specific classification especially of concepts with high in-class variability. The proposed semi-supervised joint training technique increases the performance compared to multiple baselines. In the future, we will apply this procedure to the classification of other art-historically relevant narratives and motifs that can possibly also be improved by the use of visual attributes. To further improve the discrimination of saints (or other individuals relevant to art history), we plan to explore different loss functions, e.g., contrastive or triplet loss, as they are successfully used in face recognition tasks.
 
 In this section, we introduced a new data set and task for identifying saints in the visual arts. To address #strong[RQ3], we proposed a novel deep-learning approach that utilizes expert-based attributes alongside a semi-supervised joint training technique. This method improved performance over multiple baselines, though it yielded only minor gains compared to purely supervised baselines. To address #strong[RQ2], we integrated style transfer to generate synthetic training samples. While style transfer failed to improve performance in the supervised setting, likely because synthetic images introduced additional noise that supervised training could not accommodate, our semi-supervised framework successfully filtered informative synthetic samples. This demonstrates that generative data augmentation and semi-supervised learning can synergistically enhance model performance. In the future, we will extend this procedure to other art-historically relevant narratives and motifs. Furthermore, we plan to explore loss functions such as contrastive or triplet loss to refine fine-grained discrimination between visually similar entities.
