@@ -111,7 +111,7 @@ The final stage of iconographic analysis, the iconographic interpretation, is co
 
 
 == Existing Challenges and Limitations
-<sec:int_challenges>
+<sec:int:challenges>
 
 #let researchquestion = thmbox(
   "rq", 
@@ -143,7 +143,7 @@ By expanding the training data, it becomes possible to train larger models and i
 == Contributions
 <sec:int_contributions>
 
-The goal of this thesis is to answer the research questions which were formulated in previous @sec:int_challenges by developing various image analysis methods that enable art historians to systematically search through larger image collections and then help them analyze these art historical objects. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
+The goal of this thesis is to answer the research questions which were formulated in previous @sec:int:challenges by developing various image analysis methods that enable art historians to systematically search through larger image collections and then help them analyze these art historical objects. The challenge lies in the limited amount of training data available for specific tasks, making it difficult to optimize procedures specifically for art historical collections. For this purpose, improvements and approaches for various image analysis methods are proposed to specifically optimize them for the domain of art.
 
 The scarcity of art-historical datasets represents one of the principal challenges in training deep neural networks. This scarcity arises from the fact that the annotation of artworks is often considerably more complex than the annotation of photographic images and typically requires domain-specific expert knowledge. While this thesis aims to develop and evaluate methods that reduce the reliance on annotated datasets, such datasets nevertheless remain essential, particularly for the evaluation of trained models. Within the scope of this work, we therefore introduce three new art related datasets that are substantially more extensive than existing ones, not only in terms of the number of samples but also with regard to the complexity of their annotations. This includes a dataset for the classification of depictions of saints comprising #num("21,479") images of #num("239") saints; the #emph[PoPArt] dataset, which consists of #num("2,859") art images with #num("3,514") annotated persons, comprising #num("51,645") keypoints; and the #emph(gls("ICARUS"))  dataset, consisting of #num("477,569") images for iconographic concept recognition covering #num("20,596") different #gls("Iconclass") concepts.
 

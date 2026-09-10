@@ -424,61 +424,65 @@ experiments, we use the metrics and tools from the COCO
 API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 
 // TODO
+#set-round(precision:0)
 #flex-figure(
-  table(
-    columns: (20%,20%,20%,20%,20%),
-    align: (left,left,right,right,right,),
-
-    toprule(),
-    table.header([Data set], [Split], [Images], [Persons], [Keypoints],),
-    midrule(),
-    [COCO 2017], [Training], [118,287], [262,465], [1,642,283],
-    [], [Validation], [5,000], [11,004], [68,215],
-    [], [Test], [0], [0], [0],
-    cmidrule(start: 1),
-    [], [Total], [123,287], [273,469], [1,710,498],
-    midrule(),
-    [COCO 2017], [Training], [236,574], [524,930], [3,284,566],
-    [(stylized)], [Validation], [10,000], [22,008], [136,430],
-    [], [Test], [0], [0], [0],
-    cmidrule(start: 1),
-    [], [Total], [246,574], [546,938], [3,420,996],
-    midrule(),
-    [People-Art], [Training], [1,746], [1,330], [0],
-    [], [Validation], [1,489], [1,080], [0],
-    [], [Test], [1,616], [1,088], [0],
-    cmidrule(start: 1),
-    [], [Total], [4,851], [3,498], [0],
-    midrule(),
-    [PoPArt], [Training], [1,553], [2,069], [30,415],
-    [], [Validation], [643], [704], [10,367],
-    [], [Test], [663], [741], [10,863],
-    cmidrule(start: 1),
-    [], [Total], [2,859], [3,514], [51,645],
-    midrule(),
-    [ART500k], [Training], [318,869], [0], [0],
-    [], [Validation], [0], [0], [0],
-    [], [Test], [0], [0], [0],
-    cmidrule(start: 1),
-    [], [Total], [318,869], [0], [0],
-    bottomrule(),
-  ),
+  {
+    show: format-table(none, none,auto,auto,auto)
+   
+    table(
+      columns: (20%,20%,20%,20%,20%),
+      align: (left,left,right,right,right,),
+  
+      toprule(),
+      table.header([Data set], [Split], [Images], [Persons], [Keypoints],),
+      midrule(),
+      [COCO 2017], [Training], [118287], [262465], [1642283],
+      [], [Validation], [5000], [11004], [68215],
+      [], [Test], [0], [0], [0],
+      cmidrule(start: 1),
+      [], [Total], [123287], [273469], [1710498],
+      midrule(),
+      [COCO 2017], [Training], [236574], [524930], [3284566],
+      [(stylized)], [Validation], [10000], [22008], [136430],
+      [], [Test], [0], [0], [0],
+      cmidrule(start: 1),
+      [], [Total], [246574], [546938], [3420996],
+      midrule(),
+      [People-Art], [Training], [1746], [1330], [0],
+      [], [Validation], [1489], [1080], [0],
+      [], [Test], [1616], [1088], [0],
+      cmidrule(start: 1),
+      [], [Total], [4851], [3498], [0],
+      midrule(),
+      [PoPArt], [Training], [1553], [2069], [30415],
+      [], [Validation], [643], [704], [10367],
+      [], [Test], [663], [741], [10863],
+      cmidrule(start: 1),
+      [], [Total], [2859], [3514], [51645],
+      midrule(),
+      [ART500k], [Training], [318869], [0], [0],
+      [], [Validation], [0], [0], [0],
+      [], [Test], [0], [0], [0],
+      cmidrule(start: 1),
+      [], [Total], [318869], [0], [0],
+      bottomrule(),
+    )
+  },
   [An overview is given of the data sets used in our experiments. Persons are indicated by bounding boxes associated with them. Up to 17 keypoints are stored per person.],
   [Pose estimation data sets statistics],
   label:<tab:data>
 )
-
 
 ==== Data Sets
 <sec:datasets>
 An overview of the data sets used in our experiments with their
 respective splits is shown in @tab:data. All
 data sets are based on the COCO format, where each person instance is
-labeled with up to $17$ keypoints.
+labeled with up to #num[17] keypoints.
 
 The largest annotated data set results from the #strong[COCO 2017]
-detection and keypoint challenge, which includes $118 comma 287$
-training and $5 comma 000$ validation images with person
+detection and keypoint challenge, which includes #num[118287]
+training and #num[5000] validation images with person
 instances.#footnote[#link("https://www.kaggle.com/datasets/awsaf49/coco-2017-dataset").]
 To evaluate the performance of the common scenario that uses style
 transfer to close the domain gap between annotated real-world training
@@ -494,9 +498,9 @@ encyclopedia WikiArt#footnote[#link("https://www.wikiart.org/").]: the
 set~@CaiWCH15 @WestlakeCH16,
 in which human figures are marked with bounding boxes enclosing them.
 The second data set, called PoPArt, is introduced here and identifies
-$17$ limb points in addition to bounding boxes. Both data sets
+#num[17] limb points in addition to bounding boxes. Both data sets
 approximately reflect the diversity of art-historical depictions of
-human figures through time by featuring $43$ and $22$ different styles,
+human figures through time by featuring #num[43] and #num[22] different styles,
 respectively; ranging from impressionistic to neo-figurative and
 realistic variants. The pre-existing #strong[People-Art] data set is
 enhanced on two levels. First, we integrate additional negative examples
@@ -505,8 +509,8 @@ humans~@WestlakeCH16"). Second, we use the largest
 resolution of images provided by WikiArt to avoid further complicating
 the detection of relatively small figures due to possible image
 artifacts in low-resolution reproductions. After these preparatory
-measures, People-Art features $1 comma 746$ training, $1 comma 489$
-validation, and $1 comma 616$ test images. The annotation of the novel
+measures, People-Art features #num[1746] training, #num[1489]
+validation, and #num[1616] test images. The annotation of the novel
 #strong[PoPArt] data set was performed according to the following
 principles (see @fig:examples_a) for some examples
 with ground-truth annotations): (1)~the body of a human figure must be
@@ -570,7 +574,7 @@ and $lambda_u eq 0.5$.
   [Person detection results on the People-Art test set],
   label:<tab:exp_boxes_people>
 )
-
+#set-round(precision:0)
 
 
 #set-round(precision:4)
@@ -598,7 +602,7 @@ and $lambda_u eq 0.5$.
   [Person detection results on the PoPArt test set],
   label:<tab:exp_boxes_popart>
 )
-
+#set-round(precision:0)
 
 The results for the respective test sets are shown in
 Table~@tab:exp_boxes_people and Table~@tab:exp_boxes_popart, including a comparison
@@ -685,6 +689,7 @@ trained for the given task.
   [Keypoint detection results are reported for the PoPArt test set],
   label: <tab:exp_keypoints>
 )
+#set-round(precision:0)
 
 
 
@@ -813,6 +818,7 @@ person and his or her mirror image.
   [User study results for pose retrieval],
   label:<tab:userstudy>
 )
+#set-round(precision:0)
 
 
 #flex-figure(
@@ -886,9 +892,6 @@ query image.
 //   #strong[RQ3:] "How can we use alternative learning methods such as semi-supervised learning to further scale computer vision for art historical tasks without relying on more annotated training data?"
 // ]
 
-// In this chapter, we have investigated domain adaption techniques to estimate human poses in art-historical images. To this end, we have suggested a two-stage approach based on two Transformer models that utilizes a semi-supervised teacher-student design. To reduce the gap between photographs of real-world objects and the art domain, we augmented images depicting real-world scenes with unlabeled, domain-specific data. Moreover, we introduced a reasonably large art-historical data set called PoPArt to systematically test the validity of human pose estimators. Comparisons with more common approaches that use pre-trained models or adapt existing data sets with style transfer indicated that performance can be further improved with unlabeled data. While it is not necessary to annotate large amounts of art-historical data, it is essential to include at least smaller, domain-specific labeled data in the training procedure, rather than relying solely on synthetically generated imagery. Depending on the test set, models trained entirely or partially with style transfer underperform in #gls("AP") by between $7.32$ to $28.12$ % for person detection and between $27.33$ to $28.15$ % for keypoint prediction, even with semi-supervised learning. Furthermore, a user study confirmed the feasibility of the proposed approach for retrieval tasks, thus also enabling the search for resembling poses of human figures; however, in this case the difference with other models performance-wise is smaller. Our method enables the engagement of humanities scholars by providing them with state-of-the-art methods for indexing human poses in large art image databases. Although our approach specifically targets the curation of art and cultural objects, it is likely applicable to other domains with few labeled training data.
-
-// In the future, we intend to analyze the potential of recently introduced Transformer models, such as the Pyramid Vision Transformer presented by Wang et al. @abs-2106-13797. Further improvement of the training process could be achieved by applying style transfer to unlabeled instead of only labeled data. We also plan to extend the PoPArt data set with additional bounding boxes, enhancing its usefulness for training person detection models.
 
 In this chapter, we addressed #strong[RQ2] and #strong[RQ3] by investigating how generative techniques and alternative learning strategies can be leveraged for human pose estimation in artworks. To explore these questions, we developed a two-stage pose estimator that first predicts person bounding boxes and subsequently locates body joints. To systematically test the validity of human pose estimators across artistic domains, we introduced a reasonably large art-historical dataset called PoPArt. We then trained our two-stage model using partially synthetic datasets alongside unlabeled images via semi-supervised learning, evaluating the results on PoPArt in light of our research questions.
 
@@ -897,7 +900,9 @@ In this chapter, we addressed #strong[RQ2] and #strong[RQ3] by investigating how
 
 To investigate #strong[RQ2], we used style transfer to synthesize new training examples from real images. Specifically, we varied the proportion of style-transferred images in each training batch (#pct[0], #pct[50], #pct[100]) and measured the effect on model performance. Both the #pct[50] and #pct[100] settings outperformed the #pct[0] baseline, yielding a significant improvement in #gls("AP") and #gls("AR") for both bounding box and keypoint detection. By using synthetic images, we increased the total amount of training data and, since the synthesized images are closer to the target domain, reduced the domain gap.
 
-A primary limitation of using style-transferred images is that while they can reproduce the visual appearance of artwork, artistic representations often exhibit significantly higher complexity and structural deviations from real-world forms. To demonstrate that incorporating authentic artworks improves model performance and that style transfer alone is insufficient, we leveraged semi-supervised learning to integrate real, unlabeled artworks into the training process, directly addressing #strong[RQ3] on alternative training methods. The results demonstrate that incorporating unlabeled art data achieves peak performance across all evaluated benchmarks. This indicates that semi-supervised learning significantly enhances model performance while mitigating the need to annotate large volumes of art-historical data. Nevertheless, our experiments also show that while extensive annotation of domain-specific datasets is unnecessary, incorporating at least a small amount of labeled art-historical data during training remains essential rather than relying solely on synthetically generated imagery. Depending on the test set, models trained entirely or partially with style transfer underperform in #gls("AP") by $7.32$ to $28.12$,$\%$ for person detection and $27.33$ to $28.15$,$\%$ for keypoint prediction, even when semi-supervised learning is applied.
+
+#set-round(precision:2)
+A primary limitation of using style-transferred images is that while they can reproduce the visual appearance of artwork, artistic representations often exhibit significantly higher complexity and structural deviations from real-world forms. To demonstrate that incorporating authentic artworks improves model performance and that style transfer alone is insufficient, we leveraged semi-supervised learning to integrate real, unlabeled artworks into the training process, directly addressing #strong[RQ3] on alternative training methods. The results demonstrate that incorporating unlabeled art data achieves peak performance across all evaluated benchmarks. This indicates that semi-supervised learning significantly enhances model performance while mitigating the need to annotate large volumes of art-historical data. Nevertheless, our experiments also show that while extensive annotation of domain-specific datasets is unnecessary, incorporating at least a small amount of labeled art-historical data during training remains essential rather than relying solely on synthetically generated imagery. Depending on the test set, models trained entirely or partially with style transfer underperform in #gls("AP") by #pct[7.32] to #pct[28.12] for person detection and #pct[27.33] to #pct[28.15] for keypoint prediction, even when semi-supervised learning is applied.
 
 Furthermore, a user study confirmed the feasibility of the proposed approach for retrieval tasks, thus also enabling the search for resembling poses of human figures; however, in this case the difference with other models performance-wise is smaller. Our method enables the engagement of humanities scholars by providing them with state-of-the-art methods for indexing human poses in large art image databases. Although our approach specifically targets the curation of art and cultural objects, it is likely applicable to other domains with few labeled training data.
 

@@ -5,7 +5,7 @@
 
 #flex-heading([iART: A Search Engine for Art-Historical Images to Support Research in the Humanities],[iART: A Search Engine for Art-Historical Images], level:1, label:<chp:iart>) 
 
-This chapter is based on the following publication:
+This chapter is based on the following publications:
 
 #info_with_bib[
   #cite(<SchneiderSRKEH22>, form: none)
@@ -14,7 +14,7 @@ This chapter is based on the following publication:
 
 The overarching objective of this thesis is to develop and refine approaches that enable art historians to automatically analyze and search large volumes of artworks, as described in @chp:intro. Improving these methods represents only the first step toward that end. An equally important step is making these models accessible to the research community. To fulfill this aim, we develop a web based platform that applies these methods to a large scale collection of art-historical images. Beyond our proposed techniques, the platform incorporates a wide range of complementary deep learning approaches, providing users with a comprehensive suite of search and analysis tools.
 
-The rest of this chapter is organized as follows. @sec:iart:introduction introduces the concept and requirements of a search engine for art-historical images. @sec:iart:system-architecture explains the designed system architecture. @sec:iart:image-retrieval and @sec:iart:result-visualization explain how image retrieval works and how the results are visualized, respectively. Finally, @sec:iart:conclusion provides a short conclusion and gives an outlook on future developments.
+The rest of this chapter is organized as follows. @sec:iart:introduction introduces the concept and requirements of a search engine for art-historical images. @sec:iart:system-architecture explains the designed system architecture. @sec:iart:image-retrieval and @sec:iart:result-visualization explain how image retrieval works and how the results are visualized, respectively. Finally, @sec:iart:summary provides a short conclusion and gives an outlook on future developments.
 
 == Introduction
 <sec:iart:introduction>
@@ -156,8 +156,8 @@ figure([#image("../images/iart/iart_sebastian_ranked.jpg", width: 100%)],
 )
 
 
-== Conclusion
-<sec:iart:conclusion>
+== Summary
+<sec:iart:summary>
 With iART, we introduced an open Web platform for art-historical
 research that facilitates the process of comparative vision. As the
 system is extensible and supports various classification plug-ins and
