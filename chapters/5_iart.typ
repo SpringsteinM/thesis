@@ -92,7 +92,7 @@ visualization and clustering. The complete pipeline is shown in
 Common feature extractors are integrated into iART, e.g., for ImageNet
 embeddings through a pre-trained ResNet @HeZRS16.
 These are complemented by models adjusted to the art-historical domain:
-(1) the self-supervised model BYOL (Bootstrap Your Own Latent) is
+(1) the self-supervised model #gls("BYOL") is
 trained on an adequate subset of Wikimedia
 images~@GrillSATRBDPGAP20; (2) while the Painter
 model utilizes the Painter by Numbers dataset~@painter to

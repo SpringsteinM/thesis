@@ -970,7 +970,7 @@ iconclass-ai-test-set:
   type: misc
   title: Iconclass {AI} Test Set
   author: Posthumus, Etienne
-  note: \\url\{https://iconclass.org/testset/\}
+  url: https://iconclass.org/testset/
 schneider2020:
   type: article
   title: The Dissimilar in the Similar. {A}n Attribute-guided Approach to the Subject-specific Classification of Art-historical Objects
@@ -5034,3 +5034,192 @@ ChenK0H20:
     parent:
       type: proceedings
       title: Proceedings of Machine Learning Research
+Hakopian24:
+  type: article
+  title: 'Art histories from nowhere: on the coloniality of experiments in art and artificial intelligence'
+  author: Hakopian, Mashinka Firunts
+  date: 2024
+  page-range: 29-41
+  url: https://doi.org/10.1007/s00146-023-01768-0
+  serial-number:
+    doi: 10.1007/S00146-023-01768-0
+  parent:
+    type: periodical
+    title: '{AI} Soc.'
+    issue: 1
+    volume: 39
+
+couprie1983iconclass:
+  type: article
+  title: 'Iconclass: an iconographic classification system'
+  author: Couprie, Leendert D
+  date: 1983
+  page-range: 32-49
+  parent:
+    type: periodical
+    title: Art libraries journal
+    publisher: Cambridge University Press
+    issue: 2
+    volume: 8
+
+SimeoniVSBOJKSYRMHWWDMS26:
+  type: article
+  title: DINOv3
+  author:
+  - Siméoni, Oriane
+  - Vo, Huy V.
+  - Seitzer, Maximilian
+  - Baldassarre, Federico
+  - Oquab, Maxime
+  - Jose, Cijo
+  - Khalidov, Vasil
+  - Szafraniec, Marc
+  - Yi, Seung Eun
+  - Ramamonjisoa, Michaël
+  - Massa, Francisco
+  - Haziza, Daniel
+  - Wehrstedt, Luca
+  - Wang, Jianyuan
+  - Darcet, Timothée
+  - Moutakanni, Théo
+  - Sentana, Leonel
+  - Roberts, Claire
+  - Vedaldi, Andrea
+  - Tolan, Jamie
+  - Brandt, John
+  - Couprie, Camille
+  - Mairal, Julien
+  - Jégou, Hervé
+  - Labatut, Patrick
+  - Bojanowski, Piotr
+  date: 2026
+  url: https://openreview.net/forum?id=2NlGyqNjns
+  parent:
+    type: periodical
+    title: Trans. Mach. Learn. Res.
+    volume: 2026
+
+OquabDMVSKFHMEA24:
+  type: article
+  title: 'DINOv2: Learning Robust Visual Features without Supervision'
+  author:
+  - Oquab, Maxime
+  - Darcet, Timothée
+  - Moutakanni, Théo
+  - Vo, Huy V.
+  - Szafraniec, Marc
+  - Khalidov, Vasil
+  - Fernandez, Pierre
+  - Haziza, Daniel
+  - Massa, Francisco
+  - El-Nouby, Alaaeldin
+  - Assran, Mido
+  - Ballas, Nicolas
+  - Galuba, Wojciech
+  - Howes, Russell
+  - Huang, Po-Yao
+  - Li, Shang-Wen
+  - Misra, Ishan
+  - Rabbat, Michael
+  - Sharma, Vasu
+  - Synnaeve, Gabriel
+  - Xu, Hu
+  - Jégou, Hervé
+  - Mairal, Julien
+  - Labatut, Patrick
+  - Joulin, Armand
+  - Bojanowski, Piotr
+  date: 2024
+  url: https://openreview.net/forum?id=a68SUt6zFt
+  parent:
+    type: periodical
+    title: Trans. Mach. Learn. Res.
+    volume: 2024
+
+CaronTMJMBJ21:
+  type: article
+  title: Emerging Properties in Self-Supervised Vision Transformers
+  author:
+  - Caron, Mathilde
+  - Touvron, Hugo
+  - Misra, Ishan
+  - Jégou, Hervé
+  - Mairal, Julien
+  - Bojanowski, Piotr
+  - Joulin, Armand
+  date: 2021
+  page-range: 9630-9640
+  url: https://doi.org/10.1109/ICCV48922.2021.00951
+  serial-number:
+    doi: 10.1109/ICCV48922.2021.00951
+  parent:
+    type: proceedings
+    title: 2021 {IEEE/CVF} International Conference on Computer Vision, {ICCV} 2021, Montreal, QC, Canada, October 10-17, 2021
+    publisher: '{IEEE}'
+
+AssranDMBVRLB23:
+  type: article
+  title: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture
+  author:
+  - Assran, Mahmoud
+  - Duval, Quentin
+  - Misra, Ishan
+  - Bojanowski, Piotr
+  - Vincent, Pascal
+  - Rabbat, Michael G.
+  - LeCun, Yann
+  - Ballas, Nicolas
+  date: 2023
+  page-range: 15619-15629
+  url: https://doi.org/10.1109/CVPR52729.2023.01499
+  serial-number:
+    doi: 10.1109/CVPR52729.2023.01499
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2023, Vancouver, BC, Canada, June 17-24, 2023'
+    publisher: '{IEEE}'
+
+
+ZhaiM0B23:
+  type: article
+  title: Sigmoid Loss for Language Image Pre-Training
+  author:
+  - Zhai, Xiaohua
+  - Mustafa, Basil
+  - Kolesnikov, Alexander
+  - Beyer, Lucas
+  date: 2023
+  page-range: 11941-11952
+  url: https://doi.org/10.1109/ICCV51070.2023.01100
+  serial-number:
+    doi: 10.1109/ICCV51070.2023.01100
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} International Conference on Computer Vision, {ICCV} 2023, Paris, France, October 1-6, 2023'
+    publisher: '{IEEE}'
+abs-2502-14786:
+  type: article
+  title: 'SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features'
+  author:
+  - Tschannen, Michael
+  - Gritsenko, Alexey A.
+  - Wang, Xiao
+  - Naeem, Muhammad Ferjad
+  - Alabdulmohsin, Ibrahim
+  - Parthasarathy, Nikhil
+  - Evans, Talfan
+  - Beyer, Lucas
+  - Xia, Ye
+  - Mustafa, Basil
+  - Hénaff, Olivier J.
+  - Harmsen, Jeremiah
+  - Steiner, Andreas
+  - Zhai, Xiaohua
+  date: 2025
+  url: https://doi.org/10.48550/arXiv.2502.14786
+  serial-number:
+    arxiv: '2502.14786'
+    doi: 10.48550/ARXIV.2502.14786
+  parent:
+    type: periodical
+    title: CoRR

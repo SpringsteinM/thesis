@@ -1,4 +1,4 @@
-#import "@preview/ctheorems:1.1.3": *
+ #import "@preview/ctheorems:1.1.3": *
 #import "@preview/glossarium:0.5.3": gls, glspl 
 #import "/helper/table_helper.typ": bottomrule, toprule, midrule, cmidrule
 #import "/helper/outline_text.typ": flex-heading, flex-figure, flex-super, flex-grid
@@ -70,4 +70,25 @@ The contributions of this dissertation can be summarized as follows:
 + Public release of all developed methods, source code, model weights, and datasets
 
 
-== Future Work <chp:conclusion:future_work>
+== Limitations and Future Work <chp:conclusion:future_work>
+
+This thesis focuses on methods that improve the automatic analysis of artworks, on evaluating these methods, and on making them available to researchers. In doing so, several research questions arise, not all of which could be addressed in this dissertation, as the field and its associated tasks and questions are too extensive. Some limitations and future extensions are listed in the following sections.
+
+=== Non-Eurocentric Art
+<chp:conclusion:future_work:non_europe>
+The methods developed and trained in @chp:art rely on highly Eurocentric datasets. While it would be desirable to extend these methods to other artistic traditions, this is constrained by data availability, as most publicly accessible art datasets are Eurocentric. This is largely because they are derived from freely available museum collections, which are predominantly located in Europe or North America (e.g., the Met, the Rijksmuseum, or the Getty Collection). This creates a significant bias in both the training data and the resulting model capabilities @Hakopian24. Moreover, the absence of non-Eurocentric art is not merely a matter of visual variance, but also entails entirely different iconographic and symbolic concepts that are absent from Eurocentric taxonomies. A good example of this is #gls("Iconclass"), which served as the foundation for the methods in @chp:saints and @chp:iconclass. Developed in the Netherlands in the 1940s #footnote[https://huggingface.co/datasets/biglam/brill_iconclass#discussion-of-biases], its scope is limited to Western art @couprie1983iconclass.
+
+To mitigate this bias, we propose the following strategies for future work. (1) Leverage existing non-Eurocentric datasets, or create new ones, to capture more visually diverse cultural traditions. (2) Employ taxonomies that include concepts from non-Eurocentric traditions, complementing the Eurocentric taxonomies used in this thesis. A positive example is #gls("CIT"), which covers Chinese visual culture from the 8th to the 19th century #footnote[https://chineseiconography.org/]. Building on these two directions, future models could be trained on the resulting visual content and extended taxonomies, or use them as unlabeled data within our semi-supervised pipelines, to improve robustness on underrepresented visual traditions.
+
+=== Advance Pre-Training Strategy
+<chp:conclusion:future_work:pre_training>
+
+During the development of the various methods in @chp:art, different pretraining strategies were employed. For image classification (@chp:saints), the models were pretrained on ImageNet @russakovsky2015imagenet, while for pose estimation (@chp:pose), COCO 2017 @LinMBHPRDZ14 served as the pretraining corpus. In @chp:iconclass, the original encoder used contrastive image-text pretraining with #gls("CLIP") @RadfordKHRGASAM21. A key limitation shared by all these strategies is that artworks were either entirely absent from the pretraining data or constituted only a negligible fraction of it. To advance research in art-historical analysis and to improve search in iART more broadly, it would be beneficial to develop a foundation model with a dedicated focus on art, which could then serve as a shared backbone for the methods presented in @chp:art and yield more meaningful art-specific embeddings for retrieval (@chp:iart).
+
+We have already begun preliminary experiments toward training an art-specific foundation model. In @chp:iconclass, we generated a synthetic image-text dataset for #gls("Iconclass") and trained a model using contrastive learning. In @chp:iart, we trained a model using the #gls("BYOL") @GrillSATRBDPGAP20 self-supervised learning method on unlabeled art data. Building on these initial experiments, a natural next step would be to consolidate the efforts: either evaluate existing state-of-the-art foundation models for their suitability to the task or train a dedicated art-specific foundation model. To this end, we would consider both self-supervised learning on unlabeled artworks (e.g., #gls("DINO") @SimeoniVSBOJKSYRMHWWDMS26 @OquabDMVSKFHMEA24 @CaronTMJMBJ21, #gls("BYOL") @GrillSATRBDPGAP20, #gls("JEPA") @AssranDMBVRLB23) and weakly supervised learning using a contrastive loss on image–text pairs (e.g., #gls("CLIP") @RadfordKHRGASAM21, #gls("SigLIP") @abs-2502-14786 @ZhaiM0B23). In doing so, we can draw on the datasets collected in our respective approaches and combine them for joint training. Subsequently, we would use the resulting encoder and apply the methods presented in @chp:art to evaluate whether it outperforms the current baselines.
+
+
+=== Extending iART
+<chp:conclusion:future_work:iart>
+
+

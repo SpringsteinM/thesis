@@ -230,5 +230,25 @@
         short:"ViT",
         long:"Vision Transformer"
     ),
+    (
+        key:"BYOL",
+        short:"BYOL",
+        long:"Bootstrap Your Own Latent"
+    ),
+    (
+        key:"DINO",
+        short:"DINO",
+        long:"Self-DIstillation with NO labels"
+    ),
+    (
+        key:"SigLIP",
+        short:"SigLIP",
+        long:"Sigmoid Loss for Language Image Pre-training"
+    ),
+    (
+        key:"JEPA",
+        short:"JEPA",
+        long:"Joint-Embedding Predictive Architecture"
+    ),
   )
 

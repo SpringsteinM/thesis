@@ -331,7 +331,7 @@ and the imbalance between background and foreground classes is much
 smaller.
 
 #flex-figure(
-  image("../images/pose/detr_semi_v2.svg", width: 100%),
+  image("../images/pose/detr_semi_v2.svg", width: 80%),
   [In the semi-supervised training pipeline adapted from
     Xu et al. @Xu00WWWB021, each batch consists of labeled
     and unlabeled images with strong and weak augmentations generated
@@ -533,12 +533,9 @@ use in our semi-supervised learning approach as unlabeled data.
 
 ==== Ablation Study
 <sec:ablation>
-For #strong[person detection], we leverage the weights
-of a DETR model~@CarionMSUKZ20") pre-trained on
-COCO 2017 and reinitialize the classification head. An Adam
-optimizer~@KingmaB14") with a learning rate of
-$l r eq 5 e minus 6$ is used for the Transformer and with
-$l r eq 1 e minus 7$ for the ResNet-50
+For #strong[person detection], we leverage the weights of a DETR model~@CarionMSUKZ20 pre-trained on
+COCO 2017 and reinitialize the classification head. An Adam optimizer~@KingmaB14") with a learning rate of
+$l r eq 5 e minus 6$ is used for the Transformer and with $l r eq 1 e minus 7$ for the ResNet-50
 backbone~@HeZRS16. Similar to Li et al. @0012WZXXT21, all classes except persons are
 ignored; small bounding boxes are not considered. Models are trained for
 $200 comma 000$ iterations with a batch size of four, with all images
