@@ -5223,3 +5223,75 @@ abs-2502-14786:
   parent:
     type: periodical
     title: CoRR
+
+WengSY24:
+  type: article
+  title: 'Diffusion-HPC: Synthetic Data Generation for Human Mesh Recovery in Challenging Domains'
+  author:
+  - Weng, Zhenzhen
+  - Sánchez, Laura Bravo
+  - Yeung-Levy, Serena
+  date: 2024
+  page-range: 257-267
+  url: https://doi.org/10.1109/3DV62453.2024.00043
+  serial-number:
+    doi: 10.1109/3DV62453.2024.00043
+  parent:
+    type: proceedings
+    title: International Conference on 3D Vision, 3DV 2024, Davos, Switzerland, March 18-21, 2024
+    publisher: '{IEEE}'
+
+abs-2403-08650:
+  type: article
+  title: Data Augmentation in Human-Centric Vision
+  author:
+  - Jiang, Wentao
+  - Zhang, Yige
+  - Zheng, Shaozhong
+  - Liu, Si
+  - Yan, Shuicheng
+  date: 2024
+  url: https://doi.org/10.48550/arXiv.2403.08650
+  serial-number:
+    arxiv: '2403.08650'
+    doi: 10.48550/ARXIV.2403.08650
+  parent:
+    type: periodical
+    title: CoRR
+
+ZhangRA23:
+  type: article
+  title: Adding Conditional Control to Text-to-Image Diffusion Models
+  author:
+  - Zhang, Lvmin
+  - Rao, Anyi
+  - Agrawala, Maneesh
+  date: 2023
+  page-range: 3813-3824
+  url: https://doi.org/10.1109/ICCV51070.2023.00355
+  serial-number:
+    doi: 10.1109/ICCV51070.2023.00355
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} International Conference on Computer Vision, {ICCV} 2023, Paris, France, October 1-6, 2023'
+    publisher: '{IEEE}'
+
+
+RombachBLEO22:
+  type: article
+  title: High-Resolution Image Synthesis with Latent Diffusion Models
+  author:
+  - Rombach, Robin
+  - Blattmann, Andreas
+  - Lorenz, Dominik
+  - Esser, Patrick
+  - Ommer, Björn
+  date: 2022
+  page-range: 10674-10685
+  url: https://doi.org/10.1109/CVPR52688.2022.01042
+  serial-number:
+    doi: 10.1109/CVPR52688.2022.01042
+  parent:
+    type: proceedings
+    title: '{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022'
+    publisher: '{IEEE}'

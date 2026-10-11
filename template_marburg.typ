@@ -81,6 +81,10 @@
 
   // The thesis' notation, can be left empty if not needed
   notation:none,
+  
+  // The thesis' appendix, can be left empty if not needed
+  appendix:none,
+  
   // The thesis' content
   body
 ) = {
@@ -422,6 +426,23 @@ vorgelegt von \
     show std-bibliography: set text(size: 0.9em)
     set std-bibliography(title: none)
     bibliography
+  }
+  
+  pagebreak(to: "odd")
+    // Bibliography
+  if appendix != none {
+    // Reset heading numbering to Appendix format: A.1, A.2, etc.
+    counter(heading).update(0)
+    set heading(numbering: "A.1")
+    
+    heading(
+      level: 1,
+      // numbering: none,
+      if lang == "en" {
+        "Appendix"
+      }
+    )
+    appendix
   }
 }
 

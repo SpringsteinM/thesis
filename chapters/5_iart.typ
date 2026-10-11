@@ -30,7 +30,7 @@ structures that adapt to users’ needs @Lang2018, or the ability
 for users to upload their own datasets @Offert2021.
 
 In this paper, we present
-iART#footnote[#link("https://labs.tib.eu/iart"), accessed: 2021-06-15.]:
+iART#footnote[#link("https://iart.vision"), accessed: 2026-08-16.]:
 an e-research-tool that analyses structures (or similarities) of a group
 of images by processing large, heterogeneous, and digitally available
 databases of art-historical objects through machine learning. Ordering

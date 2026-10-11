@@ -190,7 +190,7 @@ taxonomy~(@chp:method-hierarchical-classification).
 While #gls("Iconclass") is explicitly designed for the iconography of Western
 fine art, it also encompasses universal definitions ranging from natural
 phenomena to socio-economic aspects~@vanstraten1994. As shown in
-@fig:clip_model_a, each definition
+@fig:iconclass:clip_model:a, each definition
 within the taxonomy is represented by a unique combination of
 alphanumeric characters, referred to as the 'notation,' hereafter
 denoted as #gls("Iconclass") concept~$C$, and an explanatory 'textual
@@ -208,11 +208,11 @@ notations, as in `79C52:42E3`.
   figure(
     image("../images/iconclass/iconclass_clip_v6-1.svg", height:3.1cm),
     caption:[]
-  ), <fig:clip_model_a>,
+  ), <fig:iconclass:clip_model:a>,
   figure(
     image("../images/iconclass/iconclass_clip.svg", height:3.1cm),  
     caption:[]
-  ), <fig:clip_model_b>,
+  ), <fig:iconclass:clip_model:b>,
   columns: 2,
   column-gutter: 0em,
   long: [The proposed approach for #gls("VLM") pre-training based on images labeled according to the #gls("Iconclass") notation scheme: (a)~Based on the keywords~$bb(K)_C$ from each annotated #gls("Iconclass") concept~$C in bb(C)$ of an image~$I$, three strategies are used~(`KW`, `GPT`, `BLIP`) to create image descriptions~(@chp:method-contrastice-pre-training); (b)~They are used for contrastive pre-training of #emph("CLIP")~@RadfordKHRGASAM21~(@chp:method-constrastive-pretraining).],
@@ -227,7 +227,7 @@ Several recent methods have shown that #glspl("VLM") pre-trained with image-text
 pairs from other domain-relevant~@CondeT21 @LiXWZ0Z0JC22
 or large-scale data sets in general~@RadfordKHRGASAM21 @abs-2212-00794
 can significantly improve the performance of many downstream
-applications. As shown in @fig:clip_model_b, it is necessary
+applications. As shown in @fig:iconclass:clip_model:b, it is necessary
 to provide textual descriptions for the corresponding images in order to
 optimize a #gls("VLM") with contrastive
 pre-training~(@chp:method-constrastive-pretraining).
@@ -248,7 +248,7 @@ dimension. Thus, we cannot use a generic free-form to create textual
 descriptions. Instead, we consider the following three approaches to
 generating pairs of images and textual descriptions for
 language-supervised pre-training of #glspl("VLM"); examples are shown in
-@fig:clip_model_a.
+@fig:iconclass:clip_model:a.
 
 ===== Descriptions based on #gls("Iconclass") Keywords (`KW`)
 <descriptions-based-on-iconclass-keywords-kw>
@@ -307,7 +307,7 @@ Given a data set containing a set of images and associated annotations
 according to the #gls("Iconclass") notation scheme, we create textual
 descriptions based on the associated keywords using #emph[one] of the
 methods presented in the previous section. As shown in
-@fig:clip_model_b, the #gls("InfoNCE")
+@fig:iconclass:clip_model:b, the #gls("InfoNCE")
 contrastive loss~@abs-1807-03748 is used to
 optimize the #gls("VLM") model
 #emph[CLIP]~@RadfordKHRGASAM21 based on these
@@ -374,7 +374,7 @@ classifiers~(@chp:method-flat to
 <chp:method-clip>
 For zero-shot classification, we measure the similarity between an image
 and the textual descriptions for all #gls("Iconclass") concepts~(as shown in
-@fig:clip_model_b) using a
+@fig:iconclass:clip_model:b) using a
 #emph[CLIP] model pre-trained according to one of the strategies in
 @chp:method-constrastive-pretraining. Unlike the
 following supervised classifiers, this method does not require a
@@ -468,7 +468,7 @@ similar to the recurrent hierarchical classification approach
 #emph[HMCN-R]~@WehrmannCB18 or image
 captioning~@KarpathyL15, where in each iteration,
 a level of the hierarchy, or a token of the #gls("Iconclass")
-concept $C$ (@fig:clip_model_a), is
+concept $C$ (@fig:iconclass:clip_model:a), is
 predicted. In contrast to related work, we use an encoder-decoder
 structure based on recent transformer architectures. The entire
 architecture is shown in
@@ -528,7 +528,7 @@ disproportionately low. We are relying on two data sets that unite
 several institutions and entail a wide range of art-historical objects,
 such as paintings, emblems, drawings, engravings, and manuscripts:
 (i)~#emph[]~@iconclass-ai-test-set, in the following abbreviated
-to #gls("ICAI"). The data set contains 87744 images sampled from the Arkyves
+to #gls("ICAI"). The data set contains #num[87744] images sampled from the Arkyves
 database.#footnote[#link("https://www.arkyves.org/") (last accessed on
 2024-05-20).] These images are labeled with a total of 362561 #gls("Iconclass")
 concepts, #num[12488] of which are unique. (ii)~#gls("ICARUS"). In addition,
@@ -600,7 +600,7 @@ we also fine-tune the `CAT` classifier on the original #emph[CLIP] model
 trained on the #emph[LAION-400M] data
 set~@abs-2111-02114. Therefore, no
 pre-training takes place in this experiment. The results of this
-experiment are shown in Table~@tab:pre-training.
+experiment are shown in Table~@tab:iconclass:pre-training.
 
 #flex-figure(
 table(
@@ -621,7 +621,7 @@ table(
 ),
  [Results of contrastive pre-training with image-text pairs on different text generation strategies on the #gls("ICARUS") test set using the `CAT` classifier. The results show the #gls("mAP") for all concepts that have at least one image in the test set. The best-performing strategy is denoted in bold.],
   [Results of contrastive pre-training with image-text pairs],
-  label:<tab:pre-training>
+  label:<tab:iconclass:pre-training>
 ) 
 
 Models that were first pre-trained on one of the synthesized image-text
@@ -737,18 +737,23 @@ are shown in Table~@tab:result-data-sets.
 ) 
 
 
-#flex-figure(
-  grid(
-    columns: 1, 
-    row-gutter:0.5em,
+#flex-grid(
+  figure(
     image("../images/iconclass/iconclass_samples_3_exp_1_s.jpg", width:100%),
-    [(a) `11HH(THERESA)` (#quote[the foundress of the reformed (Discalced) Carmelites, T(h)eres(i)a of Avila ...])],
+    caption:[`11HH(THERESA)` (#quote[the foundress of the reformed (Discalced) Carmelites, T(h)eres(i)a of Avila ...])],
+  ), <fig:iconclass:samples:a>,
+  figure(
     image("../images/iconclass/iconclass_samples_3_exp_5_s.jpg", width:100%),
-    [(b) `71B4` (#quote[ story of the Tower of Babel (Genesis 11:1--9)])],
+    caption:[`71B4` (#quote[ story of the Tower of Babel (Genesis 11:1--9)])],
+  ), <fig:iconclass:samples:b>,
+  figure(
     image("../images/iconclass/iconclass_samples_3_exp_2_s.jpg", width:100%),
-    [(c) `92D19217` (#quote[Psyche performing various tasks set to her by Venus])]),
-  [Results of the `CAT` model on the #gls("ICARUS") test set. For visualization, we randomly selected three #gls("Iconclass") concepts with $"AP" > 0.5$ and at least five images in the test set. The images are arranged in descending order of prediction probability. Green borders indicate correctly classified images; red bordered images do not include the selected concept in their ground-truth annotations.],
-  [Results of the `CAT` model on the #gls-short("ICARUS") test set.],
+    caption:[`92D19217` (#quote[Psyche performing various tasks set to her by Venus])]
+  ), <fig:iconclass:samples:c>,
+    columns: 1, 
+    // row-gutter:0.5em,
+  long:[Results of the `CAT` model on the #gls("ICARUS") test set. For visualization, we randomly selected three #gls("Iconclass") concepts with $"AP" > 0.5$ and at least five images in the test set. The images are arranged in descending order of prediction probability. Green borders indicate correctly classified images; red bordered images do not include the selected concept in their ground-truth annotations.],
+  short:[Results of the `CAT` model on the #gls-short("ICARUS") test set.],
   label:<fig:iconclass-samples>
 )
 
@@ -772,19 +777,17 @@ recommended for an image and then manually confirmed or refined by an
 expert. @fig:iconclass-samples
 illustrates some of the art-historical concepts that were qualitatively
 analyzed: in addition to the narratives of primarily Christian religion
-illustrated in
-Figure~@fig:iconclass-samples[(a)] and
-Figure~@fig:iconclass-samples[(b)],
+illustrated in @fig:iconclass:samples:a and @fig:iconclass:samples:b,
 there are also those of classical mythology
-(Figure~@fig:iconclass-samples[(c)]).
+(@fig:iconclass:samples:c).
 Visually striking iconographies, such as the story of the #emph[Tower of
 Babel]
-(Figure~@fig:iconclass-samples[(b)]),
+(@fig:iconclass:samples:b),
 are reliably classified by the `CAT` model with the corresponding
 #gls("Iconclass") concepts, regardless of the painting or printing technique
 used; this is true for copper engravings as well as for illuminated
 manuscripts. As shown in
-Figure~@fig:iconclass-samples[(a)], the
+@fig:iconclass:samples:a, the
 model occasionally detects similarly predisposed compositions, even if
 they are false positives. Further information about the qualitative
 evaluation is given in the supplementary material.
@@ -796,7 +799,7 @@ evaluation is given in the supplementary material.
 //   #strong[RQ2:] "How can generative methods be used to create training material for neural network optimization to enhance the performance of computer vision methods in the field of art?"
 // ]
 
-#set-round(precision:0)
+#set-round(precision:auto)
 In this chapter, we addressed #strong[RQ2] by investigating how generative methods can be used to synthesize iconographic training materials for the pre-training of deep learning models in the art-historical domain. Specifically, we explored three distinct strategies for automatically generating image–text pairs to facilitate contrastive learning. Using these strategies, we created image descriptions to pre-train a state-of-the-art #gls("VLM") on a novel dataset comprising #num[477569] images covering more than #num[20000] unique iconographic concepts. Our investigations demonstrate that incorporating these synthetically generated textual descriptions enhances downstream model performance.
 
 Furthermore, we proposed five classification approaches, including a novel transformer decoder that leverages hierarchical knowledge from the #gls("Iconclass") taxonomy, which is the first decoder adopted to the problem of multi-label classification. We have demonstrated that our proposed solution benefits significantly from the adoption of #glspl("Iconclass") structure: if a concept situated at a lower hierarchy level is not detected, the taxonomy allows for an upward traversal, facilitating the identification of a related concept. This decisively increases the potential usefulness of digital collections for research and education in the visual arts.

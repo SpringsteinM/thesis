@@ -202,7 +202,7 @@ After filtering irrelevant detections, the individual boxes are cropped and serv
 This second Transformer model computes a set of keypoints that serve as the final prediction after filtering background classes.
   ],
   [Architecture of the two-stage human pose estimator],
-  label: <fig:two_stages>
+  label: <fig:pose:two_stages>
 )
 
 
@@ -225,7 +225,7 @@ step, the individual boxes are scanned for keypoints. The initial system
 is based on Li et al.’s method~@0012WZXXT21,
 which is built on two Transformer models for object
 detection~@VaswaniSPUJGKP17 @CarionMSUKZ20.
-The overall architecture is shown in @fig:two_stages.
+The overall architecture is shown in @fig:pose:two_stages.
 
 In the #strong[person detection phase], feature descriptors are computed
 using a CNN backend combined with a two-dimensional position embedding.
@@ -424,7 +424,7 @@ experiments, we use the metrics and tools from the COCO
 API.#footnote[#link("https://github.com/cocodataset/cocoapi").]
 
 // TODO
-#set-round(precision:0)
+#set-round(precision:auto)
 #flex-figure(
   {
     show: format-table(none, none,auto,auto,auto)
@@ -571,7 +571,7 @@ and $lambda_u eq 0.5$.
   [Person detection results on the People-Art test set],
   label:<tab:exp_boxes_people>
 )
-#set-round(precision:0)
+#set-round(precision:auto)
 
 
 #set-round(precision:4)
@@ -599,7 +599,7 @@ and $lambda_u eq 0.5$.
   [Person detection results on the PoPArt test set],
   label:<tab:exp_boxes_popart>
 )
-#set-round(precision:0)
+#set-round(precision:auto)
 
 The results for the respective test sets are shown in
 Table~@tab:exp_boxes_people and Table~@tab:exp_boxes_popart, including a comparison
@@ -686,7 +686,7 @@ trained for the given task.
   [Keypoint detection results are reported for the PoPArt test set],
   label: <tab:exp_keypoints>
 )
-#set-round(precision:0)
+#set-round(precision:auto)
 
 
 
@@ -815,7 +815,7 @@ person and his or her mirror image.
   [User study results for pose retrieval],
   label:<tab:userstudy>
 )
-#set-round(precision:0)
+#set-round(precision:auto)
 
 
 #flex-figure(
@@ -892,7 +892,7 @@ query image.
 
 In this chapter, we addressed #strong[RQ2] and #strong[RQ3] by investigating how generative techniques and alternative learning strategies can be leveraged for human pose estimation in artworks. To explore these questions, we developed a two-stage pose estimator that first predicts person bounding boxes and subsequently locates body joints. To systematically test the validity of human pose estimators across artistic domains, we introduced a reasonably large art-historical dataset called PoPArt. We then trained our two-stage model using partially synthetic datasets alongside unlabeled images via semi-supervised learning, evaluating the results on PoPArt in light of our research questions.
 
-#set-round(precision:0)
+#set-round(precision:auto)
 #let pct = zi.declare("%")
 
 To investigate #strong[RQ2], we used style transfer to synthesize new training examples from real images. Specifically, we varied the proportion of style-transferred images in each training batch (#pct[0], #pct[50], #pct[100]) and measured the effect on model performance. Both the #pct[50] and #pct[100] settings outperformed the #pct[0] baseline, yielding a significant improvement in #gls("AP") and #gls("AR") for both bounding box and keypoint detection. By using synthetic images, we increased the total amount of training data and, since the synthesized images are closer to the target domain, reduced the domain gap.

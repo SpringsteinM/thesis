@@ -70,7 +70,12 @@
   keywords: none,
 
   glossary:  glossary,
-  notation: notation
+  notation: notation,
+  appendix: [
+    #include "chapters/A_pose.typ"
+    #include "chapters/A_iconclass.typ"
+    #include "chapters/A_resume.typ"
+  ]
 
 )
 
@@ -111,3 +116,4 @@ Word count 22-08-2026: 27904
 
 Word count now: #total-words
 ]
+
